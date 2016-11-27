@@ -22,6 +22,8 @@ import javax.swing.JTextField;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.SystemColor;
+import java.awt.Color;
 
 public class MainScreen extends JFrame {
 
@@ -88,6 +90,7 @@ public class MainScreen extends JFrame {
 		contentPane.add(btnNewButton_2);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(6, 6, 480, 480);
 		contentPane.add(panel);
 		GridBagLayout gbl_panel = new GridBagLayout();
@@ -98,6 +101,8 @@ public class MainScreen extends JFrame {
 		panel.setLayout(gbl_panel);
 		
 		JToggleButton toggleButton = new JToggleButton("");
+		toggleButton.setForeground(Color.BLUE);
+		toggleButton.setBackground(Color.BLUE);
 		toggleButton.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		GridBagConstraints gbc_toggleButton = new GridBagConstraints();
 		gbc_toggleButton.fill = GridBagConstraints.BOTH;
@@ -114,24 +119,28 @@ public class MainScreen extends JFrame {
 		
 		JToggleButton toggleButton_2 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_2 = new GridBagConstraints();
+		gbc_toggleButton_2.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_2.gridx = 2;
 		gbc_toggleButton_2.gridy = 0;
 		panel.add(toggleButton_2, gbc_toggleButton_2);
 		
-		JToggleButton toggleButton_3 = new JToggleButton("4");
+		JToggleButton toggleButton_3 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_3 = new GridBagConstraints();
+		gbc_toggleButton_3.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_3.gridx = 3;
 		gbc_toggleButton_3.gridy = 0;
 		panel.add(toggleButton_3, gbc_toggleButton_3);
 		
-		JToggleButton toggleButton_4 = new JToggleButton("5");
+		JToggleButton toggleButton_4 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_4 = new GridBagConstraints();
+		gbc_toggleButton_4.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_4.gridx = 4;
 		gbc_toggleButton_4.gridy = 0;
 		panel.add(toggleButton_4, gbc_toggleButton_4);
 		
-		JToggleButton toggleButton_5 = new JToggleButton("6");
+		JToggleButton toggleButton_5 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_5 = new GridBagConstraints();
+		gbc_toggleButton_5.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_5.gridx = 5;
 		gbc_toggleButton_5.gridy = 0;
 		panel.add(toggleButton_5, gbc_toggleButton_5);
@@ -144,178 +153,207 @@ public class MainScreen extends JFrame {
 		gbc_toggleButton_6.gridy = 1;
 		panel.add(toggleButton_6, gbc_toggleButton_6);
 		
-		JToggleButton toggleButton_7 = new JToggleButton("7");
+		JToggleButton toggleButton_7 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_7 = new GridBagConstraints();
+		gbc_toggleButton_7.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_7.gridx = 1;
 		gbc_toggleButton_7.gridy = 1;
 		panel.add(toggleButton_7, gbc_toggleButton_7);
 		
-		JToggleButton toggleButton_8 = new JToggleButton("7");
+		JToggleButton toggleButton_8 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_8 = new GridBagConstraints();
+		gbc_toggleButton_8.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_8.gridx = 2;
 		gbc_toggleButton_8.gridy = 1;
 		panel.add(toggleButton_8, gbc_toggleButton_8);
 		
-		JToggleButton toggleButton_9 = new JToggleButton("7");
+		JToggleButton toggleButton_9 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_9 = new GridBagConstraints();
+		gbc_toggleButton_9.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_9.gridx = 3;
 		gbc_toggleButton_9.gridy = 1;
 		panel.add(toggleButton_9, gbc_toggleButton_9);
 		
-		JToggleButton toggleButton_10 = new JToggleButton("7");
+		JToggleButton toggleButton_10 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_10 = new GridBagConstraints();
+		gbc_toggleButton_10.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_10.gridx = 4;
 		gbc_toggleButton_10.gridy = 1;
 		panel.add(toggleButton_10, gbc_toggleButton_10);
 		
-		JToggleButton toggleButton_11 = new JToggleButton("7");
+		JToggleButton toggleButton_11 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_11 = new GridBagConstraints();
+		gbc_toggleButton_11.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_11.gridx = 5;
 		gbc_toggleButton_11.gridy = 1;
 		panel.add(toggleButton_11, gbc_toggleButton_11);
 		
-		JToggleButton toggleButton_12 = new JToggleButton("7");
+		JToggleButton toggleButton_12 = new JToggleButton("");
 		toggleButton_12.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		GridBagConstraints gbc_toggleButton_12 = new GridBagConstraints();
+		gbc_toggleButton_12.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_12.gridx = 0;
 		gbc_toggleButton_12.gridy = 2;
 		panel.add(toggleButton_12, gbc_toggleButton_12);
 		
-		JToggleButton toggleButton_13 = new JToggleButton("7");
+		JToggleButton toggleButton_13 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_13 = new GridBagConstraints();
+		gbc_toggleButton_13.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_13.gridx = 1;
 		gbc_toggleButton_13.gridy = 2;
 		panel.add(toggleButton_13, gbc_toggleButton_13);
 		
-		JToggleButton toggleButton_14 = new JToggleButton("7");
+		JToggleButton toggleButton_14 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_14 = new GridBagConstraints();
+		gbc_toggleButton_14.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_14.gridx = 2;
 		gbc_toggleButton_14.gridy = 2;
 		panel.add(toggleButton_14, gbc_toggleButton_14);
 		
-		JToggleButton toggleButton_15 = new JToggleButton("7");
+		JToggleButton toggleButton_15 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_15 = new GridBagConstraints();
+		gbc_toggleButton_15.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_15.gridx = 3;
 		gbc_toggleButton_15.gridy = 2;
 		panel.add(toggleButton_15, gbc_toggleButton_15);
 		
-		JToggleButton toggleButton_16 = new JToggleButton("7");
+		JToggleButton toggleButton_16 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_16 = new GridBagConstraints();
+		gbc_toggleButton_16.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_16.gridx = 4;
 		gbc_toggleButton_16.gridy = 2;
 		panel.add(toggleButton_16, gbc_toggleButton_16);
 		
-		JToggleButton toggleButton_17 = new JToggleButton("7");
+		JToggleButton toggleButton_17 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_17 = new GridBagConstraints();
+		gbc_toggleButton_17.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_17.gridx = 5;
 		gbc_toggleButton_17.gridy = 2;
 		panel.add(toggleButton_17, gbc_toggleButton_17);
 		
-		JToggleButton toggleButton_18 = new JToggleButton("7");
+		JToggleButton toggleButton_18 = new JToggleButton("");
 		toggleButton_18.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		GridBagConstraints gbc_toggleButton_18 = new GridBagConstraints();
+		gbc_toggleButton_18.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_18.gridx = 0;
 		gbc_toggleButton_18.gridy = 3;
 		panel.add(toggleButton_18, gbc_toggleButton_18);
 		
-		JToggleButton toggleButton_19 = new JToggleButton("7");
+		JToggleButton toggleButton_19 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_19 = new GridBagConstraints();
+		gbc_toggleButton_19.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_19.gridx = 1;
 		gbc_toggleButton_19.gridy = 3;
 		panel.add(toggleButton_19, gbc_toggleButton_19);
 		
-		JToggleButton toggleButton_20 = new JToggleButton("7");
+		JToggleButton toggleButton_20 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_20 = new GridBagConstraints();
+		gbc_toggleButton_20.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_20.gridx = 2;
 		gbc_toggleButton_20.gridy = 3;
 		panel.add(toggleButton_20, gbc_toggleButton_20);
 		
-		JToggleButton toggleButton_21 = new JToggleButton("7");
+		JToggleButton toggleButton_21 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_21 = new GridBagConstraints();
+		gbc_toggleButton_21.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_21.gridx = 3;
 		gbc_toggleButton_21.gridy = 3;
 		panel.add(toggleButton_21, gbc_toggleButton_21);
 		
-		JToggleButton toggleButton_22 = new JToggleButton("7");
+		JToggleButton toggleButton_22 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_22 = new GridBagConstraints();
+		gbc_toggleButton_22.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_22.gridx = 4;
 		gbc_toggleButton_22.gridy = 3;
 		panel.add(toggleButton_22, gbc_toggleButton_22);
 		
-		JToggleButton toggleButton_23 = new JToggleButton("7");
+		JToggleButton toggleButton_23 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_23 = new GridBagConstraints();
+		gbc_toggleButton_23.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_23.gridx = 5;
 		gbc_toggleButton_23.gridy = 3;
 		panel.add(toggleButton_23, gbc_toggleButton_23);
 		
-		JToggleButton toggleButton_24 = new JToggleButton("7");
+		JToggleButton toggleButton_24 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_24 = new GridBagConstraints();
+		gbc_toggleButton_24.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_24.gridx = 0;
 		gbc_toggleButton_24.gridy = 4;
 		panel.add(toggleButton_24, gbc_toggleButton_24);
 		
 		JToggleButton toggleButton_25 = new JToggleButton("\n");
 		GridBagConstraints gbc_toggleButton_25 = new GridBagConstraints();
+		gbc_toggleButton_25.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_25.gridx = 1;
 		gbc_toggleButton_25.gridy = 4;
 		panel.add(toggleButton_25, gbc_toggleButton_25);
 		
-		JToggleButton toggleButton_28 = new JToggleButton("7");
+		JToggleButton toggleButton_28 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_28 = new GridBagConstraints();
+		gbc_toggleButton_28.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_28.gridx = 2;
 		gbc_toggleButton_28.gridy = 4;
 		panel.add(toggleButton_28, gbc_toggleButton_28);
 		
-		JToggleButton toggleButton_30 = new JToggleButton("7");
+		JToggleButton toggleButton_30 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_30 = new GridBagConstraints();
+		gbc_toggleButton_30.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_30.gridx = 3;
 		gbc_toggleButton_30.gridy = 4;
 		panel.add(toggleButton_30, gbc_toggleButton_30);
 		
-		JToggleButton toggleButton_32 = new JToggleButton("7");
+		JToggleButton toggleButton_32 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_32 = new GridBagConstraints();
+		gbc_toggleButton_32.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_32.gridx = 4;
 		gbc_toggleButton_32.gridy = 4;
 		panel.add(toggleButton_32, gbc_toggleButton_32);
 		
-		JToggleButton toggleButton_34 = new JToggleButton("7");
+		JToggleButton toggleButton_34 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_34 = new GridBagConstraints();
+		gbc_toggleButton_34.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_34.gridx = 5;
 		gbc_toggleButton_34.gridy = 4;
 		panel.add(toggleButton_34, gbc_toggleButton_34);
 		
-		JToggleButton toggleButton_26 = new JToggleButton("7");
+		JToggleButton toggleButton_26 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_26 = new GridBagConstraints();
+		gbc_toggleButton_26.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_26.gridx = 0;
 		gbc_toggleButton_26.gridy = 5;
 		panel.add(toggleButton_26, gbc_toggleButton_26);
 		
-		JToggleButton toggleButton_27 = new JToggleButton("7");
+		JToggleButton toggleButton_27 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_27 = new GridBagConstraints();
+		gbc_toggleButton_27.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_27.gridx = 1;
 		gbc_toggleButton_27.gridy = 5;
 		panel.add(toggleButton_27, gbc_toggleButton_27);
 		
-		JToggleButton toggleButton_29 = new JToggleButton("7");
+		JToggleButton toggleButton_29 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_29 = new GridBagConstraints();
+		gbc_toggleButton_29.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_29.gridx = 2;
 		gbc_toggleButton_29.gridy = 5;
 		panel.add(toggleButton_29, gbc_toggleButton_29);
 		
-		JToggleButton toggleButton_31 = new JToggleButton("7");
+		JToggleButton toggleButton_31 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_31 = new GridBagConstraints();
+		gbc_toggleButton_31.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_31.gridx = 3;
 		gbc_toggleButton_31.gridy = 5;
 		panel.add(toggleButton_31, gbc_toggleButton_31);
 		
-		JToggleButton toggleButton_33 = new JToggleButton("7");
+		JToggleButton toggleButton_33 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_33 = new GridBagConstraints();
+		gbc_toggleButton_33.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_33.gridx = 4;
 		gbc_toggleButton_33.gridy = 5;
 		panel.add(toggleButton_33, gbc_toggleButton_33);
 		
-		JToggleButton toggleButton_35 = new JToggleButton("7");
+		JToggleButton toggleButton_35 = new JToggleButton("");
 		GridBagConstraints gbc_toggleButton_35 = new GridBagConstraints();
+		gbc_toggleButton_35.fill = GridBagConstraints.BOTH;
 		gbc_toggleButton_35.gridx = 5;
 		gbc_toggleButton_35.gridy = 5;
 		panel.add(toggleButton_35, gbc_toggleButton_35);
