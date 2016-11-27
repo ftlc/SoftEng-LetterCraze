@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+import java.awt.SystemColor;
 
 public class SplashScreen extends JFrame {
 
@@ -48,22 +49,23 @@ public class SplashScreen extends JFrame {
 		
 		JLabel lblGameBuilder = new JLabel("Game Builder");
 		lblGameBuilder.setHorizontalAlignment(SwingConstants.CENTER);
-		lblGameBuilder.setFont(new Font("Lucida Grande", Font.PLAIN, 37));
-		lblGameBuilder.setBounds(208, 6, 286, 52);
+		lblGameBuilder.setFont(new Font("Lucida Grande", Font.PLAIN, 46));
+		lblGameBuilder.setBounds(6, 6, 697, 76);
 		contentPane.add(lblGameBuilder);
 		
 		JLabel lblTeamIron = new JLabel("Team: Iron");
-		lblTeamIron.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-		lblTeamIron.setHorizontalAlignment(SwingConstants.LEFT);
-		lblTeamIron.setBounds(6, 111, 184, 25);
+		lblTeamIron.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
+		lblTeamIron.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTeamIron.setBounds(6, 141, 697, 25);
 		contentPane.add(lblTeamIron);
 		
 		JTextArea txtrJuanLuis = new JTextArea();
+		txtrJuanLuis.setBackground(SystemColor.window);
 		txtrJuanLuis.setForeground(Color.BLACK);
-		txtrJuanLuis.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		txtrJuanLuis.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 		txtrJuanLuis.setEditable(false);
-		txtrJuanLuis.setText("ø Juan Luis Herrero Estrada\nø Harutyun Sadoyan\nø Christian Scillitoe\nø Bradford Bonanno\nø Nicolette Vere");
-		txtrJuanLuis.setBounds(6, 161, 212, 100);
+		txtrJuanLuis.setText("ø Juan Luis Herrero Estrada\n\nø Harutyun Sadoyan\n\nø Christian Scillitoe\n\nø Bradford Bonanno\n\nø Nicolette Vere");
+		txtrJuanLuis.setBounds(6, 178, 697, 239);
 		contentPane.add(txtrJuanLuis);
 		
 		JButton btnNewButton = new JButton("Create New Level");
