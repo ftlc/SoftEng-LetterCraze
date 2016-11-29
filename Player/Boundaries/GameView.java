@@ -3,16 +3,17 @@ package Boundaries;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class GameView extends JPanel {
 	
 	final int MAX_NUM_TILES = 6;
-	TileView tileViews[][];
+	JLabel tileViews[][];
 
 	public GameView() {
 		//Will have to pass GameView some data so it knows what to draw.
-		tileViews = new TileView[MAX_NUM_TILES][MAX_NUM_TILES];
+		tileViews = new JLabel[MAX_NUM_TILES][MAX_NUM_TILES];
 		
 		initTiles();
 	}
@@ -23,7 +24,11 @@ public class GameView extends JPanel {
 			for(int y = 0; y < 6; y++){
 				int tileY = (y * getHeight())/6;
 				
-				tileViews[x][y] = new TileView("A", tileX, tileY);
+				JLabel tile = new JLabel();
+				tile.setText("A");
+				tile.setBounds(tileX,tileY,50,50);
+				tileViews[x][y] = tile;
+				
 			}
 		}
 	}
