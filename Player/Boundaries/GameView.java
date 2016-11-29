@@ -47,15 +47,15 @@ public class GameView extends JPanel {
 				tileY += 15;
 				
 				// Generate Label //
-				JLabel tile = new JLabel("Null", SwingConstants.CENTER);
+				JLabel tileView = new JLabel("Null", SwingConstants.CENTER);
 				String letter = generateLetter(); // Generates Random Letter //
-				tile.setText(letter);
-				tile.setBounds(tileX,tileY,60,60);
-				tile.setVisible(true);
-				tile.setBackground(c);
-				tile.setBorder(b);
-				parent.add(tile);
-				tileViews[x][y] = tile;
+				tileView.setText(letter);
+				tileView.setBounds(tileX,tileY,60,60);
+				tileView.setVisible(true);
+				tileView.setBackground(c);
+				tileView.setBorder(b);
+				parent.add(tileView);
+				tileViews[x][y] = tileView;
 				
 			}
 		}
