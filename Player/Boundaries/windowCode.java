@@ -12,6 +12,10 @@ import javax.swing.SwingConstants;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JScrollBar;
 
 public class windowCode {
 
@@ -47,114 +51,52 @@ public class windowCode {
 		frame = new JFrame();
 		frame.setSize(800, 800);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
-		JButton button_0 = new JButton("Level 1");
+		JPanel panel = new JPanel();
+		panel.setBounds(12, 12, 400, 400);
+		frame.getContentPane().add(panel);
 		
-		JButton button_1 = new JButton("Level 2");
+		JButton btnExit = new JButton("EXIT");
+		btnExit.setBounds(470, 647, 298, 77);
+		frame.getContentPane().add(btnExit);
 		
-		JButton button_2 = new JButton("Level 3");
+		JButton btnResetBoard = new JButton("Reset Board");
+		btnResetBoard.setBounds(470, 359, 298, 77);
+		frame.getContentPane().add(btnResetBoard);
 		
-		JButton button_3 = new JButton("Level 4");
-		button_3.setEnabled(false);
+		JTextArea txtrSelectedWords = new JTextArea();
+		txtrSelectedWords.setText("Selected Words\n");
+		txtrSelectedWords.setEditable(false);
+		txtrSelectedWords.setLineWrap(true);
+		txtrSelectedWords.setVisible(true);
 		
-		JButton button_4 = new JButton("Level 5");
-		button_4.setEnabled(false);
+		JScrollPane scroll = new JScrollPane(txtrSelectedWords);
+		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		scroll.setBounds(12, 464, 407, 263);
+		scroll.setVisible(true);
 		
-		JButton button_5 = new JButton("Level 6");
-		button_5.setEnabled(false);
+		frame.getContentPane().add(scroll);
 		
-		JButton button_6 = new JButton("Level 7");
-		button_6.setEnabled(false);
+		JTextArea scoreArea = new JTextArea();
+		scoreArea.setText("Score: \n\n 0");
+		scoreArea.setEditable(false);
+		scoreArea.setBounds(470, 37, 298, 70);
+		frame.getContentPane().add(scoreArea);
 		
-		JButton button_7 = new JButton("Level 8");
-		button_7.setEnabled(false);
+		JTextArea starArea = new JTextArea();
+		starArea.setText("Stars: \n\n 0");
+		starArea.setEditable(false);
+		starArea.setBounds(470, 149, 298, 70);
+		frame.getContentPane().add(starArea);
 		
-		JButton button_8 = new JButton("Level 9");
-		button_8.setEnabled(false);
+		JTextArea timerArea = new JTextArea();
+		timerArea.setText("(TIMER)");
+		timerArea.setEditable(false);
+		timerArea.setBounds(470, 257, 298, 70);
 		
-		JButton button_9 = new JButton("Level 10");
-		button_9.setEnabled(false);
-		
-		JButton button_10 = new JButton("Level 11");
-		button_10.setEnabled(false);
-		
-		JButton button_11 = new JButton("Level 12");
-		button_11.setEnabled(false);
-		
-		JButton button_12 = new JButton("Level 13");
-		button_12.setEnabled(false);
-		
-		JButton button_13 = new JButton("Level 14");
-		button_13.setEnabled(false);
-		
-		JButton button_14 = new JButton("Level 15");
-		button_14.setEnabled(false);
-		
-		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(62)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(button_0, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(button_1, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(button_2, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(button_3, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(button_4, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(button_5, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
-							.addComponent(button_6, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
-							.addComponent(button_7, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
-							.addComponent(button_8, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
-							.addComponent(button_9, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(button_10, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
-							.addComponent(button_11, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
-							.addComponent(button_12, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
-							.addComponent(button_13, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
-							.addComponent(button_14, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)))
-					.addGap(60))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(106)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-							.addComponent(button_3, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-							.addComponent(button_4, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
-						.addComponent(button_2, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_1, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_0, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
-					.addGap(93)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(button_5, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_6, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_7, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_8, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_9, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
-					.addGap(104)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(button_10, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_11, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_12, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_13, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-						.addComponent(button_14, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap(130, Short.MAX_VALUE))
-		);
-		frame.getContentPane().setLayout(groupLayout);
+		frame.getContentPane().add(timerArea);
+		frame.setVisible(true);
 	}
 }
