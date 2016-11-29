@@ -80,7 +80,7 @@ public class LevelView extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
-		theView = new GameView();
+		theView = new GameView(this);
 		theView.setSize(400 , 400);
 		theView.setLocation(12 , 12);
 		add(theView);

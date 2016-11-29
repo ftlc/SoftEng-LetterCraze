@@ -2,32 +2,59 @@ package Boundaries;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.Random;
 
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.Border;
 
 public class GameView extends JPanel {
 	
 	final int MAX_NUM_TILES = 6;
 	JLabel tileViews[][];
+	JFrame parent;
 
-	public GameView() {
+	public GameView(JFrame parent) {
 		//Will have to pass GameView some data so it knows what to draw.
 		tileViews = new JLabel[MAX_NUM_TILES][MAX_NUM_TILES];
+		
+		Border b = BorderFactory.createLineBorder(Color.BLACK, 1);
+		this.setBorder(b);
+		
+		this.setLayout(null);
+		this.parent = parent;
 		
 		initTiles();
 	}
 	
 	public void initTiles(){
-		for(int x = 0; x < 6; x++){
-			int tileX = (x * getWidth())/6;
+		Color c = new Color(0,0,0,100);
+		Border b = BorderFactory.createLineBorder(Color.BLACK, 1);
+		// Height and Width not initialized yet //
+		int h = 400;
+		int w = 400;
+		
+		// Spawn Labels for letters //
+		for(int x = 0; x < 6; x++){			
 			for(int y = 0; y < 6; y++){
-				int tileY = (y * getHeight())/6;
+				// Tile X and Y 1/6 of Height Apart //
+				int tileX = (x * w)/6;
+				int tileY = (y * h)/6;
+				tileX += 15;
+				tileY += 15;
 				
-				JLabel tile = new JLabel();
-				tile.setText("A");
-				tile.setBounds(tileX,tileY,50,50);
+				// Generate Label //
+				JLabel tile = new JLabel("Null", SwingConstants.CENTER);
+				String letter = generateLetter(); // Generates Random Letter //
+				tile.setText(letter);
+				tile.setBounds(tileX,tileY,60,60);
 				tile.setVisible(true);
+				tile.setBackground(c);
+				tile.setBorder(b);
+				parent.add(tile);
 				tileViews[x][y] = tile;
 				
 			}
@@ -56,6 +83,17 @@ public class GameView extends JPanel {
 		}
 		
 		
+	}
+	// Generate Random Letters //
+	public String generateLetter(){
+		String returnStr = "0";
+		Random random = new Random();
+		int num = random.nextInt(26) + 65;
+		if(num == 81)
+			returnStr = "Qu";
+		else
+			returnStr = Character.toString((char)num);
+		return returnStr;
 	}
 	
 }
