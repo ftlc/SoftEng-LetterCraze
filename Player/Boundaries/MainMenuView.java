@@ -35,7 +35,7 @@ public class MainMenuView extends JFrame {
 	// Create LevelViews for each Level //
 	private void initViews(){
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){
-			levelViews[i] = new LevelView(levels[i]);
+			levelViews[i] = new LevelView(levels[i], this);
 		}
 	}
 	

@@ -10,15 +10,18 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.Border;
 
+import Controllers.LevelToMainMenuController;
 import Entities.Level;
 
 public class LevelView extends JFrame {
 
 	Level theLevel;
 	GameView theView;
+	MainMenuView mainMenu;
 	
-	public LevelView(Level theLevel) {
+	public LevelView(Level theLevel, MainMenuView mainMenu) {
 		this.theLevel = theLevel;
+		this.mainMenu = mainMenu;
 		initFrame();
 	}
 	
@@ -28,6 +31,7 @@ public class LevelView extends JFrame {
 		Border b = BorderFactory.createLineBorder(Color.BLACK, 1);
 				
 		JButton btnExit = new JButton("EXIT");
+		btnExit.addActionListener(new LevelToMainMenuController(this, mainMenu));
 		btnExit.setBounds(470, 647, 298, 77);
 		add(btnExit);
 		

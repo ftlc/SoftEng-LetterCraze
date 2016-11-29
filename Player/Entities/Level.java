@@ -6,4 +6,8 @@ public class Level {
 		
 	}
 	
+	public void reconstruct(){
+		
+	}
+	
 }
