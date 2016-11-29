@@ -1,6 +1,7 @@
 package Boundaries;
 
 import java.awt.Color;
+import java.awt.Font;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -29,18 +30,22 @@ public class LevelView extends JFrame {
 		
 		Color c = new Color(229,229,229,100);
 		Border b = BorderFactory.createLineBorder(Color.BLACK, 1);
+		Font f = new Font("TimesRoman", Font.PLAIN, 25);
 				
 		JButton btnExit = new JButton("EXIT");
+		btnExit.setFont(f);
 		btnExit.addActionListener(new LevelToMainMenuController(this, mainMenu));
 		btnExit.setBounds(470, 647, 298, 77);
 		add(btnExit);
 		
 		JButton btnResetBoard = new JButton("Reset Board");
+		btnResetBoard.setFont(f);
 		btnResetBoard.setBounds(470, 359, 298, 77);
 		add(btnResetBoard);
 		
 		JTextArea txtrSelectedWords = new JTextArea();
 		txtrSelectedWords.setText("Selected Words\n");
+		txtrSelectedWords.setFont(f);
 		txtrSelectedWords.setBackground(c);
 		txtrSelectedWords.setEditable(false);
 		txtrSelectedWords.setLineWrap(true);
@@ -56,7 +61,8 @@ public class LevelView extends JFrame {
 		add(scroll);
 		
 		JTextArea scoreArea = new JTextArea();
-		scoreArea.setText("Score: \n\n 0");
+		scoreArea.setText("Score\n 0");
+		scoreArea.setFont(f);
 		scoreArea.setBackground(c);
 		scoreArea.setBorder(b);
 		scoreArea.setEditable(false);
@@ -64,14 +70,16 @@ public class LevelView extends JFrame {
 		add(scoreArea);
 		
 		JTextArea starArea = new JTextArea();
+		starArea.setFont(f);
 		starArea.setBackground(c);
 		starArea.setBorder(b);
-		starArea.setText("Stars: \n\n 0");
+		starArea.setText("Stars\n 0");
 		starArea.setEditable(false);
 		starArea.setBounds(470, 149, 298, 70);
 		add(starArea);
 		
 		JTextArea timerArea = new JTextArea();
+		timerArea.setFont(f);
 		timerArea.setBackground(c);
 		timerArea.setBorder(b);
 		timerArea.setText("(TIMER)");
