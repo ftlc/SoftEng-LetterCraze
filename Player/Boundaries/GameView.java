@@ -27,6 +27,7 @@ public class GameView extends JPanel {
 				JLabel tile = new JLabel();
 				tile.setText("A");
 				tile.setBounds(tileX,tileY,50,50);
+				tile.setVisible(true);
 				tileViews[x][y] = tile;
 				
 			}
