@@ -1,6 +1,7 @@
 package Boundaries;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.util.Random;
 
@@ -48,6 +49,7 @@ public class GameView extends JPanel {
 				
 				// Generate Label //
 				JLabel tileView = new JLabel("Null", SwingConstants.CENTER);
+				tileView.setFont(new Font("TimesRoman", Font.PLAIN, 35));
 				String letter = generateLetter(); // Generates Random Letter //
 				tileView.setText(letter);
 				tileView.setBounds(tileX,tileY,60,60);

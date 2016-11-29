@@ -41,6 +41,7 @@ public class LevelView extends JFrame {
 		
 		JTextArea txtrSelectedWords = new JTextArea();
 		txtrSelectedWords.setText("Selected Words\n");
+		
 		txtrSelectedWords.setBackground(c);
 		txtrSelectedWords.setEditable(false);
 		txtrSelectedWords.setLineWrap(true);
