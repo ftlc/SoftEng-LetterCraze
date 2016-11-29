@@ -6,9 +6,26 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class GameView extends JPanel {
+	
+	final int MAX_NUM_TILES = 6;
+	TileView tileViews[][];
 
-	public void GameView() {
+	public GameView() {
 		//Will have to pass GameView some data so it knows what to draw.
+		tileViews = new TileView[MAX_NUM_TILES][MAX_NUM_TILES];
+		
+		initTiles();
+	}
+	
+	public void initTiles(){
+		for(int x = 0; x < 6; x++){
+			int tileX = (x * getWidth())/6;
+			for(int y = 0; y < 6; y++){
+				int tileY = (y * getHeight())/6;
+				
+				tileViews[x][y] = new TileView("A", tileX, tileY);
+			}
+		}
 	}
 	
 	public void refresh() {
@@ -20,9 +37,12 @@ public class GameView extends JPanel {
 		
 		//Draw a 6x6 grid.
 		for(int x = 1 ; x <= 6 ; x++) {
+			int xPos = (x * getWidth())/6;
+			
 			for(int y = 1 ; y <= 6 ; y++) {
 				int yPos = (y * getHeight())/6;
-				int xPos = (x * getWidth())/6;
+				
+				tileViews[x-1][y-1].repaint();
 				
 				g.drawLine(0, yPos, getWidth(), yPos);
 				g.drawLine(xPos, 0, xPos, getHeight());
