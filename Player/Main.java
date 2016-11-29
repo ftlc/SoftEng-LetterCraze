@@ -1,10 +1,10 @@
-import Boundaries.MainMenuView;
+import Boundaries.SplashScreenView;
 import Entities.Model;
 
 
 public class Main {
 	public static void main(String[] args) {
 		Model model = new Model();
-		MainMenuView m = new MainMenuView(model);
+		SplashScreenView s = new SplashScreenView(model);
 	}
 }
