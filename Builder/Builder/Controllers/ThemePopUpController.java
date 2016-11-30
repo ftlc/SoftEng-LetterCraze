@@ -2,6 +2,7 @@ package Builder.Controllers;
 
 import Builder.Boundaries.LevelView;
 import Builder.Boundaries.SplashScreenView;
+import Builder.Boundaries.ThemeView;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -11,8 +12,8 @@ public class ThemePopUpController implements ActionListener{
 
 
 		SplashScreenView from;
-		LevelView to;
-		public ThemePopUpController(SplashScreenView from, LevelView to)
+		ThemeView to;
+		public ThemePopUpController(SplashScreenView from, ThemeView to)
 		{
 			this.from = from;
 			this.to = to;
@@ -20,7 +21,6 @@ public class ThemePopUpController implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent actionEvent) {
-			from.setVisible(false);
 			to.setVisible(true);
 		}
 	}
