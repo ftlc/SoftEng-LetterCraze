@@ -1,5 +1,6 @@
 package Builder.Boundaries;
 
+import Builder.Controllers.SplashScreenToLevelController;
 import Builder.Entities.Model;
 
 import javax.swing.*;
@@ -14,8 +15,10 @@ import java.awt.event.ActionListener;
 public class SplashScreenView extends JFrame {
 
     private JPanel contentPane;
+    LevelView lvl;
 
-    public SplashScreenView (Model m) {
+    public SplashScreenView (Model m, LevelView lvl) {
+        this.lvl = lvl;
 
 
 
@@ -49,11 +52,11 @@ public class SplashScreenView extends JFrame {
 
 		JButton btnNewButton = new JButton("Create New Level");
 		btnNewButton.setFont(new Font("Lucida Grande", Font.PLAIN, 39));
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		btnNewButton.addActionListener(new SplashScreenToLevelController(this, this.lvl));
+
 		btnNewButton.setBounds(6, 429, 697, 110);
 		contentPane.add(btnNewButton);
     }
+
+
 }
