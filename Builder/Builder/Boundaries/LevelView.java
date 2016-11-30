@@ -46,60 +46,35 @@ public class LevelView extends JFrame{
 	private JTextField textField_4;
 	private ThemeView themeCreationDialog;
 
-    public LevelView(Model m) //, ThemeView themeCreationDialog)
+	public LevelView(Model m) //, ThemeView themeCreationDialog)
     {
-
-
         this.model = m;
         this.themeCreationDialog = new ThemeView(m);
-        
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        initializeLevel();
+    }
+
+
+
+    void initializeLevel() {
+
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 711, 569);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JButton btnSaveLevel = new JButton("Save Level");
-		btnSaveLevel.setBounds(5, 493, 142, 33);
-		btnSaveLevel.setAlignmentY(0.975f);
-		btnSaveLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-		contentPane.add(btnSaveLevel);
+        initializeButtons();
 
-		JButton btnNewButton = new JButton("Edit Level");
-		btnNewButton.setBounds(147, 493, 136, 33);
-		btnNewButton.setAlignmentY(0.975f);
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-		contentPane.add(btnNewButton);
+        initializeTextFields();
 
-		JButton btnNewButton_1 = new JButton("Preview Level");
-		btnNewButton_1.setBounds(283, 493, 171, 33);
-		btnNewButton_1.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-		btnNewButton_1.setAlignmentY(0.975f);
-		contentPane.add(btnNewButton_1);
 
-		JButton btnNewButton_2 = new JButton("Delete Level");
-		btnNewButton_2.setBounds(454, 493, 160, 33);
-		btnNewButton_2.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-		btnNewButton_2.setAlignmentY(0.975f);
-		contentPane.add(btnNewButton_2);
 
-		BoardView panel = new BoardView();
-		panel.setBackground(Color.BLACK);
-		panel.setBounds(6, 6, 480, 480);
+		BoardView panel = new BoardView(model);
 		contentPane.add(panel);
-		GridBagLayout gbl_panel = new GridBagLayout();
-		gbl_panel.columnWidths = new int[]{80, 80, 80, 80, 80, 80, 0};
-		gbl_panel.rowHeights = new int[]{80, 80, 80, 80, 80, 80, 0};
-		gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		panel.setLayout(gbl_panel);
-		panel.initialiseSquares();
+
 
 
 
@@ -109,17 +84,25 @@ public class LevelView extends JFrame{
 		comboBox.setBounds(499, 27, 206, 27);
 		contentPane.add(comboBox);
 
-		JLabel lblStar = new JLabel("1 Star:");
-		lblStar.setBounds(499, 168, 61, 16);
-		contentPane.add(lblStar);
 
-		JLabel lblStar_1 = new JLabel("2 Star:");
-		lblStar_1.setBounds(499, 196, 61, 16);
-		contentPane.add(lblStar_1);
 
-		JLabel lblStar_2 = new JLabel("3 Star:");
-		lblStar_2.setBounds(499, 224, 61, 16);
-		contentPane.add(lblStar_2);
+
+
+	}
+
+	void initializeTextFields()
+    {
+       		JLabel Star1 = new JLabel("1 Star:");
+		Star1.setBounds(499, 168, 61, 16);
+		contentPane.add(Star1);
+
+		JLabel Star2 = new JLabel("2 Star:");
+		Star2.setBounds(499, 196, 61, 16);
+		contentPane.add(Star2);
+
+		JLabel Star3 = new JLabel("3 Star:");
+		Star3.setBounds(499, 224, 61, 16);
+		contentPane.add(Star3);
 
 		textField = new JTextField();
 		textField.setBounds(561, 163, 130, 26);
@@ -153,28 +136,59 @@ public class LevelView extends JFrame{
 		textField_4.setBounds(584, 325, 107, 26);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
+    }
 
-		JButton btnNewButton_3 = new JButton("Theme");
-		btnNewButton_3.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+	void initializeButtons()
+    {
+        	JButton btnSaveLevel = new JButton("Save Level");
+		btnSaveLevel.setBounds(5, 493, 142, 33);
+		btnSaveLevel.setAlignmentY(0.975f);
+		btnSaveLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		contentPane.add(btnSaveLevel);
 
-		btnNewButton_3.setBounds(499, 382, 187, 33);
-		contentPane.add(btnNewButton_3);
-		
-		// This allows the user to click on the theme button leading you to the 
-		// JDialog to make your theme
-		btnNewButton_3.addActionListener(new ThemePopUpController(this, this.themeCreationDialog));
 
-		JButton btnNewButton_4 = new JButton("EXIT");
-		btnNewButton_4.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-		btnNewButton_4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton_4.setBounds(498, 427, 193, 40);
-		contentPane.add(btnNewButton_4);
-		
-		// controller used to exit the program when clicked on the exit button
-		btnNewButton_4.addActionListener(new ExitBuilderController(this));
+        JButton btnEditLevel= new JButton("Edit Level");
+        btnEditLevel.setBounds(147, 493, 136, 33);
+        btnEditLevel.setAlignmentY(0.975f);
+        btnEditLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+        contentPane.add(btnEditLevel);
+
+
+
+        JButton btnPreviewLevel = new JButton("Preview Level");
+        btnPreviewLevel.setBounds(283, 493, 171, 33);
+        btnPreviewLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+        btnPreviewLevel.setAlignmentY(0.975f);
+        contentPane.add(btnPreviewLevel);
+
+
+
+        JButton btnDeleteLevel = new JButton("Delete Level");
+        btnDeleteLevel.setBounds(454, 493, 160, 33);
+        btnDeleteLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+        btnDeleteLevel.setAlignmentY(0.975f);
+        contentPane.add(btnDeleteLevel);
+
+
+
+        JButton btnTheme = new JButton("Theme");
+        btnTheme.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+
+        btnTheme.setBounds(499, 382, 187, 33);
+        contentPane.add(btnTheme);
+
+        // This allows the user to click on the theme button leading you to the
+        // JDialog to make your theme
+        btnTheme.addActionListener(new ThemePopUpController(this, this.themeCreationDialog));
+
+
+
+        JButton btnExit = new JButton("EXIT");
+        btnExit.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+        btnExit.setBounds(498, 427, 193, 40);
+        contentPane.add(btnExit);
+        // controller used to exit the program when clicked on the exit button
+        btnExit.addActionListener(new ExitBuilderController(this));
 
     }
 

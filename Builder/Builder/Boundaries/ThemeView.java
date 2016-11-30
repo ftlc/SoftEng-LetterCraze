@@ -19,11 +19,18 @@ public class ThemeView extends JDialog{
 	private final JPanel contentPanel = new JPanel();
 	private JTextField textField;
 
-
+    Model model;
 	/**
 	 * Create the dialog box
 	 */
 	public ThemeView(Model m) {
+        this.model = m;
+
+        initializePopup();
+    }
+    void initializePopup() {
+
+
 		
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 475);

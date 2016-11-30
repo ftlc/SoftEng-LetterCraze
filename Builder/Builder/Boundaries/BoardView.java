@@ -14,23 +14,34 @@ public class BoardView extends JPanel {
     GridBagConstraints[] gbs = new GridBagConstraints[36];
 
     public BoardView () {
-        initaliseBoard();
+
+        initalizeBoard();
     }
     public BoardView (Model m) {
         this.model = m;
 
 
 
-     //   initialiseSquares();
 
+        initalizeBoard();
     }
 
-    void initaliseBoard()
+
+    void initalizeBoard()
     {
+        setBackground(Color.BLACK);
+        setBounds(6, 6, 480, 480);
+        GridBagLayout gbl_panel = new GridBagLayout();
+        gbl_panel.columnWidths = new int[]{80, 80, 80, 80, 80, 80, 0};
+        gbl_panel.rowHeights = new int[]{80, 80, 80, 80, 80, 80, 0};
+        gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+        gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+        setLayout(gbl_panel);
 
+        initializeSquares();
     }
 
-    void initialiseSquares()
+    void initializeSquares()
     {
 
 
