@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="Splash Screen Button">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/BoardView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/SquareView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
+    <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/SplashScreenView.java" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/SplashScreenView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Controllers/SplashScreenToLevelController.java" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/SplashScreenToLevelController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Main.java" afterPath="$PROJECT_DIR$/Builder/Builder/Main.java" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1035,15 +1028,23 @@
       <workItem from="1480454912837" duration="3173000" />
       <workItem from="1480458305719" duration="187000" />
       <workItem from="1480458875369" duration="3632000" />
-      <workItem from="1480494100243" duration="291000" />
+      <workItem from="1480494100243" duration="298000" />
     </task>
+    <task id="LOCAL-00001" summary="Splash Screen Button">
+      <created>1480494394704</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1480494394704</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8487000" />
+    <option name="totallyTimeSpent" value="8494000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="10" width="1900" height="1043" extended-state="0" />
+    <frame x="10" y="10" width="1900" height="1043" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
