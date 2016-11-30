@@ -17,6 +17,8 @@ public class SplashScreenView extends JFrame {
 
     public SplashScreenView (Model m) {
 
+
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 709, 567);
 		contentPane = new JPanel();
