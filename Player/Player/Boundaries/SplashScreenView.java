@@ -1,8 +1,9 @@
-package Boundaries;
+package Player.Boundaries;
 
 
 import javax.swing.JFrame;
-import Entities.Model;
+
+import Player.Entities.Model;
 
 public class SplashScreenView extends JFrame {
 	public SplashScreenView(Model m) {

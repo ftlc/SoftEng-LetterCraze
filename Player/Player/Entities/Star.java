@@ -1,4 +1,4 @@
-package Entities;
+package Player.Entities;
 
 public class Star{
 	int oneStar;
@@ -10,9 +10,12 @@ public class Star{
 		this.threeStar = three;
 	}
 	public int calculateStars(){
-		int numberStars = oneStar + twoStar + threeStar;
-		
-		return numberStars;
+		return 0;
 	}
+	
+	// Getters //
+	public int getOneStar() { return oneStar; }
+	public int getTwoStar() { return twoStar; }
+	public int getThreeStar() { return threeStar; }
 }
 

@@ -1,10 +1,13 @@
-package Entities;
+package Player.Entities;
 
 public class LightningLogic extends Logic{
 
-	public Word selectWord(Tile tiles[*]){
-		Word selected;
-		return selected;
+	public LightningLogic(Word selectedWord, int score) {
+		super(selectedWord, score);
+		// TODO Auto-generated constructor stub
+	}
+	public Word selectWord(Tile tiles[]){
+		return null;
 	}
 	public boolean gameOver(){
 		return false;

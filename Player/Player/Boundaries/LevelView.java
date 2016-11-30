@@ -1,4 +1,4 @@
-package Boundaries;
+package Player.Boundaries;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,18 +11,25 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.Border;
 
-import Controllers.LevelToMainMenuController;
-import Entities.Level;
+import Player.Controllers.LevelToMainMenuController;
+import Player.Entities.Level;
+import Player.Entities.Model;
 
 public class LevelView extends JFrame {
 
 	Level theLevel;
-	GameView theView;
+	GameView gameView;
 	MainMenuView mainMenu;
+	JTextArea starArea;
+	JTextArea scoreArea;
+	Model model;
 	
-	public LevelView(Level theLevel, MainMenuView mainMenu) {
+	public LevelView(Level theLevel, MainMenuView mainMenu, Model m) {
 		this.theLevel = theLevel;
 		this.mainMenu = mainMenu;
+		this.model = m;
+		this.starArea = new JTextArea();
+		this.scoreArea = new JTextArea();
 		initFrame();
 	}
 	
@@ -60,8 +67,7 @@ public class LevelView extends JFrame {
 		
 		add(scroll);
 		
-		JTextArea scoreArea = new JTextArea();
-		scoreArea.setText("Score\n 0");
+		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
 		scoreArea.setFont(f);
 		scoreArea.setBackground(c);
 		scoreArea.setBorder(b);
@@ -69,11 +75,10 @@ public class LevelView extends JFrame {
 		scoreArea.setBounds(470, 37, 298, 70);
 		add(scoreArea);
 		
-		JTextArea starArea = new JTextArea();
 		starArea.setFont(f);
 		starArea.setBackground(c);
 		starArea.setBorder(b);
-		starArea.setText("Stars\n 0");
+		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
 		starArea.setEditable(false);
 		starArea.setBounds(470, 149, 298, 70);
 		add(starArea);
@@ -92,17 +97,21 @@ public class LevelView extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
-		theView = new GameView(this);
-		theView.setSize(400 , 400);
-		theView.setLocation(12 , 12);
-		add(theView);
+		gameView = new GameView(this, theLevel);
+		gameView.setSize(400 , 400);
+		gameView.setLocation(12 , 12);
+		add(gameView);
 	}
 	
 	public void refresh() {
-		theView.refresh();
+		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
+		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
+		gameView.refresh();
 	}
 	
-	public Level getLevel() {
-		return theLevel;
-	}
+	// Getters //
+	public Level getLevel() { return theLevel; }
+	public MainMenuView getMainMenuView() { return mainMenu; }
+	public GameView getGameView() { return gameView; }
+	
 }

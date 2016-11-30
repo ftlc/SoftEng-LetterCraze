@@ -1,5 +1,6 @@
-import Boundaries.SplashScreenView;
-import Entities.Model;
+package Player;
+import Player.Boundaries.SplashScreenView;
+import Player.Entities.Model;
 
 
 public class Main {
