@@ -417,5 +417,14 @@ public class MainScreen extends JFrame {
 		});
 		btnNewButton_3.setBounds(499, 382, 187, 33);
 		contentPane.add(btnNewButton_3);
+		
+		JButton btnNewButton_4 = new JButton("EXIT");
+		btnNewButton_4.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_4.setBounds(498, 427, 193, 40);
+		contentPane.add(btnNewButton_4);
 	}
 }
