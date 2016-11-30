@@ -1,5 +1,9 @@
 Instructions First Implementation
 
+TEAM: IRON
+
+MEMBERS: Juan Luis Herrero Estrada, Harutyun Sadoyan, Nicolette Vere, Christian Scillitoe, Bradford Bonanno
+
 Builder
 
     1. Unzip the project
