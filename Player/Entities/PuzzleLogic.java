@@ -2,9 +2,12 @@ package Entities;
 
 public class PuzzleLogic extends Logic{
 	
-	public Word selectWord(Tile tiles[*]){
-		Word selected;
-		return selected;
+	public PuzzleLogic(Word selectedWord, int score) {
+		super(selectedWord, score);
+		// TODO Auto-generated constructor stub
+	}
+	public Word selectWord(Tile tiles[]){
+		return null;
 	}
 	public boolean gameOver(){
 		return false;

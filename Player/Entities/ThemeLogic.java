@@ -2,9 +2,12 @@ package Entities;
 
 public class ThemeLogic extends Logic{
 	
-	public Word selectWord(Tile tiles[*]){
-		Word selected;
-		return selected;
+	public ThemeLogic(Word selectedWord, int score) {
+		super(selectedWord, score);
+		// TODO Auto-generated constructor stub
+	}
+	public Word selectWord(Tile tiles[]){
+		return null;
 	}
 	public boolean gameOver(){
 		return false;

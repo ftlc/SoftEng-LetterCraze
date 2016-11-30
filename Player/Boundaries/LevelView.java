@@ -13,16 +13,19 @@ import javax.swing.border.Border;
 
 import Controllers.LevelToMainMenuController;
 import Entities.Level;
+import Entities.Model;
 
 public class LevelView extends JFrame {
 
 	Level theLevel;
 	GameView theView;
 	MainMenuView mainMenu;
+	Model model;
 	
-	public LevelView(Level theLevel, MainMenuView mainMenu) {
+	public LevelView(Level theLevel, MainMenuView mainMenu, Model m) {
 		this.theLevel = theLevel;
 		this.mainMenu = mainMenu;
+		this.model = m;
 		initFrame();
 	}
 	
@@ -92,7 +95,7 @@ public class LevelView extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
-		theView = new GameView(this);
+		theView = new GameView(this, theLevel);
 		theView.setSize(400 , 400);
 		theView.setLocation(12 , 12);
 		add(theView);

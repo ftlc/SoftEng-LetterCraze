@@ -3,7 +3,6 @@ package Boundaries;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.util.Random;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
@@ -12,13 +11,17 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 
+import Entities.Level;
+import Entities.Tile;
+
 public class GameView extends JPanel {
 	
 	final int MAX_NUM_TILES = 6;
 	JLabel tileViews[][];
+	Level level;
 	JFrame parent;
 
-	public GameView(JFrame parent) {
+	public GameView(JFrame parent, Level theLevel) {
 		//Will have to pass GameView some data so it knows what to draw.
 		tileViews = new JLabel[MAX_NUM_TILES][MAX_NUM_TILES];
 		
@@ -27,6 +30,8 @@ public class GameView extends JPanel {
 		
 		this.setLayout(null);
 		this.parent = parent;
+		
+		this.level = theLevel;
 		
 		initTiles();
 	}
@@ -50,13 +55,14 @@ public class GameView extends JPanel {
 				// Generate Label //
 				JLabel tileView = new JLabel("Null", SwingConstants.CENTER);
 				tileView.setFont(new Font("TimesRoman", Font.PLAIN, 35));
-				String letter = generateLetter(); // Generates Random Letter //
-				//tileView.setText(letter);
+
 				tileView.setBounds(tileX,tileY,60,60);
 				tileView.setVisible(true);
 				tileView.setBackground(c);
 				tileView.setBorder(b);
-				tileView.setText(Tile.generateLetter());
+				Tile[][] tiles = level.getBoard().getTiles();
+				tileView.setText(tiles[x][y].getLetter());
+				
 				parent.add(tileView);
 				tileViews[x][y] = tileView;
 				
@@ -86,17 +92,6 @@ public class GameView extends JPanel {
 		}
 		
 		
-	}
-	// Generate Random Letters //
-	public String generateLetter(){
-		String returnStr = "0";
-		Random random = new Random();
-		int num = random.nextInt(26) + 65;
-		if(num == 81)
-			returnStr = "Qu";
-		else
-			returnStr = Character.toString((char)num);
-		return returnStr;
 	}
 	
 }

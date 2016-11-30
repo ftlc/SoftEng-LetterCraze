@@ -18,7 +18,7 @@ public class Model {
 	/* Exception (?) for missing level */
 	public void initializeLevels(){
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){
-			levels[i] = new Level(); // Will become level specific //
+			levels[i] = new Level("null"); // Will become level specific //
 		}
 	}
 

@@ -2,14 +2,18 @@ package Entities;
 import Entities.Tile;
 
 public class Word{
-	Tile tiles[] = new tiles[*];
-	int wordscore;
+	Tile tiles[];
+	int wordScore;
 	
-	public Word(Tile t, int wordscore){
-		this.wordscore = wordscore;
+	public Word(Tile[] t, int wordscore){
+		this.wordScore = wordscore;
 		this.tiles = t;
 	}
 	public int calculateWordScore(){
-		return wordscore;
+		return wordScore;
 	}
+	
+	// Getters //
+	public Tile[] getWordTiles() { return tiles; }
+	public int getWordScore() { return wordScore; }
 }
