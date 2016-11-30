@@ -1,9 +1,7 @@
 package Builder;
 
-import Builder.Boundaries.LevelView;
-import Builder.Boundaries.SplashScreenView;
-import Builder.Entities.Level;
-import Builder.Entities.Model;
+import Builder.Boundaries.*;
+import Builder.Entities.*;
 
 import java.awt.*;
 
@@ -11,7 +9,10 @@ public class Main {
     public static void main(String[] args) {
 		Level lvl = new Level();
         Model model = new Model(lvl);
-		LevelView lview = new LevelView(model);
+        ThemeView themeView = new ThemeView(model);
+        
+		LevelView lview = new LevelView(model, themeView);
+		
 
         EventQueue.invokeLater(new Runnable() {
 			public void run() {

@@ -7,18 +7,18 @@ import Builder.Boundaries.LevelView;
 import Builder.Boundaries.SplashScreenView;
 
 public class ExitBuilderController implements ActionListener{
-	LevelView from;
-	SplashScreenView to;
+	LevelView levelLeft;
 
-	public ExitBuilderController(LevelView from, SplashScreenView to)
+
+	public ExitBuilderController(LevelView levelLeft)
 	{
-		this.from = from;
-		this.to = to;
+		this.levelLeft = levelLeft;
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent actionEvent) {
-		from.setVisible(false);
-		to.setVisible(true);
+
+	public void actionPerformed(ActionEvent e)
+	{
+		System.exit(0);
 	}
+
 }

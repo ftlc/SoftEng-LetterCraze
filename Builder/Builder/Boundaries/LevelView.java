@@ -1,5 +1,8 @@
 package Builder.Boundaries;
 
+import Builder.Controllers.ExitBuilderController;
+import Builder.Controllers.SplashScreenToLevelController;
+import Builder.Controllers.ThemePopUpController;
 import Builder.Entities.Model;
 
 import java.awt.BorderLayout;
@@ -41,11 +44,13 @@ public class LevelView extends JFrame{
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
+	private ThemeView themeCreationDialog;
 
-
-    public LevelView(Model m)
+    public LevelView(Model m, ThemeView themeCreationDialog)
     {
         this.model = m;
+        this.themeCreationDialog = themeCreationDialog;
+        
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 711, 569);
@@ -155,9 +160,22 @@ public class LevelView extends JFrame{
 		});
 		btnNewButton_3.setBounds(499, 382, 187, 33);
 		contentPane.add(btnNewButton_3);
+		
+		// This allows the user to click on the theme button leading you to the 
+		// JDialog to make your theme
+		btnNewButton_3.addActionListener(new ThemePopUpController(this, this.themeCreationDialog));
 
-
-
+		JButton btnNewButton_4 = new JButton("EXIT");
+		btnNewButton_4.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_4.setBounds(498, 427, 193, 40);
+		contentPane.add(btnNewButton_4);
+		
+		// controller used to exit the program when clicked on the exit button
+		btnNewButton_4.addActionListener(new ExitBuilderController(this));
 
     }
 

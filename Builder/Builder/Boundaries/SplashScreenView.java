@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 public class SplashScreenView extends JFrame {
 
     private JPanel contentPane;
-    LevelView lvl;
+    private LevelView lvl;
 
     public SplashScreenView (Model m, LevelView lvl) {
         this.lvl = lvl;

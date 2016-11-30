@@ -359,8 +359,8 @@ public class MainScreen extends JFrame {
 		gbc_toggleButton36.gridy = 5;
 		panel.add(toggleButton36, gbc_toggleButton36);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Puzzle", "Lightning", "Theme"}));
+		JComboBox<String> comboBox = new JComboBox<String>();
+		comboBox.setModel(new DefaultComboBoxModel<String>(new String[] {"Puzzle", "Lightning", "Theme"}));
 		comboBox.setBounds(499, 27, 206, 27);
 		contentPane.add(comboBox);
 		
