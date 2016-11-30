@@ -11,12 +11,13 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JTextArea;
+import javax.swing.JList;
+import javax.swing.JTextPane;
 
 public class ThemePopUp extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 	private JTextField textField;
-	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -56,19 +57,18 @@ public class ThemePopUp extends JDialog {
 		lblNewLabel.setBounds(6, 76, 87, 16);
 		contentPanel.add(lblNewLabel);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(138, 71, 294, 152);
-		contentPanel.add(textField_1);
-		textField_1.setColumns(10);
-		
 		JLabel lblLetterOrder = new JLabel("Letter Order");
 		lblLetterOrder.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLetterOrder.setBounds(6, 235, 87, 16);
 		contentPanel.add(lblLetterOrder);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(138, 235, 294, 154);
-		contentPanel.add(textArea);
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(138, 75, 294, 149);
+		contentPanel.add(textPane);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setBounds(134, 235, 298, 173);
+		contentPanel.add(textPane_1);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
