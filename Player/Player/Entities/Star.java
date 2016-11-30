@@ -10,7 +10,7 @@ public class Star{
 		this.threeStar = three;
 	}
 	public int calculateStars(){
-		return -1;
+		return 0;
 	}
 	
 	// Getters //

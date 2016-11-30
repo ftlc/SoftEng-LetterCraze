@@ -20,12 +20,16 @@ public class LevelView extends JFrame {
 	Level theLevel;
 	GameView gameView;
 	MainMenuView mainMenu;
+	JTextArea starArea;
+	JTextArea scoreArea;
 	Model model;
 	
 	public LevelView(Level theLevel, MainMenuView mainMenu, Model m) {
 		this.theLevel = theLevel;
 		this.mainMenu = mainMenu;
 		this.model = m;
+		this.starArea = new JTextArea();
+		this.scoreArea = new JTextArea();
 		initFrame();
 	}
 	
@@ -63,8 +67,7 @@ public class LevelView extends JFrame {
 		
 		add(scroll);
 		
-		JTextArea scoreArea = new JTextArea();
-		scoreArea.setText("Score\n 0");
+		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
 		scoreArea.setFont(f);
 		scoreArea.setBackground(c);
 		scoreArea.setBorder(b);
@@ -72,11 +75,10 @@ public class LevelView extends JFrame {
 		scoreArea.setBounds(470, 37, 298, 70);
 		add(scoreArea);
 		
-		JTextArea starArea = new JTextArea();
 		starArea.setFont(f);
 		starArea.setBackground(c);
 		starArea.setBorder(b);
-		starArea.setText("Stars\n 0");
+		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
 		starArea.setEditable(false);
 		starArea.setBounds(470, 149, 298, 70);
 		add(starArea);
@@ -102,6 +104,8 @@ public class LevelView extends JFrame {
 	}
 	
 	public void refresh() {
+		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
+		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
 		gameView.refresh();
 	}
 	

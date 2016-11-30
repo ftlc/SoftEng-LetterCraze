@@ -10,6 +10,7 @@ public class Level {
 	String path;
 	Board board;
 	Star star;
+	int score;
 	int highScore;
 	Logic logic;
 	Dictionary dictionary;
@@ -17,6 +18,7 @@ public class Level {
 	public Level(String path) {
 		this.path = path;
 		this.board = new Board(new char[TOTAL_NUM_TILES][TOTAL_NUM_TILES]);
+		this.score = 0;
 	}
 	
 	public boolean saveHighScore(int score){
@@ -47,6 +49,7 @@ public class Level {
 	// Getters and Setters //
 	public Board getBoard() { return board; }
 	public Star getStar() { return star; }
+	public int getScore() { return score; }
 	public int getHighScore() { return highScore; }
 	public Logic getLogic() { return logic; }
 	public Dictionary getDictionary() { return dictionary; }
