@@ -18,7 +18,7 @@ import Entities.Model;
 public class LevelView extends JFrame {
 
 	Level theLevel;
-	GameView theView;
+	GameView gameView;
 	MainMenuView mainMenu;
 	Model model;
 	
@@ -95,17 +95,19 @@ public class LevelView extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
-		theView = new GameView(this, theLevel);
-		theView.setSize(400 , 400);
-		theView.setLocation(12 , 12);
-		add(theView);
+		gameView = new GameView(this, theLevel);
+		gameView.setSize(400 , 400);
+		gameView.setLocation(12 , 12);
+		add(gameView);
 	}
 	
 	public void refresh() {
-		theView.refresh();
+		gameView.refresh();
 	}
 	
-	public Level getLevel() {
-		return theLevel;
-	}
+	// Getters //
+	public Level getLevel() { return theLevel; }
+	public MainMenuView getMainMenuView() { return mainMenu; }
+	public GameView getGameView() { return gameView; }
+	
 }

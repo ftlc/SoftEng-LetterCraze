@@ -94,4 +94,8 @@ public class GameView extends JPanel {
 		
 	}
 	
+	// Getters //
+	public JFrame getLevelView() { return parent; }
+	public JLabel[][] getTileViews() { return tileViews;}
+	
 }
