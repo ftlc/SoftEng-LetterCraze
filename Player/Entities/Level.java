@@ -10,6 +10,7 @@ public class Level {
 	int highscore;
 	Logic logic;
 	Dictionary dictionary;
+	Tile[][] tiles = new Tile[][];
 
 	public Level(String path) {
 		this.path = path;

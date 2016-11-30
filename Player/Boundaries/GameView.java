@@ -51,11 +51,12 @@ public class GameView extends JPanel {
 				JLabel tileView = new JLabel("Null", SwingConstants.CENTER);
 				tileView.setFont(new Font("TimesRoman", Font.PLAIN, 35));
 				String letter = generateLetter(); // Generates Random Letter //
-				tileView.setText(letter);
+				//tileView.setText(letter);
 				tileView.setBounds(tileX,tileY,60,60);
 				tileView.setVisible(true);
 				tileView.setBackground(c);
 				tileView.setBorder(b);
+				tileView.setText(Tile.generateLetter());
 				parent.add(tileView);
 				tileViews[x][y] = tileView;
 				
