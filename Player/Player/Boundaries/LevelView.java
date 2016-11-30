@@ -1,4 +1,4 @@
-package Boundaries;
+package Player.Boundaries;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,9 +11,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.Border;
 
-import Controllers.LevelToMainMenuController;
-import Entities.Level;
-import Entities.Model;
+import Player.Controllers.LevelToMainMenuController;
+import Player.Entities.Level;
+import Player.Entities.Model;
 
 public class LevelView extends JFrame {
 

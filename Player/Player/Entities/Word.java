@@ -1,5 +1,5 @@
-package Entities;
-import Entities.Tile;
+package Player.Entities;
+import Player.Entities.Tile;
 
 public class Word{
 	Tile tiles[];

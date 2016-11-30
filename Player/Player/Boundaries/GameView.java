@@ -1,4 +1,4 @@
-package Boundaries;
+package Player.Boundaries;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 
-import Entities.Level;
-import Entities.Tile;
+import Player.Entities.Level;
+import Player.Entities.Tile;
 
 public class GameView extends JPanel {
 	

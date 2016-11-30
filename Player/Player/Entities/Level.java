@@ -1,10 +1,9 @@
-package Entities;
-import Entities.Star;
-import Entities.Word;
-
+package Player.Entities;
 import java.util.Dictionary;
 
-import Entities.Board;
+import Player.Entities.Board;
+import Player.Entities.Star;
+import Player.Entities.Word;
 
 public class Level {
 	final int TOTAL_NUM_TILES = 6;

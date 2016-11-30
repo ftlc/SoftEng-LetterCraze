@@ -1,4 +1,4 @@
-package Boundaries;
+package Player.Boundaries;
 
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
@@ -6,9 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-import Controllers.MainMenuToLevelController;
-import Entities.Level;
-import Entities.Model;
+import Player.Controllers.MainMenuToLevelController;
+import Player.Entities.Level;
+import Player.Entities.Model;
 
 public class MainMenuView extends JFrame {
 	

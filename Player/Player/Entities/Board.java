@@ -1,5 +1,5 @@
-package Entities;
-import Entities.Tile;
+package Player.Entities;
+import Player.Entities.Tile;
 
 public class Board{
 	final int TOTAL_NUM_TILES = 6;

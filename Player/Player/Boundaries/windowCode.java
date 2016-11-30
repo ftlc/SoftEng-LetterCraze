@@ -1,4 +1,4 @@
-package Boundaries;
+package Player.Boundaries;
 
 import java.awt.EventQueue;
 

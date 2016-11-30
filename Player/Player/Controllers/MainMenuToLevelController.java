@@ -1,10 +1,10 @@
-package Controllers;
+package Player.Controllers;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Boundaries.LevelView;
-import Boundaries.MainMenuView;
+import Player.Boundaries.LevelView;
+import Player.Boundaries.MainMenuView;
 
 public class MainMenuToLevelController implements ActionListener {
 

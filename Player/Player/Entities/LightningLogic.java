@@ -1,4 +1,4 @@
-package Entities;
+package Player.Entities;
 
 public class LightningLogic extends Logic{
 
