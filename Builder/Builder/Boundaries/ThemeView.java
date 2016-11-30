@@ -11,6 +11,7 @@ import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import Builder.Controllers.CloseThemeController;
 import Builder.Entities.Model;
 
 public class ThemeView extends JDialog{
@@ -71,6 +72,7 @@ public class ThemeView extends JDialog{
 			{
 				JButton cancelButton = new JButton("Cancel");
 				cancelButton.setActionCommand("Cancel");
+				cancelButton.addActionListener(new CloseThemeController(this));
 				buttonPane.add(cancelButton);
 			}
 		}
