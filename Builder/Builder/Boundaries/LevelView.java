@@ -46,10 +46,12 @@ public class LevelView extends JFrame{
 	private JTextField textField_4;
 	private ThemeView themeCreationDialog;
 
-    public LevelView(Model m, ThemeView themeCreationDialog)
+    public LevelView(Model m) //, ThemeView themeCreationDialog)
     {
+
+
         this.model = m;
-        this.themeCreationDialog = themeCreationDialog;
+        this.themeCreationDialog = new ThemeView(m);
         
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -154,10 +156,7 @@ public class LevelView extends JFrame{
 
 		JButton btnNewButton_3 = new JButton("Theme");
 		btnNewButton_3.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-		btnNewButton_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+
 		btnNewButton_3.setBounds(499, 382, 187, 33);
 		contentPane.add(btnNewButton_3);
 		
