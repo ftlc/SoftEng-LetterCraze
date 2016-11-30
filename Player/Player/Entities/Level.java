@@ -19,6 +19,7 @@ public class Level {
 		this.path = path;
 		this.board = new Board(new char[TOTAL_NUM_TILES][TOTAL_NUM_TILES]);
 		this.score = 0;
+		this.star = new Star(0,0,0);
 	}
 	
 	public boolean saveHighScore(int score){
