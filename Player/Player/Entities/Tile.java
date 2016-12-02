@@ -42,7 +42,7 @@ public class Tile{
 	public int getXCoord() { return xCoord; }
 	public int getYCoord() { return yCoord; }
 	
-	// Setters //
+	// Setters //generateLetter()
 	public void setXCoord(int x) { xCoord = x; }
 	public void setYCoord(int y) { yCoord = y; }
 }

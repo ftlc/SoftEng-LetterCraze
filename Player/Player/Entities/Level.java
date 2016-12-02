@@ -1,5 +1,5 @@
 package Player.Entities;
-import java.util.Dictionary;
+import Player.Entities.Dictionary;
 
 import Player.Entities.Board;
 import Player.Entities.Star;
