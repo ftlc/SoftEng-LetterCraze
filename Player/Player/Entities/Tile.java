@@ -17,6 +17,14 @@ public class Tile{
 		this.letter = generateLetter();
 		this.value = -1;
 	}
+	public Tile(int x, int y, String letter){
+		this.xCoord = x;
+		this.yCoord = y;
+		
+		this.random = new Random();
+		this.letter = letter;
+		this.value = -1;
+	}
 	// Generate Random Letters //
 	public String generateLetter(){
 		String returnStr = "0";
