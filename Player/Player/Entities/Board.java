@@ -28,7 +28,7 @@ public class Board{
 	}
 	// Assumes X is .brd marking for tile existing //
 	public boolean isValid(int xCoord, int yCoord){
-		return layout[xCoord][yCoord] == 'X';
+		return layout[xCoord][yCoord] == 'O';
 	}
 	
 	// Getters //
