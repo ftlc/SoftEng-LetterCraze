@@ -1,0 +1,25 @@
+T
+-
+2     <-- # of words you must find for 1 star
+4     <-- 2
+6     <-- 3 stars
+-
+Animals   <-- Name of the theme
+-
+Dog       <-- Dictionary (as long as you want)
+Cat
+Monkey
+Donkey
+Giraffe
+-
+HUEJFK    <-- Predetermined board layout.
+DQEHW"    <-- "QU" will just be a Q in the file
+WDW"FJ    <-- a '"' character means a blank tile
+EIFI"F
+E"RJEK
+VNFMEJ
+-
+0       <-- Previous amount of stars
+            received on this level
+              (the builder should default this to 0)
+              (the player will edit the value)
