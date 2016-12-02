@@ -1,5 +1,6 @@
 package Builder.Boundaries;
 
+import Builder.Controllers.SplashScreenToLevelController;
 import Builder.Entities.Model;
 
 import javax.swing.*;
@@ -14,10 +15,36 @@ import java.awt.event.ActionListener;
 public class SplashScreenView extends JFrame {
 
     private JPanel contentPane;
+    private Model m;
 
     public SplashScreenView (Model m) {
+        this.m = m;
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        initFrame();
+
+        setVisible(true);
+
+		try {
+            Thread.sleep(3000);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        setVisible(false);
+        dispose();
+
+
+        LevelView lvlView = new LevelView(this.m);
+
+        lvlView.setVisible(true);
+    }
+
+
+    void initFrame() {
+         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 709, 567);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -44,14 +71,7 @@ public class SplashScreenView extends JFrame {
 		txtrJuanLuis.setText("ø Juan Luis Herrero Estrada\n\nø Harutyun Sadoyan\n\nø Christian Scillitoe\n\nø Bradford Bonanno\n\nø Nicolette Vere");
 		txtrJuanLuis.setBounds(6, 178, 697, 239);
 		contentPane.add(txtrJuanLuis);
-
-		JButton btnNewButton = new JButton("Create New Level");
-		btnNewButton.setFont(new Font("Lucida Grande", Font.PLAIN, 39));
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton.setBounds(6, 429, 697, 110);
-		contentPane.add(btnNewButton);
     }
+
+
 }

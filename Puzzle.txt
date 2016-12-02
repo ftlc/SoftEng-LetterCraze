@@ -1,0 +1,19 @@
+P       <-- Puzzle Level
+-
+100     <-- Point values for 1
+200     <-- 2
+300     <-- 3 stars
+-
+20      <-- Maximum number of moves
+-
+OOOOOO  <-- Board layout. O = on
+OOOOOX  <-- X for off.
+OOOOXX
+OOOOOO
+OOOOOO
+OOOOOO
+-
+0       <-- Previous amount of stars
+            received on this level
+              (the builder should default this to 0)
+              (the player will edit the value)

@@ -1,15 +1,16 @@
 package Builder;
 
-import Builder.Boundaries.SplashScreenView;
-import Builder.Entities.Level;
-import Builder.Entities.Model;
+import Builder.Boundaries.*;
+import Builder.Entities.*;
+
+import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        Level l = new Level();
+		Level lvl = new Level();
+        Model model = new Model(lvl);
 
 
-        Model model = new Model(l);
-        SplashScreenView s = new SplashScreenView(model);
+		SplashScreenView s = new SplashScreenView(model);
     }
 }
