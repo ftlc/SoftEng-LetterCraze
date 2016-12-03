@@ -138,7 +138,7 @@ public class MainMenuView extends JFrame {
 					.addContainerGap(130, Short.MAX_VALUE))
 		);
 		getContentPane().setLayout(groupLayout);
-		setTitle("Builder.Main Menu");
+		setTitle("LetterCraze");
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
