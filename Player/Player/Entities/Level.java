@@ -21,6 +21,7 @@ public class Level {
 	String theme; //temp
 	Logic logic;
 	Dictionary dictionary;
+	String thirdBox;
 
 	public Level(String path) {
 		this.path = path;
@@ -29,6 +30,7 @@ public class Level {
 		this.maxMoves = 0;
 		this.timer = 0;
 		this.dictionary = new Dictionary();
+		this.thirdBox = "null";
 		
 		readLevel(path);
 	}
@@ -39,14 +41,14 @@ public class Level {
 			// open input stream test.txt for reading purpose.
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while ((currLine = br.readLine().trim()) != null) {
-				System.out.println(currLine);
 				if (currLine.equals("P")) {
-					System.out.println("PUZZLE INIT");
 					br.close();
 					return puzzleInit(path);
 				} else if (currLine.equals("L")) {
+					br.close();
 					return lightningInit(path);
 				} else if (currLine.equals("T")) {
+					br.close();
 					return themeInit(path);
 				}
 			}
@@ -77,7 +79,9 @@ public class Level {
 					break;
 				case 1:
 					currLine = br.readLine().trim();
-					this.maxMoves = Integer.parseInt(currLine);
+					int maxMoves = Integer.parseInt(currLine);
+					this.maxMoves = maxMoves; // temp
+					this.thirdBox = "Max Moves\n" + String.valueOf(maxMoves);
 					break;
 				case 2:
 					char[][] layout = new char[6][6];
@@ -122,7 +126,9 @@ public class Level {
 					break;
 				case 1:
 					currLine = br.readLine().trim();
-					this.timer = Integer.parseInt(currLine);
+					int timer = Integer.parseInt(currLine);
+					this.timer = timer; // temp
+					this.thirdBox = "Timer\n"+ String.valueOf(timer);
 					break;
 				case 2:
 					char[][] layout = new char[6][6];
@@ -167,13 +173,14 @@ public class Level {
 					break;
 				case 1:
 					currLine = br.readLine().trim();
-					this.theme = currLine;
+					String theme = currLine;
+					this.theme = theme; // temp
+					this.thirdBox = "Theme:\n"+ theme;
 					break;
 				case 2:
 					// Read in Dictionary up to Line //
 					while(!(currLine = br.readLine().trim()).equals("-")){
 						dictionary.addWord(currLine);
-						System.out.println(currLine);
 					}
 					break;
 				case 3:
@@ -233,4 +240,5 @@ public class Level {
 	public Logic getLogic() { return logic; }
 	public Dictionary getDictionary() { return dictionary; }
 	public int getTimer() { return timer; }
+	public String getThirdBox() { return thirdBox; }
 }

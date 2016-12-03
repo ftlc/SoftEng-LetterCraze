@@ -87,7 +87,7 @@ public class LevelView extends JFrame {
 		timerArea.setFont(f);
 		timerArea.setBackground(c);
 		timerArea.setBorder(b);
-		timerArea.setText("Timer\n" + Integer.toString(theLevel.getTimer()));
+		timerArea.setText(theLevel.getThirdBox());
 		timerArea.setEditable(false);
 		timerArea.setBounds(470, 257, 298, 70);
 		add(timerArea);
