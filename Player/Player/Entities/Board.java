@@ -29,12 +29,12 @@ public class Board{
 		
 		for (int x = 0; x < TOTAL_NUM_TILES; x++){
 			for(int y = 0; y < TOTAL_NUM_TILES; y++){
-				char c = layout[x][y];
+				char c = layout[y][x];
 				if(c != '"'){
 					if(c == 'Q')
 						tiles[x][y] = new Tile(x,y,"Qu");
 					else
-						tiles[x][y] = new Tile(x,y,String.valueOf(c));
+						tiles[x][y] = new Tile(x,y,Character.toString(c));
 				}
 			}
 		}

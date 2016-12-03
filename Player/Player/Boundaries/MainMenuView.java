@@ -43,7 +43,8 @@ public class MainMenuView extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){
-			levelButtons[i] = new JButton("Level ".concat(Integer.toString((i+1))));
+			Level theLevel = model.getLevels()[i];
+			levelButtons[i] = new JButton("Level "+Integer.toString((i+1)));
 			levelButtons[i].addActionListener(new MainMenuToLevelController(this, levelViews[i]));
 			
 			if(i >= 3)
