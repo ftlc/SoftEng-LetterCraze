@@ -1,9 +1,9 @@
 package Builder;
 
-import Builder.Boundaries.*;
-import Builder.Entities.*;
 
-import java.awt.*;
+import Builder.Boundaries.SplashScreenView;
+import Builder.Entities.Level;
+import Builder.Entities.Model;
 
 public class Main {
     public static void main(String[] args) {

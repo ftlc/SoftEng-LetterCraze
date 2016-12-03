@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Builder/Builder.iml" filepath="$PROJECT_DIR$/Builder/Builder.iml" />
       <module fileurl="file://$PROJECT_DIR$/iron_builder.iml" filepath="$PROJECT_DIR$/iron_builder.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Builder/src/src.iml" filepath="$PROJECT_DIR$/Builder/src/src.iml" />
     </modules>
   </component>
 </project>
