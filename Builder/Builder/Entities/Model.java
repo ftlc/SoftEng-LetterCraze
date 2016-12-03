@@ -8,5 +8,8 @@ public class Model {
 	{
 		this.level = level;
 	}
-	public Model() {}
+	public Model() {
+		this.level = new Level();
+
+	}
 }

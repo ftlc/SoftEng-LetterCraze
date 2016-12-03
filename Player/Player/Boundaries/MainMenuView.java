@@ -37,7 +37,7 @@ public class MainMenuView extends JFrame {
 		}
 	}
 	
-	// Create Main Menu Frame with Level Buttons //
+	// Create Builder.Main Menu Frame with Level Buttons //
 	private void initFrame() {
 		setSize(800, 800);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -119,7 +119,7 @@ public class MainMenuView extends JFrame {
 					.addContainerGap(130, Short.MAX_VALUE))
 		);
 		getContentPane().setLayout(groupLayout);
-		setTitle("Main Menu");
+		setTitle("Builder.Main Menu");
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}

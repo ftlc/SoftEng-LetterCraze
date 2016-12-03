@@ -10,11 +10,11 @@ Builder
 
     2. Open Builder Folder
 
-    3. Run the Main from the builder package.
+    3. Run the Builder.Main from the builder package.
  
     4. Splash Screen will run for 3 seconds
   
-    5. Main GUI will show up.
+    5. Builder.Main GUI will show up.
    
     6. Click on add theme to open dialog box
    
@@ -28,7 +28,7 @@ Player
     
     2. Open Player folder
     
-    3. Run the Main from the player package
+    3. Run the Builder.Main from the player package
     
     4. Splash screen will run for 3 seconds.
     
