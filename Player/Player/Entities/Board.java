@@ -14,6 +14,15 @@ public class Board{
 		
 		initializeTiles();
 	}
+	public Board(char[][] l, boolean theme){
+		this.layout = l;
+		tiles = new Tile[TOTAL_NUM_TILES][TOTAL_NUM_TILES];
+		if(theme == true)
+			return;
+			//initializeTilesTheme();
+		else
+			initializeTiles();
+	}
 	
 	public boolean initializeTiles(){
 		boolean init = true;

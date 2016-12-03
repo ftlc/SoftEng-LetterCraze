@@ -1,0 +1,16 @@
+L       
+-
+5       
+10      
+15      
+-
+150     
+-
+OOOOOO  
+XXOOXX  
+XXOOXX
+XXOOXX
+XXOOXX
+OOOOOO
+-
+0      
