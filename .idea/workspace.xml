@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Board.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/LightningLevel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/PuzzleLevel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Square.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/ThemeLevel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -887,7 +879,7 @@
       <workItem from="1480555051404" duration="77000" />
       <workItem from="1480617258842" duration="1123000" />
       <workItem from="1480723845520" duration="1546000" />
-      <workItem from="1480726195803" duration="1288000" />
+      <workItem from="1480726195803" duration="1512000" />
     </task>
     <task id="LOCAL-00001" summary="Splash Screen Button">
       <created>1480494394704</created>
@@ -938,11 +930,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480724128484</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Builder Entity Classes">
+      <created>1480727496804</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1480727496804</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26713000" />
+    <option name="totallyTimeSpent" value="26937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
@@ -994,7 +993,8 @@
     <MESSAGE value="Splash Screen" />
     <MESSAGE value="Clean Up Code" />
     <MESSAGE value="Src Bug Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Src Bug Fix" />
+    <MESSAGE value="Builder Entity Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Builder Entity Classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
