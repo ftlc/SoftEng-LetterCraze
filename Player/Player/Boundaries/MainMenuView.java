@@ -1,8 +1,13 @@
 package Player.Boundaries;
 
+import java.awt.BorderLayout;
+
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
@@ -14,7 +19,7 @@ public class MainMenuView extends JFrame {
 	
 	final int TOTAL_NUM_LEVELS = 15; // 15 levels in final build //
 	
-	JButton[] levelButtons;
+	JPanel[] levelButtons;
 	Level[] levels;
 	LevelView[] levelViews;
 	Model model;
@@ -22,7 +27,7 @@ public class MainMenuView extends JFrame {
 	
 	public MainMenuView(Model m) {
 		model = m;
-		levelButtons = new JButton[TOTAL_NUM_LEVELS];
+		levelButtons = new JPanel[TOTAL_NUM_LEVELS];
 		levels = model.getLevels();
 		levelViews = new LevelView[TOTAL_NUM_LEVELS];
 		
@@ -43,12 +48,25 @@ public class MainMenuView extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){
+			// Level that LevelView Corresponds To //
 			Level theLevel = model.getLevels()[i];
-			levelButtons[i] = new JButton("Level "+Integer.toString((i+1)));
-			levelButtons[i].addActionListener(new MainMenuToLevelController(this, levelViews[i]));
 			
-			if(i >= 3)
-				levelButtons[i].setEnabled(false);
+			// JButton //
+			JButton theButton = new JButton("Level "+Integer.toString((i+1)));
+			theButton.addActionListener(new MainMenuToLevelController(this, levelViews[i]));
+			
+			// High Score Label //
+			JLabel highScore = new JLabel("Stars: " + Integer.toString(theLevel.getHighScore()), SwingConstants.CENTER);
+			
+			// Place Button and Label on JPanel //
+			levelButtons[i] = new JPanel(new BorderLayout());
+			levelButtons[i].add(theButton, BorderLayout.CENTER);
+			levelButtons[i].add(highScore, BorderLayout.SOUTH);
+			
+			if(i >= 3){
+				highScore.setText("Locked");
+				theButton.setEnabled(false);
+			}
 		}
 		
 		
