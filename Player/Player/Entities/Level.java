@@ -35,19 +35,21 @@ public class Level {
 		readLevel(path);
 	}
 	
+	// Determine Level Type from First Line //
+	//              of File                //
 	public boolean readLevel(String path) {
-		String currLine = null;
+		String currLine = null; // Buffer for line being read 
 		try {
-			// open input stream test.txt for reading purpose.
+			// Open File //
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while ((currLine = br.readLine().trim()) != null) {
-				if (currLine.equals("P")) {
+				if (currLine.equals("P")) { // Puzzle Case 
 					br.close();
 					return puzzleInit(path);
-				} else if (currLine.equals("L")) {
+				} else if (currLine.equals("L")) { // Lightning Case
 					br.close();
 					return lightningInit(path);
-				} else if (currLine.equals("T")) {
+				} else if (currLine.equals("T")) { // Theme Case
 					br.close();
 					return themeInit(path);
 				}
@@ -60,9 +62,14 @@ public class Level {
 		return true;
 	}
 	
+	// Initialize Entities for Puzzle Level //
+	//         by reading from file        //
 	public boolean puzzleInit(String path) {
-		String currLine = null;
-		int lineCount = 0;
+		
+		String currLine = null; // Buffer for each line 
+		
+		int lineCount = 0; // Keeps track of which section 
+						   // of file is being read
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while((currLine=br.readLine()) != null){
@@ -107,44 +114,57 @@ public class Level {
 		}
 		return true;
 	}
+	
+	// Initialize Entities for Lightning Level //
+	//          by reading from file          //
 	public boolean lightningInit(String path) {
-		String currLine = null;
-		int lineCount = 0;
+		
+		String currLine = null; // Buffer for current line being read 
+		
+		int lineCount = 0; // Keeps track of which section 
+		   				   // of file is being read
 		try {
+			// Re-open file //
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while((currLine=br.readLine()) != null){
-				currLine = currLine.trim();
+				currLine = currLine.trim(); // Strips extra spaces
 				switch(lineCount){
 				case 0:
-					currLine=br.readLine();
-					int starAmounts[] = new int[3];
+					currLine=br.readLine(); // Skips '-'
+					int starAmounts[] = new int[3]; // Holds thresholds for
+													// star values
 					for(int i = 0; i < 3; i++){
-						currLine = br.readLine().trim();
+						currLine = br.readLine().trim(); 
 						starAmounts[i] = Integer.parseInt(currLine);
 					}
-					this.star = new Star(starAmounts[0], starAmounts[1], starAmounts[2]);
+					// Create new Star //
+					this.star = new Star(starAmounts[0], starAmounts[1], starAmounts[2]); 
 					break;
 				case 1:
 					currLine = br.readLine().trim();
-					int timer = Integer.parseInt(currLine);
+					int timer = Integer.parseInt(currLine); // Timer length 
 					this.timer = timer; // temp
 					this.thirdBox = "Timer\n"+ String.valueOf(timer);
 					break;
 				case 2:
+					// Read in board layout //
 					char[][] layout = new char[6][6];
 					for (int i = 0; i < 6; i++){
 						currLine = br.readLine();
-						layout[i] = currLine.toCharArray();
+						// Sets each row to character array //
+						//            From file             // 
+						layout[i] = currLine.toCharArray(); 
 					}
-					this.board = new Board(layout);
+					this.board = new Board(layout); // Create Board
 					break;
 				case 3:
 					currLine = br.readLine().trim();
-					this.highScore = Integer.parseInt(currLine);
+					// Stores stars previously scored //
+					this.highScore = Integer.parseInt(currLine); 
 				}
 					
 				
-				lineCount++;
+				lineCount++; // Next section of file being read //
 			}
 			br.close();
 			
@@ -154,9 +174,14 @@ public class Level {
 		}
 		return true;
 	}
+	// Initialize Entities for Theme Level //
+	//        by reading from file        //
 	public boolean themeInit(String path) {
-		String currLine = null;
-		int lineCount = 0;
+		
+		String currLine = null; // Buffer for current line being read
+		
+		int lineCount = 0; // Keeps track of which section 
+		   				   // of file is being read
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while((currLine=br.readLine()) != null){
