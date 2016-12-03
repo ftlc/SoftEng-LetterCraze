@@ -14,14 +14,32 @@ public class Board{
 		
 		initializeTiles();
 	}
+	
 	public Board(char[][] l, boolean theme){
 		this.layout = l;
 		tiles = new Tile[TOTAL_NUM_TILES][TOTAL_NUM_TILES];
 		if(theme == true)
-			return;
-			//initializeTilesTheme();
+			initializeTilesTheme();
 		else
 			initializeTiles();
+	}
+	
+	public boolean initializeTilesTheme(){
+		boolean init = true;
+		
+		for (int x = 0; x < TOTAL_NUM_TILES; x++){
+			for(int y = 0; y < TOTAL_NUM_TILES; y++){
+				char c = layout[x][y];
+				if(c != '"'){
+					if(c == 'Q')
+						tiles[x][y] = new Tile(x,y,"Qu");
+					else
+						tiles[x][y] = new Tile(x,y,String.valueOf(c));
+				}
+			}
+		}
+		
+		return init;
 	}
 	
 	public boolean initializeTiles(){
@@ -29,7 +47,8 @@ public class Board{
 		
 		for(int x = 0; x < TOTAL_NUM_TILES; x++){
 			for(int y = 0; y < TOTAL_NUM_TILES; y++){
-				tiles[x][y] = new Tile(x,y);
+				if(isValid(x,y) == true)
+					tiles[x][y] = new Tile(x,y);
 			}
 		}
 		

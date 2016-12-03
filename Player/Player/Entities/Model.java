@@ -18,7 +18,17 @@ public class Model {
 	/* Exception (?) for missing level */
 	public void initializeLevels(){
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){
-			levels[i] = new Level("null"); // Will become level specific //
+			int levelType = i % 3;
+			switch(levelType){
+			case 0:
+				levels[i] = new Level("Puzzle-Test.txt"); 
+				break;
+			case 1:
+				levels[i] = new Level("Lightning-Test.txt");
+				break;
+			case 2:
+				levels[i] = new Level("Theme-Test.txt");
+			}
 		}
 	}
 

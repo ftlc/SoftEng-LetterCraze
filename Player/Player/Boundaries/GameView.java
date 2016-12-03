@@ -53,18 +53,27 @@ public class GameView extends JPanel {
 				tileY += 15;
 				
 				// Generate Label //
-				JLabel tileView = new JLabel("Null", SwingConstants.CENTER);
-				tileView.setFont(new Font("TimesRoman", Font.PLAIN, 35));
-
-				tileView.setBounds(tileX,tileY,60,60);
-				tileView.setVisible(true);
-				tileView.setBackground(c);
-				tileView.setBorder(b);
 				Tile[][] tiles = level.getBoard().getTiles();
-				tileView.setText(tiles[x][y].getLetter());
-				
-				parent.add(tileView);
-				tileViews[x][y] = tileView;
+				if (tiles[x][y] != null) {
+					JLabel tileView = new JLabel("Null", SwingConstants.CENTER);
+					tileView.setFont(new Font("TimesRoman", Font.PLAIN, 35));
+
+					tileView.setBounds(tileX, tileY, 60, 60);
+					tileView.setVisible(true);
+					tileView.setBackground(c);
+					tileView.setBorder(b);
+					tileView.setText(tiles[x][y].getLetter());
+
+					parent.add(tileView);
+					tileViews[x][y] = tileView;
+				}
+				else {
+					JLabel tileView = new JLabel("Null", SwingConstants.CENTER);
+					tileView.setBounds(tileX, tileY, 60, 60);
+					tileView.setVisible(false);
+					parent.add(tileView);
+					tileViews[x][y] = tileView;
+				}
 				
 			}
 		}
