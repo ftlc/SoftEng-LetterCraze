@@ -22,6 +22,9 @@ public class Level {
 	Logic logic;
 	Dictionary dictionary;
 	String thirdBox;
+	String currSelectedWord;
+	String lastSelectedWord;
+	boolean selectingWord;
 
 	public Level(String path) {
 		this.path = path;
@@ -31,9 +34,13 @@ public class Level {
 		this.timer = 0;
 		this.dictionary = new Dictionary();
 		this.thirdBox = "null";
-		
+		this.selectingWord = false;
+		this.currSelectedWord = "";
+		this.lastSelectedWord = "";
 		readLevel(path);
 	}
+	
+	
 	
 	// Determine Level Type from First Line //
 	//              of File                //
@@ -296,4 +303,19 @@ public class Level {
 	public Dictionary getDictionary() { return dictionary; }
 	public int getTimer() { return timer; }
 	public String getThirdBox() { return thirdBox; }
+	public String getCurrSelectedWord() { return currSelectedWord; }
+	public String getLastSelectedWord() { return lastSelectedWord; }
+	public boolean getSelectingWord() { return selectingWord; }
+	
+	public void setSelectingWord(boolean b) {
+		this.selectingWord = b;
+	}
+	
+	public void setCurrSelectedWord(String s) {
+		this.currSelectedWord = s;
+	}
+	
+	public void setLastSelectedWord(String s) {
+		this.lastSelectedWord = s;
+	}
 }

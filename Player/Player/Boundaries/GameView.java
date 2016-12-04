@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 
+import Player.Controllers.TileController;
 import Player.Entities.Level;
 import Player.Entities.Tile;
 
@@ -18,19 +19,14 @@ public class GameView extends JPanel {
 	
 	final int MAX_NUM_TILES = 6;
 	JLabel tileViews[][];
+	TileController tileControllers[][];
 	Level level;
 	JFrame parent;
 
 	public GameView(JFrame parent, Level theLevel) {
 		//Will have to pass GameView some data so it knows what to draw.
 		tileViews = new JLabel[MAX_NUM_TILES][MAX_NUM_TILES];
-		
-		Border b = BorderFactory.createLineBorder(Color.BLACK, 1);
-		this.setBorder(b);
-		
-		this.setLayout(null);
-		this.parent = parent;
-		
+		tileControllers = new TileController[MAX_NUM_TILES][MAX_NUM_TILES];
 		this.level = theLevel;
 		
 		initTiles();
@@ -57,13 +53,13 @@ public class GameView extends JPanel {
 				if (tiles[x][y] != null) {
 					JLabel tileView = new JLabel("Null", SwingConstants.CENTER);
 					tileView.setFont(new Font("TimesRoman", Font.PLAIN, 35));
-
 					tileView.setBounds(tileX, tileY, 60, 60);
 					tileView.setVisible(true);
 					tileView.setBackground(c);
 					tileView.setBorder(b);
 					tileView.setText(tiles[x][y].getLetter());
-
+					tileControllers[x][y] = new TileController(tileView , level , this);
+					tileView.addMouseListener(tileControllers[x][y]);
 					parent.add(tileView);
 					tileViews[x][y] = tileView;
 				}
@@ -106,5 +102,6 @@ public class GameView extends JPanel {
 	// Getters //
 	public JFrame getLevelView() { return parent; }
 	public JLabel[][] getTileViews() { return tileViews;}
+	public TileController[][] getTileControllers() { return tileControllers; }
 	
 }
