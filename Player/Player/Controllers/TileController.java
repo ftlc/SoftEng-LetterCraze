@@ -55,6 +55,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 
 	private void pressed() {
+		System.out.println("Pressed");
 		if(!level.getSelectingWord() && !visited) {
 			//If we are not currently selecting a word
 			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
@@ -64,12 +65,11 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 	
 	private void released() {
-		if(level.getSelectingWord() && !visited) {
+		if(level.getSelectingWord()) {
 			//Set the last selected word as the word and clear the current word.
-			level.setLastSelectedWord(level.getCurrSelectedWord() + getValueHeld());
+			level.setLastSelectedWord(level.getCurrSelectedWord());
 			level.setCurrSelectedWord("");
 			level.setSelectingWord(false);
-			visited = true;
 			for(int x = 0 ; x < 6 ; x++) {
 				for(int y = 0 ; y < 6 ; y++) {
 					if(gameView.getTileControllers()[x][y] != null) {
