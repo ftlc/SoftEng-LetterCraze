@@ -1,6 +1,10 @@
 package Builder.Boundaries;
 
+import Builder.Controllers.ToggleSquareController;
+import Builder.Entities.Board;
+import Builder.Entities.Level;
 import Builder.Entities.Model;
+import Builder.Entities.Square;
 
 import javax.swing.*;
 import java.awt.*;
@@ -45,10 +49,14 @@ public class BoardView extends JPanel {
     {
 
 
-
+        Level l = model.getLevel();
+        Board b = l.getBoard();
         for(int i = 0; i < 36; i++)
         {
+
+            Square square = b.getSquareAt(i);
             squares[i] = new SquareView("");
+            squares[i].addActionListener(new ToggleSquareController(square, squares[i]));
             gbs[i] = new GridBagConstraints();
             gbs[i].fill = GridBagConstraints.BOTH;
         }

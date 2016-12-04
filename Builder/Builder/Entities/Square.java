@@ -4,15 +4,13 @@ package Builder.Entities;
  * Created by ftlc on 12/2/16.
  */
 public class Square {
-    String character;
     boolean toggle;
 
-    Square(String character, boolean toggle) {
-        this.character = character;
+    Square(boolean toggle) {
         this.toggle =  toggle;
     }
 
-    boolean ToggleSquare() {
+    public boolean toggleSquare() {
         setToggle(!isToggle());
 
         return true; 
