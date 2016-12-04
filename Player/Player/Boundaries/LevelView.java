@@ -93,7 +93,7 @@ public class LevelView extends JFrame {
 		timerArea.setBounds(470, 257, 298, 70);
 		add(timerArea);
 		
-		setTitle("Level View");
+		setTitle("LetterCraze");
 		setSize(800 , 800);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -109,6 +109,10 @@ public class LevelView extends JFrame {
 		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
 		timerArea.setText(theLevel.getThirdBox());
 		gameView.refresh();
+	}
+	public void reconstruct(){
+		this.removeAll();
+		initFrame();
 	}
 	
 	// Getters //
