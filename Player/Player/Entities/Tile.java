@@ -62,6 +62,7 @@ public class Tile{
 		
 		LinkedList<Double> ll2 = new LinkedList<Double>();
 		LinkedList<Double> ll = new LinkedList<Double>();
+		ll.add(0.0);
 		ll.add(8.167);
 		ll.add(1.492);
 		ll.add(2.782);
@@ -90,7 +91,7 @@ public class Tile{
 		ll.add(0.074);
 		int sw = 0;
 		String return_letter = null;
-		int sum  = 26;
+		int sum  = 27;
 		Random r = new Random();
 		double randomValue = 0 + (100 - 0) * r.nextDouble();
 		
@@ -101,20 +102,26 @@ public class Tile{
 			
 			ll2.add(next);
 			prev = next;
-			if(m == 25){
+			if(m == 26){
 				sw  = 1;
 			}
 		}
-	    int k = sum;
+	   
 	    if(sw == 1){
-	    for(k = sum -1 ; k>0 ; k--){
+	    for(int k = 26 ; k>0 ; k--){
 	    	if(randomValue  <= ll2.get(k) & randomValue >ll2.get(k-1)){
 	    		return_letter = hm1.get(k);
+	    		
+	    	
 	    	}
 	    }
 	    }
 	
-
+	    if(return_letter == null){
+	    	return_letter = "e";
+	    	System.out.println("error");
+	    }
+	   
 	
 		return return_letter;
 
