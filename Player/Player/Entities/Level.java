@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import com.sun.xml.internal.ws.dump.LoggingDumpTube.Position;
+
 import Player.Entities.Board;
 import Player.Entities.Star;
 import Player.Entities.Word;
@@ -12,6 +14,7 @@ import Player.Entities.Word;
 public class Level {
 	final int TOTAL_NUM_TILES = 6;
 	String path;
+	Position lastSelectedPosition;
 	int num;
 	Board board;
 	Star star;
@@ -309,6 +312,7 @@ public class Level {
 	public String getLastSelectedWord() { return lastSelectedWord; }
 	public boolean getSelectingWord() { return selectingWord; }
 	public int getLevelNum() { return num; }
+	public Position getLastSelectedPosition() { return lastSelectedPosition; }
 	
 	public void setSelectingWord(boolean b) {
 		this.selectingWord = b;
@@ -320,5 +324,9 @@ public class Level {
 	
 	public void setLastSelectedWord(String s) {
 		this.lastSelectedWord = s;
+	}
+	
+	public void setLastSelectedPosition(Position p){
+		this.lastSelectedPosition = p;
 	}
 }
