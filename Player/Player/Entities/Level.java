@@ -291,7 +291,7 @@ public class Level {
 		return false;
 	}
 	public void reconstruct(){
-		return;
+		readLevel(path);
 	}
 	
 	// Getters and Setters //
