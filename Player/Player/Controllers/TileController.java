@@ -1,5 +1,6 @@
 package Player.Controllers;
 
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -19,9 +20,11 @@ public class TileController implements MouseListener , MouseMotionListener {
 	
 	public TileController(JLabel tileView , Level l , GameView g) {
 		this.tileView = tileView;
+		tileView.setOpaque(true);
 		level = l;
 		this.gameView = g;
 		this.visited = false;
+		resetState();
 	}
 	
 	private String getValueHeld() {
@@ -29,6 +32,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 	
 	public void resetState() {
+		tileView.setBackground(Color.white);
 		this.visited = false;
 	}
 	
@@ -55,8 +59,10 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 
 	private void pressed() {
+		System.out.println("Pressed");
 		if(!level.getSelectingWord() && !visited) {
 			//If we are not currently selecting a word
+			tileView.setBackground(Color.green);
 			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
 			level.setSelectingWord(true);
 			visited = true;
@@ -64,12 +70,11 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 	
 	private void released() {
-		if(level.getSelectingWord() && !visited) {
+		if(level.getSelectingWord()) {
 			//Set the last selected word as the word and clear the current word.
-			level.setLastSelectedWord(level.getCurrSelectedWord() + getValueHeld());
+			level.setLastSelectedWord(level.getCurrSelectedWord());
 			level.setCurrSelectedWord("");
 			level.setSelectingWord(false);
-			visited = true;
 			for(int x = 0 ; x < 6 ; x++) {
 				for(int y = 0 ; y < 6 ; y++) {
 					if(gameView.getTileControllers()[x][y] != null) {
@@ -86,6 +91,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited) {
 			//If the mouse enters this tile and is pressed
 			visited = true;
+			tileView.setBackground(Color.green);
 			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
 		}
 	}

@@ -22,6 +22,7 @@ public class LevelView extends JFrame {
 	MainMenuView mainMenu;
 	JTextArea starArea;
 	JTextArea scoreArea;
+	JTextArea timerArea;
 	Model model;
 	
 	public LevelView(Level theLevel, MainMenuView mainMenu, Model m) {
@@ -30,6 +31,7 @@ public class LevelView extends JFrame {
 		this.model = m;
 		this.starArea = new JTextArea();
 		this.scoreArea = new JTextArea();
+		this.timerArea = new JTextArea();
 		initFrame();
 	}
 	
@@ -83,7 +85,6 @@ public class LevelView extends JFrame {
 		starArea.setBounds(470, 149, 298, 70);
 		add(starArea);
 		
-		JTextArea timerArea = new JTextArea();
 		timerArea.setFont(f);
 		timerArea.setBackground(c);
 		timerArea.setBorder(b);
@@ -92,7 +93,7 @@ public class LevelView extends JFrame {
 		timerArea.setBounds(470, 257, 298, 70);
 		add(timerArea);
 		
-		setTitle("Level View");
+		setTitle("LetterCraze");
 		setSize(800 , 800);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -106,7 +107,20 @@ public class LevelView extends JFrame {
 	public void refresh() {
 		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
 		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
+		timerArea.setText(theLevel.getThirdBox());
 		gameView.refresh();
+	}
+	
+	public void clearLevel() {
+		this.dispose();
+		gameView.setVisible(false);
+		gameView.validate();
+	}
+	
+	public void reconstruct(){
+		this.remove(gameView);
+		gameView = new GameView(this, theLevel);
+		this.add(gameView);
 	}
 	
 	// Getters //
