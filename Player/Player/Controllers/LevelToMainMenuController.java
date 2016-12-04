@@ -1,10 +1,6 @@
 package Player.Controllers;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import Player.Entities.Level;
-import Player.Boundaries.GameView;
 import Player.Boundaries.LevelView;
 import Player.Boundaries.MainMenuView;
 
@@ -24,9 +20,8 @@ public class LevelToMainMenuController implements ActionListener{
 		from.setVisible(false);
 		to.setVisible(true);
 
-		Level theLevel = from.getLevel();
-		//from.dispose();
-		theLevel.reconstruct();
+		from.clearLevel();
+		from.getLevel().reconstruct();
 		from.reconstruct();
 	}
 

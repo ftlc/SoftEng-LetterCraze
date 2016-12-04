@@ -22,7 +22,7 @@ public class GameView extends JPanel {
 	TileController tileControllers[][];
 	Level level;
 	JFrame parent;
-
+	
 	public GameView(JFrame parent, Level theLevel) {
 		//Will have to pass GameView some data so it knows what to draw.
 		tileViews = new JLabel[MAX_NUM_TILES][MAX_NUM_TILES];
@@ -92,13 +92,14 @@ public class GameView extends JPanel {
 				int yPos = (y * getHeight())/6;
 				
 				tileViews[x-1][y-1].repaint();
-				
-				g.drawLine(0, yPos, getWidth(), yPos);
-				g.drawLine(xPos, 0, xPos, getHeight());
 			}
 		}
 		
 		
+	}
+	
+	public void resetBoard() {
+		initTiles();
 	}
 	
 	// Getters //

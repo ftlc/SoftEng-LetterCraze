@@ -110,6 +110,13 @@ public class LevelView extends JFrame {
 		timerArea.setText(theLevel.getThirdBox());
 		gameView.refresh();
 	}
+	
+	public void clearLevel() {
+		this.dispose();
+		gameView.setVisible(false);
+		gameView.validate();
+	}
+	
 	public void reconstruct(){
 		this.remove(gameView);
 		gameView = new GameView(this, theLevel);
