@@ -25,9 +25,9 @@ public class LevelToMainMenuController implements ActionListener{
 		to.setVisible(true);
 
 		Level theLevel = from.getLevel();
-		from.dispose();
+		//from.dispose();
 		theLevel.reconstruct();
-		from.setLevel(theLevel);
+		from.reconstruct();
 	}
 
 }
