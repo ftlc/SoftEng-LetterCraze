@@ -35,6 +35,10 @@ public class LevelView extends JFrame {
 		initFrame();
 	}
 	
+	public void setLevel(Level l) {
+		theLevel = l;
+	}
+	
 	private void initFrame() {
 		
 		Color c = new Color(229,229,229,100);

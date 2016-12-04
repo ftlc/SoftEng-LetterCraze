@@ -23,11 +23,11 @@ public class LevelToMainMenuController implements ActionListener{
 		// TODO Auto-generated method stub
 		from.setVisible(false);
 		to.setVisible(true);
-		from.dispose();
+
 		Level theLevel = from.getLevel();
+		from.dispose();
 		theLevel.reconstruct();
-		from.reconstruct();
-		
+		from.setLevel(theLevel);
 	}
 
 }
