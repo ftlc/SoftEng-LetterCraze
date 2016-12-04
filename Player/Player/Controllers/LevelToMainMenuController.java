@@ -18,8 +18,7 @@ public class LevelToMainMenuController implements ActionListener{
 	public void actionPerformed(ActionEvent ae) {
 		// TODO Auto-generated method stub
 		from.setVisible(false);
-		to.setVisible(true);
-
+		to.setVisible(true);		
 		from.clearLevel();
 		from.getLevel().reconstruct();
 		from.reconstruct();
