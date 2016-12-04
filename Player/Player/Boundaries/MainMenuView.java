@@ -143,6 +143,13 @@ public class MainMenuView extends JFrame {
 		setVisible(true);
 	}
 	
+	public void reinitLevel(int num){
+		levelViews[num] = new LevelView(levels[num], this, model);
+		JButton theButton = (JButton)levelButtons[num].getComponent(0);
+		theButton.removeActionListener(theButton.getActionListeners()[0]);
+		theButton.addActionListener(new MainMenuToLevelController(this, levelViews[num]));
+	}
+	
 	// Getters //
 	public LevelView[] getLevelView() { return levelViews; }
 	public Level[] getLevels() { return levels; }

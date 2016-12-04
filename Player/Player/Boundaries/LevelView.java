@@ -118,9 +118,8 @@ public class LevelView extends JFrame {
 	}
 	
 	public void reconstruct(){
-		this.remove(gameView);
-		gameView = new GameView(this, theLevel);
-		this.add(gameView);
+		this.removeAll();
+		initFrame();
 	}
 	
 	// Getters //

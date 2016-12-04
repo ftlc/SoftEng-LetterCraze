@@ -12,6 +12,7 @@ import Player.Entities.Word;
 public class Level {
 	final int TOTAL_NUM_TILES = 6;
 	String path;
+	int num;
 	Board board;
 	Star star;
 	int score;
@@ -26,8 +27,9 @@ public class Level {
 	String lastSelectedWord;
 	boolean selectingWord;
 
-	public Level(String path) {
+	public Level(String path, int num) {
 		this.path = path;
+		this.num = num;
 		this.score = 0;
 		this.star = new Star(0,0,0);
 		this.maxMoves = 0;
@@ -306,6 +308,7 @@ public class Level {
 	public String getCurrSelectedWord() { return currSelectedWord; }
 	public String getLastSelectedWord() { return lastSelectedWord; }
 	public boolean getSelectingWord() { return selectingWord; }
+	public int getLevelNum() { return num; }
 	
 	public void setSelectingWord(boolean b) {
 		this.selectingWord = b;

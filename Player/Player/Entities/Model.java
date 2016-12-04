@@ -22,13 +22,13 @@ public class Model {
 			int levelType = i % 3;
 			switch(levelType){
 			case 0:
-				levels[i] = new Level("Puzzle-Test.txt"); 
+				levels[i] = new Level("Puzzle-Test.txt", i); 
 				break;
 			case 1:
-				levels[i] = new Level("Lightning-Test.txt");
+				levels[i] = new Level("Lightning-Test.txt", i);
 				break;
 			case 2:
-				levels[i] = new Level("Theme-Test.txt");
+				levels[i] = new Level("Theme-Test.txt", i);
 			}
 		}
 	}
