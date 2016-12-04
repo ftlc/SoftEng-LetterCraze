@@ -28,6 +28,7 @@ public class GameView extends JPanel {
 		tileViews = new JLabel[MAX_NUM_TILES][MAX_NUM_TILES];
 		tileControllers = new TileController[MAX_NUM_TILES][MAX_NUM_TILES];
 		this.level = theLevel;
+		this.parent = parent;
 		
 		initTiles();
 	}
@@ -58,9 +59,10 @@ public class GameView extends JPanel {
 					tileView.setBackground(c);
 					tileView.setBorder(b);
 					tileView.setText(tiles[x][y].getLetter());
-					tileControllers[x][y] = new TileController(tileView , level , this);
-					tileView.addMouseListener(tileControllers[x][y]);
+					TileController tc = new TileController(tileView, level, this);
+					tileControllers[x][y] = tc;
 					parent.add(tileView);
+					tileView.addMouseListener(tc);
 					tileViews[x][y] = tileView;
 				}
 				else {
