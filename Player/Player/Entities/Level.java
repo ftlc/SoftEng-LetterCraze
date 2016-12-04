@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import com.sun.xml.internal.ws.dump.LoggingDumpTube.Position;
 
 import Player.Entities.Board;
 import Player.Entities.Star;

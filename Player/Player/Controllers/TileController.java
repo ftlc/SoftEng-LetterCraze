@@ -7,8 +7,10 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JLabel;
 
+
 import Player.Boundaries.GameView;
 import Player.Entities.Level;
+import Player.Entities.Position;
 
 public class TileController implements MouseListener , MouseMotionListener {
 
@@ -16,12 +18,13 @@ public class TileController implements MouseListener , MouseMotionListener {
 	Level level;
 	boolean visited;
 	GameView gameView;
+	Position position;
 	
-	
-	public TileController(JLabel tileView , Level l , GameView g) {
+	public TileController(JLabel tileView , Level l , GameView g , Position p) {
 		this.tileView = tileView;
 		tileView.setOpaque(true);
 		level = l;
+		this.position = p;
 		this.gameView = g;
 		this.visited = false;
 		resetState();
@@ -65,8 +68,27 @@ public class TileController implements MouseListener , MouseMotionListener {
 			tileView.setBackground(Color.green);
 			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
 			level.setSelectingWord(true);
+			level.setLastSelectedPosition(position);
 			visited = true;
 		}
+	}
+	
+	private boolean isAdjacentPosition() {
+		Position temp = level.getLastSelectedPosition();
+		
+		int tx = temp.getX();
+		int px = position.getX();
+		int ty = temp.getY();
+		int py = position.getY();
+		
+		if((tx == px + 1 && ty == py) || (tx == px - 1 && ty == py) ||
+				(tx == px && ty == py + 1) || (tx == px && ty == py - 1) ||
+				(tx == px + 1 && ty == py + 1) || (tx == px + 1 && ty == py - 1) ||
+				(tx == px - 1 && ty == py + 1) || (tx == px + 1 && ty == py - 1)) {
+			return true;
+		}
+		
+		return false;
 	}
 	
 	private void released() {
@@ -88,9 +110,10 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 	
 	private void entered(MouseEvent me) {
-		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited) {
+		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited && isAdjacentPosition()) {
 			//If the mouse enters this tile and is pressed
 			visited = true;
+			level.setLastSelectedPosition(position);
 			tileView.setBackground(Color.green);
 			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
 		}

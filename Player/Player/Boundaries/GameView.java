@@ -13,6 +13,7 @@ import javax.swing.border.Border;
 
 import Player.Controllers.TileController;
 import Player.Entities.Level;
+import Player.Entities.Position;
 import Player.Entities.Tile;
 
 public class GameView extends JPanel {
@@ -59,7 +60,7 @@ public class GameView extends JPanel {
 					tileView.setBackground(c);
 					tileView.setBorder(b);
 					tileView.setText(tiles[x][y].getLetter());
-					TileController tc = new TileController(tileView, level, this);
+					TileController tc = new TileController(tileView, level, this , new Position(x , y));
 					tileControllers[x][y] = tc;
 					parent.add(tileView);
 					tileView.addMouseListener(tc);
