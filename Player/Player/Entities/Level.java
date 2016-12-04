@@ -71,35 +71,50 @@ public class Level {
 		int lineCount = 0; // Keeps track of which section 
 						   // of file is being read
 		try {
+			// Re-Open File //
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while((currLine=br.readLine()) != null){
-				currLine = currLine.trim();
+				currLine = currLine.trim(); // Remove extra spaces
 				switch(lineCount){
 				case 0:
-					currLine=br.readLine();
-					int starAmounts[] = new int[3];
+					// Star Amounts //
+					currLine=br.readLine(); // Skips '-'
+					int starAmounts[] = new int[3]; // Stores thresholds for
+													// Each star value
 					for(int i = 0; i < 3; i++){
 						currLine = br.readLine().trim();
 						starAmounts[i] = Integer.parseInt(currLine);
 					}
+					// Create New Star //
 					this.star = new Star(starAmounts[0], starAmounts[1], starAmounts[2]);
 					break;
 				case 1:
+					// Maximum Number of Moves //
 					currLine = br.readLine().trim();
+					
+					// Stores Max Number of Moves //
 					int maxMoves = Integer.parseInt(currLine);
 					this.maxMoves = maxMoves; // temp
+					
+					// Sets what third box will represent //
+					//        (Level-Type Specific)      //
 					this.thirdBox = "Max Moves\n" + String.valueOf(maxMoves);
+					
 					break;
 				case 2:
+					// Board Layout //
 					char[][] layout = new char[6][6];
 					for (int i = 0; i < 6; i++){
 						currLine = br.readLine();
+						// Reads each line into Character Array //
 						layout[i] = currLine.toCharArray();
 					}
-					this.board = new Board(layout);
+					this.board = new Board(layout); // Create new Board 
 					break;
 				case 3:
+					// High Score //
 					currLine = br.readLine().trim();
+					// Reads Highest Number of Stars Previously Stored
 					this.highScore = Integer.parseInt(currLine);
 				}
 					
@@ -109,7 +124,6 @@ public class Level {
 			br.close();
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return true;
@@ -130,6 +144,7 @@ public class Level {
 				currLine = currLine.trim(); // Strips extra spaces
 				switch(lineCount){
 				case 0:
+					// Star Amounts //
 					currLine=br.readLine(); // Skips '-'
 					int starAmounts[] = new int[3]; // Holds thresholds for
 													// star values
@@ -141,10 +156,15 @@ public class Level {
 					this.star = new Star(starAmounts[0], starAmounts[1], starAmounts[2]); 
 					break;
 				case 1:
+					// Timer Value //
 					currLine = br.readLine().trim();
 					int timer = Integer.parseInt(currLine); // Timer length 
 					this.timer = timer; // temp
+					
+					// Sets what third box will represent //
+					//        (Level-Type Specific)      //
 					this.thirdBox = "Timer\n"+ String.valueOf(timer);
+					
 					break;
 				case 2:
 					// Read in board layout //
@@ -158,6 +178,7 @@ public class Level {
 					this.board = new Board(layout); // Create Board
 					break;
 				case 3:
+					// High Score //
 					currLine = br.readLine().trim();
 					// Stores stars previously scored //
 					this.highScore = Integer.parseInt(currLine); 
@@ -185,9 +206,10 @@ public class Level {
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while((currLine=br.readLine()) != null){
-				currLine = currLine.trim();
+				currLine = currLine.trim(); // Remove Extra Spaces //
 				switch(lineCount){
 				case 0:
+					// Star Amounts //
 					currLine=br.readLine();
 					int starAmounts[] = new int[3];
 					for(int i = 0; i < 3; i++){
@@ -197,10 +219,15 @@ public class Level {
 					this.star = new Star(starAmounts[0], starAmounts[1], starAmounts[2]);
 					break;
 				case 1:
+					// Theme Name //
 					currLine = br.readLine().trim();
 					String theme = currLine;
 					this.theme = theme; // temp
+					
+					// Sets what third box will represent //
+					//        (Level-Type Specific)      //
 					this.thirdBox = "Theme:\n"+ theme;
+					
 					break;
 				case 2:
 					// Read in Dictionary up to Line //
@@ -211,12 +238,15 @@ public class Level {
 				case 3:
 					char[][] board = new char[6][6];
 					for (int i = 0; i < 6; i++){
+						// Store each line as character array //
 						board[i] = currLine.toCharArray();
 						currLine = br.readLine().trim();
 					}
-					this.board = new Board(board, true);
+					this.board = new Board(board, true); // Create new board
+														 // with themeInitTiles()
 					break;
 				case 4:
+					// Store Highest Star Value scored //
 					this.highScore = Integer.parseInt(currLine);
 				}
 					
