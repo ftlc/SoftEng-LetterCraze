@@ -1,5 +1,6 @@
 package Player.Controllers;
 
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -19,9 +20,11 @@ public class TileController implements MouseListener , MouseMotionListener {
 	
 	public TileController(JLabel tileView , Level l , GameView g) {
 		this.tileView = tileView;
+		tileView.setOpaque(true);
 		level = l;
 		this.gameView = g;
 		this.visited = false;
+		resetState();
 	}
 	
 	private String getValueHeld() {
@@ -29,6 +32,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 	
 	public void resetState() {
+		tileView.setBackground(Color.white);
 		this.visited = false;
 	}
 	
@@ -58,6 +62,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 		System.out.println("Pressed");
 		if(!level.getSelectingWord() && !visited) {
 			//If we are not currently selecting a word
+			tileView.setBackground(Color.green);
 			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
 			level.setSelectingWord(true);
 			visited = true;
@@ -86,6 +91,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited) {
 			//If the mouse enters this tile and is pressed
 			visited = true;
+			tileView.setBackground(Color.green);
 			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
 		}
 	}
