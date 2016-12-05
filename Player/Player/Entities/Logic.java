@@ -1,30 +1,58 @@
 package Player.Entities;
 
-public class Logic{
+import java.util.ArrayList;
 
-	Word selectedWord;
-	int score;
+import Player.Controllers.TileController;
+
+public class Logic {
+
+	Level level;
+	String thirdBox;
+
+	public Logic(Level l) {
+		this.level = l;
+		this.thirdBox = "Not Initializd";
+	}
+
+	public boolean playWord() {
+
+		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
 	
-	public Logic(Word selectedWord, int score){
-		this.score = score;
-		this.selectedWord = selectedWord;
-	}
-	public Word selectWord(Tile[] tiles){
-		return null;
-	}
-	public boolean gameOver(){
+		if (lastSelectedWord != null) {
+			
+			if(lastSelectedWord.size() < 3){
+				return false;
+			}
+
+			String w = "";
+			for (Tile t : lastSelectedWord) {
+				w += t.getLetter();
+			}
+
+			if (level.hasWord(w)) {
+				Word theWord = new Word(lastSelectedWord);
+				level.addScore(scoreToAdd(theWord));
+				level.addWord(theWord);
+
+				return true;
+			}
+		}
 		return false;
 	}
-	public boolean validWord(){
+	
+	public String getThirdBox(){
+		return thirdBox;
+	}
+	
+	public boolean readFile(String path){
 		return false;
 	}
-	public boolean resetBoard(){
-		return false;
+	
+	protected int scoreToAdd(Word theWord){
+		return 1;
 	}
-	public boolean updateScore(int changeInScore){
-		return false;
-	}
-	public boolean undoMove(){
+
+	public boolean undoMove() {
 		return false;
 	}
 }

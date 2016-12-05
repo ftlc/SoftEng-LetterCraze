@@ -1,21 +1,101 @@
 package Player.Entities;
 
-public class ThemeLogic extends Logic{
-	
-	public ThemeLogic(Word selectedWord, int score) {
-		super(selectedWord, score);
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ThemeLogic extends Logic {
+	String theme;
+
+	public ThemeLogic(Level l) {
+		super(l);
+		this.theme = "Not initialized";
 		// TODO Auto-generated constructor stub
 	}
-	public Word selectWord(Tile tiles[]){
+
+	// Initialize Entities for Theme Level //
+	// by reading from file //
+	@Override
+	public boolean readFile(String path) {
+
+		String currLine = null; // Buffer for current line being read
+
+		int lineCount = 0; // Keeps track of which section
+							// of file is being read
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(path));
+			while ((currLine = br.readLine()) != null) {
+				currLine = currLine.trim(); // Remove Extra Spaces //
+				switch (lineCount) {
+				case 0:
+					// Star Amounts //
+					currLine = br.readLine();
+					int starAmounts[] = new int[3];
+					for (int i = 0; i < 3; i++) {
+						currLine = br.readLine().trim();
+						starAmounts[i] = Integer.parseInt(currLine);
+					}
+					level.setStar(new Star(starAmounts[0], starAmounts[1], starAmounts[2]));
+					break;
+				case 1:
+					// Theme Name //
+					currLine = br.readLine().trim();
+					String theme = currLine;
+					this.theme = theme; // temp
+
+					// Sets what third box will represent //
+					// (Level-Type Specific) //
+					this.thirdBox = "Theme:\n" + theme;
+
+					break;
+				case 2:
+					Dictionary dictionary = new Dictionary(true);
+					// Read in Dictionary up to Line //
+					while (!(currLine = br.readLine().trim()).equals("-")) {
+						dictionary.addWord(currLine);
+					}
+					level.setDictionary(dictionary);
+					break;
+				case 3:
+					char[][] board = new char[6][6];
+					for (int i = 0; i < 6; i++) {
+						// Store each line as character array //
+						board[i] = currLine.toCharArray();
+						currLine = br.readLine().trim();
+					}
+					level.setBoard(new Board(board, true)); // Create new board
+															// with
+															// themeInitTiles()
+					break;
+				case 4:
+					// Store Highest Star Value scored //
+					level.setHighScore(Integer.parseInt(currLine));
+				}
+
+				lineCount++;
+			}
+			br.close();
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
+
+	public Word selectWord(Tile tiles[]) {
 		return null;
 	}
-	public boolean gameOver(){
+
+	public boolean gameOver() {
 		return false;
 	}
-	public boolean validWord(){
+
+	public boolean validWord() {
 		return false;
 	}
-	public boolean resetBoard(){
+
+	public boolean resetBoard() {
 		return false;
 	}
 

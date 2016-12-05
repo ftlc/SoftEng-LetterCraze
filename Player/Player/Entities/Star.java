@@ -9,9 +9,15 @@ public class Star{
 		this.twoStar = two;
 		this.threeStar = three;
 	}
-	public int calculateStars(){
-	int stars =	getOneStar() + getTwoStar() + getThreeStar();
-		return stars;
+	public int calculateStars(int score){
+		if(score >= threeStar)
+			return 3;
+		else if (score >= twoStar)
+			return 2;
+		else if (score >= oneStar)
+			return 1;
+		else
+			return 0;
 	}
 	
 	// Getters //
