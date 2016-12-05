@@ -297,8 +297,8 @@ public class Level {
 		readLevel(path);
 	}
 	
-	public void makeWord(){
-		this.selectedWords.add(new Word(lastSelectedWord, 0));
+	public void addWord(Word w){
+		this.selectedWords.add(w);
 	}
 	
 	public void addCurrTile(Tile t){
@@ -337,5 +337,13 @@ public class Level {
 	
 	public void setLastSelectedPosition(Position p){
 		this.lastSelectedPosition = p;
+	}
+	
+	public void setScore(int score){
+		this.score = score;
+	}
+	
+	public void addScore(int score){
+		this.score += score;
 	}
 }

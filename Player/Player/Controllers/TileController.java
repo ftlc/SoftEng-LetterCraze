@@ -123,9 +123,9 @@ public class TileController implements MouseListener , MouseMotionListener {
 			}
 			
 			if(level.hasWord(w)) {
-				for(Tile t : lastSelectedWord) {
-					//Code for calculating score 
-				}
+				Word theWord = new Word(lastSelectedWord);
+				level.addScore(theWord.getWordScore());
+				level.addWord(theWord);
 				
 				for(int x = 0 ; x < 6 ; x++) {
 					for(int y = 0 ; y < 6 ; y++) {
@@ -145,6 +145,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 				}
 			}
 		}
+		
 	}
 	
 	private void entered(MouseEvent me) {
