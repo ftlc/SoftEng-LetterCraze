@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.util.ArrayList;
 
 import javax.swing.JLabel;
 
@@ -11,21 +12,25 @@ import javax.swing.JLabel;
 import Player.Boundaries.GameView;
 import Player.Entities.Level;
 import Player.Entities.Position;
+import Player.Entities.Tile;
+import Player.Entities.Word;
 
 public class TileController implements MouseListener , MouseMotionListener {
 
 	JLabel tileView;
 	Level level;
 	boolean visited;
+	Tile tile;
 	GameView gameView;
 	Position position;
 	
-	public TileController(JLabel tileView , Level l , GameView g , Position p) {
+	public TileController(JLabel tileView , Tile tile, Level l , GameView g , Position p) {
 		this.tileView = tileView;
 		tileView.setOpaque(true);
 		level = l;
 		this.position = p;
 		this.gameView = g;
+		this.tile = tile;
 		this.visited = false;
 		resetState();
 	}
@@ -66,7 +71,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 		if(!level.getSelectingWord() && !visited) {
 			//If we are not currently selecting a word
 			tileView.setBackground(Color.green);
-			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
+			level.addCurrTile(tile);
 			level.setSelectingWord(true);
 			level.setLastSelectedPosition(position);
 			visited = true;
@@ -95,7 +100,8 @@ public class TileController implements MouseListener , MouseMotionListener {
 		if(level.getSelectingWord()) {
 			//Set the last selected word as the word and clear the current word.
 			level.setLastSelectedWord(level.getCurrSelectedWord());
-			level.setCurrSelectedWord("");
+			level.makeWord();
+			level.setCurrSelectedWord(new ArrayList<Tile>());
 			level.setSelectingWord(false);
 			for(int x = 0 ; x < 6 ; x++) {
 				for(int y = 0 ; y < 6 ; y++) {
@@ -104,7 +110,9 @@ public class TileController implements MouseListener , MouseMotionListener {
 					}
 				}
 			}
-			System.out.println("Word Selected : " + level.getLastSelectedWord());
+			ArrayList<Word> words = level.getSelectedWords();
+			
+			System.out.println("Word Selected : " + words.get(words.size()- 1));
 		
 		}
 	}
@@ -115,7 +123,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 			visited = true;
 			level.setLastSelectedPosition(position);
 			tileView.setBackground(Color.green);
-			level.setCurrSelectedWord(level.getCurrSelectedWord() + getValueHeld());
+			level.addCurrTile(tile);
 		}
 	}
 	

@@ -4,7 +4,7 @@ import Player.Entities.Dictionary;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
+import java.util.ArrayList;
 
 import Player.Entities.Board;
 import Player.Entities.Star;
@@ -25,8 +25,9 @@ public class Level {
 	Logic logic;
 	Dictionary dictionary;
 	String thirdBox;
-	String currSelectedWord;
-	String lastSelectedWord;
+	ArrayList<Tile> currSelectedWord;
+	ArrayList<Tile> lastSelectedWord;
+	ArrayList<Word> selectedWords;
 	boolean selectingWord;
 
 	public Level(String path, int num) {
@@ -39,8 +40,9 @@ public class Level {
 		this.dictionary = new Dictionary();
 		this.thirdBox = "null";
 		this.selectingWord = false;
-		this.currSelectedWord = "";
-		this.lastSelectedWord = "";
+		this.currSelectedWord = new ArrayList<Tile>();
+		this.lastSelectedWord = new ArrayList<Tile>();
+		this.selectedWords = new ArrayList<Word>();
 		readLevel(path);
 	}
 	
@@ -285,17 +287,16 @@ public class Level {
 		
 		return scoreHighest;
 	}
-	public boolean initialize(){
-		return false;
-	}
-	public boolean initializeView(){
-		return false;
-	}
-	public boolean initializeControllers(){
-		return false;
-	}
 	public void reconstruct(){
 		readLevel(path);
+	}
+	
+	public void makeWord(){
+		this.selectedWords.add(new Word(lastSelectedWord, 0));
+	}
+	
+	public void addCurrTile(Tile t){
+		this.currSelectedWord.add(t);
 	}
 	
 	// Getters and Setters //
@@ -307,22 +308,23 @@ public class Level {
 	public Dictionary getDictionary() { return dictionary; }
 	public int getTimer() { return timer; }
 	public String getThirdBox() { return thirdBox; }
-	public String getCurrSelectedWord() { return currSelectedWord; }
-	public String getLastSelectedWord() { return lastSelectedWord; }
+	public ArrayList<Tile> getCurrSelectedWord() { return currSelectedWord; }
+	public ArrayList<Tile> getLastSelectedWord() { return lastSelectedWord; }
 	public boolean getSelectingWord() { return selectingWord; }
 	public int getLevelNum() { return num; }
 	public Position getLastSelectedPosition() { return lastSelectedPosition; }
+	public ArrayList<Word> getSelectedWords() { return selectedWords; }
 	
 	public void setSelectingWord(boolean b) {
 		this.selectingWord = b;
 	}
 	
-	public void setCurrSelectedWord(String s) {
-		this.currSelectedWord = s;
+	public void setCurrSelectedWord(ArrayList<Tile> t) {
+		this.currSelectedWord = t;
 	}
 	
-	public void setLastSelectedWord(String s) {
-		this.lastSelectedWord = s;
+	public void setLastSelectedWord(ArrayList<Tile> t) {
+		this.lastSelectedWord = t;
 	}
 	
 	public void setLastSelectedPosition(Position p){

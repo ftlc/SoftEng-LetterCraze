@@ -1,11 +1,13 @@
 package Player.Entities;
+import java.util.ArrayList;
+
 import Player.Entities.Tile;
 
 public class Word{
-	Tile tiles[];
+	ArrayList<Tile> tiles;
 	int wordScore;
 	
-	public Word(Tile[] t, int wordscore){
+	public Word(ArrayList<Tile> t, int wordscore){
 		this.wordScore = wordscore;
 		this.tiles = t;
 	}
@@ -13,7 +15,15 @@ public class Word{
 		return wordScore;
 	}
 	
+	public String toString(){
+		String word = "";
+		for(Tile t: tiles){
+			word += t.getLetter();
+		}
+		return word;
+	}
+	
 	// Getters //
-	public Tile[] getWordTiles() { return tiles; }
+	public ArrayList getWordTiles() { return tiles; }
 	public int getWordScore() { return wordScore; }
 }

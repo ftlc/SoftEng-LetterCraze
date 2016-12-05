@@ -60,7 +60,8 @@ public class GameView extends JPanel {
 					tileView.setBackground(c);
 					tileView.setBorder(b);
 					tileView.setText(tiles[x][y].getLetter());
-					TileController tc = new TileController(tileView, level, this , new Position(x , y));
+					Tile theTile = level.getBoard().getTiles()[x][y];
+					TileController tc = new TileController(tileView, theTile, level, this , new Position(x , y));
 					tileControllers[x][y] = tc;
 					parent.add(tileView);
 					tileView.addMouseListener(tc);
