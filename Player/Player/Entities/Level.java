@@ -77,17 +77,16 @@ public class Level {
 		return this.dictionary.hasWord(s);
 	}
 	
-	public boolean saveHighScore(int score){
-		boolean scoreHighest;
-		if(score > highScore){
-			scoreHighest = true;
-			this.highScore = score;
+	public boolean saveHighScore(){
+		int numStars = star.calculateStars(score);
+		if(numStars > highScore){
+			this.highScore = numStars;
+			logic.writeHighScore(numStars, path);
+			return true;
 		}
 		else{
-			scoreHighest = false;
+			return false;
 		}
-		
-		return scoreHighest;
 	}
 	public void reconstruct(){
 		readLevel(path);
