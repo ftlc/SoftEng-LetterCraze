@@ -7,8 +7,7 @@ import Builder.Entities.Model;
 
 public class Main {
     public static void main(String[] args) {
-		Level lvl = new Level();
-        Model model = new Model(lvl);
+        Model model = new Model();
 
 
 		SplashScreenView s = new SplashScreenView(model);
