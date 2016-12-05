@@ -1,30 +1,42 @@
 package Player.Entities;
 
-public class Logic{
+import java.util.ArrayList;
 
-	Word selectedWord;
-	int score;
-	
-	public Logic(Word selectedWord, int score){
-		this.score = score;
-		this.selectedWord = selectedWord;
+import Player.Controllers.TileController;
+
+public class Logic {
+
+	Level level;
+
+	public Logic(Level l) {
+		this.level = l;
 	}
-	public Word selectWord(Tile[] tiles){
-		return null;
-	}
-	public boolean gameOver(){
+
+	public boolean playWord() {
+
+		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
+
+		if (lastSelectedWord != null) {
+			String w = "";
+			for (Tile t : lastSelectedWord) {
+				w += t.getLetter();
+			}
+
+			if (level.hasWord(w)) {
+				Word theWord = new Word(lastSelectedWord);
+				level.addScore(scoreToAdd(theWord));
+				level.addWord(theWord);
+
+				return true;
+			}
+		}
 		return false;
 	}
-	public boolean validWord(){
-		return false;
+	protected int scoreToAdd(Word theWord){
+		return 1;
 	}
-	public boolean resetBoard(){
-		return false;
-	}
-	public boolean updateScore(int changeInScore){
-		return false;
-	}
-	public boolean undoMove(){
+
+	public boolean undoMove() {
 		return false;
 	}
 }

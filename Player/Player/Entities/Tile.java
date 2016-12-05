@@ -128,6 +128,10 @@ public class Tile{
 	      
 	}
 	
+	public void resetLetter(){
+		this.letter = "";
+	}
+	
 	public String toString(){
 		return this.letter;
 	}

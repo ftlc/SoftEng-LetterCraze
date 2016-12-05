@@ -46,9 +46,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 	
 	public void clearTile() {
-		if(this.visited) {
-			tileView.setText("");
-		}
+		tile.resetLetter();
 	}
 	
 	@Override
@@ -121,24 +119,15 @@ public class TileController implements MouseListener , MouseMotionListener {
 		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
 		
 		if(lastSelectedWord != null) {
-			String w = "";
-			for(Tile t : lastSelectedWord) {
-				w += t.getLetter();
-			}
-			
-			if(level.hasWord(w)) {
-				Word theWord = new Word(lastSelectedWord);
-				level.addScore(theWord.getWordScore());
-				level.addWord(theWord);
-				
+			if(level.playWord()) {				
 				for(Tile t: lastSelectedWord){
 					int tileX = t.getXCoord();
 					int tileY = t.getYCoord();
 					TileController tc = gameView.getTileControllers()[tileX][tileY];
 					tc.clearTile();
 					tc.resetState();
-					gameView.getLevelView().refresh();
 				}
+				gameView.getLevelView().refresh();
 				return;
 			}
 		}
@@ -147,8 +136,8 @@ public class TileController implements MouseListener , MouseMotionListener {
 			int tileX = t.getXCoord();
 			int tileY = t.getYCoord();
 			gameView.getTileControllers()[tileX][tileY].resetState();
-			gameView.getLevelView().refresh();
 		}
+		gameView.getLevelView().refresh();
 		
 	}
 	

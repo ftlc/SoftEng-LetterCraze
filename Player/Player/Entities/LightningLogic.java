@@ -2,8 +2,8 @@ package Player.Entities;
 
 public class LightningLogic extends Logic{
 
-	public LightningLogic(Word selectedWord, int score) {
-		super(selectedWord, score);
+	public LightningLogic(Level l) {
+		super(l);
 		// TODO Auto-generated constructor stub
 	}
 	public Word selectWord(Tile tiles[]){

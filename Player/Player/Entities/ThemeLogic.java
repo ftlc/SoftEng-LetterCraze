@@ -2,8 +2,8 @@ package Player.Entities;
 
 public class ThemeLogic extends Logic{
 	
-	public ThemeLogic(Word selectedWord, int score) {
-		super(selectedWord, score);
+	public ThemeLogic(Level l) {
+		super(l);
 		// TODO Auto-generated constructor stub
 	}
 	public Word selectWord(Tile tiles[]){

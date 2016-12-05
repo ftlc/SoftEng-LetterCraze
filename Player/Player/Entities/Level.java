@@ -56,12 +56,15 @@ public class Level {
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			while ((currLine = br.readLine().trim()) != null) {
 				if (currLine.equals("P")) { // Puzzle Case 
+					this.logic = new PuzzleLogic(this);
 					br.close();
 					return puzzleInit(path);
 				} else if (currLine.equals("L")) { // Lightning Case
+					this.logic = new LightningLogic(this);
 					br.close();
 					return lightningInit(path);
 				} else if (currLine.equals("T")) { // Theme Case
+					this.logic = new ThemeLogic(this);
 					br.close();
 					return themeInit(path);
 				}
@@ -305,6 +308,9 @@ public class Level {
 		this.currSelectedWord.add(t);
 	}
 	
+	public boolean playWord(){
+		return logic.playWord();
+	}
 
 	
 	// Getters and Setters //

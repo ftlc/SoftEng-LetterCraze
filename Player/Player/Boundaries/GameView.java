@@ -80,6 +80,13 @@ public class GameView extends JPanel {
 	}
 	
 	public void refresh() {
+		Tile[][] t = level.getBoard().getTiles();
+		for(int x = 0; x < MAX_NUM_TILES; x++){
+			for(int y = 0; y < MAX_NUM_TILES; y++){
+				if(t[x][y]!=null)
+					tileViews[x][y].setText(t[x][y].getLetter());
+			}
+		}
 		repaint();
 	}
 	
