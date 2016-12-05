@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import javax.swing.JLabel;
 
-
+import Player.Boundaries.LevelView;
 import Player.Boundaries.GameView;
 import Player.Entities.Level;
 import Player.Entities.Position;
@@ -21,13 +21,14 @@ public class TileController implements MouseListener , MouseMotionListener {
 	Level level;
 	boolean visited;
 	Tile tile;
+	LevelView levelView;
 	GameView gameView;
 	Position position;
 	
 	public TileController(JLabel tileView , Tile tile, Level l , GameView g , Position p) {
 		this.tileView = tileView;
 		tileView.setOpaque(true);
-		level = l;
+		this.level = l;
 		this.position = p;
 		this.gameView = g;
 		this.tile = tile;
@@ -42,6 +43,10 @@ public class TileController implements MouseListener , MouseMotionListener {
 	public void resetState() {
 		tileView.setBackground(Color.white);
 		this.visited = false;
+	}
+	
+	public void clearTile() {
+		tile.resetLetter();
 	}
 	
 	@Override
@@ -67,8 +72,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 
 	private void pressed() {
-		System.out.println("Pressed");
-		if(!level.getSelectingWord() && !visited) {
+		if(!level.getSelectingWord() && !visited && !(tileView.getText().isEmpty())) {
 			//If we are not currently selecting a word
 			tileView.setBackground(Color.green);
 			level.addCurrTile(tile);
@@ -100,25 +104,45 @@ public class TileController implements MouseListener , MouseMotionListener {
 		if(level.getSelectingWord()) {
 			//Set the last selected word as the word and clear the current word.
 			level.setLastSelectedWord(level.getCurrSelectedWord());
-			level.makeWord();
 			level.setCurrSelectedWord(new ArrayList<Tile>());
 			level.setSelectingWord(false);
-			for(int x = 0 ; x < 6 ; x++) {
-				for(int y = 0 ; y < 6 ; y++) {
-					if(gameView.getTileControllers()[x][y] != null) {
-						gameView.getTileControllers()[x][y].resetState();
-					}
-				}
-			}
-			ArrayList<Word> words = level.getSelectedWords();
 			
-			System.out.println("Word Selected : " + words.get(words.size()- 1));
-		
+			playWord();
 		}
 	}
 	
+	/**
+	 * Plays word if applicable, otherwise resets state of board.
+	 */
+	private void playWord() {
+		
+		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
+		
+		if(lastSelectedWord != null) {
+			if(level.playWord()) {				
+				for(Tile t: lastSelectedWord){
+					int tileX = t.getXCoord();
+					int tileY = t.getYCoord();
+					TileController tc = gameView.getTileControllers()[tileX][tileY];
+					tc.clearTile();
+					tc.resetState();
+				}
+				gameView.getLevelView().refresh();
+				return;
+			}
+		}
+		
+		for(Tile t: lastSelectedWord){
+			int tileX = t.getXCoord();
+			int tileY = t.getYCoord();
+			gameView.getTileControllers()[tileX][tileY].resetState();
+		}
+		gameView.getLevelView().refresh();
+		
+	}
+	
 	private void entered(MouseEvent me) {
-		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited && isAdjacentPosition()) {
+		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited && isAdjacentPosition() && !(tileView.getText().isEmpty())) {
 			//If the mouse enters this tile and is pressed
 			visited = true;
 			level.setLastSelectedPosition(position);
