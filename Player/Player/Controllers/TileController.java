@@ -89,7 +89,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 		if((tx == px + 1 && ty == py) || (tx == px - 1 && ty == py) ||
 				(tx == px && ty == py + 1) || (tx == px && ty == py - 1) ||
 				(tx == px + 1 && ty == py + 1) || (tx == px + 1 && ty == py - 1) ||
-				(tx == px - 1 && ty == py + 1) || (tx == px + 1 && ty == py - 1)) {
+				(tx == px - 1 && ty == py + 1) || (tx == px - 1 && ty == py - 1)) {
 			return true;
 		}
 		

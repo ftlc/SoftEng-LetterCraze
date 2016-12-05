@@ -30,10 +30,17 @@ public class EntitiesTesting extends TestCase{
 		assertTrue(one.puzzleInit("P"));
 		assertTrue(one.saveHighScore(7));
 		assertFalse(one.saveHighScore(5));
-		one.setCurrSelectedWord("cat");
-		assertEquals("cat", one.getCurrSelectedWord());
-		one.setLastSelectedWord("dog");
-		assertEquals("dog", one.getLastSelectedWord());
+		
+		// Create Tiles //
+		ArrayList<Tile> tilesToTest = new ArrayList<Tile>();
+		tilesToTest.add(new Tile(0,0,"C")); // x,y,Letter
+		tilesToTest.add(new Tile(0,0,"A"));
+		tilesToTest.add(new Tile(0,0,"T"));
+		
+		one.setCurrSelectedWord(tilesToTest);
+		assertEquals(tilesToTest, one.getCurrSelectedWord());
+		one.setLastSelectedWord(tilesToTest);
+		assertEquals(tilesToTest, one.getLastSelectedWord());
 		
 		
 		
