@@ -299,6 +299,8 @@ public class Level {
 		this.currSelectedWord.add(t);
 	}
 	
+
+	
 	// Getters and Setters //
 	public Board getBoard() { return board; }
 	public Star getStar() { return star; }

@@ -44,6 +44,12 @@ public class TileController implements MouseListener , MouseMotionListener {
 		this.visited = false;
 	}
 	
+	public void clearTile() {
+		if(this.visited) {
+			tileView.setText("");
+		}
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 		// TODO Auto-generated method stub
@@ -67,7 +73,6 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 
 	private void pressed() {
-		System.out.println("Pressed");
 		if(!level.getSelectingWord() && !visited) {
 			//If we are not currently selecting a word
 			tileView.setBackground(Color.green);
@@ -100,20 +105,43 @@ public class TileController implements MouseListener , MouseMotionListener {
 		if(level.getSelectingWord()) {
 			//Set the last selected word as the word and clear the current word.
 			level.setLastSelectedWord(level.getCurrSelectedWord());
-			level.makeWord();
 			level.setCurrSelectedWord(new ArrayList<Tile>());
 			level.setSelectingWord(false);
-			for(int x = 0 ; x < 6 ; x++) {
-				for(int y = 0 ; y < 6 ; y++) {
-					if(gameView.getTileControllers()[x][y] != null) {
-						gameView.getTileControllers()[x][y].resetState();
+			
+			playWord();
+		}
+	}
+	
+	private void playWord() {
+		
+		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
+		
+		if(lastSelectedWord != null) {
+			String w = "";
+			for(Tile t : lastSelectedWord) {
+				w += t.getLetter();
+			}
+			
+			//if(w.isInDictionary()) {
+				for(Tile t : lastSelectedWord) {
+					for(int x = 0 ; x < 6 ; x++) {
+						for(int y = 0 ; y < 6 ; y++) {
+							if(gameView.getTileControllers()[x][y] != null) {
+								gameView.getTileControllers()[x][y].clearTile();
+							}
+						}
 					}
 				}
-			}
-			ArrayList<Word> words = level.getSelectedWords();
-			
-			System.out.println("Word Selected : " + words.get(words.size()- 1));
+			//}
+		}
 		
+		
+		for(int x = 0 ; x < 6 ; x++) {
+			for(int y = 0 ; y < 6 ; y++) {
+				if(gameView.getTileControllers()[x][y] != null) {
+					gameView.getTileControllers()[x][y].resetState();
+				}
+			}
 		}
 	}
 	
