@@ -1,9 +1,14 @@
 package iron_builder;
+import java.util.ArrayList;
+
 import Player.Main;
-import Player.Boundaries.SplashScreenView;
+import Player.Entities.Board;
+import Player.Entities.Dictionary;
 import Player.Entities.Level;
 import Player.Entities.Model;
 import Player.Entities.Position;
+import Player.Entities.Star;
+import Player.Entities.Tile;
 import junit.framework.TestCase;
 
 
@@ -53,5 +58,30 @@ public class EntitiesTesting extends TestCase{
 		
 	}
 
+	public void testStar(){
+		Star s = new Star(1,2,3);
+	
+		assertEquals(s.calculateStars(), 6);
+	}
+	public void testDictionary(){
+		ArrayList<Tile> tiles = new ArrayList<Tile>();
+		Tile c = new Tile(1,1,"c");
+		Tile a = new Tile(1,1,"a");
+		Tile t = new Tile(1,1,"t");
+		tiles.add(c);
+		Dictionary d = new Dictionary();
+		assertFalse(d.hasWord(tiles));
+		tiles.add(a);
+		tiles.add(t);
 
+		d.addWord("cat");
+		assertTrue(d.hasWord(tiles));
+	}
+	public void testBoard(){
+		
+		char [][] tiles = new char[6][6];
+		
+		Board b  = new Board(tiles);
+		//assertEquals(24,b.getLayout());
+	}
 }
