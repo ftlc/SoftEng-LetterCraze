@@ -81,7 +81,7 @@ public class LevelView extends JFrame{
 
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Puzzle", "Lightning", "Theme"}));
-		comboBox.setBounds(499, 27, 206, 27);
+		comboBox.setBounds(485, 27, 206, 27);
 		contentPane.add(comboBox);
 
 
@@ -128,11 +128,15 @@ public class LevelView extends JFrame{
 		contentPane.add(lblMaxWords);
 
 		textField_3 = new JTextField();
+		textField_3.setEnabled(false);
+		textField_3.setEditable(false);
 		textField_3.setBounds(561, 284, 130, 26);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 
 		textField_4 = new JTextField();
+		textField_4.setEnabled(false);
+		textField_4.setEditable(false);
 		textField_4.setBounds(584, 325, 107, 26);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
@@ -172,6 +176,7 @@ public class LevelView extends JFrame{
 
 
         JButton btnTheme = new JButton("Theme");
+        btnTheme.setEnabled(false);
         btnTheme.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 
         btnTheme.setBounds(499, 382, 187, 33);
