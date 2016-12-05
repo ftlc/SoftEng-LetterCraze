@@ -71,24 +71,24 @@ public class EntitiesTesting extends TestCase{
 		assertEquals(s.calculateStars(), 6);
 	}
 	public void testDictionary(){
-		ArrayList<Tile> tiles = new ArrayList<Tile>();
-		Tile c = new Tile(1,1,"c");
-		Tile a = new Tile(1,1,"a");
-		Tile t = new Tile(1,1,"t");
-		tiles.add(c);
-		Dictionary d = new Dictionary();
-		assertFalse(d.hasWord(tiles));
-		tiles.add(a);
-		tiles.add(t);
 
-		d.addWord("cat");
-		assertTrue(d.hasWord(tiles));
+		Dictionary d = new Dictionary(false);
+		assertTrue(d.hasWord("tile"));
+
+		Dictionary c = new Dictionary(true);
+	//	ArrayList<String> words = new ArrayList<String>();
+		c.addWord("cat");
+		assertTrue(c.hasWord("cat"));
+		assertFalse(c.hasWord("dog"));
+	
 	}
 	public void testBoard(){
 		
 		char [][] tiles = new char[6][6];
 		
 		Board b  = new Board(tiles);
+		//assertEquals(b.getTiles(), null);
+		
 		//assertEquals(24,b.getLayout());
 	}
 }
