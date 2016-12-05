@@ -33,6 +33,10 @@ public class Level {
 		return stars;
 	}
 
+	public void setStarAt(int s, int i) {
+		stars[i-1] = s;
+	}
+
 	public void setStars(int[] stars) {
 		this.stars = stars;
 	}
