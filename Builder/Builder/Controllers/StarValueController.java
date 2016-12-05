@@ -25,9 +25,16 @@ public class StarValueController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        String txt = lvlView.getStar1Text().getText();
+        String txt = lvlView.getStarText(starnum).getText();
         System.out.println(txt);
-        int contents = Integer.parseInt(txt);
-        lvl.setStarAt(contents, starnum);
+        try {
+            int contents = Integer.parseInt(txt);
+            lvl.setStarAt(contents, starnum);
+        }
+        catch (Exception e){
+            lvlView.getStarText(starnum).setText("0");
+        }
+
+
     }
 }

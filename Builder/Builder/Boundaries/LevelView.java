@@ -57,9 +57,21 @@ public class LevelView extends JFrame{
 		initializeLevel();
 	}
 
-	public JTextField getStar1Text() {
-		return Star1Text;
+	public JTextField getStarText(int num) {
+		switch (num) {
+			case 1:
+				return Star1Text;
+
+			case 2:
+				return Star2Text;
+
+			case 3:
+				return Star3Text;
+
+		}
+		return null;
 	}
+
 
 	public JTextField getStar2Text() {
 		return Star2Text;
