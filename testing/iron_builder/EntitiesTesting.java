@@ -77,20 +77,20 @@ public class EntitiesTesting extends TestCase{
 		Tile t = new Tile(1,1,"t");
 		tiles.add(c);
 		Dictionary d = new Dictionary();
-<<<<<<< HEAD
+
 		//assertFalse(d.hasWord(tiles));
-=======
+
 	//	assertFalse(d.hasWord(tiles));
->>>>>>> branch 'master' of https://github.com/ftlc/SoftEng-LetterCraze.git
+
 		tiles.add(a);
 		tiles.add(t);
 
 		d.addWord("cat");
-<<<<<<< HEAD
+
 		//assertTrue(d.hasWord(tiles));
-=======
+
 	//	assertTrue(d.hasWord(tiles));
->>>>>>> branch 'master' of https://github.com/ftlc/SoftEng-LetterCraze.git
+
 	}
 	public void testBoard(){
 		
