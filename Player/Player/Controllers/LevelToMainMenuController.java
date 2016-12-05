@@ -19,11 +19,16 @@ public class LevelToMainMenuController implements ActionListener{
 	public void actionPerformed(ActionEvent ae) {
 		// TODO Auto-generated method stub
 		from.setVisible(false);
-		to.setVisible(true);
+		
 		Level theLevel = from.getLevel();
+		int levelNum = theLevel.getLevelNum();
+		theLevel.saveHighScore();
+		to.updateHighScore(levelNum);
+		
+		to.setVisible(true);
 		theLevel.reconstruct();
 		
-		to.reinitLevel(theLevel.getLevelNum());
+		to.reinitLevel(levelNum);
 		from.clearLevel();
 		
 	}

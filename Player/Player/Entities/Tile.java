@@ -126,7 +126,15 @@ public class Tile{
 		return return_letter;
 
 	      
-	    	}
+	}
+	
+	public void resetLetter(){
+		this.letter = "";
+	}
+	
+	public String toString(){
+		return this.letter;
+	}
 
 	
 	// Getters //

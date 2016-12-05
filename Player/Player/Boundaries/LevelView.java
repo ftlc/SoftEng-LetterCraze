@@ -71,6 +71,7 @@ public class LevelView extends JFrame {
 		
 		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
 		scoreArea.setFont(f);
+		scoreArea.setOpaque(false);
 		scoreArea.setBackground(c);
 		scoreArea.setBorder(b);
 		scoreArea.setEditable(false);
@@ -78,14 +79,16 @@ public class LevelView extends JFrame {
 		add(scoreArea);
 		
 		starArea.setFont(f);
+		starArea.setOpaque(false);
 		starArea.setBackground(c);
 		starArea.setBorder(b);
-		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
+		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars(theLevel.getScore())));
 		starArea.setEditable(false);
 		starArea.setBounds(470, 149, 298, 70);
 		add(starArea);
 		
 		timerArea.setFont(f);
+		timerArea.setOpaque(false);
 		timerArea.setBackground(c);
 		timerArea.setBorder(b);
 		timerArea.setText(theLevel.getThirdBox());
@@ -98,15 +101,18 @@ public class LevelView extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
-		gameView = new GameView(this, theLevel);
+		this.gameView = new GameView(this, theLevel);
 		gameView.setSize(400 , 400);
 		gameView.setLocation(12 , 12);
 		add(gameView);
 	}
 	
 	public void refresh() {
+		scoreArea.setText(null);
+		starArea.setText(null);
+		timerArea.setText(null);
 		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
-		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
+		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars(theLevel.getScore())));
 		timerArea.setText(theLevel.getThirdBox());
 		gameView.refresh();
 	}
@@ -125,6 +131,6 @@ public class LevelView extends JFrame {
 	// Getters //
 	public Level getLevel() { return theLevel; }
 	public MainMenuView getMainMenuView() { return mainMenu; }
-	public GameView getGameView() { return gameView; }
+	public GameView getGameView() { return this.gameView; }
 	
 }
