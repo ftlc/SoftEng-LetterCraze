@@ -32,6 +32,7 @@ public class Word{
 		letterScores.put("r",2);
 		
 		// 3 Points //
+		letterScores.put("l",3);
 		letterScores.put("d",3);
 		letterScores.put("c",3);
 		letterScores.put("u",3);
