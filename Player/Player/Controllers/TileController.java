@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import javax.swing.JLabel;
 
-
+import Player.Boundaries.LevelView;
 import Player.Boundaries.GameView;
 import Player.Entities.Level;
 import Player.Entities.Position;
@@ -21,13 +21,14 @@ public class TileController implements MouseListener , MouseMotionListener {
 	Level level;
 	boolean visited;
 	Tile tile;
+	LevelView levelView;
 	GameView gameView;
 	Position position;
 	
 	public TileController(JLabel tileView , Tile tile, Level l , GameView g , Position p) {
 		this.tileView = tileView;
 		tileView.setOpaque(true);
-		level = l;
+		this.level = l;
 		this.position = p;
 		this.gameView = g;
 		this.tile = tile;
@@ -73,7 +74,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 
 	private void pressed() {
-		if(!level.getSelectingWord() && !visited && !(tile.getLetter().equals(""))) {
+		if(!level.getSelectingWord() && !visited && !(tileView.getText().isEmpty())) {
 			//If we are not currently selecting a word
 			tileView.setBackground(Color.green);
 			level.addCurrTile(tile);
@@ -113,7 +114,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 	
 	/**
-	 * 
+	 * Plays word if applicable, otherwise resets state of board.
 	 */
 	private void playWord() {
 		
@@ -136,8 +137,9 @@ public class TileController implements MouseListener , MouseMotionListener {
 					TileController tc = gameView.getTileControllers()[tileX][tileY];
 					tc.clearTile();
 					tc.resetState();
-					return;
+					gameView.getLevelView().refresh();
 				}
+				return;
 			}
 		}
 		
@@ -145,12 +147,13 @@ public class TileController implements MouseListener , MouseMotionListener {
 			int tileX = t.getXCoord();
 			int tileY = t.getYCoord();
 			gameView.getTileControllers()[tileX][tileY].resetState();
+			gameView.getLevelView().refresh();
 		}
 		
 	}
 	
 	private void entered(MouseEvent me) {
-		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited && isAdjacentPosition() && !tile.getLetter().equals("")) {
+		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited && isAdjacentPosition() && !(tileView.getText().isEmpty())) {
 			//If the mouse enters this tile and is pressed
 			visited = true;
 			level.setLastSelectedPosition(position);

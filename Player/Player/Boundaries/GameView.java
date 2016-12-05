@@ -22,9 +22,9 @@ public class GameView extends JPanel {
 	JLabel tileViews[][];
 	TileController tileControllers[][];
 	Level level;
-	JFrame parent;
+	LevelView parent;
 	
-	public GameView(JFrame parent, Level theLevel) {
+	public GameView(LevelView parent, Level theLevel) {
 		//Will have to pass GameView some data so it knows what to draw.
 		tileViews = new JLabel[MAX_NUM_TILES][MAX_NUM_TILES];
 		tileControllers = new TileController[MAX_NUM_TILES][MAX_NUM_TILES];
@@ -105,7 +105,7 @@ public class GameView extends JPanel {
 	}
 	
 	// Getters //
-	public JFrame getLevelView() { return parent; }
+	public LevelView getLevelView() { return parent; }
 	public JLabel[][] getTileViews() { return tileViews;}
 	public TileController[][] getTileControllers() { return tileControllers; }
 	
