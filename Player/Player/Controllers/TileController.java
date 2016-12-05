@@ -73,7 +73,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 	}
 
 	private void pressed() {
-		if(!level.getSelectingWord() && !visited) {
+		if(!level.getSelectingWord() && !visited && !(tile.getLetter().equals(""))) {
 			//If we are not currently selecting a word
 			tileView.setBackground(Color.green);
 			level.addCurrTile(tile);
@@ -112,6 +112,9 @@ public class TileController implements MouseListener , MouseMotionListener {
 		}
 	}
 	
+	/**
+	 * 
+	 */
 	private void playWord() {
 		
 		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
@@ -127,29 +130,27 @@ public class TileController implements MouseListener , MouseMotionListener {
 				level.addScore(theWord.getWordScore());
 				level.addWord(theWord);
 				
-				for(int x = 0 ; x < 6 ; x++) {
-					for(int y = 0 ; y < 6 ; y++) {
-						if(gameView.getTileControllers()[x][y] != null) {
-							gameView.getTileControllers()[x][y].clearTile();
-						}
-					}
+				for(Tile t: lastSelectedWord){
+					int tileX = t.getXCoord();
+					int tileY = t.getYCoord();
+					TileController tc = gameView.getTileControllers()[tileX][tileY];
+					tc.clearTile();
+					tc.resetState();
+					return;
 				}
 			}
 		}
 		
-		
-		for(int x = 0 ; x < 6 ; x++) {
-			for(int y = 0 ; y < 6 ; y++) {
-				if(gameView.getTileControllers()[x][y] != null) {
-					gameView.getTileControllers()[x][y].resetState();
-				}
-			}
+		for(Tile t: lastSelectedWord){
+			int tileX = t.getXCoord();
+			int tileY = t.getYCoord();
+			gameView.getTileControllers()[tileX][tileY].resetState();
 		}
 		
 	}
 	
 	private void entered(MouseEvent me) {
-		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited && isAdjacentPosition()) {
+		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited && isAdjacentPosition() && !tile.getLetter().equals("")) {
 			//If the mouse enters this tile and is pressed
 			visited = true;
 			level.setLastSelectedPosition(position);
