@@ -124,11 +124,13 @@ public class TileController implements MouseListener , MouseMotionListener {
 			
 			//if(w.isInDictionary()) {
 				for(Tile t : lastSelectedWord) {
-					for(int x = 0 ; x < 6 ; x++) {
-						for(int y = 0 ; y < 6 ; y++) {
-							if(gameView.getTileControllers()[x][y] != null) {
-								gameView.getTileControllers()[x][y].clearTile();
-							}
+					//Code for calculating score 
+				}
+				
+				for(int x = 0 ; x < 6 ; x++) {
+					for(int y = 0 ; y < 6 ; y++) {
+						if(gameView.getTileControllers()[x][y] != null) {
+							gameView.getTileControllers()[x][y].clearTile();
 						}
 					}
 				}
