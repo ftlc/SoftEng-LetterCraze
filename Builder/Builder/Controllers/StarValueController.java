@@ -15,6 +15,7 @@ public class StarValueController implements ActionListener {
     LevelView lvlView;
     int starnum;
 
+    //Constructor
     public StarValueController(Level lvl, LevelView lvlView, int starnum) {
         this.lvl = lvl;
         this.lvlView = lvlView;

@@ -127,11 +127,13 @@ public class LevelView extends JFrame{
 		Star2Text.setBounds(561, 191, 130, 26);
 		contentPane.add(Star2Text);
 		Star2Text.setColumns(10);
+		Star2Text.addActionListener(new StarValueController(lvl, this, 2));
 
 		Star3Text = new JTextField();
 		Star3Text.setBounds(561, 219, 130, 26);
 		contentPane.add(Star3Text);
 		Star3Text.setColumns(10);
+		Star3Text.addActionListener(new StarValueController(lvl, this, 3));
 
 		JLabel lblTime = new JLabel("Time:");
 		lblTime.setBounds(499, 289, 61, 16);
