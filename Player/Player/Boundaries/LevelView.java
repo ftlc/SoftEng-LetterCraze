@@ -71,6 +71,7 @@ public class LevelView extends JFrame {
 		
 		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
 		scoreArea.setFont(f);
+		scoreArea.setOpaque(false);
 		scoreArea.setBackground(c);
 		scoreArea.setBorder(b);
 		scoreArea.setEditable(false);
@@ -78,6 +79,7 @@ public class LevelView extends JFrame {
 		add(scoreArea);
 		
 		starArea.setFont(f);
+		starArea.setOpaque(false);
 		starArea.setBackground(c);
 		starArea.setBorder(b);
 		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars()));
@@ -86,6 +88,7 @@ public class LevelView extends JFrame {
 		add(starArea);
 		
 		timerArea.setFont(f);
+		timerArea.setOpaque(false);
 		timerArea.setBackground(c);
 		timerArea.setBorder(b);
 		timerArea.setText(theLevel.getThirdBox());
