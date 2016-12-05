@@ -4,11 +4,20 @@ public class Level {
 
 	int stars[];
 	Board board;
+	int maxWords;
+	int time;
+	String themeName;
+	Dictionary dictionary;
 
-	public Level(){
+	public Level() {
+		initValues();
+	}
+	void initValues() {
 		this.stars = new int[3];
 		this.board = new Board();
-
+		this.maxWords = -1;
+		this.time = -1;
+		this.themeName = "";
 	}
 
 	boolean assignStarValues(int star1, int star2, int star3)
@@ -40,4 +49,32 @@ public class Level {
 	public void setStars(int[] stars) {
 		this.stars = stars;
 	}
+
+
+	public int getMaxWords() {
+		return maxWords;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public String getThemeName() {
+		return themeName;
+	}
+
+
+	public void setMaxWords(int maxWords) {
+		this.maxWords = maxWords;
+	}
+
+	public void setThemeName(String themeName) {
+		this.themeName = themeName;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
+	}
+
+
 }

@@ -1,9 +1,6 @@
 package Builder.Boundaries;
 
-import Builder.Controllers.ExitBuilderController;
-import Builder.Controllers.SplashScreenToLevelController;
-import Builder.Controllers.StarValueController;
-import Builder.Controllers.ThemePopUpController;
+import Builder.Controllers.*;
 import Builder.Entities.Level;
 import Builder.Entities.Model;
 
@@ -44,8 +41,8 @@ public class LevelView extends JFrame{
 	private JTextField Star1Text;
 	private JTextField Star2Text;
 	private JTextField Star3Text;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField TimeTxt;
+	private JTextField MaxWordstxt;
 	private ThemeView themeCreationDialog;
 
 	public LevelView(Model m) //, ThemeView themeCreationDialog)
@@ -55,6 +52,14 @@ public class LevelView extends JFrame{
 		this.lvl = model.getLevel();
 
 		initializeLevel();
+	}
+
+	public JTextField getTimeTxt() {
+		return TimeTxt;
+	}
+
+	public JTextField getMaxWordstxt() {
+		return MaxWordstxt;
 	}
 
 	public JTextField getStarText(int num) {
@@ -155,15 +160,16 @@ public class LevelView extends JFrame{
 		lblMaxWords.setBounds(499, 330, 73, 16);
 		contentPane.add(lblMaxWords);
 
-		textField_3 = new JTextField();
-		textField_3.setBounds(561, 284, 130, 26);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		TimeTxt = new JTextField();
+		TimeTxt.setBounds(561, 284, 130, 26);
+		contentPane.add(TimeTxt);
+		TimeTxt.setColumns(10);
 
-		textField_4 = new JTextField();
-		textField_4.setBounds(584, 325, 107, 26);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
+		MaxWordstxt = new JTextField();
+		MaxWordstxt.setBounds(584, 325, 107, 26);
+		contentPane.add(MaxWordstxt);
+		MaxWordstxt.setColumns(10);
+		MaxWordstxt.addActionListener(new AssignNumWordsController(lvl, this));
 	}
 
 	void initializeButtons()
