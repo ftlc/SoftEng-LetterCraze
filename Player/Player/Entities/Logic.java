@@ -15,8 +15,13 @@ public class Logic {
 	public boolean playWord() {
 
 		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
-
+	
 		if (lastSelectedWord != null) {
+			
+			if(lastSelectedWord.size() < 3){
+				return false;
+			}
+
 			String w = "";
 			for (Tile t : lastSelectedWord) {
 				w += t.getLetter();
