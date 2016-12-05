@@ -37,7 +37,6 @@ public class Level {
 		this.star = new Star(0,0,0);
 		this.maxMoves = 0;
 		this.timer = 0;
-		this.dictionary = new Dictionary();
 		this.thirdBox = "null";
 		this.selectingWord = false;
 		this.currSelectedWord = new ArrayList<Tile>();
@@ -75,10 +74,15 @@ public class Level {
 		return true;
 	}
 	
+	public boolean hasWord(String s) {
+		return this.dictionary.hasWord(s);
+	}
+	
 	// Initialize Entities for Puzzle Level //
 	//         by reading from file        //
 	public boolean puzzleInit(String path) {
-		
+
+		this.dictionary = new Dictionary();
 		String currLine = null; // Buffer for each line 
 		
 		int lineCount = 0; // Keeps track of which section 
@@ -145,7 +149,8 @@ public class Level {
 	// Initialize Entities for Lightning Level //
 	//          by reading from file          //
 	public boolean lightningInit(String path) {
-		
+
+		this.dictionary = new Dictionary();
 		String currLine = null; // Buffer for current line being read 
 		
 		int lineCount = 0; // Keeps track of which section 
@@ -211,7 +216,8 @@ public class Level {
 	// Initialize Entities for Theme Level //
 	//        by reading from file        //
 	public boolean themeInit(String path) {
-		
+
+		this.dictionary = new Dictionary(true);
 		String currLine = null; // Buffer for current line being read
 		
 		int lineCount = 0; // Keeps track of which section 

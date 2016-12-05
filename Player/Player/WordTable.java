@@ -21,7 +21,7 @@ public class WordTable {
 	public static void loadWordTable() throws IOException {
 		table = new Hashtable<String,Boolean>();
 		
-		Iterator<String> it = new StringFileIterator(new File (".", wordTable));
+		Iterator<String> it = new StringFileIterator(new File ("./Player/Player/" + wordTable));
 		while (it.hasNext()) {
 			String word = it.next();
 			word = word.trim();

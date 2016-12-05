@@ -122,7 +122,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 				w += t.getLetter();
 			}
 			
-			//if(w.isInDictionary()) {
+			if(level.hasWord(w)) {
 				for(Tile t : lastSelectedWord) {
 					//Code for calculating score 
 				}
@@ -134,7 +134,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 						}
 					}
 				}
-			//}
+			}
 		}
 		
 		
