@@ -22,12 +22,10 @@ public class ThemeLevel extends Level{
         return true;
     }
 
-    @Override
     public String getThemeName() {
         return name;
     }
 
-    @Override
     public void setThemeName(String themeName) {
         this.name = name;
     }
