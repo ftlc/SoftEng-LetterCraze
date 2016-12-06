@@ -19,6 +19,7 @@ import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
@@ -46,6 +47,8 @@ public class LevelView extends JFrame{
 	private ThemeView themeCreationDialog;
 	private JComboBox comboBox;
 	private JButton btnTheme;
+	private JButton btnSaveLevel;
+	private JFileChooser fileFinder;
 
 	public LevelView(Model m) //, ThemeView themeCreationDialog)
 	{
@@ -63,6 +66,7 @@ public class LevelView extends JFrame{
 		btnTheme.setEnabled(false);
 	}
 
+	// getter for the Time text field
 	public JTextField getTimeTxt() {
 		return TimeTxt;
 	}
@@ -78,6 +82,10 @@ public class LevelView extends JFrame{
 		TimeTxt.setEditable(false);
 		MaxWordstxt.setEditable(false);
 		btnTheme.setEnabled(true);
+	}
+	
+	public JFileChooser getFileFinder(){
+		return fileFinder;
 	}
 
 	public JTextField getMaxWordstxt() {
@@ -111,6 +119,10 @@ public class LevelView extends JFrame{
 	public JTextField getStar3Text() {
 		return Star3Text;
 	}
+	
+	public JButton getSaveButton(){
+		return btnSaveLevel;
+	}
 
 	void initializeLevel() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -124,6 +136,9 @@ public class LevelView extends JFrame{
 		initializeTextFields();
 		BoardView panel = new BoardView(model);
 		contentPane.add(panel);
+		
+		// initializing the fileFinder
+		fileFinder = new JFileChooser();
 		
 	}
 
@@ -194,12 +209,14 @@ public class LevelView extends JFrame{
 
 	void initializeButtons()
 	{
-		JButton btnSaveLevel = new JButton("Save Level");
+		// -----------------------------------------------------
+		btnSaveLevel = new JButton("Save Level");
 		btnSaveLevel.setBounds(5, 493, 142, 33);
 		btnSaveLevel.setAlignmentY(0.975f);
 		btnSaveLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnSaveLevel.addActionListener(new SaveLevelController(this));
 		contentPane.add(btnSaveLevel);
-
+		// ---------- SAVE LEVEL BUTTON ------------------------
 
 		JButton btnEditLevel= new JButton("Edit Level");
 		btnEditLevel.setBounds(147, 493, 136, 33);
