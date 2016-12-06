@@ -24,6 +24,13 @@ public class GameView extends JPanel {
 	Level level;
 	LevelView parent;
 	
+	/**
+	 * Constructor for the GameView class. It needs to hold data
+	 * about the level it is displaying.
+	 * 
+	 * @param parent
+	 * @param theLevel
+	 */
 	public GameView(LevelView parent, Level theLevel) {
 		//Will have to pass GameView some data so it knows what to draw.
 		tileViews = new JLabel[MAX_NUM_TILES][MAX_NUM_TILES];
@@ -34,6 +41,9 @@ public class GameView extends JPanel {
 		initTiles();
 	}
 	
+	/**
+	 * Initialize the tiles and assign them their TileControllers.
+	 */
 	public void initTiles(){
 		Color c = new Color(0,0,0,100);
 		Border b = BorderFactory.createLineBorder(Color.BLACK, 1);
@@ -79,6 +89,9 @@ public class GameView extends JPanel {
 		}
 	}
 	
+	/**
+	 * refreshes the tiles by updatingthe letters they hold and repainting.
+	 */
 	public void refresh() {
 		Tile[][] t = level.getBoard().getTiles();
 		for(int x = 0; x < MAX_NUM_TILES; x++){
@@ -90,10 +103,12 @@ public class GameView extends JPanel {
 		repaint();
 	}
 	
+	/**
+	 * Draws the tileViews.
+	 */
 	public void paint(Graphics g) {
 		g.setColor(Color.BLACK);
 		
-		//Draw a 6x6 grid.
 		for(int x = 1 ; x <= 6 ; x++) {
 			int xPos = (x * getWidth())/6;
 			
@@ -107,13 +122,30 @@ public class GameView extends JPanel {
 		
 	}
 	
+	/**
+	 * Same functionality as initTiles(),
+	 * but its' name implies it should be used to reset the board.
+	 */
 	public void resetBoard() {
 		initTiles();
 	}
 	
-	// Getters //
+	/**
+	 * 
+	 * @return the LevelView that this GameView is contained within
+	 */
 	public LevelView getLevelView() { return parent; }
+	
+	/**
+	 * 
+	 * @return the 2 dimensional JLabel array that holds the tile letters
+	 */
 	public JLabel[][] getTileViews() { return tileViews;}
+	
+	/**
+	 * 
+	 * @return the 2 dimensional TileController array used to manipulate the tiles
+	 */
 	public TileController[][] getTileControllers() { return tileControllers; }
 	
 }
