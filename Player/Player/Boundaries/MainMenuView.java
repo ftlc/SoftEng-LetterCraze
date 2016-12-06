@@ -157,6 +157,14 @@ public class MainMenuView extends JFrame {
 		
 	}
 	
+	public void unlockLevel(int levelNum){
+		JButton theButton = (JButton)levelButtons[levelNum].getComponent(0);
+		theButton.setEnabled(true);
+		JLabel theLabel = (JLabel)levelButtons[levelNum].getComponent(1);
+		theLabel.setText("Stars: " + Integer.toString(levels[levelNum].getHighScore()));
+		
+	}
+	
 	// Getters //
 	public LevelView[] getLevelView() { return levelViews; }
 	public Level[] getLevels() { return levels; }
