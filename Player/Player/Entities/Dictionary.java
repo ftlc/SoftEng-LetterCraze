@@ -11,6 +11,10 @@ public class Dictionary {
 	boolean theme;
 	WordTable dict;
 	
+	/**
+	 * Default constructor for the Dictionary class.
+	 * assumes that theme is false and loads the default word table.
+	 */
 	public Dictionary() {
 		this.theme = false;
 		dict = new WordTable();
@@ -22,7 +26,11 @@ public class Dictionary {
 		}
 	}
 	
-	//2nd constructor
+	/**
+	 * Special constructor for Dictionary to allow the user to specify
+	 * if the Dictionary is a theme dictionary.
+	 * @param theme
+	 */
 	public Dictionary(boolean theme) {
 		this.theme = theme;
 		if(!theme) {
@@ -38,12 +46,23 @@ public class Dictionary {
 		}
 	}
 	
+	/**
+	 * Adds a given word to the dictionary
+	 * @param word
+	 * @return true on success
+	 * @return false on failure
+	 */
 	public boolean addWord(String word){
 		return words.add(word);
 	}	
 	
 	
-	
+	/**
+	 * Determines if the given string is a valid word in the dictionary
+	 * @param s
+	 * @return true if s is in the dictionary
+	 * @return false if s is not in the dictionary
+	 */
 	public boolean hasWord(String s){
 		if(!theme) {
 			return dict.isWord(s);
