@@ -150,6 +150,13 @@ public class MainMenuView extends JFrame {
 		theButton.addActionListener(new MainMenuToLevelController(this, levelViews[num]));
 	}
 	
+	public void updateHighScore(int levelNum){
+		JLabel scoreView = (JLabel)levelButtons[levelNum].getComponent(1);
+		Level theLevel = levels[levelNum];
+		scoreView.setText("Stars: " + Integer.toString(theLevel.getHighScore()));
+		
+	}
+	
 	// Getters //
 	public LevelView[] getLevelView() { return levelViews; }
 	public Level[] getLevels() { return levels; }

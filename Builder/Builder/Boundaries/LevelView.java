@@ -1,8 +1,7 @@
 package Builder.Boundaries;
 
-import Builder.Controllers.ExitBuilderController;
-import Builder.Controllers.SplashScreenToLevelController;
-import Builder.Controllers.ThemePopUpController;
+import Builder.Controllers.*;
+import Builder.Entities.Level;
 import Builder.Entities.Model;
 
 import java.awt.BorderLayout;
@@ -20,6 +19,7 @@ import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
@@ -35,64 +35,126 @@ import javax.swing.UIManager;
  */
 public class LevelView extends JFrame{
 
-    Model model;
+	Model model;
+	Level lvl;
 
-
-    private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JPanel contentPane;
+	private JTextField Star1Text;
+	private JTextField Star2Text;
+	private JTextField Star3Text;
+	private JTextField TimeTxt;
+	private JTextField MaxWordstxt;
 	private ThemeView themeCreationDialog;
+	private JComboBox comboBox;
+	private JButton btnTheme;
+	private JButton btnSaveLevel;
+	private JFileChooser fileFinder;
 
 	public LevelView(Model m) //, ThemeView themeCreationDialog)
-    {
-        this.model = m;
-        this.themeCreationDialog = new ThemeView(m);
+	{
+		this.model = m;
+		this.themeCreationDialog = new ThemeView(m);
+		this.lvl = model.getLevel();
 
-        initializeLevel();
-    }
+		initializeLevel();
+	}
+
+	// This is a setter for a few fields for when the PUZZLE mode is selected
+	public void setPuzzleFields(){
+		TimeTxt.setEditable(false);
+		MaxWordstxt.setEditable(true);	
+		btnTheme.setEnabled(false);
+	}
+
+	// getter for the Time text field
+	public JTextField getTimeTxt() {
+		return TimeTxt;
+	}
+
+	// This is a setter for a few fields for when the LIGHTNING mode is selected
+	public void setLightningFields(){
+		TimeTxt.setEditable(true);
+		MaxWordstxt.setEditable(false);
+		btnTheme.setEnabled(false);
+	}
+	
+	public void setThemeFields(){
+		TimeTxt.setEditable(false);
+		MaxWordstxt.setEditable(false);
+		btnTheme.setEnabled(true);
+	}
+	
+	public JFileChooser getFileFinder(){
+		return fileFinder;
+	}
+
+	public JTextField getMaxWordstxt() {
+		return MaxWordstxt;
+	}
+	
+	public JComboBox getComboBox(){
+		return comboBox;
+	}
+
+	public JTextField getStarText(int num) {
+		switch (num) {
+		case 1:
+			return Star1Text;
+
+		case 2:
+			return Star2Text;
+
+		case 3:
+			return Star3Text;
+
+		}
+		return null;
+	}
 
 
+	public JTextField getStar2Text() {
+		return Star2Text;
+	}
 
-    void initializeLevel() {
+	public JTextField getStar3Text() {
+		return Star3Text;
+	}
+	
+	public JButton getSaveButton(){
+		return btnSaveLevel;
+	}
 
-
+	void initializeLevel() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 711, 569);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-        initializeButtons();
-
-        initializeTextFields();
-
-
-
+		initializeButtons();
+		initializeComboBox();
+		initializeTextFields();
 		BoardView panel = new BoardView(model);
 		contentPane.add(panel);
+		
+		// initializing the fileFinder
+		fileFinder = new JFileChooser();
+		
+	}
 
-
-
-
-
-		JComboBox comboBox = new JComboBox();
+	void initializeComboBox(){
+		comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Puzzle", "Lightning", "Theme"}));
-		comboBox.setBounds(499, 27, 206, 27);
+		comboBox.setBounds(485, 27, 206, 27);
 		contentPane.add(comboBox);
-
-
-
-
-
+		// action listener to have some buttons and fields enabled or disabled
+		// when a certain game type is selected.
+		comboBox.addActionListener(new ChangeGameTypeController(this, model));
 	}
 
 	void initializeTextFields()
-    {
-       		JLabel Star1 = new JLabel("1 Star:");
+	{
+		JLabel Star1 = new JLabel("1 Star:");
 		Star1.setBounds(499, 168, 61, 16);
 		contentPane.add(Star1);
 
@@ -104,20 +166,23 @@ public class LevelView extends JFrame{
 		Star3.setBounds(499, 224, 61, 16);
 		contentPane.add(Star3);
 
-		textField = new JTextField();
-		textField.setBounds(561, 163, 130, 26);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		Star1Text = new JTextField();
+		Star1Text.setBounds(561, 163, 130, 26);
+		contentPane.add(Star1Text);
+		Star1Text.setColumns(10);
+		Star1Text.addActionListener(new StarValueController(lvl, this, 1));
 
-		textField_1 = new JTextField();
-		textField_1.setBounds(561, 191, 130, 26);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		Star2Text = new JTextField();
+		Star2Text.setBounds(561, 191, 130, 26);
+		contentPane.add(Star2Text);
+		Star2Text.setColumns(10);
+		Star2Text.addActionListener(new StarValueController(lvl, this, 2));
 
-		textField_2 = new JTextField();
-		textField_2.setBounds(561, 219, 130, 26);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		Star3Text = new JTextField();
+		Star3Text.setBounds(561, 219, 130, 26);
+		contentPane.add(Star3Text);
+		Star3Text.setColumns(10);
+		Star3Text.addActionListener(new StarValueController(lvl, this, 3));
 
 		JLabel lblTime = new JLabel("Time:");
 		lblTime.setBounds(499, 289, 61, 16);
@@ -127,70 +192,76 @@ public class LevelView extends JFrame{
 		lblMaxWords.setBounds(499, 330, 73, 16);
 		contentPane.add(lblMaxWords);
 
-		textField_3 = new JTextField();
-		textField_3.setBounds(561, 284, 130, 26);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
-
-		textField_4 = new JTextField();
-		textField_4.setBounds(584, 325, 107, 26);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
-    }
+		
+		// Time field and MaxWords field
+		TimeTxt = new JTextField();
+		TimeTxt.setBounds(561, 284, 130, 26);
+		contentPane.add(TimeTxt);
+		TimeTxt.setColumns(10);
+		TimeTxt.setEditable(false);
+		
+		MaxWordstxt = new JTextField();
+		MaxWordstxt.setBounds(584, 325, 107, 26);
+		contentPane.add(MaxWordstxt);
+		MaxWordstxt.setColumns(10);
+		MaxWordstxt.addActionListener(new AssignNumWordsController(lvl, this));
+	}
 
 	void initializeButtons()
-    {
-        	JButton btnSaveLevel = new JButton("Save Level");
+	{
+		// -----------------------------------------------------
+		btnSaveLevel = new JButton("Save Level");
 		btnSaveLevel.setBounds(5, 493, 142, 33);
 		btnSaveLevel.setAlignmentY(0.975f);
 		btnSaveLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnSaveLevel.addActionListener(new SaveLevelController(this));
 		contentPane.add(btnSaveLevel);
+		// ---------- SAVE LEVEL BUTTON ------------------------
 
-
-        JButton btnEditLevel= new JButton("Edit Level");
-        btnEditLevel.setBounds(147, 493, 136, 33);
-        btnEditLevel.setAlignmentY(0.975f);
-        btnEditLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-        contentPane.add(btnEditLevel);
-
-
-
-        JButton btnPreviewLevel = new JButton("Preview Level");
-        btnPreviewLevel.setBounds(283, 493, 171, 33);
-        btnPreviewLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-        btnPreviewLevel.setAlignmentY(0.975f);
-        contentPane.add(btnPreviewLevel);
+		JButton btnEditLevel= new JButton("Edit Level");
+		btnEditLevel.setBounds(147, 493, 136, 33);
+		btnEditLevel.setAlignmentY(0.975f);
+		btnEditLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		contentPane.add(btnEditLevel);
 
 
 
-        JButton btnDeleteLevel = new JButton("Delete Level");
-        btnDeleteLevel.setBounds(454, 493, 160, 33);
-        btnDeleteLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-        btnDeleteLevel.setAlignmentY(0.975f);
-        contentPane.add(btnDeleteLevel);
+		JButton btnPreviewLevel = new JButton("Preview Level");
+		btnPreviewLevel.setBounds(283, 493, 171, 33);
+		btnPreviewLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnPreviewLevel.setAlignmentY(0.975f);
+		contentPane.add(btnPreviewLevel);
 
 
 
-        JButton btnTheme = new JButton("Theme");
-        btnTheme.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-
-        btnTheme.setBounds(499, 382, 187, 33);
-        contentPane.add(btnTheme);
-
-        // This allows the user to click on the theme button leading you to the
-        // JDialog to make your theme
-        btnTheme.addActionListener(new ThemePopUpController(this, this.themeCreationDialog));
+		JButton btnDeleteLevel = new JButton("Delete Level");
+		btnDeleteLevel.setBounds(454, 493, 160, 33);
+		btnDeleteLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnDeleteLevel.setAlignmentY(0.975f);
+		contentPane.add(btnDeleteLevel);
 
 
 
-        JButton btnExit = new JButton("EXIT");
-        btnExit.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-        btnExit.setBounds(498, 427, 193, 40);
-        contentPane.add(btnExit);
-        // controller used to exit the program when clicked on the exit button
-        btnExit.addActionListener(new ExitBuilderController(this));
+		btnTheme = new JButton("Theme");
+		btnTheme.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnTheme.setEnabled(false); // Initialize as disabled because first game mode is puzzle
+		btnTheme.setBounds(499, 382, 187, 33);
+		contentPane.add(btnTheme);
 
-    }
+		// This allows the user to click on the theme button leading you to the
+		// JDialog to make your theme
+		btnTheme.addActionListener(new ThemePopUpController(this, this.themeCreationDialog));
+
+
+
+		JButton btnExit = new JButton("EXIT");
+		btnExit.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnExit.setBounds(498, 427, 193, 40);
+		contentPane.add(btnExit);
+		// controller used to exit the program when clicked on the exit button
+		btnExit.addActionListener(new ExitBuilderController(this));
+
+	}
 
 
 }
