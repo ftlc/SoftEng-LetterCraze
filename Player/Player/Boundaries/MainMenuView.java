@@ -53,7 +53,7 @@ public class MainMenuView extends JFrame {
 			
 			// JButton //
 			JButton theButton = new JButton("Level "+Integer.toString((i+1)));
-			theButton.addActionListener(new MainMenuToLevelController(this, levelViews[i]));
+			theButton.addActionListener(new MainMenuToLevelController(this, levelViews[i], levels[i]));
 			
 			// High Score Label //
 			JLabel highScore = new JLabel("Stars: " + Integer.toString(theLevel.getHighScore()), SwingConstants.CENTER);
@@ -147,7 +147,7 @@ public class MainMenuView extends JFrame {
 		levelViews[num] = new LevelView(levels[num], this, model);
 		JButton theButton = (JButton)levelButtons[num].getComponent(0);
 		theButton.removeActionListener(theButton.getActionListeners()[0]);
-		theButton.addActionListener(new MainMenuToLevelController(this, levelViews[num]));
+		theButton.addActionListener(new MainMenuToLevelController(this, levelViews[num], levels[num]));
 	}
 	
 	public void updateHighScore(int levelNum){

@@ -107,6 +107,10 @@ public class LevelView extends JFrame {
 		add(gameView);
 	}
 	
+	public void updateThirdBox(){
+		timerArea.setText(theLevel.getThirdBox());
+	}
+	
 	public void refresh() {
 		scoreArea.setText(null);
 		starArea.setText(null);

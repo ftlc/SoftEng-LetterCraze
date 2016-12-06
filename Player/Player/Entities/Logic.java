@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 
+import Player.Boundaries.LevelView;
 import Player.Controllers.TileController;
 
 public class Logic {
@@ -29,6 +30,14 @@ public class Logic {
 		}
 		return true;
 	}
+	
+	public boolean startTimer(LevelView levelView){
+		return false;
+	}
+	public boolean stopTimer(){
+		return false;
+	}
+	
 	public boolean playWord() {
 
 		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
