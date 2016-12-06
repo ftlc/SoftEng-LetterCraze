@@ -62,7 +62,8 @@ public class LevelView extends JFrame{
 	// This is a setter for a few fields for when the PUZZLE mode is selected
 	public void setPuzzleFields(){
 		TimeTxt.setEditable(false);
-		MaxWordstxt.setEditable(true);	
+		TimeTxt.setText("");
+		MaxWordstxt.setEditable(true);
 		btnTheme.setEnabled(false);
 	}
 
@@ -75,12 +76,15 @@ public class LevelView extends JFrame{
 	public void setLightningFields(){
 		TimeTxt.setEditable(true);
 		MaxWordstxt.setEditable(false);
+		MaxWordstxt.setText("");
 		btnTheme.setEnabled(false);
 	}
 	
 	public void setThemeFields(){
 		TimeTxt.setEditable(false);
+		TimeTxt.setText("");
 		MaxWordstxt.setEditable(false);
+		MaxWordstxt.setText("");
 		btnTheme.setEnabled(true);
 	}
 	

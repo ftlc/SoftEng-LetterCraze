@@ -11,6 +11,11 @@ public class PuzzleLevel extends Level{
         this.maxWords = maxWords;
     }
 
+    public PuzzleLevel() {
+        super();
+        this.maxWords = -1;
+    }
+
     public int getMaxWords() {
         return maxWords;
     }

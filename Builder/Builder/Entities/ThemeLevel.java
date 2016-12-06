@@ -13,7 +13,10 @@ public class ThemeLevel extends Level{
         super();
         this.name = name;
     }
-
+    public ThemeLevel() {
+        super();
+        this.name = "";
+    }
     boolean MakeDictionary(Dictionary d) {
         this.dictionary = d;
         return true;
