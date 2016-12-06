@@ -130,17 +130,19 @@ public class TileController implements MouseListener , MouseMotionListener {
 				}
 				Board b = level.getBoard();
 				Tile[][] t = b.getTiles();
+				
 				for(int x = 0 ; x < 6 ; x++) {
 					for(int y = 0 ; y < 6 ; y++) {
-						if(t[x][y] != null) {
+						if(t[x][y] != null && !t[x][y].getLetter().isEmpty()) {
 							Position p = b.canMoveUp(x, y);
-							t[p.getX()][p.getY()] = t[x][y];
+							t[p.getX()][p.getY()].setLetter(t[x][y].getLetter());
 							if(p.getX() != x || p.getY() != y) {
 								t[x][y].resetLetter();
 							}
 						}
 					}
 				}
+				
 				gameView.getLevelView().refresh();
 				return;
 			}

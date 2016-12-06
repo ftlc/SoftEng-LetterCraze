@@ -25,12 +25,11 @@ public class Board{
 	}
 	
 	public Position canMoveUp(int x, int y) {
-		for(int yCounter = y - 1; y > 0 ; y--) {
+
+		for(int yCounter = 0; yCounter < y ; yCounter++) {
 			if(tiles[x][yCounter] == null) {
 				
-			} else if(!tiles[x][yCounter].getLetter().isEmpty()) {
-				break;
-			} else if(tiles[x][yCounter].getLetter().isEmpty()) {
+			}  else if(tiles[x][yCounter].getLetter().isEmpty()) {
 				return new Position(x , yCounter);
 			}
 		}
