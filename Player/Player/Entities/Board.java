@@ -47,7 +47,7 @@ public class Board{
 		
 		for(int x = 0; x < TOTAL_NUM_TILES; x++){
 			for(int y = 0; y < TOTAL_NUM_TILES; y++){
-				if(isValid(x,y) == true)
+				if(isValid(y,x) == true)
 					tiles[x][y] = new Tile(x,y);
 			}
 		}
