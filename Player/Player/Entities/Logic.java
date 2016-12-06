@@ -1,5 +1,7 @@
 package Player.Entities;
 
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.ArrayList;
 
 import Player.Controllers.TileController;
@@ -17,10 +19,10 @@ public class Logic {
 	public boolean playWord() {
 
 		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
-	
+
 		if (lastSelectedWord != null) {
-			
-			if(lastSelectedWord.size() < 3){
+
+			if (lastSelectedWord.size() < 3) {
 				return false;
 			}
 
@@ -39,16 +41,36 @@ public class Logic {
 		}
 		return false;
 	}
-	
-	public String getThirdBox(){
+
+	public String getThirdBox() {
 		return thirdBox;
 	}
-	
-	public boolean readFile(String path){
+
+	public boolean writeHighScore(int num, String path) {
+		try {
+			RandomAccessFile f = new RandomAccessFile(path, "rw");
+
+			long length = f.length() - 1;
+			f.seek(length);
+			while (f.readByte() != 10){
+				length -= 1;
+				f.seek(length);
+			}
+			f.writeBytes(String.valueOf(num));
+			f.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return true;
+	}
+
+	public boolean readFile(String path) {
 		return false;
 	}
-	
-	protected int scoreToAdd(Word theWord){
+
+	protected int scoreToAdd(Word theWord) {
 		return 1;
 	}
 
