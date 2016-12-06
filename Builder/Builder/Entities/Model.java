@@ -10,7 +10,7 @@ public class Model {
 	}
 
 	public Model() {
-		this.level = new Level();
+		this.level = new PuzzleLevel();
 	}
 
 	public void initLevel(Level lvl) {
@@ -20,4 +20,19 @@ public class Model {
 	public Level getLevel() {
 		return level;
 	}
+
+
+	public void setLevelType(String type) {
+		if(type.equals("Puzzle")) {
+			this.level = new PuzzleLevel();
+		}
+
+		if(type.equals("Theme")) {
+			this.level = new ThemeLevel();
+		}
+		if(type.equals("Lightning")) {
+			this.level = new LightningLevel();
+		}
+	}
+
 }
