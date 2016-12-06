@@ -2,6 +2,7 @@ package Builder.Controllers;
 
 import Builder.Boundaries.LevelView;
 import Builder.Entities.Level;
+import Builder.Entities.PuzzleLevel;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,12 +12,12 @@ import java.awt.event.ActionListener;
  */
 public class AssignNumWordsController implements ActionListener{
 
-    Level lvl;
+    PuzzleLevel lvl;
     LevelView lvlView;
 
 
     public AssignNumWordsController(Level lvl, LevelView lvlView) {
-        this.lvl = lvl;
+        this.lvl = (PuzzleLevel) lvl;
         this.lvlView = lvlView;
 
     }
@@ -27,7 +28,7 @@ public class AssignNumWordsController implements ActionListener{
         System.out.println(txt);
         try {
             int contents = Integer.parseInt(txt);
-            lvl.setMaxWords(contents);
+            lvl.assignMaxWords(contents);
         }
         catch (Exception e){
             lvlView.getMaxWordstxt().setText("0");
