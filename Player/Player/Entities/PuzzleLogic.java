@@ -15,10 +15,13 @@ public class PuzzleLogic extends Logic {
 
 	@Override
 	public boolean playWord(){
-		boolean returnVal = super.playWord();
+		boolean returnVal = false;
+		if(maxMoves <= 0)
+			return returnVal;
+		returnVal= super.playWord();
 		if(returnVal == true){
 			maxMoves--;
-			this.thirdBox = "Max Moves\n" + String.valueOf(maxMoves);
+			this.thirdBox = "Moves Remaining\n" + String.valueOf(maxMoves);
 		}
 		
 		return returnVal;
@@ -64,7 +67,7 @@ public class PuzzleLogic extends Logic {
 
 					// Sets what third box will represent //
 					// (Level-Type Specific) //
-					this.thirdBox = "Max Moves\n" + String.valueOf(maxMoves);
+					this.thirdBox = "Moves Remaining\n" + String.valueOf(maxMoves);
 
 					break;
 				case 2:
