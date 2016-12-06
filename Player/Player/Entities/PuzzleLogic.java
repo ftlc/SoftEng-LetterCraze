@@ -21,7 +21,7 @@ public class PuzzleLogic extends Logic {
 			this.thirdBox = "Max Moves\n" + String.valueOf(maxMoves);
 		}
 		
-		return true;
+		return returnVal;
 	}
 	@Override
 	protected int scoreToAdd(Word theWord) {
