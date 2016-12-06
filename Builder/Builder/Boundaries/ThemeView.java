@@ -17,8 +17,9 @@ import Builder.Entities.Model;
 public class ThemeView extends JDialog{
 
 	private final JPanel contentPanel = new JPanel();
-	private JTextField textField;
-
+	private JTextField name;
+	private JTextPane words;
+	private JTextPane letters;
     Model model;
 	/**
 	 * Create the dialog box
@@ -28,7 +29,20 @@ public class ThemeView extends JDialog{
 
         initializePopup();
     }
-    void initializePopup() {
+
+	public JTextPane getLetters() {
+		return letters;
+	}
+
+	public JTextPane getWords() {
+		return words;
+	}
+
+	public JTextField getTheName() {
+		return name;
+	}
+
+	void initializePopup() {
 
 
 		
@@ -44,10 +58,10 @@ public class ThemeView extends JDialog{
 		lblThemeName.setBounds(6, 31, 87, 16);
 		contentPanel.add(lblThemeName);
 
-		textField = new JTextField();
-		textField.setBounds(138, 26, 294, 26);
-		contentPanel.add(textField);
-		textField.setColumns(10);
+		name = new JTextField();
+		name.setBounds(138, 26, 294, 26);
+		contentPanel.add(name);
+		name.setColumns(10);
 
 		JLabel lblNewLabel = new JLabel("Words");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -59,13 +73,13 @@ public class ThemeView extends JDialog{
 		lblLetterOrder.setBounds(6, 235, 87, 16);
 		contentPanel.add(lblLetterOrder);
 
-		JTextPane textPane = new JTextPane();
-		textPane.setBounds(138, 75, 294, 149);
-		contentPanel.add(textPane);
+		words = new JTextPane();
+		words.setBounds(138, 75, 294, 149);
+		contentPanel.add(words);
 
-		JTextPane textPane_1 = new JTextPane();
-		textPane_1.setBounds(134, 235, 298, 173);
-		contentPanel.add(textPane_1);
+		letters = new JTextPane();
+		letters.setBounds(134, 235, 298, 173);
+		contentPanel.add(letters);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
@@ -79,7 +93,7 @@ public class ThemeView extends JDialog{
 			{
 				JButton cancelButton = new JButton("Cancel");
 				cancelButton.setActionCommand("Cancel");
-				cancelButton.addActionListener(new CloseThemeController(this));
+				cancelButton.addActionListener(new CloseThemeController(this, model));
 				buttonPane.add(cancelButton);
 			}
 		}

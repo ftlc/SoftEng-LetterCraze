@@ -149,7 +149,7 @@ public class LevelView extends JFrame{
 		contentPane.add(comboBox);
 		// action listener to have some buttons and fields enabled or disabled
 		// when a certain game type is selected.
-		comboBox.addActionListener(new ChangeGameTypeController(this));
+		comboBox.addActionListener(new ChangeGameTypeController(this, model));
 	}
 
 	void initializeTextFields()
