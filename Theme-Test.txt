@@ -12,11 +12,11 @@ monkey
 donkey
 giraffe
 -
-dogcat
-monkey
-donkey
-giraff
-lettee
-abcdef
+mogcat
+oonkey
+nonkey
+kiraff
+eettee
+ybcdef
 -
 1       

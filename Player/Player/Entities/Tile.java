@@ -132,6 +132,10 @@ public class Tile{
 		this.letter = "";
 	}
 	
+	public void setLetter(String s) {
+		this.letter = s;
+	}
+	
 	public String toString(){
 		return this.letter;
 	}

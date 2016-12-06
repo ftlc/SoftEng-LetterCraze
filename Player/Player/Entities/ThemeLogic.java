@@ -83,6 +83,10 @@ public class ThemeLogic extends Logic {
 		return true;
 	}
 
+	@Override
+	public boolean regenLetters(){
+		return false;
+	}
 	public Word selectWord(Tile tiles[]) {
 		return null;
 	}
