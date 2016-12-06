@@ -20,7 +20,7 @@ public class PuzzleLevel extends Level{
         return maxWords;
     }
 
-    boolean assignMaxWords(int maxWords) {
+    public boolean assignMaxWords(int maxWords) {
         this.maxWords = maxWords;
         return true;
     }
