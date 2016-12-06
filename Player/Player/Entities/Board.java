@@ -8,6 +8,11 @@ public class Board{
 	//list of characters
 	char layout[][];
 	
+	/**
+	 * Constructor for the board class that assumes the board is not a theme level.
+	 * 
+	 * @param l
+	 */
 	public Board(char[][] l){
 		this.layout = l;
 		tiles = new Tile[TOTAL_NUM_TILES][TOTAL_NUM_TILES];
@@ -15,6 +20,15 @@ public class Board{
 		initializeTiles();
 	}
 	
+	
+	/**
+	 * Constructor for the board class where you can specify if this is a theme board.
+	 * 
+	 * If it's not a theme board we will use the default dictionary.
+	 * 
+	 * @param l
+	 * @param theme
+	 */
 	public Board(char[][] l, boolean theme){
 		this.layout = l;
 		tiles = new Tile[TOTAL_NUM_TILES][TOTAL_NUM_TILES];
@@ -24,6 +38,14 @@ public class Board{
 			initializeTiles();
 	}
 	
+	/**
+	 * Returns position that a tile should move up to.
+	 * returns the original position if there is no where to move up to.
+	 * 
+	 * @param x
+	 * @param y
+	 * @return Position that the tile should move up to
+	 */
 	public Position canMoveUp(int x, int y) {
 
 		for(int yCounter = 0; yCounter < y ; yCounter++) {
@@ -37,6 +59,13 @@ public class Board{
 		return new Position(x , y);
 	}
 	
+	/**
+	 * Instead of randomly generating tiles, we fill the grid
+	 * with pre-determined tiles specified by the theme file.
+	 * 
+	 * @return true on success
+	 * @return false on failure
+	 */
 	public boolean initializeTilesTheme(){
 		boolean init = true;
 		
@@ -55,6 +84,12 @@ public class Board{
 		return init;
 	}
 	
+	/**
+	 * Randomly generates letters for the tiles with proper weighting.
+	 * 
+	 * @return true on success
+	 * @return false on failure
+	 */
 	public boolean initializeTiles(){
 		boolean init = true;
 		
@@ -67,13 +102,27 @@ public class Board{
 		
 		return init;
 	}
-	// Assumes X is .brd marking for tile existing //
+
+	/**
+	 * Determines if the board is valid.
+	 * @param xCoord
+	 * @param yCoord
+	 * @return
+	 */
 	public boolean isValid(int xCoord, int yCoord){
 		return layout[xCoord][yCoord] == 'O';
 	}
 	
-	// Getters //
+	/**
+	 * 
+	 * @return the 2 dimensional tile array.
+	 */
 	public Tile[][] getTiles(){ return tiles; }
+	
+	/**
+	 * 
+	 * @return the 2 dimensional character array used to generate the tile array.
+	 */
 	public char[][] getLayout() { return layout; }
 	
 }
