@@ -7,7 +7,6 @@ import java.io.IOException;
 public class PuzzleLogic extends Logic {
 
 	int maxMoves;
-	String thirdBox;
 	public PuzzleLogic(Level l) {
 		super(l);
 		this.maxMoves = -1;
