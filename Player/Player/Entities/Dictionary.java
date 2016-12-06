@@ -22,6 +22,7 @@ public class Dictionary {
 		}
 	}
 	
+	//2nd constructor
 	public Dictionary(boolean theme) {
 		this.theme = theme;
 		if(!theme) {
