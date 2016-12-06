@@ -142,6 +142,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 						}
 					}
 				}
+				level.getLogic().regenLetters();
 				
 				gameView.getLevelView().refresh();
 				return;

@@ -16,6 +16,19 @@ public class Logic {
 		this.thirdBox = "Not Initializd";
 	}
 
+	public boolean regenLetters(){
+		Tile[][] tiles = level.getBoard().getTiles();
+		Tile theTile = null;
+		for(int x = 0; x < 6; x++){
+			for(int y = 0; y < 6; y++){
+				theTile = tiles[x][y];
+				if(theTile != null && theTile.getLetter().isEmpty()){
+					theTile.setLetter(theTile.generateLetter());
+				}
+			}
+		}
+		return true;
+	}
 	public boolean playWord() {
 
 		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
