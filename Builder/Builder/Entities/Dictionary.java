@@ -9,14 +9,19 @@ public class Dictionary {
     String name;
 
     ArrayList<String> words;
-    String[][] letters;
+    Character[][] letters;
 
     public Dictionary(String name, ArrayList<String> words)
     {
         this.name = name;
         this.words = words;
     }
+    public Dictionary()
+    {
+        this.name = "";
+        this.words = new ArrayList<String>();
 
+    }
     public ArrayList<String> getWords() {
         return words;
     }
@@ -25,24 +30,30 @@ public class Dictionary {
         return name;
     }
 
-    public String[][] getLetters() {
+    public Character[][] getLetters() {
         return letters;
     }
 
-    boolean addWord(String word) {
+    public boolean addWord(String word) {
         words.add(word);
         return true;
     }
 
-    boolean removeWord(String word) {
+    public boolean removeWord(String word) {
         words.remove(word);
         return true;
     }
 
 
-    boolean placeLetters(String[][] letters)
+    public boolean placeLetters(Character[][] letters)
     {
         this.letters = letters;
+        return true;
+    }
+
+    public boolean placeLetters(String let)
+    {
+
         return true;
     }
 

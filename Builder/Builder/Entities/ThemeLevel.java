@@ -12,11 +12,16 @@ public class ThemeLevel extends Level{
     public ThemeLevel(String name) {
         super();
         this.name = name;
+        this.dictionary = new Dictionary();
     }
     public ThemeLevel() {
         super();
         this.name = "";
-    }
+       this.dictionary = new Dictionary();
+
+     }
+
+
     boolean MakeDictionary(Dictionary d) {
         this.dictionary = d;
         return true;

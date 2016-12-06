@@ -24,7 +24,6 @@ public class CloseThemeController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
 
-
         tv.dispose();
     }
 }
