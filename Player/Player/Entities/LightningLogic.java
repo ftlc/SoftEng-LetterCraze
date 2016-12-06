@@ -3,10 +3,15 @@ package Player.Entities;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import Player.Boundaries.LevelView;
 
 public class LightningLogic extends Logic {
 
 	int timer;
+	Timer actualTimer;
 
 	public LightningLogic(Level l) {
 		super(l);
@@ -80,24 +85,40 @@ public class LightningLogic extends Logic {
 		}
 		return true;
 	}
-
-	public Word selectWord(Tile tiles[]) {
-		return null;
+	
+	@Override 
+	public boolean playWord(){
+		boolean returnVal = false;
+		if (timer <=0 ){
+			return returnVal;
+		}
+		returnVal = super.playWord();
+		return returnVal;
+	}
+	
+	@Override
+	public boolean startTimer(LevelView levelView){
+		TimerTask task = new TimerTask(){
+			@Override
+			public void run(){
+				if (timer > 0) {
+					timer--;
+					thirdBox = "Timer\n" + String.valueOf(timer);
+					levelView.updateThirdBox();
+				}
+				
+			}
+		};
+		
+		actualTimer = new Timer("LightningTimer");
+		actualTimer.scheduleAtFixedRate(task, 1000, 1000);
+	
+		return true;
+	}
+	@Override
+	public boolean stopTimer(){
+		actualTimer.cancel();		
+		return true;
 	}
 
-	public boolean gameOver() {
-		return false;
-	}
-
-	public boolean validWord() {
-		return false;
-	}
-
-	public boolean resetBoard() {
-		return false;
-	}
-
-	public boolean undoMove() {
-		return false;
-	}
 }

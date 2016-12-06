@@ -11,7 +11,7 @@ public class Board{
 	/**
 	 * Constructor for the board class that assumes the board is not a theme level.
 	 * 
-	 * @param l
+	 * @param l Character array representing valid layout of board
 	 */
 	public Board(char[][] l){
 		this.layout = l;

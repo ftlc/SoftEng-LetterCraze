@@ -14,6 +14,13 @@ public class Tile{
 	int xCoord;
 	int yCoord;
 	
+	/**
+	 * Constructor for Tile. Pass it the tiles X and Y coordinate.
+	 * The tile will randomly generate a letter for itself.
+	 * 
+	 * @param x
+	 * @param y
+	 */
 	public Tile(int x, int y){
 		this.xCoord = x;
 		this.yCoord = y;
@@ -22,6 +29,15 @@ public class Tile{
 		this.letter = generateLetter();
 		this.value = -1;
 	}
+	
+	/**
+	 * Constructor for Tile. Pass it the tiles X and Y coordinates,
+	 * and also pass the tile its' letter value.
+	 * 
+	 * @param x
+	 * @param y
+	 * @param letter
+	 */
 	public Tile(int x, int y, String letter){
 		this.xCoord = x;
 		this.yCoord = y;
@@ -30,7 +46,11 @@ public class Tile{
 		this.letter = letter;
 		this.value = -1;
 	}
-	// Generate Random Letters //
+	
+	/**
+	 *
+	 * @return random letter with appropriate weighting
+	 */
 	public String generateLetter(){
 		HashMap<Integer, String> hm1 = new HashMap<Integer, String>();
 		hm1.put(1, "a");
@@ -128,26 +148,61 @@ public class Tile{
 	      
 	}
 	
+	/**
+	 * Resets the letter value of the Tile to ""
+	 */
 	public void resetLetter(){
 		this.letter = "";
 	}
 	
+	/**
+	 * Sets the letter value of the Tile to the given string
+	 * @param s
+	 */
 	public void setLetter(String s) {
 		this.letter = s;
 	}
 	
+	/**
+	 * For debugging purposes.
+	 */
 	public String toString(){
 		return this.letter;
 	}
 
-	
-	// Getters //
+	/**
+	 * 
+	 * @return the letter contained within the tile
+	 */
 	public String getLetter(){ return letter; }
+	
+	/**
+	 * 
+	 * @return value of the tile
+	 */
 	public int getValue() { return value; }
+	
+	/**
+	 * 
+	 * @return the x-coordinate of the tile
+	 */
 	public int getXCoord() { return xCoord; }
+	
+	/**
+	 * 
+	 * @return the y-coordinate of the tile
+	 */
 	public int getYCoord() { return yCoord; }
 	
-	// Setters //generateLetter()
+	/**
+	 * Set the x-coordinate of the tile
+	 * @param x
+	 */
 	public void setXCoord(int x) { xCoord = x; }
+	
+	/**
+	 * Set the y-coordinate of the tile
+	 * @param y
+	 */
 	public void setYCoord(int y) { yCoord = y; }
 }

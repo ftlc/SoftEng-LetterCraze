@@ -1,5 +1,7 @@
 package Player.Entities;
 
+import java.util.ArrayList;
+
 public class Model {
 	
 	// Top Level Model For LetterCraze //
@@ -7,10 +9,28 @@ public class Model {
 	
 	final int TOTAL_NUM_LEVELS = 15; // 15 Levels in Final Build //
 	Level levels[]; // Level Data //
+	ArrayList<String> paths;
 	
 	
 	public Model(){
 		levels = new Level[TOTAL_NUM_LEVELS];
+		this.paths = new ArrayList<String>();
+		paths.add("Puzzle-Test.txt");
+		paths.add("Lightning-Test.txt");
+		paths.add("Theme-Test.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");
+		paths.add("Puzzle-Test-Uninitialized.txt");	
+		
 		
 		initializeLevels();
 	}
@@ -19,17 +39,7 @@ public class Model {
 	/* Exception (?) for missing level */
 	public void initializeLevels(){
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){
-			int levelType = i % 3;
-			switch(levelType){
-			case 0:
-				levels[i] = new Level("Puzzle-Test.txt", i); 
-				break;
-			case 1:
-				levels[i] = new Level("Lightning-Test.txt", i);
-				break;
-			case 2:
-				levels[i] = new Level("Theme-Test.txt", i);
-			}
+			levels[i] = new Level(paths.get(i), i);
 		}
 	}
 

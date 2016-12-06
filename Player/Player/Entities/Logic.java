@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 
+import Player.Boundaries.LevelView;
 import Player.Controllers.TileController;
 
 public class Logic {
@@ -29,6 +30,31 @@ public class Logic {
 		}
 		return true;
 	}
+	
+	public boolean resetBoard(){
+		level.setScore(0);
+		
+		Tile[][] tiles = level.getBoard().getTiles();
+		Tile theTile = null;
+		for (int x = 0; x < 6; x++){
+			for(int y = 0; y < 6; y++){
+				theTile = tiles[x][y];
+				if(theTile !=null){
+					theTile.setLetter(theTile.generateLetter());
+				}
+			}
+		}
+		
+		return true;
+	}
+	
+	public boolean startTimer(LevelView levelView){
+		return false;
+	}
+	public boolean stopTimer(){
+		return false;
+	}
+	
 	public boolean playWord() {
 
 		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();

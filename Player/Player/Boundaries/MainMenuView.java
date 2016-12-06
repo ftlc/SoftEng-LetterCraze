@@ -22,6 +22,7 @@ public class MainMenuView extends JFrame {
 	JPanel[] levelButtons;
 	Level[] levels;
 	LevelView[] levelViews;
+	int unlockedNum;
 	Model model;
 	
 	
@@ -30,6 +31,7 @@ public class MainMenuView extends JFrame {
 		levelButtons = new JPanel[TOTAL_NUM_LEVELS];
 		levels = model.getLevels();
 		levelViews = new LevelView[TOTAL_NUM_LEVELS];
+		this.unlockedNum = 16;
 		
 		initViews();
 		initFrame();
@@ -53,17 +55,20 @@ public class MainMenuView extends JFrame {
 			
 			// JButton //
 			JButton theButton = new JButton("Level "+Integer.toString((i+1)));
-			theButton.addActionListener(new MainMenuToLevelController(this, levelViews[i]));
+			theButton.addActionListener(new MainMenuToLevelController(this, levelViews[i], levels[i]));
 			
 			// High Score Label //
-			JLabel highScore = new JLabel("Stars: " + Integer.toString(theLevel.getHighScore()), SwingConstants.CENTER);
+			int highScoreNum = theLevel.getHighScore();
+			JLabel highScore = new JLabel("Stars: " + Integer.toString(highScoreNum), SwingConstants.CENTER);
+			if (highScoreNum == 0 && i < unlockedNum)
+				this.unlockedNum = i;
 			
 			// Place Button and Label on JPanel //
 			levelButtons[i] = new JPanel(new BorderLayout());
 			levelButtons[i].add(theButton, BorderLayout.CENTER);
 			levelButtons[i].add(highScore, BorderLayout.SOUTH);
 			
-			if(i >= 3){
+			if(i > unlockedNum){
 				highScore.setText("Locked");
 				theButton.setEnabled(false);
 			}
@@ -147,13 +152,21 @@ public class MainMenuView extends JFrame {
 		levelViews[num] = new LevelView(levels[num], this, model);
 		JButton theButton = (JButton)levelButtons[num].getComponent(0);
 		theButton.removeActionListener(theButton.getActionListeners()[0]);
-		theButton.addActionListener(new MainMenuToLevelController(this, levelViews[num]));
+		theButton.addActionListener(new MainMenuToLevelController(this, levelViews[num], levels[num]));
 	}
 	
 	public void updateHighScore(int levelNum){
 		JLabel scoreView = (JLabel)levelButtons[levelNum].getComponent(1);
 		Level theLevel = levels[levelNum];
 		scoreView.setText("Stars: " + Integer.toString(theLevel.getHighScore()));
+		
+	}
+	
+	public void unlockLevel(int levelNum){
+		JButton theButton = (JButton)levelButtons[levelNum].getComponent(0);
+		theButton.setEnabled(true);
+		JLabel theLabel = (JLabel)levelButtons[levelNum].getComponent(1);
+		theLabel.setText("Stars: " + Integer.toString(levels[levelNum].getHighScore()));
 		
 	}
 	
