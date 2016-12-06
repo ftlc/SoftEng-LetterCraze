@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 
 import Player.Boundaries.LevelView;
 import Player.Boundaries.GameView;
+import Player.Entities.Board;
 import Player.Entities.Level;
 import Player.Entities.Position;
 import Player.Entities.Tile;
@@ -126,6 +127,19 @@ public class TileController implements MouseListener , MouseMotionListener {
 					TileController tc = gameView.getTileControllers()[tileX][tileY];
 					tc.clearTile();
 					tc.resetState();
+				}
+				Board b = level.getBoard();
+				Tile[][] t = b.getTiles();
+				for(int x = 0 ; x < 6 ; x++) {
+					for(int y = 0 ; y < 6 ; y++) {
+						if(t[x][y] != null) {
+							Position p = b.canMoveUp(x, y);
+							t[p.getX()][p.getY()] = t[x][y];
+							if(p.getX() != x || p.getY() != y) {
+								t[x][y].resetLetter();
+							}
+						}
+					}
 				}
 				gameView.getLevelView().refresh();
 				return;

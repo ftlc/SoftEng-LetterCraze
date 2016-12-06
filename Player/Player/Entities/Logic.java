@@ -37,19 +37,7 @@ public class Logic {
 				level.addWord(theWord);
 				
 				
-				Board b = level.getBoard();
-				Tile[][] t = b.getTiles();
-				for(int x = 0 ; x < 6 ; x++) {
-					for(int y = 0 ; y < 6 ; y++) {
-						if(t[x][y] != null) {
-							Position p = b.canMoveUp(x, y);
-							t[p.getX()][p.getY()] = t[x][y];
-							if(p.getX() != x || p.getY() != y) {
-								t[x][y].resetLetter();
-							}
-						}
-					}
-				}
+				
 				
 				
 				return true;

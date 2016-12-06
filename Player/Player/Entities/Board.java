@@ -25,7 +25,7 @@ public class Board{
 	}
 	
 	public Position canMoveUp(int x, int y) {
-		for(int yCounter = y ; y > 0 ; y--) {
+		for(int yCounter = y - 1; y > 0 ; y--) {
 			if(tiles[x][yCounter] == null) {
 				
 			} else if(!tiles[x][yCounter].getLetter().isEmpty()) {
