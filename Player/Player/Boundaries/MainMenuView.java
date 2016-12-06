@@ -22,6 +22,7 @@ public class MainMenuView extends JFrame {
 	JPanel[] levelButtons;
 	Level[] levels;
 	LevelView[] levelViews;
+	int unlockedNum;
 	Model model;
 	
 	
@@ -30,6 +31,7 @@ public class MainMenuView extends JFrame {
 		levelButtons = new JPanel[TOTAL_NUM_LEVELS];
 		levels = model.getLevels();
 		levelViews = new LevelView[TOTAL_NUM_LEVELS];
+		this.unlockedNum = 16;
 		
 		initViews();
 		initFrame();
@@ -56,14 +58,17 @@ public class MainMenuView extends JFrame {
 			theButton.addActionListener(new MainMenuToLevelController(this, levelViews[i], levels[i]));
 			
 			// High Score Label //
-			JLabel highScore = new JLabel("Stars: " + Integer.toString(theLevel.getHighScore()), SwingConstants.CENTER);
+			int highScoreNum = theLevel.getHighScore();
+			JLabel highScore = new JLabel("Stars: " + Integer.toString(highScoreNum), SwingConstants.CENTER);
+			if (highScoreNum == 0 && i < unlockedNum)
+				this.unlockedNum = i;
 			
 			// Place Button and Label on JPanel //
 			levelButtons[i] = new JPanel(new BorderLayout());
 			levelButtons[i].add(theButton, BorderLayout.CENTER);
 			levelButtons[i].add(highScore, BorderLayout.SOUTH);
 			
-			if(i >= 3){
+			if(i > unlockedNum){
 				highScore.setText("Locked");
 				theButton.setEnabled(false);
 			}
