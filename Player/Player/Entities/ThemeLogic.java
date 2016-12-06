@@ -84,23 +84,16 @@ public class ThemeLogic extends Logic {
 	}
 
 	@Override
+	public boolean resetBoard(){
+		level.setScore(0);
+		level.reconstruct();
+		
+		return true;
+	}
+	@Override
 	public boolean regenLetters(){
 		return false;
 	}
-	public Word selectWord(Tile tiles[]) {
-		return null;
-	}
-
-	public boolean gameOver() {
-		return false;
-	}
-
-	public boolean validWord() {
-		return false;
-	}
-
-	public boolean resetBoard() {
-		return false;
-	}
+	
 
 }

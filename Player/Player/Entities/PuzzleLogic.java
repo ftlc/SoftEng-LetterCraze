@@ -7,21 +7,23 @@ import java.io.IOException;
 public class PuzzleLogic extends Logic {
 
 	int maxMoves;
+	int movesRem;
 	public PuzzleLogic(Level l) {
 		super(l);
 		this.maxMoves = -1;
+		this.movesRem = -1;
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public boolean playWord(){
 		boolean returnVal = false;
-		if(maxMoves <= 0)
+		if(movesRem <= 0)
 			return returnVal;
 		returnVal= super.playWord();
 		if(returnVal == true){
-			maxMoves--;
-			this.thirdBox = "Moves Remaining\n" + String.valueOf(maxMoves);
+			movesRem--;
+			this.thirdBox = "Moves Remaining\n" + String.valueOf(movesRem);
 		}
 		
 		return returnVal;
@@ -29,6 +31,15 @@ public class PuzzleLogic extends Logic {
 	@Override
 	protected int scoreToAdd(Word theWord) {
 		return theWord.getWordScore();
+	}
+	
+	@Override
+	public boolean resetBoard(){
+		boolean returnVal = super.resetBoard();
+		movesRem = maxMoves;
+		this.thirdBox = "Moves Remaining\n" + String.valueOf(movesRem);
+		
+		return returnVal;
 	}
 
 	// Initialize Entities for Puzzle Level //
@@ -64,10 +75,11 @@ public class PuzzleLogic extends Logic {
 
 					// Stores Max Number of Moves //
 					maxMoves = Integer.parseInt(currLine);
+					movesRem = maxMoves;
 
 					// Sets what third box will represent //
 					// (Level-Type Specific) //
-					this.thirdBox = "Moves Remaining\n" + String.valueOf(maxMoves);
+					this.thirdBox = "Moves Remaining\n" + String.valueOf(movesRem);
 
 					break;
 				case 2:

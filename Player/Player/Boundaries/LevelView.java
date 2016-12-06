@@ -12,6 +12,7 @@ import javax.swing.JTextArea;
 import javax.swing.border.Border;
 
 import Player.Controllers.LevelToMainMenuController;
+import Player.Controllers.ResetBoardController;
 import Player.Entities.Level;
 import Player.Entities.Model;
 
@@ -48,6 +49,7 @@ public class LevelView extends JFrame {
 		add(btnExit);
 		
 		JButton btnResetBoard = new JButton("Reset Board");
+		btnResetBoard.addActionListener(new ResetBoardController(theLevel, this));
 		btnResetBoard.setFont(f);
 		btnResetBoard.setBounds(470, 359, 298, 77);
 		add(btnResetBoard);

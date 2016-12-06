@@ -121,23 +121,4 @@ public class LightningLogic extends Logic {
 		return true;
 	}
 
-	public Word selectWord(Tile tiles[]) {
-		return null;
-	}
-
-	public boolean gameOver() {
-		return false;
-	}
-
-	public boolean validWord() {
-		return false;
-	}
-
-	public boolean resetBoard() {
-		return false;
-	}
-
-	public boolean undoMove() {
-		return false;
-	}
 }
