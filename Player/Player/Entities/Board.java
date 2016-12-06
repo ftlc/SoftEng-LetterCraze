@@ -24,6 +24,20 @@ public class Board{
 			initializeTiles();
 	}
 	
+	public Position canMoveUp(int x, int y) {
+		for(int yCounter = y ; y > 0 ; y--) {
+			if(tiles[x][yCounter] == null) {
+				
+			} else if(!tiles[x][yCounter].getLetter().isEmpty()) {
+				break;
+			} else if(tiles[x][yCounter].getLetter().isEmpty()) {
+				return new Position(x , yCounter);
+			}
+		}
+		
+		return new Position(x , y);
+	}
+	
 	public boolean initializeTilesTheme(){
 		boolean init = true;
 		
