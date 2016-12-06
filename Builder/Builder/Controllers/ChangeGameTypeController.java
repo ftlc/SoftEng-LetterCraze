@@ -10,17 +10,29 @@ import java.awt.event.ActionListener;
 public class ChangeGameTypeController implements ActionListener{
 
 	LevelView lv;
-	JComboBox comboBox;
+	String currentSelection;
 	
 	
-	 public ChangeGameTypeController(LevelView lv, JComboBox comboBox) {
+	 public ChangeGameTypeController(LevelView lv, String currentSelection) {
 	        this.lv = lv;
-	        this.comboBox = comboBox;
-	    }
+	        this.currentSelection = currentSelection;
+	 }
 
 	
 	@Override
 	public void actionPerformed(ActionEvent actionEvent) {
+		
+		if (currentSelection.toString().equals("Puzzle")){
+			lv.setPuzzleFields();
+		}
+		
+		if (currentSelection.toString().equals("Lightning")){
+			lv.setLightningFields();
+		}
+		
+		if (currentSelection.toString().equals("Theme")){
+			lv.setThemeFields();
+		}
 		
 		
 	}

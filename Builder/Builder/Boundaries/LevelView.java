@@ -44,6 +44,8 @@ public class LevelView extends JFrame{
 	private JTextField TimeTxt;
 	private JTextField MaxWordstxt;
 	private ThemeView themeCreationDialog;
+	private JComboBox comboBox;
+	private JButton btnTheme;
 
 	public LevelView(Model m) //, ThemeView themeCreationDialog)
 	{
@@ -54,8 +56,34 @@ public class LevelView extends JFrame{
 		initializeLevel();
 	}
 
+	// This is a setter for a few fields for when the PUZZLE mode is selected
+	public void setPuzzleFields(){
+		TimeTxt.setEnabled(false);
+		TimeTxt.setEditable(false);
+		MaxWordstxt.setEditable(true);
+		MaxWordstxt.setEnabled(true);	
+		btnTheme.setEnabled(false);
+	}
+
 	public JTextField getTimeTxt() {
 		return TimeTxt;
+	}
+
+	// This is a setter for a few fields for when the LIGHTNING mode is selected
+	public void setLightningFields(){
+		TimeTxt.setEnabled(true);
+		TimeTxt.setEditable(true);
+		MaxWordstxt.setEditable(false);
+		MaxWordstxt.setEnabled(false);
+		btnTheme.setEnabled(false);
+	}
+	
+	public void setThemeFields(){
+		TimeTxt.setEnabled(false);
+		TimeTxt.setEditable(false);
+		MaxWordstxt.setEditable(false);
+		MaxWordstxt.setEnabled(false);
+		btnTheme.setEnabled(true);
 	}
 
 	public JTextField getMaxWordstxt() {
@@ -64,14 +92,14 @@ public class LevelView extends JFrame{
 
 	public JTextField getStarText(int num) {
 		switch (num) {
-			case 1:
-				return Star1Text;
+		case 1:
+			return Star1Text;
 
-			case 2:
-				return Star2Text;
+		case 2:
+			return Star2Text;
 
-			case 3:
-				return Star3Text;
+		case 3:
+			return Star3Text;
 
 		}
 		return null;
@@ -95,29 +123,22 @@ public class LevelView extends JFrame{
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
 		initializeButtons();
-
 		initializeTextFields();
-
-
-
 		BoardView panel = new BoardView(model);
 		contentPane.add(panel);
+		initializeComboBox();
+	}
 
-
-
-
-
-		JComboBox comboBox = new JComboBox();
+	void initializeComboBox(){
+		comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Puzzle", "Lightning", "Theme"}));
 		comboBox.setBounds(485, 27, 206, 27);
 		contentPane.add(comboBox);
-
-
-
-
-
+		// action listener to have some buttons and fields enabled or disabled
+		// when a certain game type is selected.
+		String selectedItem = String.valueOf(comboBox.getSelectedItem());
+		comboBox.addActionListener(new ChangeGameTypeController(this, selectedItem));
 	}
 
 	void initializeTextFields()
@@ -161,8 +182,6 @@ public class LevelView extends JFrame{
 		contentPane.add(lblMaxWords);
 
 		JTextField textField_3 = new JTextField();
-		textField_3.setEnabled(false);
-		textField_3.setEditable(false);
 		textField_3.setBounds(561, 284, 130, 26);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
@@ -175,8 +194,6 @@ public class LevelView extends JFrame{
 
 
 		JTextField textField_4 = new JTextField();
-		textField_4.setEnabled(false);
-		textField_4.setEditable(false);
 		textField_4.setBounds(584, 325, 107, 26);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
@@ -221,9 +238,8 @@ public class LevelView extends JFrame{
 
 
 
-        JButton btnTheme = new JButton("Theme");
-        btnTheme.setEnabled(false);
-        btnTheme.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnTheme = new JButton("Theme");
+		btnTheme.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 
 
 		btnTheme.setBounds(499, 382, 187, 33);
