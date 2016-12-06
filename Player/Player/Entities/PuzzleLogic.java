@@ -14,6 +14,16 @@ public class PuzzleLogic extends Logic {
 	}
 
 	@Override
+	public boolean playWord(){
+		boolean returnVal = super.playWord();
+		if(returnVal == true){
+			maxMoves--;
+			this.thirdBox = "Max Moves\n" + String.valueOf(maxMoves);
+		}
+		
+		return true;
+	}
+	@Override
 	protected int scoreToAdd(Word theWord) {
 		return theWord.getWordScore();
 	}
