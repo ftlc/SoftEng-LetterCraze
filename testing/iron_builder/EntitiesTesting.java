@@ -5,10 +5,12 @@ import Player.Main;
 import Player.Entities.Board;
 import Player.Entities.Dictionary;
 import Player.Entities.Level;
+import Player.Entities.Logic;
 import Player.Entities.Model;
 import Player.Entities.Position;
 import Player.Entities.Star;
 import Player.Entities.Tile;
+import Player.Entities.Word;
 import junit.framework.TestCase;
 
 
@@ -54,9 +56,23 @@ public class EntitiesTesting extends TestCase{
 		Level three = new Level("T", 2);
 		assertTrue(one.readLevel("T"));
 	//	assertTrue(one.themeInit("T"));
+		
+		
 	
+		three.setScore(1);
+		//three.setHighScore(2);
+		Logic l3 = new Logic(three);
+		Star s =  new Star(1,2,3);
+		three.setStar(s);
 		
+		//logic.writeHighScore(numStars, path); is not working
+		//assertTrue(three.saveHighScore());
 		
+		three.setScore(4);
+
+		Star s1 =  new Star(6,7,8);
+		three.setStar(s1);
+		assertFalse(three.saveHighScore());
 	}
 	public void testPosition(){
 		Position p =  new Position(1,2);
@@ -67,7 +83,10 @@ public class EntitiesTesting extends TestCase{
 
 	public void testStar(){
 		Star s = new Star(1,2,3);
-	
+		assertEquals(s.calculateStars(6),3);
+		assertEquals(s.calculateStars(2),2);
+		assertEquals(s.calculateStars(1),1);
+		assertEquals(s.calculateStars(0),0);
 		//assertEquals(s.calculateStars(), 6);
 	}
 	public void testDictionary(){
@@ -113,5 +132,65 @@ public class EntitiesTesting extends TestCase{
 		//assertEquals(b.getTiles(), null);
 		
 		//assertEquals(24,b.getLayout());
+	}
+	public void testLogic(){
+		Level four = new Level("P", 4);
+		
+		ArrayList<Tile> tilesToTest = new ArrayList<Tile>();
+		tilesToTest.add(new Tile(0,0,"c")); // x,y,Letter
+		tilesToTest.add(new Tile(0,0,"a"));
+		//tilesToTest.add(new Tile(0,0,"T"));
+	
+		four.setLastSelectedWord(tilesToTest);
+		
+		//ArrayList<Tile> lastSelectedWord = four.getLastSelectedWord();
+		Logic l = new Logic(four);
+		assertFalse(l.playWord());
+		Dictionary d = new Dictionary(true);
+		
+		ArrayList<Tile> tile = new ArrayList<Tile>();
+		tile.add(new Tile(1,1,"c")); // x,y,Letter
+		tile.add(new Tile(2,1,"a"));
+		tile.add(new Tile(3,1,"t"));
+		Word word = new Word(tile);
+		d.addWord("cat");
+		d.hasWord("cat");
+		
+		four.addWord(word);
+		four.setDictionary(d);
+		assertTrue(four.hasWord("cat"));
+		four.setLastSelectedWord(tile);
+		assertTrue(l.playWord());
+		
+		
+		Level level1 = new Level("P", 5);
+		Logic l1 = new Logic(level1);
+		char [][] tiles = new char[6][6];
+		
+		Board b  = new Board(tiles);
+		
+		ArrayList<Tile> tile2 = new ArrayList<Tile>();
+		tile2.add(new Tile(1,1,null)); // x,y,Letter
+		//assertTrue(l1.regenLetters());
+		
+	}
+	
+	public void testWord(){
+		ArrayList<Tile> tiles = new ArrayList<Tile>();
+		tiles.add(new Tile(1,1,"c")); // x,y,Letter
+		tiles.add(new Tile(1,2,"a"));
+		tiles.add(new Tile(1,3,"t"));
+		Word w = new Word(tiles);
+		
+		assertEquals(w.getWordScore(), 6);
+		
+		ArrayList<Tile> tiles1 = new ArrayList<Tile>();
+		tiles1.add(new Tile(1,1,"c")); // x,y,Letter
+		tiles1.add(new Tile(2,1,"a")); 
+		tiles1.add(new Tile(3,1,"t")); 
+		Word w1 = new Word(tiles1);
+		String t =w1.toString();
+		assertEquals(t,"cat");
+		
 	}
 }

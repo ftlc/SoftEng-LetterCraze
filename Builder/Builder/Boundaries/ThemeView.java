@@ -11,6 +11,7 @@ import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import Builder.Controllers.AcceptThemeController;
 import Builder.Controllers.CloseThemeController;
 import Builder.Entities.Model;
 
@@ -30,6 +31,10 @@ public class ThemeView extends JDialog{
         initializePopup();
     }
 
+	public Model getModel() {
+		return model;
+	}
+
 	public JTextPane getLetters() {
 		return letters;
 	}
@@ -38,8 +43,8 @@ public class ThemeView extends JDialog{
 		return words;
 	}
 
-	public JTextField getTheName() {
-		return name;
+	public String getTheName() {
+		return name.getText();
 	}
 
 	void initializePopup() {
@@ -87,6 +92,7 @@ public class ThemeView extends JDialog{
 			{
 				JButton okButton = new JButton("OK");
 				okButton.setActionCommand("OK");
+				okButton.addActionListener(new AcceptThemeController(this));
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
 			}
