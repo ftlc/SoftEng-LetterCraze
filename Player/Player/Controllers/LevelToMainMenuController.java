@@ -21,13 +21,13 @@ public class LevelToMainMenuController implements ActionListener{
 		from.setVisible(false);
 		
 		Level theLevel = from.getLevel();
-		theLevel.setScore(0);
 		int levelNum = theLevel.getLevelNum();
 		boolean returnVal = theLevel.saveHighScore();
 		if (returnVal == true) {
 			to.updateHighScore(levelNum);
 			to.unlockLevel(levelNum+1);
 		}
+		theLevel.setScore(0);
 		
 		
 		theLevel.getLogic().stopTimer();

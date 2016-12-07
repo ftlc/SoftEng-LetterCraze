@@ -2,7 +2,7 @@ T
 -
 2     
 4     
-6    
+5    
 -
 Animals  
 -
@@ -11,12 +11,13 @@ cat
 monkey
 donkey
 giraffe
+rat
 -
-mogcat
-oonkey
-nonkey
-kiraff
-eettee
+dogcat
+donkey
+monkey
+giraff
+lettee
 ybcdef
 -
 1   
