@@ -73,8 +73,9 @@ public class Board{
 			for(int y = 0; y < TOTAL_NUM_TILES; y++){
 				char c = layout[y][x];
 				if(c != '"'){
-					if(c == 'Q')
-						tiles[x][y] = new Tile(x,y,"Qu");
+					c = Character.toLowerCase(c);
+					if(c == 'q')
+						tiles[x][y] = new Tile(x,y,"qu");
 					else
 						tiles[x][y] = new Tile(x,y,Character.toString(c));
 				}
