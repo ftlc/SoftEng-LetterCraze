@@ -75,13 +75,18 @@ public class ChangeGameTypeController implements ActionListener{
 
     }
 
+    //Set the shared state to the new level type
 	void setSharedState(Level lvl ) {
 
+	 	//Set the stars
         for(int i = 1; i<=3; i++) {
             lvl.setStarAt(templvl.getStarAt(i), i);
         }
 
+        //Set the board
         lvl.setBoard(templvl.getBoard());
+
+        //Update the level in levelView
         lv.setLvl(lvl);
     }
 	

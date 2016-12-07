@@ -57,7 +57,8 @@ public class LevelView extends JFrame{
 
 		initializeLevel();
 
-        setLvl(m.getLevel());
+        //Set the level and corresponding controllers
+		setLvl(m.getLevel());
 	}
 
 	public Level getLvl() {
@@ -67,6 +68,7 @@ public class LevelView extends JFrame{
 	public void setLvl(Level lvl) {
 		this.lvl = lvl;
 
+		// Set the corresponding controllers (Only if correct level type)
         if(lvl.getLevelType().equals("Lightning")) {
             TimeTxt.addActionListener(new AssignTimeController(lvl, this));
         }
