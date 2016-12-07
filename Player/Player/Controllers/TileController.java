@@ -30,6 +30,7 @@ public class TileController implements MouseListener , MouseMotionListener {
 		this.tileView = tileView;
 		tileView.setOpaque(true);
 		this.level = l;
+		this.levelView = g.getLevelView();
 		this.position = p;
 		this.gameView = g;
 		this.tile = tile;
@@ -120,7 +121,10 @@ public class TileController implements MouseListener , MouseMotionListener {
 		ArrayList<Tile> lastSelectedWord = level.getLastSelectedWord();
 		
 		if(lastSelectedWord != null) {
-			if(level.playWord()) {				
+			if(level.playWord()) {
+				ArrayList<Word> selectedWords = level.getSelectedWords();
+				int index = selectedWords.size() - 1;
+				levelView.updateSelectedWords(selectedWords.get(index));
 				for(Tile t: lastSelectedWord){
 					int tileX = t.getXCoord();
 					int tileY = t.getYCoord();
