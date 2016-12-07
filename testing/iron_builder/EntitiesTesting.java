@@ -2,12 +2,18 @@ package iron_builder;
 import java.util.ArrayList;
 
 import Player.Main;
+import Player.Boundaries.GameView;
+import Player.Boundaries.LevelView;
+import Player.Boundaries.MainMenuView;
+import Player.Boundaries.SplashScreenView;
 import Player.Entities.Board;
 import Player.Entities.Dictionary;
 import Player.Entities.Level;
+import Player.Entities.LightningLogic;
 import Player.Entities.Logic;
 import Player.Entities.Model;
 import Player.Entities.Position;
+import Player.Entities.PuzzleLogic;
 import Player.Entities.Star;
 import Player.Entities.Tile;
 import Player.Entities.Word;
@@ -20,10 +26,7 @@ public class EntitiesTesting extends TestCase{
 	Model model;
 	
 	
-	protected void setUp() {
-		Model model = new Model();
-	
-	}
+
 	
 
 	public void testLevel(){
@@ -129,6 +132,12 @@ public class EntitiesTesting extends TestCase{
 		char [][] tiles = new char[6][6];
 		
 		Board b  = new Board(tiles);
+		Position pos1 = new Position(1,1);
+
+		//assertEquals(b.canMoveUp(1, 1) , pos);
+		assertFalse(b.isValid(1, 1));
+		b.canMoveUp(1, 1);
+		
 		//assertEquals(b.getTiles(), null);
 		
 		//assertEquals(24,b.getLayout());
@@ -170,8 +179,19 @@ public class EntitiesTesting extends TestCase{
 		Board b  = new Board(tiles);
 		
 		ArrayList<Tile> tile2 = new ArrayList<Tile>();
-		tile2.add(new Tile(1,1,null)); // x,y,Letter
-		//assertTrue(l1.regenLetters());
+		Tile tile4 = new Tile(1,1,"");
+		tile2.add(tile4);
+	
+		level1.setBoard(b);
+		b.initializeTiles();
+		level1.addCurrTile(tile4);
+		// x,y,Letter
+		assertTrue(tile4.getLetter().isEmpty());
+		assertFalse(tile4.equals(null));
+		assertTrue(l1.regenLetters());
+		//assertTrue(tile4.getLetter() != "");
+		assertTrue(l1.resetBoard());
+		assertTrue(l1.writeHighScore(5, "P"));
 		
 	}
 	
@@ -192,5 +212,30 @@ public class EntitiesTesting extends TestCase{
 		String t =w1.toString();
 		assertEquals(t,"cat");
 		
+	}
+	public void testLightningLogic(){
+		
+		Level light = new Level("L", 2);
+		LightningLogic l = new LightningLogic(light);
+		Model m1 = new Model();
+		SplashScreenView v = new SplashScreenView(m1);
+		MainMenuView m = new MainMenuView(m1);
+		m1.initializeLevels();
+		light.reconstruct();
+		assertFalse(light.equals(null));
+		assertFalse(m.equals(null));
+		assertFalse(m1.equals(null));
+	
+		//assertTrue(l.stopTimer());
+		assertFalse(l.playWord());
+	}
+	public void testPuzzleLogic(){
+		Level light = new Level("P", 2);
+		PuzzleLogic p  =  new PuzzleLogic(light);
+		
+		assertFalse(p.playWord());
+		//assertFalse(p.resetBoard());
+		
+		//assertTrue(p.playWord());
 	}
 }
