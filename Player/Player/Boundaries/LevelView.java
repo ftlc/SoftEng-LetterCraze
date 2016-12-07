@@ -15,6 +15,7 @@ import Player.Controllers.LevelToMainMenuController;
 import Player.Controllers.ResetBoardController;
 import Player.Entities.Level;
 import Player.Entities.Model;
+import Player.Entities.Word;
 
 public class LevelView extends JFrame {
 
@@ -24,6 +25,7 @@ public class LevelView extends JFrame {
 	JTextArea starArea;
 	JTextArea scoreArea;
 	JTextArea timerArea;
+	JTextArea txtrSelectedWords;
 	Model model;
 	
 	public LevelView(Level theLevel, MainMenuView mainMenu, Model m) {
@@ -54,9 +56,10 @@ public class LevelView extends JFrame {
 		btnResetBoard.setBounds(470, 359, 298, 77);
 		add(btnResetBoard);
 		
-		JTextArea txtrSelectedWords = new JTextArea();
+		txtrSelectedWords = new JTextArea();
 		txtrSelectedWords.setText("Selected Words\n");
 		txtrSelectedWords.setFont(f);
+		txtrSelectedWords.setOpaque(false);
 		txtrSelectedWords.setBackground(c);
 		txtrSelectedWords.setEditable(false);
 		txtrSelectedWords.setLineWrap(true);
@@ -127,6 +130,10 @@ public class LevelView extends JFrame {
 		this.dispose();
 		gameView.setVisible(false);
 		gameView.validate();
+	}
+	
+	public void updateSelectedWords(Word w){
+		txtrSelectedWords.append(w.toString());
 	}
 	
 	public void reconstruct(){

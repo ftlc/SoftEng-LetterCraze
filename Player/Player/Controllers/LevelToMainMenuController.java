@@ -27,6 +27,7 @@ public class LevelToMainMenuController implements ActionListener{
 			to.updateHighScore(levelNum);
 			to.unlockLevel(levelNum+1);
 		}
+		theLevel.setScore(0);
 		
 		
 		theLevel.getLogic().stopTimer();

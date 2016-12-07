@@ -75,6 +75,7 @@ public class Word{
 		for(Tile t: tiles){
 			word += t.getLetter();
 		}
+		word += "\n";
 		return word;
 	}
 	
