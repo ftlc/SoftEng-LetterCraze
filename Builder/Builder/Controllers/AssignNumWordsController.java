@@ -12,18 +12,19 @@ import java.awt.event.ActionListener;
  */
 public class AssignNumWordsController implements ActionListener{
 
+    Level tempLevel;
     PuzzleLevel lvl;
     LevelView lvlView;
 
 
     public AssignNumWordsController(Level lvl, LevelView lvlView) {
-        this.lvl = (PuzzleLevel) lvl;
+        this.tempLevel = lvl;
         this.lvlView = lvlView;
 
     }
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-
+        lvl = (PuzzleLevel) tempLevel;
         String txt = lvlView.getMaxWordstxt().getText();
         System.out.println(txt);
         try {

@@ -16,7 +16,13 @@ public class LightningLevel extends Level {
         super();
         this.time = -1;
     }
-    boolean assignTime(int time) {
+
+    @Override
+    public String getLevelType() {
+        return "Lightning";
+    }
+
+    public boolean assignTime(int time) {
         this.time = time;
         return true;
     }

@@ -21,6 +21,11 @@ public class ThemeLevel extends Level{
 
      }
 
+     @Override
+     public String getLevelType() {
+        return "Theme";
+     }
+
 
     boolean MakeDictionary(Dictionary d) {
         this.dictionary = d;

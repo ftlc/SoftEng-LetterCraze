@@ -39,6 +39,7 @@ public class SplashScreenView extends JFrame {
 
         LevelView lvlView = new LevelView(this.m);
 
+
         lvlView.setVisible(true);
     }
 

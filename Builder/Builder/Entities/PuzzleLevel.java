@@ -16,6 +16,11 @@ public class PuzzleLevel extends Level{
         this.maxWords = -1;
     }
 
+    @Override
+    public String getLevelType() {
+        return "Puzzle";
+    }
+
     public int getMaxWords() {
         return maxWords;
     }

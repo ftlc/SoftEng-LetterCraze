@@ -36,6 +36,8 @@ public class ChangeGameTypeController implements ActionListener{
             setSharedState(model.getLevel());
 
 
+
+
 		}
 		
 		if (selectedItem.toString().equals("Lightning")){
@@ -80,6 +82,7 @@ public class ChangeGameTypeController implements ActionListener{
         }
 
         lvl.setBoard(templvl.getBoard());
+        lv.setLvl(lvl);
     }
 	
 }

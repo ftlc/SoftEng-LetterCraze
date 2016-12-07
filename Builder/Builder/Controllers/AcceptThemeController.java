@@ -20,6 +20,7 @@ public class AcceptThemeController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
+
         ThemeLevel lvl = (ThemeLevel)tv.getModel().getLevel();
         Dictionary dictionary = lvl.getDictionary();
         lvl.setThemeName(tv.getTheName());

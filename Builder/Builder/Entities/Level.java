@@ -13,6 +13,10 @@ public class Level {
 		this.board = new Board();
 	}
 
+	public String getLevelType() {
+		return "";
+	}
+
 	boolean assignStarValues(int star1, int star2, int star3)
 	{
 
