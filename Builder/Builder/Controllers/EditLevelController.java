@@ -11,6 +11,7 @@ import java.util.*;
 public class EditLevelController implements ActionListener{
 
 	LevelView lv;
+	String buffer;
 
 	public EditLevelController(LevelView lv){
 		this.lv = lv;
@@ -22,10 +23,43 @@ public class EditLevelController implements ActionListener{
 			java.io.File levelFile = lv.getFileFinder().getSelectedFile();
 			try {
 				Scanner input = new Scanner(levelFile);
+				buffer = input.nextLine();
+
+				if (buffer.equals("P")){
+					lv.setPuzzleFields();
+					lv.setPuzzleComboBox();
+				}
+
+				if (buffer.equals("L")){
+					lv.setLightningFields();
+					lv.setLightningComboBox();
+				}
+
+				if (buffer.equals("T")){
+					lv.setThemeFields();
+					lv.setThemeComboBox();
+				}
+				
+				buffer = input.nextLine(); // skip character "-"
+				
+				buffer = input.nextLine();
+				lv.setStarValue1(buffer);
+				buffer = input.nextLine();
+				lv.setStarValue2(buffer);
+				buffer = input.nextLine();
+				lv.setStarValue3(buffer);
+				
+				System.out.print(buffer);
+
+
+
+
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
+
 		}
 	}
 

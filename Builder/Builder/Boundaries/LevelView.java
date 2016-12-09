@@ -77,6 +77,33 @@ public class LevelView extends JFrame{
             MaxWordstxt.addActionListener(new AssignNumWordsController(lvl, this));
         }
     }
+	
+	// Setters: When Selecting a level to edit
+	// Set this fields to the loaded file text.
+	public void setStarValue1(String input){
+		Star1Text.setText(input);
+	}
+	public void setStarValue2(String input){
+		Star2Text.setText(input);
+	}
+	public void setStarValue3(String input){
+		Star3Text.setText(input);
+	}
+	// ----------------------------------
+	
+	// Setters: Change the value of the comboBox 
+	public void setPuzzleComboBox(){
+		comboBox.setSelectedItem("Puzzle");
+	}
+	
+	public void setLightningComboBox(){
+		comboBox.setSelectedItem("Lightning");
+	}
+	
+	public void setThemeComboBox(){
+		comboBox.setSelectedItem("Theme");
+	}
+	// ----------------------------------
 
     // This is a setter for a few fields for when the PUZZLE mode is selected
     public void setPuzzleFields(){
@@ -240,28 +267,31 @@ public class LevelView extends JFrame{
         contentPane.add(btnSaveLevel);
         // ---------- SAVE LEVEL BUTTON ------------------------
 
+        // -----------------------------------------------------
         JButton btnEditLevel= new JButton("Edit Level");
         btnEditLevel.setBounds(147, 493, 136, 33);
         btnEditLevel.setAlignmentY(0.975f);
         btnEditLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+        btnEditLevel.addActionListener(new EditLevelController(this));
         contentPane.add(btnEditLevel);
+        // ---------- EDIT LEVEL BUTTON ------------------------
 
-
-
+        // -----------------------------------------------------
         JButton btnPreviewLevel = new JButton("Preview Level");
         btnPreviewLevel.setBounds(283, 493, 171, 33);
         btnPreviewLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
         btnPreviewLevel.setAlignmentY(0.975f);
         contentPane.add(btnPreviewLevel);
+        // ---------- PREVIEW LEVEL BUTTON ---------------------
 
-
-
+        // -----------------------------------------------------
         JButton btnDeleteLevel = new JButton("Delete Level");
         btnDeleteLevel.setBounds(454, 493, 160, 33);
         btnDeleteLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
         btnDeleteLevel.setAlignmentY(0.975f);
+        btnDeleteLevel.addActionListener(new DeleteLevelController(this));
         contentPane.add(btnDeleteLevel);
-
+        // --------------- DELETE LEVEL BUTTON -----------------
 
 
         btnTheme = new JButton("Theme");

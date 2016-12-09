@@ -10,12 +10,13 @@ import java.util.*;
 
 public class DeleteLevelController implements ActionListener{
 
-	public DeleteLevelController(){
-		
+	LevelView lv;
+	public DeleteLevelController(LevelView lv){
+		this.lv = lv;
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent actionEvent) {
 		// TODO Auto-generated method stub
 		
 	}
