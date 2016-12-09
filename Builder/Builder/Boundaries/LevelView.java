@@ -49,6 +49,7 @@ public class LevelView extends JFrame{
 	private JButton btnTheme;
 	private JButton btnSaveLevel;
 	private JFileChooser fileFinder;
+	private BoardView panel;
 
 	public LevelView(Model m) //, ThemeView themeCreationDialog)
 	{
@@ -77,6 +78,17 @@ public class LevelView extends JFrame{
             MaxWordstxt.addActionListener(new AssignNumWordsController(lvl, this));
         }
     }
+	
+	// ----------------------------------------
+	// setter for the max words field
+	public void setMaxWords(String input){
+		MaxWordstxt.setText(input);
+	}
+	// setter for the time field
+	public void setTime(String input){
+		TimeTxt.setText(input);
+	}
+	// -----------------------------------------
 	
 	// Setters: When Selecting a level to edit
 	// Set this fields to the loaded file text.
@@ -184,7 +196,7 @@ public class LevelView extends JFrame{
         initializeButtons();
         initializeComboBox();
         initializeTextFields();
-        BoardView panel = new BoardView(model);
+        panel = new BoardView(model);
         contentPane.add(panel);
 
         // initializing the fileFinder

@@ -28,39 +28,55 @@ public class EditLevelController implements ActionListener{
 				if (buffer.equals("P")){
 					lv.setPuzzleFields();
 					lv.setPuzzleComboBox();
+					getStars(input);
+					// --------------------------------------------
+					buffer = input.nextLine(); // skip character "-"
+					buffer = input.nextLine(); // get the max words
+					lv.setMaxWords(buffer);
+					// --------------------------------------------
+					buffer = input.nextLine(); // skip character "-"
+					getBoard(input);
 				}
 
 				if (buffer.equals("L")){
 					lv.setLightningFields();
 					lv.setLightningComboBox();
+					getStars(input);
+					// --------------------------------------------
+					buffer = input.nextLine(); // skip character "-"
+					buffer = input.nextLine(); // get the time
+					lv.setTime(buffer);
+					// --------------------------------------------
+					buffer = input.nextLine(); // skip character "-"
+					getBoard(input);
 				}
 
 				if (buffer.equals("T")){
 					lv.setThemeFields();
 					lv.setThemeComboBox();
+					getStars(input);
 				}
-				
-				buffer = input.nextLine(); // skip character "-"
-				
-				buffer = input.nextLine();
-				lv.setStarValue1(buffer);
-				buffer = input.nextLine();
-				lv.setStarValue2(buffer);
-				buffer = input.nextLine();
-				lv.setStarValue3(buffer);
-				
-				System.out.print(buffer);
-
-
 
 
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
-
 		}
+	}
+	
+	public void getStars(Scanner input){
+		buffer = input.nextLine(); // skip character "-"		
+		buffer = input.nextLine();
+		lv.setStarValue1(buffer);
+		buffer = input.nextLine();
+		lv.setStarValue2(buffer);
+		buffer = input.nextLine();
+		lv.setStarValue3(buffer);
+	}
+	
+	public void getBoard(Scanner input){
+		
 	}
 
 }
