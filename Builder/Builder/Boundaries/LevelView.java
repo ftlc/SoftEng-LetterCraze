@@ -174,13 +174,7 @@ public class LevelView extends JFrame{
     }
 
 
-    public JTextField getStar2Text() {
-        return Star2Text;
-    }
 
-    public JTextField getStar3Text() {
-        return Star3Text;
-    }
 
     public JButton getSaveButton(){
         return btnSaveLevel;
@@ -275,7 +269,7 @@ public class LevelView extends JFrame{
         btnSaveLevel.setBounds(5, 493, 142, 33);
         btnSaveLevel.setAlignmentY(0.975f);
         btnSaveLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-        btnSaveLevel.addActionListener(new SaveLevelController(this));
+        btnSaveLevel.addActionListener(new SaveLevelController(this, model));
         contentPane.add(btnSaveLevel);
         // ---------- SAVE LEVEL BUTTON ------------------------
 
