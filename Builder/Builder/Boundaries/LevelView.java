@@ -61,6 +61,10 @@ public class LevelView extends JFrame{
         //Set the level and corresponding controllers
 		setLvl(m.getLevel());
 	}
+	
+	public BoardView getBoardView(){
+		return panel;
+	}
 
 	public Level getLvl() {
 		return lvl;

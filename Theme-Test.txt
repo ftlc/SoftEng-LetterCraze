@@ -4,9 +4,9 @@ T
 4     
 6    
 -
-Animals  
+Animals
 -
-dog     
+dog
 cat
 monkey
 donkey
@@ -19,4 +19,4 @@ kiraff
 eettee
 yBcqef
 -
-1   
+1
