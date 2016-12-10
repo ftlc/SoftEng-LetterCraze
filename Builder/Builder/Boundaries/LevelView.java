@@ -82,7 +82,11 @@ public class LevelView extends JFrame{
             MaxWordstxt.addActionListener(new AssignNumWordsController(lvl, this));
         }
     }
-	
+
+
+
+
+
 	// ----------------------------------------
 	// setter for the max words field
 	public void setMaxWords(String input){

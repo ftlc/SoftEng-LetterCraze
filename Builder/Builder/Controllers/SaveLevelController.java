@@ -8,9 +8,10 @@ import java.io.IOException;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SaveLevelController implements ActionListener{
-	private static final String FILENAME = "testPuzzleLevel.txt";
+	private static final String FILENAME = "./Levels/testPuzzleLevel.txt";
 	LevelView lv;
 	Model model;
 	
@@ -129,7 +130,36 @@ public class SaveLevelController implements ActionListener{
 
     public String writeTheme(){
 
-        return "";
+
+        String content = "T\n-\n";
+
+        content = addStars(content);
+
+        ThemeLevel themeLevel = (ThemeLevel)model.getLevel();
+        String name = themeLevel.getThemeName();
+        content+=name+"\n-\n";
+
+        Dictionary dictionary = themeLevel.getDictionary();
+        ArrayList<String> words = dictionary.getWords();
+
+        for(String w: words)
+        {
+            content+=w+"\n";
+        }
+        content+="-\n";
+
+        for(int x = 0; x < 6; x++) {
+            for(int y = 0; y < 6; y++) {
+                content+=dictionary.getLetterAt(x,y);
+            }
+            content+="\n";
+        }
+
+        content+="-\n0";
+
+        System.out.println(content);
+
+        return content;
     }
 
 
