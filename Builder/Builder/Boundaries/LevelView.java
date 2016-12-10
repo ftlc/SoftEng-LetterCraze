@@ -230,18 +230,22 @@ public class LevelView extends JFrame{
         Star1Text.setBounds(561, 163, 130, 26);
         contentPane.add(Star1Text);
         Star1Text.setColumns(10);
+        Star1Text.setText("0");
         Star1Text.addActionListener(new StarValueController(lvl, this, 1));
 
         Star2Text = new JTextField();
         Star2Text.setBounds(561, 191, 130, 26);
         contentPane.add(Star2Text);
         Star2Text.setColumns(10);
+        Star2Text.setText("0");
         Star2Text.addActionListener(new StarValueController(lvl, this, 2));
 
         Star3Text = new JTextField();
         Star3Text.setBounds(561, 219, 130, 26);
         contentPane.add(Star3Text);
         Star3Text.setColumns(10);
+
+        Star3Text.setText("0");
         Star3Text.addActionListener(new StarValueController(lvl, this, 3));
 
         JLabel lblTime = new JLabel("Time:");
@@ -258,12 +262,14 @@ public class LevelView extends JFrame{
         TimeTxt.setBounds(561, 284, 130, 26);
         contentPane.add(TimeTxt);
         TimeTxt.setColumns(10);
+        TimeTxt.setText("0");
         TimeTxt.setEditable(false);
 
         MaxWordstxt = new JTextField();
         MaxWordstxt.setBounds(584, 325, 107, 26);
         contentPane.add(MaxWordstxt);
         MaxWordstxt.setColumns(10);
+        MaxWordstxt.setText("0");
     }
 
     void initializeButtons()

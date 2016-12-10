@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Levels/SomeTextFile" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/BoardView.java" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/BoardView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +41,8 @@
           <file leaf-file-name="SaveLevelController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="433">
-                  <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+                <state relative-caret-position="-125">
+                  <caret line="90" column="16" lean-forward="false" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -58,7 +54,7 @@
             <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Model.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="451">
-                  <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding>
                     <element signature="e#161#162#0" expanded="true" />
                     <element signature="e#190#191#0" expanded="true" />
@@ -83,7 +79,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Lightning.txt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Lightning.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Lightning.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
@@ -125,11 +121,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Puzzle.txt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Puzzle.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Puzzle.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
-                  <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+                  <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -139,8 +135,11 @@
             <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="545">
-                  <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-                  <folding />
+                  <caret line="271" column="30" lean-forward="false" selection-start-line="271" selection-start-column="30" selection-end-line="271" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#1606#1607#0" expanded="true" />
+                    <element signature="e#1625#1626#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -200,8 +199,8 @@
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/EditLevelController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" />
-        <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/BoardView.java" />
+        <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java" />
       </list>
     </option>
@@ -931,7 +930,7 @@
       <workItem from="1481069950223" duration="2708000" />
       <workItem from="1481140533153" duration="4791000" />
       <workItem from="1481222120385" duration="2238000" />
-      <workItem from="1481403094540" duration="7395000" />
+      <workItem from="1481403094540" duration="7742000" />
     </task>
     <task id="LOCAL-00001" summary="Splash Screen Button">
       <created>1480494394704</created>
@@ -1101,7 +1100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481405677715</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Save Puzzle Levels">
+      <created>1481410736985</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1481410736985</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1110,7 +1116,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76204000" />
+    <option name="totallyTimeSpent" value="76551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
@@ -1219,7 +1225,8 @@
     <MESSAGE value="Commented the strange parts of ChangeGameType" />
     <MESSAGE value="Removed Spaces in Test Levels" />
     <MESSAGE value="Edit Level Writes to Entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Level Writes to Entities" />
+    <MESSAGE value="Save Puzzle Levels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save Puzzle Levels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1566,14 +1573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Square.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1585,7 +1584,7 @@
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#161#162#0" expanded="true" />
             <element signature="e#190#191#0" expanded="true" />
@@ -1621,14 +1620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Puzzle.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lightning.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1637,10 +1628,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="271" column="30" lean-forward="false" selection-start-line="271" selection-start-column="30" selection-end-line="271" selection-end-column="30" />
+          <folding>
+            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Puzzle.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+        <state relative-caret-position="-125">
+          <caret line="90" column="16" lean-forward="false" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

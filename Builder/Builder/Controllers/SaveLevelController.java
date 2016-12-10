@@ -88,7 +88,7 @@ public class SaveLevelController implements ActionListener{
             s = s + "\n";
         }
 
-        s += "-";
+        s += "-\n";
 
 	    return s;
      }
@@ -99,7 +99,7 @@ public class SaveLevelController implements ActionListener{
 	    content = addStars(content);
 
 	    String maxMoves = lv.getMaxWordstxt().getText();
-	    content = content + maxMoves + "\n";
+	    content = content + maxMoves + "\n-\n";
 	    content = addBoard(content);
 	    content = content + "0\n";
 	    System.out.println(content);
@@ -113,9 +113,18 @@ public class SaveLevelController implements ActionListener{
     }
 
     public String writeLightning() {
+	    String content = "L\n-\n";
+
+	    content = addStars(content);
+
+	    String time = lv.getTimeTxt().getText();
+	    content = content + time + "\n-\n";
+        content = addBoard(content);
+        content = content + "0\n";
+        System.out.println(content);
 
 
-	    return "";
+	    return content;
     }
 
     public String writeTheme(){
