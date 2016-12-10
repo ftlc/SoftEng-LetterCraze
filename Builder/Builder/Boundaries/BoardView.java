@@ -23,11 +23,11 @@ public class BoardView extends JPanel {
     }
     public BoardView (Model m) {
         this.model = m;
-
-
-
-
         initalizeBoard();
+    }
+    
+    public void setSquareView(int position){
+    	squares[position].setSelected(true);
     }
 
 
