@@ -19,20 +19,25 @@ public class DeleteLevelController implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent actionEvent) {
 
+		// opens file finder
 		if(lv.getFileFinder().showOpenDialog(null) == lv.getFileFinder().APPROVE_OPTION){
 
+			// gets absolute string path of the file in question
 			java.io.File levelFile = lv.getFileFinder().getSelectedFile();
+			
+			// gets path from string.
 			Path path = Paths.get(levelFile.getAbsolutePath());
 			
+			// try-catch statement: Checks if have permissions, directory not empty, and file exists
 			try {
 				Files.delete(path);
-			} catch (NoSuchFileException x) {
-				System.err.format("%s: no such" + " file or directory%n", path);
-			} catch (DirectoryNotEmptyException x) {
-				System.err.format("%s not empty%n", path);
-			} catch (IOException x) {
-				// File permission problems are caught here.
-				System.err.println(x);
+			} catch (NoSuchFileException e) {
+				System.out.println("no such file");
+			} catch (DirectoryNotEmptyException e) {
+				System.out.println("directory not empty");
+			} catch (IOException e) {
+				// File permissions
+				System.out.println("don't have permissions");
 			}
 
 		}
