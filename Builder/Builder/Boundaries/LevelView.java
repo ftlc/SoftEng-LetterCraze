@@ -284,7 +284,7 @@ public class LevelView extends JFrame{
         btnEditLevel.setBounds(147, 493, 136, 33);
         btnEditLevel.setAlignmentY(0.975f);
         btnEditLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-        btnEditLevel.addActionListener(new EditLevelController(this));
+        btnEditLevel.addActionListener(new EditLevelController(this, model));
         contentPane.add(btnEditLevel);
         // ---------- EDIT LEVEL BUTTON ------------------------
 
