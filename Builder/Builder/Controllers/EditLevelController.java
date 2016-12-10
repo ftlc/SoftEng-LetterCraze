@@ -60,6 +60,7 @@ public class EditLevelController implements ActionListener{
 
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
+                System.out.println("Exception Thrown");
 				e.printStackTrace();
 			}
 		}
