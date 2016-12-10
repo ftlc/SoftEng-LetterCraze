@@ -66,7 +66,7 @@ public class BoardView extends JPanel {
         for(int x = 0; x < 6; x++)
         {
             for(int y = 0; y < 6; y++) {
-                int location = 6*x + y;
+                int location = 6*y + x;
                 gbs[location].gridx = x;
                 gbs[location].gridy = y;
                 this.add(squares[location], gbs[location]);
