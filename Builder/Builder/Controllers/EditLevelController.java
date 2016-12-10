@@ -70,20 +70,28 @@ public class EditLevelController implements ActionListener{
 			}
 		}
 	}
-	
 
-   
+
+
 
 	// this method captures the board
 	public void getBoard(Scanner input){
-		
+
+		char temp;
 		BoardView loadBV = lv.getBoardView();
-		
 		for (int i = 0; i < 36; i++){
-			buffer = input.next();
-			//if (buffer.equals("O")){
+			
+			if (i % 6 == 0){
+				buffer = input.nextLine();
+				System.out.println(buffer);
+			}
+			
+			temp = buffer.charAt(i%6);
+			System.out.println(temp);
+			
+			if (temp == 'O'){
 				loadBV.setSquareView(i);
-			//}
+			}
 		}
 	}
 

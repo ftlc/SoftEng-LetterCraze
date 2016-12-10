@@ -27,7 +27,7 @@ public class BoardView extends JPanel {
     }
     
     public void setSquareView(int position){
-    	squares[position].setSelected(true);
+    	squares[position].doClick();
     }
 
 
