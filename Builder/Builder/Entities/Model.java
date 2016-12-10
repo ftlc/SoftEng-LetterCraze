@@ -11,7 +11,7 @@ public class Model {
 	}
 
 	public Model() {
-		this.level = new PuzzleLevel();
+		setLevelType("Puzzle");
 	}
 
 	public void initLevel(Level lvl) {

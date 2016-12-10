@@ -51,14 +51,15 @@ public class BoardView extends JPanel {
 
         Level l = model.getLevel();
         Board b = l.getBoard();
-        for(int i = 0; i < 36; i++)
-        {
-
-            Square square = b.getSquareAt(i);
-            squares[i] = new SquareView("");
-            squares[i].addActionListener(new ToggleSquareController(square, squares[i]));
-            gbs[i] = new GridBagConstraints();
-            gbs[i].fill = GridBagConstraints.BOTH;
+        for(int x = 0; x < 6; x++) {
+            for (int y = 0; y < 6; y++) {
+                int i = 6 * y + x;
+                Square square = b.getSquareAt(i);
+                squares[i] = new SquareView("");
+                squares[i].addActionListener(new ToggleSquareController(square, squares[i]));
+                gbs[i] = new GridBagConstraints();
+                gbs[i].fill = GridBagConstraints.BOTH;
+            }
         }
 
 
