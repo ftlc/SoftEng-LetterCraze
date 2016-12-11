@@ -60,6 +60,15 @@ public class EditLevelController implements ActionListener{
 					lv.setThemeFields();
 					lv.setThemeComboBox();
 					getStars(input, tl);
+					buffer = input.nextLine(); // skip character "-" 
+					// ---------------------------------------
+					// Now the Theme
+					buffer = input.nextLine();
+					lv.getTheme().setTheName(buffer);
+					buffer = input.nextLine(); // skip character "-"
+					// ----------------------------------------
+					// Now the words
+					getAndSetWords(input);
 				}
 
 
@@ -70,11 +79,21 @@ public class EditLevelController implements ActionListener{
 			}
 		}
 	}
+	
+	public void getAndSetWords(Scanner input){
+		
+		String temp = "";
+		buffer = input.nextLine();
+		while(!buffer.contains("-")){
+			temp = temp + buffer + "\n";
+			buffer = input.nextLine();
+		}
+		
+		lv.getTheme().setTheWords(temp);
+		
+	}
 
-
-
-
-	// this method captures the board
+	// this method captures the board for the lightning and theme levels
 	public void getBoard(Scanner input){
 
 		char temp;
@@ -83,12 +102,9 @@ public class EditLevelController implements ActionListener{
 			
 			if (i % 6 == 0){
 				buffer = input.nextLine();
-				System.out.println(buffer);
 			}
 			
 			temp = buffer.charAt(i%6);
-			System.out.println(temp);
-			
 			if (temp == 'O'){
 				loadBV.setSquareView(i);
 			}

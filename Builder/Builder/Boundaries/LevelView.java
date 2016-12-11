@@ -69,6 +69,10 @@ public class LevelView extends JFrame{
 	public Level getLvl() {
 		return lvl;
 	}
+	
+	public ThemeView getTheme(){
+		return themeCreationDialog;
+	}
 
 	public void setLvl(Level lvl) {
 		this.lvl = lvl;
