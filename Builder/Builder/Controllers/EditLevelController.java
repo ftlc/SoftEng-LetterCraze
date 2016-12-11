@@ -69,6 +69,9 @@ public class EditLevelController implements ActionListener{
 					// ----------------------------------------
 					// Now the words
 					getAndSetWords(input);
+					// ----------------------------------------
+					// Finally the board and letter order.
+					themeBoard(input);
 				}
 
 
@@ -79,18 +82,41 @@ public class EditLevelController implements ActionListener{
 			}
 		}
 	}
-	
+
+	// this method reads from file and sets the board in boardview
+	// and the letter order in the ThemeView
+	public void themeBoard(Scanner input){
+
+		String stringTemp = "";
+		char temp;
+		BoardView loadBV = lv.getBoardView();
+		for (int i = 0; i < 36; i++){
+
+			if (i % 6 == 0){
+				buffer = input.nextLine();
+				stringTemp = stringTemp + buffer + "\n";
+				lv.getTheme().setTheLetters(stringTemp);
+
+			}
+
+			temp = buffer.charAt(i%6);
+			if (temp != '\"'){
+				loadBV.setSquareView(i);
+			}
+		}
+	}
+
+	// This method retrieves the words from file
+	// and puts them in the themeView
 	public void getAndSetWords(Scanner input){
-		
+
 		String temp = "";
 		buffer = input.nextLine();
 		while(!buffer.contains("-")){
 			temp = temp + buffer + "\n";
 			buffer = input.nextLine();
 		}
-		
 		lv.getTheme().setTheWords(temp);
-		
 	}
 
 	// this method captures the board for the lightning and theme levels
@@ -99,11 +125,11 @@ public class EditLevelController implements ActionListener{
 		char temp;
 		BoardView loadBV = lv.getBoardView();
 		for (int i = 0; i < 36; i++){
-			
+
 			if (i % 6 == 0){
 				buffer = input.nextLine();
 			}
-			
+
 			temp = buffer.charAt(i%6);
 			if (temp == 'O'){
 				loadBV.setSquareView(i);

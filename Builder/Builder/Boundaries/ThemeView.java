@@ -54,6 +54,10 @@ public class ThemeView extends JDialog{
 	public void setTheWords (String themeWords){
 		words.setText(themeWords);
 	}
+	
+	public void setTheLetters(String themeLetters){
+		letters.setText(themeLetters);
+	}
 
 	void initializePopup() {
 
