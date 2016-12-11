@@ -15,9 +15,9 @@ public class Model {
 	public Model(){
 		levels = new Level[TOTAL_NUM_LEVELS];
 		this.paths = new ArrayList<String>();
-		paths.add("Puzzle-Test.txt");
-		paths.add("Lightning-Test.txt");
-		paths.add("Theme-Test.txt");
+		paths.add("./Levels/Puzzle1.txt");
+		paths.add("./Levels/Lightning1.txt");
+		paths.add("./Levels/Theme1.txt");
 		paths.add("Puzzle-Test-Uninitialized.txt");
 		paths.add("Puzzle-Test-Uninitialized.txt");
 		paths.add("Puzzle-Test-Uninitialized.txt");

@@ -35,7 +35,10 @@ public class Dictionary {
     }
 
     public boolean addWord(String word) {
-        words.add(word);
+        if(!words.contains(word))
+        {
+            words.add(word);
+        }
         return true;
     }
 
@@ -53,8 +56,12 @@ public class Dictionary {
 
     public boolean placeLetters(String let)
     {
-
         return true;
+    }
+
+    public Character getLetterAt(int x, int y)
+    {
+        return letters[x][y];
     }
 
 }
