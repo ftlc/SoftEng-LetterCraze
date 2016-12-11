@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class SaveLevelController implements ActionListener{
-	private static final String FILENAME = "./Levels/testPuzzleLevel.txt";
+	private static final String FILENAME = "./Levels/Theme1.txt";
 	LevelView lv;
 	Model model;
 	
@@ -76,7 +76,7 @@ public class SaveLevelController implements ActionListener{
         {
             for(int y = 0; y < 6; y++)
             {
-                int location = 6*y + x;
+                int location = 6*x + y;
                 if(brd.getSquareAt(location).isToggle())
                 {
                     s = s+"O";
