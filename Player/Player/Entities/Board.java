@@ -76,6 +76,8 @@ public class Board{
 					c = Character.toLowerCase(c);
 					if(c == 'q')
 						tiles[x][y] = new Tile(x,y,"qu");
+					else if (c == '%')
+						tiles[x][y] = new Tile(x,y);
 					else
 						tiles[x][y] = new Tile(x,y,Character.toString(c));
 				}
