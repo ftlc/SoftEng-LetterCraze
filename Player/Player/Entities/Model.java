@@ -18,8 +18,8 @@ public class Model {
 		paths.add("./Levels/Puzzle-Test.txt");
 		paths.add("./Levels/Lightning-Test.txt");
 		paths.add("./Levels/Theme-Test.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
+		paths.add("./Levels/InClassDemo.txt");
+		paths.add("./Levels/Lightning-Test-Uninitialized.txt");
 		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
 		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
 		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
