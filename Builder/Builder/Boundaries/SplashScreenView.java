@@ -11,16 +11,20 @@ import java.awt.event.ActionListener;
 
 /**
  * Created by ftlc on 11/29/16.
+ * This is the splash screen that comes up before the builder is displayed.
+ * It runs for 3 seconds and displays some information about the team.
  */
 public class SplashScreenView extends JFrame {
 
     private JPanel contentPane;
     private Model m;
 
+    /**
+     * constructor method for the class. 
+     * @param m
+     */
     public SplashScreenView (Model m) {
         this.m = m;
-
-
         initFrame();
 
         setVisible(true);
@@ -32,18 +36,16 @@ public class SplashScreenView extends JFrame {
             e.printStackTrace();
         }
 
-
         setVisible(false);
         dispose();
-
-
         LevelView lvlView = new LevelView(this.m);
-
-
         lvlView.setVisible(true);
     }
 
-
+    /**
+     * Method initializes the frame with all the attributes and properties.
+     * All the information displayed in this screen.
+     */
     void initFrame() {
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 709, 567);

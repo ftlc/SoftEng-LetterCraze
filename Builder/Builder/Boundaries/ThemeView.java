@@ -15,6 +15,11 @@ import Builder.Controllers.AcceptThemeController;
 import Builder.Controllers.CloseThemeController;
 import Builder.Entities.Model;
 
+/**
+ * Dialog box that is opened whenever a theme is built for the 
+ * Theme Level
+ * @author Juan Luis Herrero Estrada
+ */
 public class ThemeView extends JDialog{
 
 	private final JPanel contentPanel = new JPanel();
@@ -22,46 +27,78 @@ public class ThemeView extends JDialog{
 	private JTextPane words;
 	private JTextPane letters;
     Model model;
+    
 	/**
-	 * Create the dialog box
+	 * Creates the Dialog box
+	 * @param m, model holding the information about the entities.
 	 */
 	public ThemeView(Model m) {
         this.model = m;
-
         initializePopup();
     }
 
+	/**
+	 * Getter method that returns the model
+	 * @return the model
+	 */
 	public Model getModel() {
 		return model;
 	}
 
+	/**
+	 * Getter method that returns the order of the letters
+	 * that the builder wants to set up there board with.
+	 * @return the TextPane holding all of the letters.
+	 */
 	public JTextPane getLetters() {
 		return letters;
 	}
 
+	/**
+	 * Getter method to get all of the theme words for the controllers/entities to use.
+	 * @return the TextPane holding the theme words.
+	 */
 	public JTextPane getWords() {
 		return words;
 	}
 
+	/**
+	 * Getter method for the name of the theme that is built for the level.
+	 * @return the name of the theme.
+	 */
 	public String getTheName() {
 		return name.getText();
 	}
 	
+	/**
+	 * Setter method that changes the textField contents for the theme name
+	 * @param theme, the theme name string that we change to.
+	 */
 	public void setTheName(String theme){
 		name.setText(theme);
 	}
 	
+	/**
+	 * Setter method that changes the textField contents for the theme words.
+	 * @param themeWords, the theme words that we change to.
+	 */
 	public void setTheWords (String themeWords){
 		words.setText(themeWords);
 	}
 	
+	/**
+	 * Setter method that changes the textField contents for the letter order of the theme created.
+	 * @param themeLetters, the letters that we change to.
+	 */
 	public void setTheLetters(String themeLetters){
 		letters.setText(themeLetters);
 	}
 
+	/**
+	 * Method initializes the dialog box with all of its text fields, controllers, buttons
+	 * and labels.
+	 */
 	void initializePopup() {
-
-
 		
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 475);

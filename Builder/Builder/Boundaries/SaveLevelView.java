@@ -11,6 +11,7 @@ import java.awt.*;
 
 /**
  * Created by ftlc on 12/13/16.
+ * Dialog Box that is opened whenever we click on the save button for a level.
  */
 public class SaveLevelView extends JDialog {
 	private final JPanel contentPanel = new JPanel();
@@ -19,6 +20,7 @@ public class SaveLevelView extends JDialog {
 	private JTextPane letters;
 	private Model model;
 	private LevelView lv;
+	
 	/**
 	 * Create the dialog box
 	 */
@@ -28,11 +30,18 @@ public class SaveLevelView extends JDialog {
 		initializePopup();
 	}
 
+	/**
+	 * Getter method for the model so that the values can be saved to a .txt
+	 * @return the model
+	 */
 	public Model getModel() {
 		return model;
 	}
 
-
+	/**
+	 * Getter method to get 
+	 * @return
+	 */
 	public JTextPane getWords() {
 		return words;
 	}
@@ -48,9 +57,6 @@ public class SaveLevelView extends JDialog {
 
 
 	void initializePopup() {
-
-
-
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 150);
 		getContentPane().setLayout(new BorderLayout());
