@@ -108,6 +108,7 @@ public class LevelView extends JFrame {
 		setLayout(null);
 		this.gameView = new GameView(this, theLevel);
 		gameView.setSize(400 , 400);
+		gameView.setOpaque(true);
 		gameView.setLocation(12 , 12);
 		add(gameView);
 	}

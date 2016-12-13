@@ -107,6 +107,8 @@ public class GameView extends JPanel {
 	 * Draws the tileViews.
 	 */
 	public void paint(Graphics g) {
+		//super.paint(g);
+		
 		g.setColor(Color.BLACK);
 		
 		for(int x = 1 ; x <= 6 ; x++) {
