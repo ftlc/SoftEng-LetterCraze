@@ -32,6 +32,7 @@ public class Logic {
 	}
 	
 	public boolean resetBoard(){
+		level.setSelectedWords(new ArrayList<Word>());
 		level.setScore(0);
 		
 		Tile[][] tiles = level.getBoard().getTiles();

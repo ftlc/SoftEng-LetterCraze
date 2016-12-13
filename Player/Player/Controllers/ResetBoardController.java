@@ -2,9 +2,11 @@ package Player.Controllers;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import Player.Boundaries.LevelView;
 import Player.Entities.Level;
+import Player.Entities.Word;
 
 public class ResetBoardController implements ActionListener{
 	
@@ -20,6 +22,7 @@ public class ResetBoardController implements ActionListener{
 	public void actionPerformed(ActionEvent ae){
 		level.getLogic().resetBoard();
 		levelView.refresh();
+		levelView.clearSelectedWords();
 	}
 
 }
