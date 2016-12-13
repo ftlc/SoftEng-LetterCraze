@@ -11,17 +11,21 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class SaveLevelController implements ActionListener{
-	private static final String FILENAME = "./Levels/Theme1.txt";
+	//private static final String FILENAME = "./Levels/Theme1.txt";
+    String FILENAME;
 	LevelView lv;
 	Model model;
-	
+	SaveLevelView sv;
 	//Constructor
-	public SaveLevelController (LevelView lv, Model m){
+	public SaveLevelController (LevelView lv, Model m, SaveLevelView sv){
 		this.lv = lv;
 		this.model = m;
+		this.sv = sv;
 	}
 	
 	 public void actionPerformed(ActionEvent actionEvent) {
+	    FILENAME = "./Levels/";
+	    FILENAME += sv.getTheName();
 
          // this just opens the file chooser box
       //   if (lv.getFileFinder().showOpenDialog(null) == lv.getFileFinder().APPROVE_OPTION) {
@@ -48,7 +52,7 @@ public class SaveLevelController implements ActionListener{
 
              // no need to close it.
              //bw.close();
-
+             sv.setVisible(false);
              System.out.println("Done");
 
          } catch (IOException e) {
@@ -102,7 +106,7 @@ public class SaveLevelController implements ActionListener{
 	    String maxMoves = lv.getMaxWordstxt().getText();
 	    content = content + maxMoves + "\n-\n";
 	    content = addBoard(content);
-	    content = content + "0\n";
+	    content = content + "0";
 	    System.out.println(content);
 
 
@@ -121,7 +125,7 @@ public class SaveLevelController implements ActionListener{
 	    String time = lv.getTimeTxt().getText();
 	    content = content + time + "\n-\n";
         content = addBoard(content);
-        content = content + "0\n";
+        content = content + "0";
         System.out.println(content);
 
 
