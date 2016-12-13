@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/SaveLevelView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/CloseSaveLevelController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelPopupController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/ThemeView.java" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/ThemeView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Theme1.txt" afterPath="$PROJECT_DIR$/Levels/Theme1.txt" />
-    </list>
+    <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="" />
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/Builder/bin/" />
@@ -1210,10 +1201,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85293000" />
+    <option name="totallyTimeSpent" value="85299000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
+    <frame x="10" y="35" width="1900" height="1018" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
