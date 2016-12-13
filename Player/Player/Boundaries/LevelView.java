@@ -126,6 +126,10 @@ public class LevelView extends JFrame {
 		gameView.refresh();
 	}
 	
+	public void clearSelectedWords(){
+		txtrSelectedWords.setText("Selected Words\n");
+	}
+	
 	public void clearLevel() {
 		this.dispose();
 		gameView.setVisible(false);

@@ -120,6 +120,10 @@ public class Level {
 	public Position getLastSelectedPosition() { return lastSelectedPosition; }
 	public ArrayList<Word> getSelectedWords() { return selectedWords; }
 	
+	public void setSelectedWords(ArrayList<Word> w){
+		selectedWords = w;
+	}
+	
 	public void setDictionary(Dictionary d){
 		this.dictionary = d;
 	}
