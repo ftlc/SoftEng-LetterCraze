@@ -1,4 +1,10 @@
 package iron_builder;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+import java.awt.event.ContainerEvent;
+import java.awt.event.ContainerListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.JLabel;
@@ -257,6 +263,7 @@ public class EntitiesTesting extends TestCase{
 		m.reinitLevel(1);
 		windowCode w = new windowCode();
 		m.updateHighScore(1);
+	
 		//fix this later
 		//LevelView l = new LevelView(one, m, model1);
 	
@@ -269,11 +276,19 @@ public class EntitiesTesting extends TestCase{
 		Level l = new Level("P",2);
 		Model model1 = new Model();
 		MainMenuView mainMenu = new MainMenuView(model1);
-		MouseClicked mouse = new MouseClicked();
+		MouseEvent me = new MouseEvent(mainMenu.findComponentAt(5, 10), MouseEvent.MOUSE_PRESSED, 
+				System.currentTimeMillis(), 0, 
+				mainMenu.getX(), mainMenu.getY(), 0, false);
+		
+
+		
+	
 		LevelView lv = new LevelView(l, mainMenu, model1);
 		GameView g = new GameView(lv, l);
 		Position p = new Position(1,2);
 		
 		TileController t = new TileController(tileView , tile, l , g ,p);
+		t.clearTile();
+		assertEquals(tile.getLetter(), "");
 	}
 }
