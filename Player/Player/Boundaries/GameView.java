@@ -107,7 +107,7 @@ public class GameView extends JPanel {
 	 * Draws the tileViews.
 	 */
 	public void paint(Graphics g) {
-		super.paint(g);
+		
 		
 		g.setColor(Color.BLACK);
 		
@@ -120,7 +120,7 @@ public class GameView extends JPanel {
 				tileViews[x-1][y-1].repaint();
 			}
 		}
-		
+		super.paint(g);
 		
 	}
 	
