@@ -108,6 +108,7 @@ public class LevelView extends JFrame {
 		setLayout(null);
 		this.gameView = new GameView(this, theLevel);
 		gameView.setSize(400 , 400);
+		gameView.setOpaque(true);
 		gameView.setLocation(12 , 12);
 		add(gameView);
 	}
@@ -124,6 +125,10 @@ public class LevelView extends JFrame {
 		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars(theLevel.getScore())));
 		timerArea.setText(theLevel.getThirdBox());
 		gameView.refresh();
+	}
+	
+	public void clearSelectedWords(){
+		txtrSelectedWords.setText("Selected Words\n");
 	}
 	
 	public void clearLevel() {

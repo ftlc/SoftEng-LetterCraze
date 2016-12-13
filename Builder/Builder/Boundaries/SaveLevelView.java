@@ -13,28 +13,25 @@ import java.awt.*;
  * Created by ftlc on 12/13/16.
  */
 public class SaveLevelView extends JDialog {
- private final JPanel contentPanel = new JPanel();
+	private final JPanel contentPanel = new JPanel();
 	private JTextField name;
 	private JTextPane words;
 	private JTextPane letters;
-    Model model;
-    LevelView lv;
+	private Model model;
+	private LevelView lv;
 	/**
 	 * Create the dialog box
 	 */
 	public SaveLevelView(Model m, LevelView lv) {
-        this.model = m;
-        this.lv = lv;
-        initializePopup();
-    }
+		this.model = m;
+		this.lv = lv;
+		initializePopup();
+	}
 
 	public Model getModel() {
 		return model;
 	}
 
-	public JTextPane getLetters() {
-		return letters;
-	}
 
 	public JTextPane getWords() {
 		return words;
@@ -48,13 +45,7 @@ public class SaveLevelView extends JDialog {
 		name.setText(theme);
 	}
 
-	public void setTheWords (String themeWords){
-		words.setText(themeWords);
-	}
 
-	public void setTheLetters(String themeLetters){
-		letters.setText(themeLetters);
-	}
 
 	void initializePopup() {
 
