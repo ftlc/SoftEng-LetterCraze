@@ -45,6 +45,7 @@ public class LevelView extends JFrame{
 	private JTextField TimeTxt;
 	private JTextField MaxWordstxt;
 	private ThemeView themeCreationDialog;
+	private SaveLevelView sv;
 	private JComboBox comboBox;
 	private JButton btnTheme;
 	private JButton btnSaveLevel;
@@ -55,7 +56,7 @@ public class LevelView extends JFrame{
 	{
 		this.model = m;
 		this.themeCreationDialog = new ThemeView(m);
-
+		this.sv = new SaveLevelView(model, this);
 		initializeLevel();
 
         //Set the level and corresponding controllers
@@ -287,7 +288,7 @@ public class LevelView extends JFrame{
         btnSaveLevel.setBounds(5, 493, 142, 33);
         btnSaveLevel.setAlignmentY(0.975f);
         btnSaveLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-        btnSaveLevel.addActionListener(new SaveLevelController(this, model));
+        btnSaveLevel.addActionListener(new SaveLevelPopupController(this, sv));
         contentPane.add(btnSaveLevel);
         // ---------- SAVE LEVEL BUTTON ------------------------
 
