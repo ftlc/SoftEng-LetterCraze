@@ -59,7 +59,7 @@ public class Dictionary {
 
 	/**
 	 * Adds a word to the theme/dictionary.
-	 * @param The word to be added to the dictionary.
+	 * @param word to be added to the dictionary.
 	 * @return true if it was added, if word already exists in theme return false.
 	 */
 	public boolean addWord(String word) {
@@ -92,11 +92,11 @@ public class Dictionary {
 		return true;
 	}
 
-	public boolean placeLetters(String let)
+/*	public boolean placeLetters(String let)
 	{
 		return true;
 	}
-
+*/
 	public Character getLetterAt(int x, int y)
 	{
 		return letters[x][y];

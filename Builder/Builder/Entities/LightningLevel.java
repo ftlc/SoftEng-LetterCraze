@@ -40,7 +40,13 @@ public class LightningLevel extends Level {
         this.time = time;
         return true;
     }
-
-
+    
+    /**
+     * Getter method for the time field.
+     * @return the time int.
+     */
+    public int getTime(){
+    	return time;
+    }
 
 }
