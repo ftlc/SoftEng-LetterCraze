@@ -1,4 +1,4 @@
-package iron_builder;
+package Builder.Boundaries;
 
 import junit.framework.TestCase;
 import Builder.Controllers.*;
@@ -22,12 +22,16 @@ public class TestBuilderController extends TestCase {
 	public void testAcceptThemeController(){
 		
 		ThemeView tv = new ThemeView(model);
+		
 		tv.setName("Animals");
 		String themeWords = "Dog\nCat\nMonkey\nDonkey\nGiraffe";
 		tv.setTheWords(themeWords);
 		String themeLetters = "HUEJFK\nDQEHW\"\nWDW\"FJ\nEIFI\"F\nE\"RJEK\nVNFMEJ";
 		tv.setTheLetters(themeLetters);
-		tv.dispose();
+		//tv.okButton.getActionListeners()[0].actionPerformed(null);
+		
+		
+		
 	}
 	
 	public void testExitBuilderController(){
