@@ -117,15 +117,27 @@ public class Board{
 	}
 	
 	/**
-	 * 
+	 * Get 2D tile Array
 	 * @return the 2 dimensional tile array.
 	 */
 	public Tile[][] getTiles(){ return tiles; }
 	
 	/**
-	 * 
+	 * Gets Board Layout
 	 * @return the 2 dimensional character array used to generate the tile array.
 	 */
 	public char[][] getLayout() { return layout; }
+	
+	/**
+	 * Set the tile at the given X,Y location 
+	 * @param x X location
+	 * @param y Y location
+	 * @param t Tile
+	 * @return void
+	 */
+	public void setTile(int x, int y, Tile t){
+		tiles[x][y] = t;
+	}
+	
 	
 }
