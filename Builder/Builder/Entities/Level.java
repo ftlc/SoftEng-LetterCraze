@@ -16,7 +16,11 @@ public class Level {
 	public Level() {
 		initValues();
 	}
-	
+
+	public Level(Board brd) {
+		this.stars = new int[3];
+		this.board = brd;
+	}
 	/**
 	 * initializes the board and stars.
 	 */

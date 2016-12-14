@@ -13,17 +13,12 @@ public class ThemeLevel extends Level{
      * Constructor of the theme level object.
      * @param name of the theme.
      */
-    public ThemeLevel(String name) {
-        super();
-        this.name = name;
-        this.dictionary = new Dictionary();
-    }
-    
+
     /**
      * Constructor of the object.
      */
-    public ThemeLevel() {
-        super();
+    public ThemeLevel(Board brd) {
+        super(brd);
         this.name = "";
        this.dictionary = new Dictionary();
 

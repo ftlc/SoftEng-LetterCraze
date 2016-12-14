@@ -15,6 +15,7 @@ import java.awt.*;
  */
 public class BoardView extends JPanel {
 	Model model;
+	Board b;
 	SquareView[] squares = new SquareView[36];
 	GridBagConstraints[] gbs = new GridBagConstraints[36];
 
@@ -62,10 +63,10 @@ public class BoardView extends JPanel {
 	 * Initializes the individual squareViews, and gives them the attribute or action
 	 * of being toggled when pressed.
 	 */
-	void initializeSquares()
+	public void initializeSquares()
 	{
 		Level l = model.getLevel();
-		Board b = l.getBoard();
+		b = l.getBoard();
 		for(int x = 0; x < 6; x++) {
 			for (int y = 0; y < 6; y++) {
 				int i = 6 * y + x;
@@ -88,8 +89,9 @@ public class BoardView extends JPanel {
 		}
 	}
 
-
-
+	public Board getBoard() {
+		return b;
+	}
 
 
 }

@@ -9,18 +9,17 @@ public class PuzzleLevel extends Level{
 
     /**
      * Constructor of the puzzle level class.
-     * @param maxWords the field that differs from the level superclass.
      */
-    public PuzzleLevel(int maxWords){
+    public PuzzleLevel(){
         super();
-        this.maxWords = maxWords;
+        this.maxWords = -1;
     }
 
     /**
      * constructor of the puzzle level.
      */
-    public PuzzleLevel() {
-        super();
+    public PuzzleLevel(Board brd) {
+        super(brd);
         this.maxWords = -1;
     }
 
