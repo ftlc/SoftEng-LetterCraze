@@ -14,6 +14,7 @@ import javax.swing.border.EmptyBorder;
 import Builder.Controllers.AcceptThemeController;
 import Builder.Controllers.CloseThemeController;
 import Builder.Entities.Model;
+import java.awt.Font;
 
 /**
  * Dialog box that is opened whenever a theme is built for the 
@@ -134,6 +135,23 @@ public class ThemeView extends JDialog{
 		letters = new JTextPane();
 		letters.setBounds(134, 235, 294, 149);
 		contentPanel.add(letters);
+		
+		JLabel lblNewLabel_1 = new JLabel("\" signals unselected tile");
+		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		lblNewLabel_1.setBounds(6, 392, 157, 16);
+		contentPanel.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Use % to signal for a random letter");
+		lblNewLabel_2.setBounds(202, 392, 242, 16);
+		contentPanel.add(lblNewLabel_2);
+		
+		JLabel lblRowsOf = new JLabel("6 rows of 6 letters");
+		lblRowsOf.setBounds(6, 340, 116, 16);
+		contentPanel.add(lblRowsOf);
+		
+		JLabel lblQQu = new JLabel("Q = Qu");
+		lblQQu.setBounds(6, 368, 61, 16);
+		contentPanel.add(lblQQu);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));

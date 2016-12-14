@@ -356,7 +356,7 @@ public class LevelView extends JFrame{
 		TimeTxt.setBounds(561, 284, 130, 26);
 		contentPane.add(TimeTxt);
 		TimeTxt.setColumns(10);
-		TimeTxt.setText("0");
+		TimeTxt.setText("");
 		TimeTxt.setEditable(false);
 
 		MaxWordstxt = new JTextField();

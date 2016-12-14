@@ -32,7 +32,7 @@ public class StarValueController implements ActionListener {
             lvl.setStarAt(contents, starnum);
         }
         catch (Exception e){
-            lvlView.getStarText(starnum).setText("0");
+            lvlView.getStarText(starnum).setText(txt); // I changed this so it wouldn't set the value to 0 everytime you press enter.
         }
 
 
