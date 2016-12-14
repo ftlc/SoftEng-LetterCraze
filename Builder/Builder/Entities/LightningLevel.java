@@ -19,8 +19,8 @@ public class LightningLevel extends Level {
     /**
      * Constructo of the lightning level.
      */
-    public LightningLevel() {
-        super();
+    public LightningLevel(Board brd) {
+        super(brd);
         this.time = -1;
     }
 

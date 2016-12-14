@@ -318,6 +318,8 @@ public class LevelView extends JFrame{
 		comboBox.addActionListener(new ChangeGameTypeController(this, model));
 	}
 
+
+
 	/**
 	 * Initializes all of the textFields with its values, positions, and controllers
 	 * to perceive the data input by the user.

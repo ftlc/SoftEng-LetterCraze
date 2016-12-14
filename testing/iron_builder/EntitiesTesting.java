@@ -10,25 +10,9 @@ import java.util.ArrayList;
 import javax.swing.JLabel;
 
 import Player.Main;
-import Player.Boundaries.GameView;
-import Player.Boundaries.LevelView;
-import Player.Boundaries.MainMenuView;
-import Player.Boundaries.SplashScreenView;
-import Player.Boundaries.windowCode;
-import Player.Controllers.LevelToMainMenuController;
-import Player.Controllers.TileController;
-import Player.Entities.Board;
-import Player.Entities.Dictionary;
-import Player.Entities.Level;
-import Player.Entities.LightningLogic;
-import Player.Entities.Logic;
-import Player.Entities.Model;
-import Player.Entities.Position;
-import Player.Entities.PuzzleLogic;
-import Player.Entities.Star;
-import Player.Entities.ThemeLogic;
-import Player.Entities.Tile;
-import Player.Entities.Word;
+import Player.Boundaries.*;
+import Player.Controllers.*;
+import Player.Entities.*;
 import junit.framework.TestCase;
 
 

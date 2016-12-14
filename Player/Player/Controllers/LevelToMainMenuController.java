@@ -10,14 +10,32 @@ public class LevelToMainMenuController implements ActionListener{
 	LevelView from;
 	MainMenuView to;
 	
+	/**
+	 * Constructor for the LevelToMainMenuController class
+	 * @param f The Current LevelView
+	 * @param t The Parent MainMenuView
+	 */
 	public LevelToMainMenuController(LevelView f, MainMenuView t){
 		from = f;
 		to = t;
 	}
 
+	
+	/**
+	 * Default method called whenever the button is pressed,
+	 * invokes the 'swapViews()' function.
+	 */
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		// TODO Auto-generated method stub
+		swapViews();
+	}
+	
+	/**
+	 * Makes the current LevelView with Level data invisible,
+	 * and displays the parent MainMenuView.
+	 */
+	private void swapViews() {
 		from.setVisible(false);
 		
 		Level theLevel = from.getLevel();
@@ -37,7 +55,6 @@ public class LevelToMainMenuController implements ActionListener{
 		
 		to.reinitLevel(levelNum);
 		from.clearLevel();
-		
 	}
 
 }

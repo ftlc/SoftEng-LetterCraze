@@ -141,9 +141,12 @@ public class EditLevelController implements ActionListener{
 	 * @param input the scanner used to read the input file.
 	 */
 	public void getBoard(Scanner input){
-
 		char temp;
 		BoardView loadBV = lv.getBoardView();
+		Board testONLY = loadBV.getBoard();
+
+		Board brd = model.getLevel().getBoard();
+
 		for (int i = 0; i < 36; i++){
 
 			if (i % 6 == 0){
@@ -151,8 +154,15 @@ public class EditLevelController implements ActionListener{
 			}
 
 			temp = buffer.charAt(i%6);
+
+			Square tmpSquare = brd.getSquareAt(i);
 			if (temp == 'O'){
 				loadBV.setSquareView(i);
+				tmpSquare.setToggle(true);
+			}
+			else
+			{
+				tmpSquare.setToggle(false);
 			}
 		}
 	}
