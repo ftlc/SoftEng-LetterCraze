@@ -21,6 +21,7 @@ public class UndoController implements ActionListener{
 		boolean completed = undoMove();
 		
 		if(completed == true){
+			levelView.removeLastSelectedWord();
 			levelView.refresh();
 		}
 	}
