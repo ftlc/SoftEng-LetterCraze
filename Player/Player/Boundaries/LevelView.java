@@ -56,6 +56,12 @@ public class LevelView extends JFrame {
 		btnResetBoard.setBounds(470, 359, 298, 77);
 		add(btnResetBoard);
 		
+		JButton btnUndo = new JButton("Undo Move");
+		//btnUndo.addActionListener(new ResetBoardController(theLevel, this));
+		btnUndo.setFont(f);
+		btnUndo.setBounds(470, 459, 298, 77);
+		add(btnUndo);
+		
 		txtrSelectedWords = new JTextArea();
 		txtrSelectedWords.setText("Selected Words\n");
 		txtrSelectedWords.setFont(f);
