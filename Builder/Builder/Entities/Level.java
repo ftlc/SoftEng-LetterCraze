@@ -19,7 +19,6 @@ public class Level {
 
 	boolean assignStarValues(int star1, int star2, int star3)
 	{
-
 		stars[1] = star1;
 		stars[2] = star2;
 		stars[3] = star3;

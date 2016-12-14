@@ -28,7 +28,7 @@ public class AssignTimeController implements ActionListener{
             lvl.assignTime(time);
         }
         catch (Exception e){
-            lvlView.getTimeTxt().setText("0");
+            lvlView.getTimeTxt().setText(contents);
         }
     }
 }

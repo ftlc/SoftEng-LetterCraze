@@ -32,7 +32,7 @@ public class AssignNumWordsController implements ActionListener{
             lvl.assignMaxWords(contents);
         }
         catch (Exception e){
-            lvlView.getMaxWordstxt().setText("0");
+            lvlView.getMaxWordstxt().setText(txt);
         }
 
     }
