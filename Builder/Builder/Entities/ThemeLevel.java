@@ -11,11 +11,7 @@ public class ThemeLevel extends Level{
     Dictionary dictionary;
     /**
      * Constructor of the theme level object.
-     * @param name of the theme.
-     */
-
-    /**
-     * Constructor of the object.
+     * @param brd the board that belongs to this level.
      */
     public ThemeLevel(Board brd) {
         super(brd);
@@ -31,15 +27,6 @@ public class ThemeLevel extends Level{
         return "Theme";
      }
 
-     /**
-      * Setter method for the dictionary attribute of the themeLevel.
-      * @param d the dictionary assigned.
-      * @return true if the dictionary was assigned.
-      */
-    boolean MakeDictionary(Dictionary d) {
-        this.dictionary = d;
-        return true;
-    }
 
     /**
      * Getter method for the name of the theme.
@@ -54,7 +41,7 @@ public class ThemeLevel extends Level{
      * @param themeName the name wished to be changed to.
      */
     public void setThemeName(String themeName) {
-        this.name = name;
+        this.name = themeName;
     }
 
     /**
@@ -63,5 +50,14 @@ public class ThemeLevel extends Level{
      */
     public Dictionary getDictionary() {
         return dictionary;
+    }
+
+
+    /**
+     * Setter method for the dictionary of theme.
+     * @param dictionary The Dictionary we're assigning to this theme.
+     */
+    public void setDictionary(Dictionary dictionary) {
+        this.dictionary = dictionary;
     }
 }

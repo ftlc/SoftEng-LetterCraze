@@ -7,16 +7,11 @@ package Builder.Entities;
 public class PuzzleLevel extends Level{
     int maxWords;
 
-    /**
-     * Constructor of the puzzle level class.
-     */
-    public PuzzleLevel(){
-        super();
-        this.maxWords = -1;
-    }
+
 
     /**
      * constructor of the puzzle level.
+     * @param brd the board that belongs to this level
      */
     public PuzzleLevel(Board brd) {
         super(brd);
