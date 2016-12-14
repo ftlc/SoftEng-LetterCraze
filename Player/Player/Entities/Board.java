@@ -38,6 +38,25 @@ public class Board{
 			initializeTiles();
 	}
 	
+	/** 
+	 * Constructor for the board class where an array of tiles is given - for use in undo
+	 * 
+	 * @param l Board Layout
+	 * @param t 2D Array of Tiles to be copied
+	 */
+	public Board(char[][] l, Tile[][] t){
+		this.layout = l;
+		tiles = new Tile[TOTAL_NUM_TILES][TOTAL_NUM_TILES];
+		
+		for(int x = 0; x < TOTAL_NUM_TILES; x++){
+			for(int y = 0; y < TOTAL_NUM_TILES; y++){
+				if(t[x][y] != null){
+					tiles[x][y] = new Tile(x,y, t[x][y].getLetter());
+				}
+			}
+		}
+	}
+	
 	/**
 	 * Returns position that a tile should move up to.
 	 * returns the original position if there is no where to move up to.

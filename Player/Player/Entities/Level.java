@@ -24,6 +24,7 @@ public class Level {
 	ArrayList<Tile> currSelectedWord;
 	ArrayList<Tile> lastSelectedWord;
 	ArrayList<Word> selectedWords;
+	ArrayList<Move> moves;
 	boolean selectingWord;
 
 	public Level(String path, int num) {
@@ -35,6 +36,7 @@ public class Level {
 		this.currSelectedWord = new ArrayList<Tile>();
 		this.lastSelectedWord = new ArrayList<Tile>();
 		this.selectedWords = new ArrayList<Word>();
+		this.moves = new ArrayList<Move>();
 		readLevel(path);
 	}
 	
@@ -119,6 +121,26 @@ public class Level {
 	public int getLevelNum() { return num; }
 	public Position getLastSelectedPosition() { return lastSelectedPosition; }
 	public ArrayList<Word> getSelectedWords() { return selectedWords; }
+	public ArrayList<Move> getMoves(){ return moves; }
+	
+	public void addMove(Move m){
+		moves.add(m);
+	}
+	
+	public boolean undoRecentMove(){
+		boolean completed = false;
+		
+		int size = moves.size();
+
+		if (size > 0) {
+			size--;
+			Move move = moves.get(size);
+			moves.remove(move);
+
+			completed = move.undo();
+		}
+		return completed;
+	}
 	
 	public void setSelectedWords(ArrayList<Word> w){
 		selectedWords = w;

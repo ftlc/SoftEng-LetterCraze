@@ -73,7 +73,8 @@ public class Logic {
 
 			if (level.hasWord(w)) {
 				Word theWord = new Word(lastSelectedWord);
-				level.addScore(scoreToAdd(theWord));
+				int scoreToAdd = scoreToAdd(theWord);
+				level.addScore(scoreToAdd);
 				level.addWord(theWord);	
 				
 				return true;
@@ -110,7 +111,7 @@ public class Logic {
 		return false;
 	}
 
-	protected int scoreToAdd(Word theWord) {
+	public int scoreToAdd(Word theWord) {
 		return 1;
 	}
 

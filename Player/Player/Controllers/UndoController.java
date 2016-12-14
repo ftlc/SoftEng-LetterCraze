@@ -8,12 +8,12 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class UndoController implements ActionListener{
-	ArrayList<Move> moves;
 	LevelView levelView;
+	Level level;
 	
-	public UndoController(LevelView lv){
-		this.moves = new ArrayList<Move>();
+	public UndoController(LevelView lv, Level l){
 		this.levelView = lv;
+		this.level = l;
 	}
 	
 	@Override
@@ -27,15 +27,7 @@ public class UndoController implements ActionListener{
 	
 	public boolean undoMove(){
 		boolean completed = false;
-		int size = moves.size();
-		
-		if(size > 0){
-			size--;
-			Move move = moves.get(size);
-			moves.remove(move);
-			
-			completed = move.undo();
-		}
+		completed = level.undoRecentMove();
 		
 		return completed;
 	}
