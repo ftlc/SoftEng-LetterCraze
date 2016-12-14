@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 /**
  * Created by ftlc on 12/5/16.
+ * Controller that saves the number of max words for the Puzzle level.
  */
 public class AssignNumWordsController implements ActionListener{
 
@@ -16,13 +17,21 @@ public class AssignNumWordsController implements ActionListener{
     PuzzleLevel lvl;
     LevelView lvlView;
 
-
+    /**
+     * Constructor of the controller.
+     * @param lvl, the entity object holding that information.
+     * @param lvlView, the boundary object that captures that info from the user.
+     */
     public AssignNumWordsController(Level lvl, LevelView lvlView) {
         this.tempLevel = lvl;
         this.lvlView = lvlView;
 
     }
-    @Override
+    
+    /**
+     * The action performed on the GUI object when controller is called
+     * save String value and place in the lvl entity object.
+     */
     public void actionPerformed(ActionEvent actionEvent) {
         lvl = (PuzzleLevel) tempLevel;
         String txt = lvlView.getMaxWordstxt().getText();
