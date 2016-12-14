@@ -53,6 +53,7 @@ public class LevelView extends JFrame{
 	private JFileChooser fileFinder;
 	private BoardView panel;
 	private JButton btnExit;
+	private JButton btnEditLevel;
 
 	/**
 	 * Constructor that initializes the level with all of its buttons and fields.
@@ -99,6 +100,14 @@ public class LevelView extends JFrame{
 	 */
 	public Level getLvl() {
 		return lvl;
+	}
+	
+	/**
+	 * Getter method for the edit level button.
+	 * @return the edit level button.
+	 */
+	public JButton getEditButton(){
+		return btnEditLevel;
 	}
 
 	/**
@@ -400,7 +409,7 @@ public class LevelView extends JFrame{
 		// ---------- SAVE LEVEL BUTTON ------------------------
 
 		// -----------------------------------------------------
-		JButton btnEditLevel= new JButton("Edit Level");
+		btnEditLevel = new JButton("Edit Level");
 		btnEditLevel.setBounds(147, 493, 136, 33);
 		btnEditLevel.setAlignmentY(0.975f);
 		btnEditLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
