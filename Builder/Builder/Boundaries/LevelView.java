@@ -68,6 +68,10 @@ public class LevelView extends JFrame{
 		//Set the level and corresponding controllers
 		setLvl(m.getLevel());
 	}
+
+	public Model getModel(){
+		return this.model;
+	}
 	
 	/**
 	 * Getter method for the exit button.

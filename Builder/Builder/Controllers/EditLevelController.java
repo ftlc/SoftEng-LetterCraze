@@ -2,6 +2,7 @@ package Builder.Controllers;
 
 import Builder.Boundaries.*;
 import Builder.Entities.*;
+import Builder.Entities.Dictionary;
 
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
@@ -78,6 +79,7 @@ public class EditLevelController implements ActionListener{
 					// Now the Theme
 					buffer = input.nextLine();
 					lv.getTheme().setTheName(buffer);
+					tl.setThemeName(buffer);
 					buffer = input.nextLine(); // skip character "-"
 					// ----------------------------------------
 					// Now the words
@@ -102,13 +104,21 @@ public class EditLevelController implements ActionListener{
 	 */
 	public void themeBoard(Scanner input){
 
+		Character[][] letters = new Character[6][6];
 		String stringTemp = "";
 		char temp;
 		BoardView loadBV = lv.getBoardView();
 		for (int i = 0; i < 36; i++){
 
 			if (i % 6 == 0){
+				int row = i/6;
 				buffer = input.nextLine();
+				for(int j = 0; j<6; j++)
+				{
+					letters[row][j] = buffer.charAt(j);
+					System.out.println(letters[row][j]);
+				}
+
 				stringTemp = stringTemp + buffer + "\n";
 				lv.getTheme().setTheLetters(stringTemp);
 
@@ -119,6 +129,10 @@ public class EditLevelController implements ActionListener{
 				loadBV.setSquareView(i);
 			}
 		}
+		ThemeLevel tl = (ThemeLevel)lv.getModel().getLevel();
+		Dictionary d = tl.getDictionary();
+		d.placeLetters(letters);
+
 	}
 
 	/** This method retrieves the words from file
@@ -127,10 +141,15 @@ public class EditLevelController implements ActionListener{
 	 */
 	public void getAndSetWords(Scanner input){
 
+		ThemeLevel tl = (ThemeLevel)lv.getModel().getLevel();
 		String temp = "";
 		buffer = input.nextLine();
 		while(!buffer.contains("-")){
+
 			temp = temp + buffer + "\n";
+			Dictionary d = tl.getDictionary();
+			d.addWord(buffer);
+
 			buffer = input.nextLine();
 		}
 		lv.getTheme().setTheWords(temp);
