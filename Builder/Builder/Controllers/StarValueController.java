@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by ftlc on 12/5/16.
+ * Controller handles the input from the user for the different star values.
  */
 public class StarValueController implements ActionListener {
 
@@ -15,7 +15,12 @@ public class StarValueController implements ActionListener {
     LevelView lvlView;
     int starnum;
 
-    //Constructor
+    /**
+     * Constructor of the controller object.
+     * @param lvl The level entity object in which the information is stored.
+     * @param lvlView the levelView in which the user inputs the values.
+     * @param starnum The number of stars input.
+     */
     public StarValueController(Level lvl, LevelView lvlView, int starnum) {
         this.lvl = lvl;
         this.lvlView = lvlView;
@@ -23,7 +28,10 @@ public class StarValueController implements ActionListener {
     }
 
 
-    @Override
+    /**
+     * Takes the input from the GUI objects given by the user and saves them
+     * to be later stored in a text file.
+     */
     public void actionPerformed(ActionEvent actionEvent) {
         String txt = lvlView.getStarText(starnum).getText();
         System.out.println(txt);

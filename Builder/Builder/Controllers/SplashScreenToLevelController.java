@@ -8,18 +8,26 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by ftlc on 11/29/16.
+ * Controller performs the transition from the splash screen to the main screen.
  */
 public class SplashScreenToLevelController implements ActionListener{
     SplashScreenView from;
     LevelView to;
+    
+    /**
+     * Constructor of the controller object.
+     * @param from The source or splash screen from which its transitioning.
+     * @param to the levelView that is opened from the splash screen.
+     */
     public SplashScreenToLevelController(SplashScreenView from, LevelView to)
     {
         this.from = from;
         this.to = to;
     }
 
-    @Override
+    /**
+     * disposes the splash screen and opens the level builder.
+     */
     public void actionPerformed(ActionEvent actionEvent) {
         from.setVisible(false);
         to.setVisible(true);

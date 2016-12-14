@@ -9,18 +9,31 @@ import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.util.*;
 
+/**
+ * Loads a level using the file finder and places the values of that level
+ * in their respective GUI fields.
+ * @author JuanLuis.
+ */
 public class EditLevelController implements ActionListener{
 
 	LevelView lv;
 	String buffer;
 	Model model;
 
+	/**
+	 * Constructor of the controller object.
+	 * @param lv the levelView from which the FileFinder is opened.
+	 * @param model The model in which the edited information stored to.
+	 */
 	public EditLevelController(LevelView lv, Model model){
 		this.lv = lv;
 		this.model = model;
 	}
 
-	@Override
+	/**
+	 * Method loads the file, through the file finder and loads the stars, time, maxWords,
+	 * board, theme name, theme words, and theme letters to their respective fields.
+	 */
 	public void actionPerformed(ActionEvent actionEvent) {
 		if(lv.getFileFinder().showOpenDialog(null) == lv.getFileFinder().APPROVE_OPTION){
 			java.io.File levelFile = lv.getFileFinder().getSelectedFile();
@@ -83,8 +96,10 @@ public class EditLevelController implements ActionListener{
 		}
 	}
 
-	// this method reads from file and sets the board in boardview
-	// and the letter order in the ThemeView
+	/** this method reads from file and sets the board in boardview 
+	 * and the letter order in the ThemeView.
+	 * @param input the scanner used to read the input file.
+	 */
 	public void themeBoard(Scanner input){
 
 		String stringTemp = "";
@@ -106,8 +121,10 @@ public class EditLevelController implements ActionListener{
 		}
 	}
 
-	// This method retrieves the words from file
-	// and puts them in the themeView
+	/** This method retrieves the words from file
+	 *  and puts them in the themeView.
+	 * @param input the scanner used to read the input file.
+	 */
 	public void getAndSetWords(Scanner input){
 
 		String temp = "";
@@ -119,7 +136,10 @@ public class EditLevelController implements ActionListener{
 		lv.getTheme().setTheWords(temp);
 	}
 
-	// this method captures the board for the lightning and theme levels
+	/**
+	 * This method captures the board for the lightning and theme levels.
+	 * @param input the scanner used to read the input file.
+	 */
 	public void getBoard(Scanner input){
 
 		char temp;
@@ -137,6 +157,12 @@ public class EditLevelController implements ActionListener{
 		}
 	}
 
+	/**
+	 * method reads 3 numbers in three different lines capturing
+	 * the values needed for 1 star, 2 stars, and 3 stars.
+	 * @param input the scanner used to read the input file.
+	 * @param lvl entity class to which the values are saved.
+	 */
 	public void getStars(Scanner input, Level lvl){
 		buffer = input.nextLine(); // skip character "-"
 		buffer = input.nextLine();
@@ -155,6 +181,12 @@ public class EditLevelController implements ActionListener{
 		lvl.setStarAt(star3, 3);
 	}
 
+	/**
+	 * Method reads from file for the puzzle level the number of max words
+	 * and sets that field in the GUI.
+	 * @param input the scanner used to read the input file.
+	 * @param lvl the entity class to which the value is saved.
+	 */
 	public void getMaxWords(Scanner input, PuzzleLevel lvl) {
 		buffer = input.nextLine(); // skip character "-"
 		buffer = input.nextLine(); // get the max words
@@ -164,6 +196,12 @@ public class EditLevelController implements ActionListener{
 	}
 
 
+	/**
+	 * Methods from file for the lightning level the total countdown time
+	 * and sets it to that field in the GUI.
+	 * @param input the scanner used to read the input file.
+	 * @param lvl the entity class to which the value is saved.
+	 */
 	public void getTime(Scanner input, LightningLevel lvl) {
 		buffer = input.nextLine(); // skip character "-"
 		buffer = input.nextLine(); // get the time
@@ -172,6 +210,12 @@ public class EditLevelController implements ActionListener{
 		lvl.assignTime(time);
 	}
 
+	/**
+	 * helper method that converts string values to
+	 * their numeric equivalents.
+	 * @param str the string that we want to convert to int.
+	 * @return the result int obtained from the input string.
+	 */
 	public int strToI(String str) {
 		try {
 			int contents = Integer.parseInt(str);
