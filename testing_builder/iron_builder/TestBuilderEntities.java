@@ -1,13 +1,12 @@
 package iron_builder;
 
-
-import Builder.Entities.*;
-import Builder.Boundaries.*;
-import Builder.Controllers.*;
+import Builder.Boundaries.SplashScreenView;
+import Builder.Entities.Model;
 import junit.framework.TestCase;
 
-public class TestBuilderBoundary extends TestCase {
+public class TestBuilderEntities extends TestCase {
 
+	
 	Model model;
 	SplashScreenView s;
 	
@@ -20,8 +19,5 @@ public class TestBuilderBoundary extends TestCase {
 		s.dispose();
 	}
 	
-	public void testBoardView(){
-		
-	}
 	
 }

@@ -52,6 +52,7 @@ public class LevelView extends JFrame{
 	private JButton btnSaveLevel;
 	private JFileChooser fileFinder;
 	private BoardView panel;
+	private JButton btnExit;
 
 	/**
 	 * Constructor that initializes the level with all of its buttons and fields.
@@ -66,6 +67,14 @@ public class LevelView extends JFrame{
 
 		//Set the level and corresponding controllers
 		setLvl(m.getLevel());
+	}
+	
+	/**
+	 * Getter method for the exit button.
+	 * @return the exit button.
+	 */
+	public JButton getExitButton(){
+		return btnExit;
 	}
 
 	/**
@@ -419,7 +428,7 @@ public class LevelView extends JFrame{
 
 
 
-		JButton btnExit = new JButton("EXIT");
+		btnExit = new JButton("EXIT");
 		btnExit.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 		btnExit.setBounds(498, 427, 193, 40);
 		contentPane.add(btnExit);
