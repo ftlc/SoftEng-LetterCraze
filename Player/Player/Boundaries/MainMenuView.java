@@ -171,7 +171,8 @@ public class MainMenuView extends JFrame {
 	}
 	
 	// Getters //
-	public LevelView[] getLevelView() { return levelViews; }
+	public LevelView getLevelView(int x) { return levelViews[x]; }
 	public Level[] getLevels() { return levels; }
+	public JPanel getLevelButton(int x){ return levelButtons[x]; }
 	
 }

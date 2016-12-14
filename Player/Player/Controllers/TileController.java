@@ -27,6 +27,14 @@ public class TileController implements MouseListener , MouseMotionListener {
 	GameView gameView;
 	Position position;
 	
+	/**
+	 * Constructor for the TileController class
+	 * @param tileView the JLabel that this tileController is in charge of
+	 * @param tile the Tile that this tileController is in charge of
+	 * @param l the Level that this tileController is held within
+	 * @param g the gameView that this tileController is held within
+	 * @param p the position in the 6x6 matrix of this specific tile
+	 */
 	public TileController(JLabel tileView , Tile tile, Level l , GameView g , Position p) {
 		this.tileView = tileView;
 		tileView.setOpaque(true);
@@ -39,41 +47,72 @@ public class TileController implements MouseListener , MouseMotionListener {
 		resetState();
 	}
 	
+	/**
+	 * Used for debugging purposes
+	 * @return text held within the tileView
+	 */
 	private String getValueHeld() {
 		return tileView.getText();
 	}
 	
+	/**
+	 * Resets the state of the tile by setting
+	 * its background color to white and its 'visited'
+	 * boolean to false. This means the tile can be
+	 * selected again when selecting another word.
+	 */
 	public void resetState() {
 		tileView.setBackground(Color.white);
 		this.visited = false;
 	}
 	
+	/**
+	 * Clears all the data within the tile, setting
+	 * its contents to ""
+	 */
 	public void clearTile() {
 		tile.resetLetter();
 	}
 	
+	/**
+	 * Required method of mouselistener
+	 */
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/**
+	 * Required method of mouselistener
+	 */
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
 		entered(arg0);
 	}
 
+	/**
+	 * Required method of mouselistener
+	 */
 	@Override
 	public void mouseExited(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/**
+	 * Required method of mouselistener
+	 * also invokes the pressed() function.
+	 */
 	@Override
 	public void mousePressed(MouseEvent arg0) {
 		pressed();
 	}
 
+	/**
+	 * Selects this tile as the first tile of a word,
+	 * assuming that there is currently no word being selected.
+	 */
 	private void pressed() {
 		if(!level.getSelectingWord() && !visited && !(tileView.getText().isEmpty())) {
 			//If we are not currently selecting a word
@@ -85,6 +124,11 @@ public class TileController implements MouseListener , MouseMotionListener {
 		}
 	}
 	
+	/**
+	 * Determines if the current tile is adjacent to the last selected tile
+	 * @return true if the current tile is adjacent (including diagonals)
+	 * @return false if the current tile is not adjacent (including diagonals)
+	 */
 	private boolean isAdjacentPosition() {
 		Position temp = level.getLastSelectedPosition();
 		
@@ -103,6 +147,10 @@ public class TileController implements MouseListener , MouseMotionListener {
 		return false;
 	}
 	
+	/**
+	 * Plays the selected word, assuming that there is currently a word
+	 * being selected.
+	 */
 	private void released() {
 		if(level.getSelectingWord()) {
 			//Set the last selected word as the word and clear the current word.
@@ -166,6 +214,11 @@ public class TileController implements MouseListener , MouseMotionListener {
 		
 	}
 	
+	/**
+	 * Adds the tile to the word if the mouse is down and we are
+	 * currently selecting a word.
+	 * @param me mouseEvent data
+	 */
 	private void entered(MouseEvent me) {
 		if(level.getSelectingWord() && me.getModifiers() == MouseEvent.BUTTON1_MASK && !visited && isAdjacentPosition() && !(tileView.getText().isEmpty())) {
 			//If the mouse enters this tile and is pressed
@@ -176,16 +229,26 @@ public class TileController implements MouseListener , MouseMotionListener {
 		}
 	}
 	
+	/**
+	 * Required method of mouseListener
+	 * also calls the released() function
+	 */
 	@Override
 	public void mouseReleased(MouseEvent arg0) {
 		released();
 	}
 
+	/**
+	 * Required method of mouselistener
+	 */
 	@Override
 	public void mouseDragged(MouseEvent arg0) {
 		
 	}
 
+	/**
+	 * Required method of mouselistener
+	 */
 	@Override
 	public void mouseMoved(MouseEvent arg0) {
 		// TODO Auto-generated method stub

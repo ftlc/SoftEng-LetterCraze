@@ -86,6 +86,14 @@ public class LevelView extends JFrame{
 	}
 
 	/**
+	 * Getter method for the theme button.
+	 * @return the theme button of the levelView.
+	 */
+	public JButton getThemeButton(){
+		return btnTheme;
+	}
+	
+	/**
 	 * Getter method for the current level, whether is puzzle, lightning, or theme.
 	 * @return the current level being built.
 	 */

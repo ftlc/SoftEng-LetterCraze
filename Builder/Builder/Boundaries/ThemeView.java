@@ -27,6 +27,7 @@ public class ThemeView extends JDialog{
 	private JTextField name;
 	private JTextPane words;
 	private JTextPane letters;
+	JButton okButton;
     Model model;
     
 	/**
@@ -44,6 +45,14 @@ public class ThemeView extends JDialog{
 	 */
 	public Model getModel() {
 		return model;
+	}
+	
+	/**
+	 * Getter method for the ok button of the themeView.
+	 * @return the OK button.
+	 */
+	public JButton getOkButton(){
+		return okButton;
 	}
 
 	/**
@@ -157,7 +166,7 @@ public class ThemeView extends JDialog{
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
-				JButton okButton = new JButton("OK");
+				okButton = new JButton("OK");
 				okButton.setActionCommand("OK");
 				okButton.addActionListener(new AcceptThemeController(this));
 				buttonPane.add(okButton);
