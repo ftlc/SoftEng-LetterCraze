@@ -31,7 +31,6 @@ import java.awt.Color;
 import javax.swing.UIManager;
 
 /**
- * Created by ftlc on 11/29/16.
  * Main GUI frame in which the majority of the elements
  * such as buttons and fields are placed like save and delete level.
  */
@@ -55,8 +54,8 @@ public class LevelView extends JFrame{
 	private BoardView panel;
 
 	/**
-	 * Constructor that initializes the level with all of its buttons and fields
-	 * @param m, passes in the entity object
+	 * Constructor that initializes the level with all of its buttons and fields.
+	 * @param m, passes in the entity object.
 	 */
 	public LevelView(Model m) //, ThemeView themeCreationDialog)
 	{
@@ -70,15 +69,15 @@ public class LevelView extends JFrame{
 	}
 
 	/**
-	 * Getter method to obtain the boardView
-	 * @return the boardView in the current level
+	 * Getter method to obtain the boardView.
+	 * @return the boardView in the current level.
 	 */
 	public BoardView getBoardView(){
 		return panel;
 	}
 
 	/**
-	 * Getter method for the current level, whether is puzzle, lightning, or theme
+	 * Getter method for the current level, whether is puzzle, lightning, or theme.
 	 * @return the current level being built.
 	 */
 	public Level getLvl() {
@@ -94,8 +93,8 @@ public class LevelView extends JFrame{
 	}
 
 	/**
-	 * setter method that deals with saving values (Lightning - time, MaxWords - Puzzle) in the entities 
-	 * @param lvl, the current type of level: lightning, theme, puzzle
+	 * setter method that deals with saving values (Lightning - time, MaxWords - Puzzle) in the entities .
+	 * @param lvl, the current type of level: lightning, theme, puzzle.
 	 */
 	public void setLvl(Level lvl) {
 		this.lvl = lvl;
@@ -137,7 +136,7 @@ public class LevelView extends JFrame{
 	public void setStarValue1(String input){
 		Star1Text.setText(input);
 	}
-	
+
 	/**
 	 * Setter method for the value needed to get two stars on the level.
 	 * @param input, value for the second star.
@@ -145,7 +144,7 @@ public class LevelView extends JFrame{
 	public void setStarValue2(String input){
 		Star2Text.setText(input);
 	}
-	
+
 	/**
 	 * Setter method for the value needed to get three stars on the level.
 	 * @param input, value for the third star.
@@ -156,21 +155,21 @@ public class LevelView extends JFrame{
 	// ----------------------------------
 
 	/**
-	 * Setter method for the comboBox to which level we are building: PUZZLE
+	 * Setter method for the comboBox to which level we are building: PUZZLE.
 	 */
 	public void setPuzzleComboBox(){
 		comboBox.setSelectedItem("Puzzle");
 	}
 
 	/**
-	 * Setter method for the comboBox to which level we are building: LIGHTNING
+	 * Setter method for the comboBox to which level we are building: LIGHTNING.
 	 */
 	public void setLightningComboBox(){
 		comboBox.setSelectedItem("Lightning");
 	}
 
 	/**
-	 * Setter method for the comboBox to which level we are building: THEME
+	 * Setter method for the comboBox to which level we are building: THEME.
 	 */
 	public void setThemeComboBox(){
 		comboBox.setSelectedItem("Theme");
@@ -185,7 +184,7 @@ public class LevelView extends JFrame{
 	}
 
 	/**
-	 * This is a setter for a few fields for when the PUZZLE mode is selected from the comboBox
+	 * This is a setter for a few fields for when the PUZZLE mode is selected from the comboBox.
 	 */
 	public void setPuzzleFields(){
 		TimeTxt.setEditable(false);
@@ -193,9 +192,9 @@ public class LevelView extends JFrame{
 		MaxWordstxt.setEditable(true);
 		btnTheme.setEnabled(false);
 	}
-	
+
 	/** 
-	 * This is a setter for a few fields for when the LIGHTNING mode is selected from the comboBox
+	 * This is a setter for a few fields for when the LIGHTNING mode is selected from the comboBox.
 	 */
 	public void setLightningFields(){
 		TimeTxt.setEditable(true);
@@ -205,7 +204,7 @@ public class LevelView extends JFrame{
 	}
 
 	/** 
-	 * This is a setter for a few fields for when the PUZZLE mode is selected from the comboBox
+	 * This is a setter for a few fields for when the PUZZLE mode is selected from the comboBox.
 	 */
 	public void setThemeFields(){
 		TimeTxt.setEditable(false);
@@ -233,7 +232,7 @@ public class LevelView extends JFrame{
 
 	/**
 	 * Getter method for the JComboBox which allows to change between game types.
-	 * @return the JComboBox[Puzzle, Lightning, Theme]
+	 * @return the JComboBox[Puzzle, Lightning, Theme].
 	 */
 	public JComboBox getComboBox(){
 		return comboBox;
@@ -241,7 +240,7 @@ public class LevelView extends JFrame{
 
 	/**
 	 * Getter method for the fields that holds the values for the star fields.
-	 * @param num, which star? 1, 2, or 3
+	 * @param num, which star? 1, 2, or 3.
 	 * @return the textField holding that star value.
 	 */
 	public JTextField getStarText(int num) {
@@ -290,7 +289,7 @@ public class LevelView extends JFrame{
 	}
 
 	/**
-	 * Initializes the comboBox with its position, size, and values ["Puzzle", "Lightning", "Theme"]
+	 * Initializes the comboBox with its position, size, and values ["Puzzle", "Lightning", "Theme"].
 	 */
 	void initializeComboBox(){
 		comboBox = new JComboBox();
@@ -367,8 +366,8 @@ public class LevelView extends JFrame{
 	}
 
 	/**
-	 * Initializes all the buttons with their attributes in the levelView.
-	 * As well associates actionListeners and controllers with certain buttons.
+	 * Initializes all the buttons with their attributes in the levelView,
+	 * as well associates actionListeners and controllers with certain buttons.
 	 */
 	void initializeButtons()
 	{

@@ -10,7 +10,6 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Created by ftlc on 11/30/16.
  * This is the boardView, that holds the gui for the 36 ToggleButtons
  * that represent the different tiles for when building a level.
  */
@@ -33,7 +32,7 @@ public class BoardView extends JPanel {
 	}
 
 	/**
-	 * setter method for the squareViews inside the boardView.
+	 * setter method for the squareViews inside the boardView,
 	 * when called it toggles the correct squareView.
 	 * @param position, 0-36, which Square do you want to change its state.
 	 */

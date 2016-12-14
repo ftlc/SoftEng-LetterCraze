@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by ftlc on 12/5/16.
  * Controller that saves the number of max words for the Puzzle level.
  */
 public class AssignNumWordsController implements ActionListener{
@@ -25,7 +24,6 @@ public class AssignNumWordsController implements ActionListener{
     public AssignNumWordsController(Level lvl, LevelView lvlView) {
         this.tempLevel = lvl;
         this.lvlView = lvlView;
-
     }
     
     /**
