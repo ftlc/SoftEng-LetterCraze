@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by ftlc on 12/6/16.
  * Controller called upon the action of the time text field to save it.
  */
 public class AssignTimeController implements ActionListener{
@@ -26,7 +25,10 @@ public class AssignTimeController implements ActionListener{
         this.lvlView = lvlView;
     }
     
-    @Override
+    /**
+     * Action performed on the Time text field: values are stored in 
+     * the level entity class to later save it to a text file.
+     */
     public void actionPerformed(ActionEvent actionEvent) {
         LightningLevel lvl = (LightningLevel)lvltemp;
         String contents= lvlView.getTimeTxt().getText();

@@ -12,6 +12,7 @@ import Player.Boundaries.LevelView;
 import Player.Boundaries.GameView;
 import Player.Entities.Board;
 import Player.Entities.Level;
+import Player.Entities.Move;
 import Player.Entities.Position;
 import Player.Entities.Tile;
 import Player.Entities.Word;
@@ -124,23 +125,26 @@ public class TileController implements MouseListener , MouseMotionListener {
 			if(level.playWord()) {
 				ArrayList<Word> selectedWords = level.getSelectedWords();
 				int index = selectedWords.size() - 1;
-				levelView.updateSelectedWords(selectedWords.get(index));
-				for(Tile t: lastSelectedWord){
-					int tileX = t.getXCoord();
-					int tileY = t.getYCoord();
+				Word theWord = selectedWords.get(index);
+				levelView.updateSelectedWords(theWord);
+				Board b = level.getBoard();
+				Tile[][] t = b.getTiles();
+				Move move = new Move(level, t, level.getLogic().scoreToAdd(theWord));
+				level.addMove(move);
+				for(Tile ti: lastSelectedWord){
+					int tileX = ti.getXCoord();
+					int tileY = ti.getYCoord();
 					TileController tc = gameView.getTileControllers()[tileX][tileY];
 					tc.clearTile();
 					tc.resetState();
-				}
-				Board b = level.getBoard();
-				Tile[][] t = b.getTiles();
+				}				
 				
 				for(int x = 0 ; x < 6 ; x++) {
 					for(int y = 0 ; y < 6 ; y++) {
 						if(t[x][y] != null && !t[x][y].getLetter().isEmpty()) {
 							Position p = b.canMoveUp(x, y);
-							t[p.getX()][p.getY()].setLetter(t[x][y].getLetter());
 							if(p.getX() != x || p.getY() != y) {
+								t[p.getX()][p.getY()].setLetter(t[x][y].getLetter());
 								t[x][y].resetLetter();
 							}
 						}

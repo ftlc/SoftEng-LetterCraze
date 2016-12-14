@@ -9,12 +9,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by ftlc on 12/6/16.
  * Controller for the OK button, to pass and save the theme created for the level.
  */
 public class AcceptThemeController implements ActionListener {
 
     ThemeView tv;
+    
+    /**
+     * Constructor that builds the controller Object.
+     * @param tv, the ThemeView or dialog box that uses this controller.
+     */
     public AcceptThemeController (ThemeView tv) {
         this.tv = tv;
     }

@@ -18,7 +18,7 @@ import java.awt.Font;
 
 /**
  * Dialog box that is opened whenever a theme is built for the 
- * Theme Level
+ * Theme Level.
  * @author Juan Luis Herrero Estrada
  */
 public class ThemeView extends JDialog{
@@ -30,7 +30,7 @@ public class ThemeView extends JDialog{
     Model model;
     
 	/**
-	 * Creates the Dialog box
+	 * Creates the Dialog box.
 	 * @param m, model holding the information about the entities.
 	 */
 	public ThemeView(Model m) {
@@ -39,8 +39,8 @@ public class ThemeView extends JDialog{
     }
 
 	/**
-	 * Getter method that returns the model
-	 * @return the model
+	 * Getter method that returns the model.
+	 * @return the model.
 	 */
 	public Model getModel() {
 		return model;
@@ -72,7 +72,7 @@ public class ThemeView extends JDialog{
 	}
 	
 	/**
-	 * Setter method that changes the textField contents for the theme name
+	 * Setter method that changes the textField contents for the theme name.
 	 * @param theme, the theme name string that we change to.
 	 */
 	public void setTheName(String theme){

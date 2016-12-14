@@ -10,7 +10,6 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 /**
- * Created by ftlc on 12/13/16.
  * Dialog Box that is opened whenever we click on the save button for a level.
  */
 public class SaveLevelView extends JDialog {
@@ -22,7 +21,7 @@ public class SaveLevelView extends JDialog {
 	private LevelView lv;
 	
 	/**
-	 * Create the dialog box
+	 * Creates the dialog box object.
 	 */
 	public SaveLevelView(Model m, LevelView lv) {
 		this.model = m;
@@ -31,8 +30,8 @@ public class SaveLevelView extends JDialog {
 	}
 
 	/**
-	 * Getter method for the model so that the values can be saved to a .txt
-	 * @return the model
+	 * Getter method for the model so that the values can be saved to a txt.
+	 * @return the model.
 	 */
 	public Model getModel() {
 		return model;
@@ -55,7 +54,10 @@ public class SaveLevelView extends JDialog {
 	}
 
 
-
+	/**
+	 * This method intializes the saveLevel Dialog box with its size, position
+	 * and text field that reads in the name of the file we want to save.
+	 */
 	void initializePopup() {
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 150);

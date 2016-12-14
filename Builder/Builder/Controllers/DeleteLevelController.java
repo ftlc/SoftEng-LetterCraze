@@ -9,14 +9,25 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 
+/**
+ * Controller opens a search box to find and delete the desired file.
+ * @author JuanLuis.
+ */
 public class DeleteLevelController implements ActionListener{
 
 	LevelView lv;
+	/**
+	 * Constructor of the controller object.
+	 * @param lv the levelView from which the FileFinder is from. 
+	 */
 	public DeleteLevelController(LevelView lv){
 		this.lv = lv;
 	}
 
-	@Override
+	/**
+	 * When Delete Level button clicked, opens the file finder
+	 * and deletes file at that path.
+	 */
 	public void actionPerformed(ActionEvent actionEvent) {
 
 		// opens file finder

@@ -6,16 +6,23 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by ftlc on 12/13/16.
+ * Controller disposes the SaveLevel Dialog Box when closed.
  */
 public class CloseSaveLevelController implements ActionListener {
 
     SaveLevelView sv;
 
+    /**
+     * Constructor of the controller object.
+     * @param sv the saveLevelView that is disposed.
+     */
     public CloseSaveLevelController(SaveLevelView sv) {
         this.sv = sv;
     }
-    @Override
+    
+    /**
+     * Action method that does the disposing.
+     */
     public void actionPerformed(ActionEvent actionEvent) {
         sv.dispose();
     }

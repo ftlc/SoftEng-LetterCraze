@@ -29,7 +29,7 @@ public class PuzzleLogic extends Logic {
 		return returnVal;
 	}
 	@Override
-	protected int scoreToAdd(Word theWord) {
+	public int scoreToAdd(Word theWord) {
 		return theWord.getWordScore();
 	}
 	

@@ -2,6 +2,7 @@ package Player.Boundaries;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -13,6 +14,7 @@ import javax.swing.border.Border;
 
 import Player.Controllers.LevelToMainMenuController;
 import Player.Controllers.ResetBoardController;
+import Player.Controllers.UndoController;
 import Player.Entities.Level;
 import Player.Entities.Model;
 import Player.Entities.Word;
@@ -55,6 +57,12 @@ public class LevelView extends JFrame {
 		btnResetBoard.setFont(f);
 		btnResetBoard.setBounds(470, 359, 298, 77);
 		add(btnResetBoard);
+		
+		JButton btnUndo = new JButton("Undo Move");
+		btnUndo.addActionListener(new UndoController(this, theLevel));
+		btnUndo.setFont(f);
+		btnUndo.setBounds(470, 459, 298, 77);
+		add(btnUndo);
 		
 		txtrSelectedWords = new JTextArea();
 		txtrSelectedWords.setText("Selected Words\n");
