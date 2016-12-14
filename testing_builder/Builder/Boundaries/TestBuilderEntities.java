@@ -1,4 +1,4 @@
-package iron_builder;
+package Builder.Boundaries;
 
 import Builder.Boundaries.SplashScreenView;
 import Builder.Entities.Model;
@@ -6,7 +6,6 @@ import junit.framework.TestCase;
 
 public class TestBuilderEntities extends TestCase {
 
-	
 	Model model;
 	SplashScreenView s;
 	
@@ -17,6 +16,10 @@ public class TestBuilderEntities extends TestCase {
 	
 	protected void tearDown() {
 		s.dispose();
+	}
+	
+	public void testBoard(){
+		
 	}
 	
 	

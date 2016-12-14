@@ -11,11 +11,20 @@ public class UndoController implements ActionListener{
 	LevelView levelView;
 	Level level;
 	
+	
+	/**
+	 * constructor for the undo controller
+	 * @param lv previous LevelView to restore on press
+	 * @param l previous Level to restore on press (deep copy)
+	 */
 	public UndoController(LevelView lv, Level l){
 		this.levelView = lv;
 		this.level = l;
 	}
 	
+	/**
+	 * This function is called whenever the undo button is pressed.
+	 */
 	@Override
 	public void actionPerformed(ActionEvent ae){
 		boolean completed = undoMove();
@@ -26,6 +35,11 @@ public class UndoController implements ActionListener{
 		}
 	}
 	
+	/**
+	 * undoes the most recent move.
+	 * @return true if move is undone
+	 * @return false if move is not undone
+	 */
 	public boolean undoMove(){
 		boolean completed = false;
 		
