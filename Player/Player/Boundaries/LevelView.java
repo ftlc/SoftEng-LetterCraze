@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.Border;
+import javax.swing.text.BadLocationException;
 
 import Player.Controllers.LevelToMainMenuController;
 import Player.Controllers.ResetBoardController;
@@ -137,6 +138,18 @@ public class LevelView extends JFrame {
 	
 	public void clearSelectedWords(){
 		txtrSelectedWords.setText("Selected Words\n");
+	}
+	
+	public void removeLastSelectedWord(){
+		String text = txtrSelectedWords.getText();
+		try {
+			String noLineBreak = txtrSelectedWords.getText(0, text.length()-1);
+			int lastLineBreak = noLineBreak.lastIndexOf("\n");
+			txtrSelectedWords.setText(txtrSelectedWords.getText(0, lastLineBreak+1));
+		} catch (BadLocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void clearLevel() {

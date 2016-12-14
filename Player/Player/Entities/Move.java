@@ -30,9 +30,14 @@ public class Move {
 	public boolean undo(){
 		boolean completed = true;
 		Board b = level.getBoard();
+		Tile[][] t = b.getTiles();
 		
-		Board restoreBoard = new Board(b.getLayout(), tiles);
-		level.setBoard(restoreBoard);
+		for(int x = 0; x < 6; x++){
+			for(int y = 0; y < 6; y++){
+				if(t[x][y] != null)
+					t[x][y].setLetter(tiles[x][y].getLetter());
+			}
+		}
 		
 		level.setScore(level.getScore() - score);
 		

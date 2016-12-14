@@ -31,6 +31,10 @@ public class Logic {
 		return true;
 	}
 	
+	public boolean canUndo(){
+		return true;
+	}
+	
 	public boolean resetBoard(){
 		level.setSelectedWords(new ArrayList<Word>());
 		level.setScore(0);

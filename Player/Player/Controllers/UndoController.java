@@ -21,12 +21,17 @@ public class UndoController implements ActionListener{
 		boolean completed = undoMove();
 		
 		if(completed == true){
+			levelView.removeLastSelectedWord();
 			levelView.refresh();
 		}
 	}
 	
 	public boolean undoMove(){
 		boolean completed = false;
+		
+		if(level.getLogic().canUndo() == false)
+			return false;
+		
 		completed = level.undoRecentMove();
 		
 		return completed;
