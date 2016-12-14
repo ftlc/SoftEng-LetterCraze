@@ -27,6 +27,10 @@ public class UndoController implements ActionListener{
 	
 	public boolean undoMove(){
 		boolean completed = false;
+		
+		if(level.getLogic().canUndo() == false)
+			return false;
+		
 		completed = level.undoRecentMove();
 		
 		return completed;

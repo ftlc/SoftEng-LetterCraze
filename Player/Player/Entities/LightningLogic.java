@@ -97,6 +97,11 @@ public class LightningLogic extends Logic {
 	}
 	
 	@Override
+	public boolean canUndo(){
+		return false;
+	}
+	
+	@Override
 	public boolean startTimer(LevelView levelView){
 		TimerTask task = new TimerTask(){
 			@Override
