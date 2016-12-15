@@ -38,7 +38,6 @@ public class BoundariesTesting extends TestCase {
 	public void setUp(){
 		m = new Model();
 		menu = new MainMenuView(m);
-		this.tiles = new Tile[1][1];
 		assertTrue((menu != null));
 		JPanel levelButton = menu.getLevelButton(2);
 		JButton button = (JButton)levelButton.getComponent(0);
@@ -49,6 +48,7 @@ public class BoundariesTesting extends TestCase {
 		this.levelView = level3;
 		this.level = level3.getLevel();
 		
+		tiles = level.getBoard().getTiles();
 		gameView = levelView.getGameView();
 		tileViews = gameView.getTileViews();
 		tileControllers = gameView.getTileControllers();
@@ -110,19 +110,44 @@ public class BoundariesTesting extends TestCase {
 		assertTrue(tileViews[5][5].getText().isEmpty());
 	}
 	
-	public void UndoClicked(){
-		MouseEvent ma = createMouseEvent(MouseEvent.MOUSE_CLICKED, undobutton );
-		level.setScore(0);
-		Move m = new Move(level,tiles, 1);
-		level.addMove(m);
+	public void testUndoClicked(){
+		selectCat();
 		
-		resetbutton.doClick();
-		assertEquals(level.getScore(),0);
+		undobutton.doClick();
+		assertEquals(0, level.getScore());
+		assertEquals(0, level.getMoves().size());
+		assertFalse(tileViews[3][5].getText().isEmpty());
+		assertFalse(tileViews[4][5].getText().isEmpty());
+		assertFalse(tileViews[5][5].getText().isEmpty());
+		
+		assertEquals("c", tileViews[3][0].getText());
+		assertEquals("a", tileViews[4][0].getText());
+		assertEquals("t", tileViews[5][0].getText());
+		
+		assertEquals("c", tiles[3][0].getLetter());
+		assertEquals("a", tiles[4][0].getLetter());
+		assertEquals("t", tiles[5][0].getLetter());
+		
+		
 	}
 	
 	public MouseEvent createMouseEvent(int eventType, JComponent c){
 		MouseEvent me = new MouseEvent(c, eventType, System.currentTimeMillis(), MouseEvent.BUTTON1_MASK, 0, 0, 0, false, MouseEvent.BUTTON1);
 		return me;
+	}
+	
+	public void selectCat(){
+		MouseEvent me = createMouseEvent(MouseEvent.MOUSE_PRESSED, tileViews[3][0]);
+		tileControllers[3][0].mousePressed(me);
+		
+		me = createMouseEvent(MouseEvent.MOUSE_ENTERED, tileViews[4][0]);
+		tileControllers[4][0].mouseEntered(me);
+		
+		me = createMouseEvent(MouseEvent.MOUSE_ENTERED, tileViews[5][0]);
+		tileControllers[5][0].mouseEntered(me);
+		
+		me = createMouseEvent(MouseEvent.MOUSE_RELEASED, tileViews[5][0]);
+		tileControllers[5][0].mouseReleased(me);
 	}
 
 }
