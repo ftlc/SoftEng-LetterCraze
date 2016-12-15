@@ -83,6 +83,7 @@ public class Level {
 	 */
 	public void setStarAt(int s, int i) {
 		stars[i-1] = s;
+		return;
 	}
 
 	/**

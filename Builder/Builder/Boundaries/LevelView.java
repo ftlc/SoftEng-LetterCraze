@@ -3,6 +3,7 @@ package Builder.Boundaries;
 import Builder.Controllers.*;
 import Builder.Entities.Level;
 import Builder.Entities.Model;
+import java.io.File;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -64,6 +65,7 @@ public class LevelView extends JFrame{
 		this.model = m;
 		this.themeCreationDialog = new ThemeView(m);
 		this.sv = new SaveLevelView(model, this);
+
 		initializeLevel();
 
 		//Set the level and corresponding controllers
@@ -141,6 +143,13 @@ public class LevelView extends JFrame{
 	public void setLvl(Level lvl) {
 		this.lvl = lvl;
 
+
+
+        Star1Text.addActionListener(new StarValueController(lvl, this, 1));
+
+        Star2Text.addActionListener(new StarValueController(lvl, this, 2));
+
+        Star3Text.addActionListener(new StarValueController(lvl, this, 3));
 		// Set the corresponding controllers (Only if correct level type)
 		if(lvl.getLevelType().equals("Lightning")) {
 			TimeTxt.addActionListener(new AssignTimeController(lvl, this));
@@ -309,6 +318,14 @@ public class LevelView extends JFrame{
 	}
 
 	/**
+	 * Setter Method to change the file chooser.
+	 * @param fileFinder the new JFileChooser to set to.
+	 */
+	public void setFileFinder(JFileChooser fileFinder) {
+		this.fileFinder = fileFinder;
+	}
+
+	/**
 	 * initializes the levelView with all buttons, labels, fields, comboBoxes, etc
 	 * and widgets.
 	 */
@@ -326,7 +343,7 @@ public class LevelView extends JFrame{
 		contentPane.add(panel);
 
 		// initializing the fileFinder
-		fileFinder = new JFileChooser();
+		fileFinder = new JFileChooser(new File("./Levels"));
 
 	}
 
@@ -368,14 +385,12 @@ public class LevelView extends JFrame{
 		contentPane.add(Star1Text);
 		Star1Text.setColumns(10);
 		Star1Text.setText("0");
-		Star1Text.addActionListener(new StarValueController(lvl, this, 1));
 
 		Star2Text = new JTextField();
 		Star2Text.setBounds(561, 191, 130, 26);
 		contentPane.add(Star2Text);
 		Star2Text.setColumns(10);
 		Star2Text.setText("0");
-		Star2Text.addActionListener(new StarValueController(lvl, this, 2));
 
 		Star3Text = new JTextField();
 		Star3Text.setBounds(561, 219, 130, 26);
@@ -383,7 +398,6 @@ public class LevelView extends JFrame{
 		Star3Text.setColumns(10);
 
 		Star3Text.setText("0");
-		Star3Text.addActionListener(new StarValueController(lvl, this, 3));
 
 		JLabel lblTime = new JLabel("Time:");
 		lblTime.setBounds(499, 289, 61, 16);

@@ -9,14 +9,7 @@ public class Model {
 	Level level;
 	private String lvltype;
 
-	/**
-	 * Constructor of the Model object.
-	 * @param level the type of level being created.
-	 */
-	public Model(Level level)
-	{
-		this.level = level;
-	}
+
 
 	/**
 	 * Additional constructor that begins with the default puzzle type.
@@ -28,13 +21,7 @@ public class Model {
 
 	}
 
-	/** 
-	 * Setter method for the level attribute of the model.
-	 * @param lvl the level to wished set.
-	 */
-	public void initLevel(Level lvl) {
-		this.level = lvl;
-	}
+
 
 	/**
 	 * Getter method for the level attribute in the model.

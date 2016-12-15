@@ -8,6 +8,8 @@ import java.io.File;
 import Builder.Boundaries.*;
 import Builder.Entities.*;
 
+import javax.swing.*;
+
 public class TestBuilderController extends TestCase {
 	
 	LevelView lv;
@@ -36,21 +38,22 @@ public class TestBuilderController extends TestCase {
 		assertEquals("Theme", lv.getLvl().getLevelType());
 	}
 	
-	public void testassignStarsController(){
+	public void testAssignStarsController(){
 		lv.setPuzzleComboBox();
 		lv.getComboBox().getActionListeners()[0].actionPerformed(null);
 
 		lv.setStarValue1("42");
 		lv.setStarValue2("43");
 		lv.setStarValue3("44");
-		
+
+		System.out.println("Star1: " + lv.getStarText(1).getText());
 		lv.getStarText(1).getActionListeners()[0].actionPerformed(null);
 		lv.getStarText(2).getActionListeners()[0].actionPerformed(null);
 		lv.getStarText(3).getActionListeners()[0].actionPerformed(null);
 		
-		//assertEquals(42, lv.getLvl().getStarAt(1));
-		//assertEquals(43, lv.getLvl().getStarAt(2));
-		//assertEquals(44, lv.getLvl().getStarAt(3));
+		assertEquals(42, lv.getLvl().getStarAt(1));
+		assertEquals(43, lv.getLvl().getStarAt(2));
+		assertEquals(44, lv.getLvl().getStarAt(3));
 		
 	}
 	
@@ -69,14 +72,32 @@ public class TestBuilderController extends TestCase {
 		lv.getTimeTxt().getActionListeners()[0].actionPerformed(null);
 		assertEquals(60, ((LightningLevel)lv.getLvl()).getTime());
 	}
-	
+
 	public void testEditLevelController(){
+
+		JFileChooser f1 = lv.getFileFinder();
+		f1.setSelectedFile(new File("./Levels/Puzzle-Test.txt"));
 		lv.getEditButton().getActionListeners()[0].actionPerformed(null);
+
 		// Select file Puzzle-Test.txt
-		assertEquals("10", lv.getStarText(1).getText());
+
+
+		String selectedItem = String.valueOf(lv.getComboBox().getSelectedItem());
+
+		if(selectedItem.equals("Puzzle")) {
+			assertEquals("10", lv.getStarText(1).getText());
+			assertEquals("20", lv.getMaxWordstxt().getText());
+		}
+
+
+
 	}
 	
-	public void testSaveLevelController(){
+	public void testSaveLevelControllerPuzzle(){
+
+
+		JFileChooser f1 = lv.getFileFinder();
+		f1.setSelectedFile(new File("./Levels/Puzzle-Test.txt"));
 		lv.getEditButton().getActionListeners()[0].actionPerformed(null);
 		// Select file Puzzle-Test.txt
 		
@@ -87,4 +108,46 @@ public class TestBuilderController extends TestCase {
 		File file = new File("./Levels/Testing-File.txt");
 		assertTrue(file.exists());
 	}
+
+
+	public void testSaveLevelControllerLightning() {
+
+
+		JFileChooser f1 = lv.getFileFinder();
+		f1.setSelectedFile(new File("./Levels/Lightning-Test.txt"));
+		lv.getEditButton().getActionListeners()[0].actionPerformed(null);
+
+		lv.getSaveButton().getActionListeners()[0].actionPerformed(null);
+
+		lv.getSLView().setTheName("Testing-File-Lightning.txt");
+
+		lv.getSLView().getOKButton().getActionListeners()[0].actionPerformed(null);
+
+		File file = new File("./Levels/Testing-File-Lightning.txt");
+		assertTrue(file.exists());
+	}
+
+
+
+
+
+	public void testSaveLevelControllerTheme() {
+
+		JFileChooser f1 = lv.getFileFinder();
+		f1.setSelectedFile(new File("./Levels/Theme-Test.txt"));
+
+		lv.getEditButton().getActionListeners()[0].actionPerformed(null);
+
+		lv.getSaveButton().getActionListeners()[0].actionPerformed(null);
+
+
+		lv.getSLView().setTheName("Testing-File-Theme.txt");
+
+		lv.getSLView().getOKButton().getActionListeners()[0].actionPerformed(null);
+
+		File file = new File("./Levels/Testing-File-Theme.txt");
+		assertTrue(file.exists());
+	}
+
+
 }

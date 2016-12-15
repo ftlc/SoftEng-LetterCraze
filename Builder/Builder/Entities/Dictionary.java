@@ -12,16 +12,7 @@ public class Dictionary {
 	ArrayList<String> words;
 	Character[][] letters;
 
-	/**
-	 * Constructor of the Entity Object.
-	 * @param name The name of the theme ie: Animals.
-	 * @param words The words that are in that theme ie: dog, cat, giraffe.
-	 */
-	public Dictionary(String name, ArrayList<String> words)
-	{
-		this.name = name;
-		this.words = words;
-	}
+
 	
 	/**
 	 * Optional constructor for the dictionary object.

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/Application.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/LightningLevel.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/LightningLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/PuzzleLevel.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/PuzzleLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/ThemeLevel.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/ThemeLevel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java" afterPath="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,6 +24,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$TestBuilderController_testSaveLevelControllerLightning.coverage" NAME="TestBuilderController.testSaveLevelControllerLightning Coverage Results" MODIFIED="1481761936565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Builder.Boundaries.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$EntitiesTesting.coverage" NAME="EntitiesTesting Coverage Results" MODIFIED="1480920837581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>iron_builder.*</FILTER>
     </SUITE>
@@ -40,13 +42,13 @@
     <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$TestBuilderBoundary__1_.coverage" NAME="TestBuilderBoundary (1) Coverage Results" MODIFIED="1481755020363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Builder.Boundaries.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$TestBuilderController.coverage" NAME="TestBuilderController Coverage Results" MODIFIED="1481755131585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$TestBuilderController.coverage" NAME="TestBuilderController Coverage Results" MODIFIED="1481764210756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Builder.Boundaries.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$Main.coverage" NAME="Main Coverage Results" MODIFIED="1481741342139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Builder.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$All_in_iron_builder.coverage" NAME="All in iron_builder Coverage Results" MODIFIED="1481758062956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$All_in_iron_builder.coverage" NAME="All in iron_builder Coverage Results" MODIFIED="1481766483499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$TestBuilderBoundary.coverage" NAME="TestBuilderBoundary Coverage Results" MODIFIED="1481741237330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>iron_builder.*</FILTER>
     </SUITE>
@@ -62,19 +64,64 @@
     <favorites_list name="SoftEng-LetterCraze" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4063714">
+    <splitter split-orientation="horizontal" split-proportion="0.68963015">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TestBuilderEntities.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java">
+          <file leaf-file-name="TestBuilderController.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="684">
-                  <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+                <state relative-caret-position="95">
+                  <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#340#341#0" expanded="true" />
-                    <element signature="e#358#359#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Level.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Level.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="241">
+                  <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#1835#1836#0" expanded="true" />
+                    <element signature="e#1859#1860#0" expanded="true" />
+                    <element signature="e#2011#2012#0" expanded="true" />
+                    <element signature="e#2036#2037#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Dictionary.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="376">
+                  <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#1883#1884#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TestBuilderBoundary.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderBoundary.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ChangeGameTypeController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/ChangeGameTypeController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -82,9 +129,43 @@
           <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Model.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+                <state relative-caret-position="414">
+                  <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SplashScreenToLevelController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/SplashScreenToLevelController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CloseThemeController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseThemeController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="468">
+                  <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#904#905#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CloseSaveLevelController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseSaveLevelController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="396">
+                  <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#627#628#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -93,18 +174,47 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ThemeLevel.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/ThemeLevel.java">
+          <file leaf-file-name="StarValueController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="194">
-                  <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+                <state relative-caret-position="473">
+                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SaveLevelController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2072">
+                  <caret line="155" column="33" lean-forward="false" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="33" />
                   <folding>
-                    <element signature="e#950#951#0" expanded="true" />
-                    <element signature="e#987#988#0" expanded="true" />
-                    <element signature="e#1164#1165#0" expanded="true" />
-                    <element signature="e#1197#1198#0" expanded="true" />
-                    <element signature="e#1391#1392#0" expanded="true" />
-                    <element signature="e#1435#1436#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EditLevelController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/EditLevelController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="206">
+                  <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LevelView.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="68" column="21" lean-forward="false" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#8041#8042#0" expanded="true" />
+                    <element signature="e#8076#8077#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -144,7 +254,6 @@
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/Board.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/ToggleSquareController.java" />
         <option value="$PROJECT_DIR$/testing/iron_builder/EntitiesTesting.java" />
-        <option value="$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Main.java" />
         <option value="$PROJECT_DIR$/Levels/Test.html" />
         <option value="$PROJECT_DIR$/Levels/SomeTextFile" />
@@ -163,17 +272,19 @@
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/CloseSaveLevelController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/SaveLevelView.java" />
-        <option value="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/BoardView.java" />
-        <option value="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
-        <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/EditLevelController.java" />
         <option value="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderEntities.java" />
-        <option value="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/PuzzleLevel.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/LightningLevel.java" />
         <option value="$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/ThemeLevel.java" />
+        <option value="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
+        <option value="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" />
+        <option value="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java" />
+        <option value="$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java" />
+        <option value="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" />
+        <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
       </list>
     </option>
   </component>
@@ -208,8 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -277,11 +386,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="testing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iron_builder" />
+              <option name="myItemId" value="Builder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,9 +403,81 @@
               <option name="myItemId" value="Builder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SoftEng-LetterCraze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SoftEng-LetterCraze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SoftEng-LetterCraze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SoftEng-LetterCraze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SoftEng-LetterCraze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SoftEng-LetterCraze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Boundaries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,122 +491,28 @@
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Builder/Builder/Boundaries/SaveLevelView.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Player/Player/Entities/Level.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Player/Player/Entities/PuzzleLogic.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Levels/Testing-File.txt</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-  </component>
   <component name="RunManager" selected="JUnit.All in iron_builder">
+    <configuration default="false" name="All in iron_builder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="iron_builder" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="false" name="TestBuilderController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -456,7 +539,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestBuilderEntities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestBuilderController.testSaveLevelControllerTheme" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="Builder.Boundaries.*" />
@@ -467,60 +550,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Builder.Boundaries" />
-      <option name="MAIN_CLASS_NAME" value="Builder.Boundaries.TestBuilderEntities" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestBuilderEntities (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Builder.Entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="iron_builder" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Builder.Entities" />
-      <option name="MAIN_CLASS_NAME" value="Builder.Entities.TestBuilderEntities" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestBuilderEntities.testThemeLevel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Builder.Entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="iron_builder" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Builder.Entities" />
-      <option name="MAIN_CLASS_NAME" value="Builder.Entities.TestBuilderEntities" />
-      <option name="METHOD_NAME" value="testThemeLevel" />
+      <option name="MAIN_CLASS_NAME" value="Builder.Boundaries.TestBuilderController" />
+      <option name="METHOD_NAME" value="testSaveLevelControllerTheme" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -534,15 +565,46 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="All in iron_builder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="TestBuilderController.testEditLevelController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Builder.Boundaries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="iron_builder" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="Builder.Boundaries" />
+      <option name="MAIN_CLASS_NAME" value="Builder.Boundaries.TestBuilderController" />
+      <option name="METHOD_NAME" value="testEditLevelController" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestBuilderController.testAssignStarsController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Builder.Boundaries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="iron_builder" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Builder.Boundaries" />
+      <option name="MAIN_CLASS_NAME" value="Builder.Boundaries.TestBuilderController" />
+      <option name="METHOD_NAME" value="testAssignStarsController" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -937,19 +999,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestBuilderEntities" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestBuilderEntities (1)" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestBuilderEntities.testThemeLevel" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.All in iron_builder" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.All in iron_builder" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testSaveLevelControllerTheme" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testEditLevelController" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testAssignStarsController" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in iron_builder" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestBuilderEntities (1)" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestBuilderEntities.testThemeLevel" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestBuilderEntities" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testAssignStarsController" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testEditLevelController" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testSaveLevelControllerTheme" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1018,6 +1080,7 @@
       <workItem from="1481566643089" duration="4114000" />
       <workItem from="1481740749020" duration="7763000" />
       <workItem from="1481751277215" duration="6912000" />
+      <workItem from="1481758290402" duration="6193000" />
     </task>
     <task id="LOCAL-00001" summary="Splash Screen Button">
       <created>1480494394704</created>
@@ -1240,39 +1303,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_iron_builder - 2016.12.14 at 18h 28m 59s.xml">
+    <history-entry file="All_in_iron_builder - 2016.12.14 at 20h 48m 39s.xml">
       <configuration name="All in iron_builder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_(1) - 2016.12.14 at 18h 11m 36s.xml">
-      <configuration name="TestBuilderEntities (1)" configurationId="JUnit" />
+    <history-entry file="TestBuilderController - 2016.12.14 at 20h 31m 19s.xml">
+      <configuration name="TestBuilderController" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_(1) - 2016.12.14 at 18h 17m 09s.xml">
-      <configuration name="TestBuilderEntities (1)" configurationId="JUnit" />
+    <history-entry file="TestBuilderController_testAssignStarsController - 2016.12.14 at 20h 34m 48s.xml">
+      <configuration name="TestBuilderController.testAssignStarsController" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_(1) - 2016.12.14 at 18h 19m 15s.xml">
-      <configuration name="TestBuilderEntities (1)" configurationId="JUnit" />
+    <history-entry file="TestBuilderController_testAssignStarsController - 2016.12.14 at 20h 35m 09s.xml">
+      <configuration name="TestBuilderController.testAssignStarsController" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_(1) - 2016.12.14 at 18h 22m 40s.xml">
-      <configuration name="TestBuilderEntities (1)" configurationId="JUnit" />
+    <history-entry file="TestBuilderController_testAssignStarsController - 2016.12.14 at 20h 36m 39s.xml">
+      <configuration name="TestBuilderController.testAssignStarsController" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_(1) - 2016.12.14 at 18h 26m 36s.xml">
-      <configuration name="TestBuilderEntities (1)" configurationId="JUnit" />
+    <history-entry file="TestBuilderController_testAssignStarsController - 2016.12.14 at 20h 37m 57s.xml">
+      <configuration name="TestBuilderController.testAssignStarsController" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_testThemeLevel - 2016.12.14 at 18h 22m 48s.xml">
-      <configuration name="TestBuilderEntities.testThemeLevel" configurationId="JUnit" />
+    <history-entry file="TestBuilderController_testAssignStarsController - 2016.12.14 at 20h 39m 14s.xml">
+      <configuration name="TestBuilderController.testAssignStarsController" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_testThemeLevel - 2016.12.14 at 18h 24m 00s.xml">
-      <configuration name="TestBuilderEntities.testThemeLevel" configurationId="JUnit" />
+    <history-entry file="TestBuilderController_testAssignStarsController - 2016.12.14 at 20h 43m 50s.xml">
+      <configuration name="TestBuilderController.testAssignStarsController" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_testThemeLevel - 2016.12.14 at 18h 25m 05s.xml">
-      <configuration name="TestBuilderEntities.testThemeLevel" configurationId="JUnit" />
+    <history-entry file="TestBuilderController_testAssignStarsController - 2016.12.14 at 20h 45m 13s.xml">
+      <configuration name="TestBuilderController.testAssignStarsController" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestBuilderEntities_testThemeLevel - 2016.12.14 at 18h 25m 55s.xml">
-      <configuration name="TestBuilderEntities.testThemeLevel" configurationId="JUnit" />
+    <history-entry file="TestBuilderController_testAssignStarsController - 2016.12.14 at 20h 47m 02s.xml">
+      <configuration name="TestBuilderController.testAssignStarsController" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103406000" />
+    <option name="totallyTimeSpent" value="109599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
@@ -1296,10 +1359,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21374045" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33151582" sideWeight="0.6232433" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21494542" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33151582" sideWeight="0.6232433" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24648649" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23891892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26216215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2355507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1361,8 +1424,26 @@
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Builder/Builder/Entities/Level.java</url>
+          <line>85</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1371,21 +1452,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/SquareView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Player/Player/Entities/ThemeLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1423,16 +1489,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lightning-Test.txt" />
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Puzzle-Test.txt" />
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AssignNumWordsController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1530,19 +1586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseSaveLevelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#473#474#0" expanded="false" />
-            <element signature="e#501#502#0" expanded="false" />
-            <element signature="e#627#628#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/ThemePopUpController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -1567,16 +1610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseThemeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#904#905#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Theme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1586,30 +1619,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testing_builder/iron_builder/TestBuilderController.java" />
     <entry file="file://$PROJECT_DIR$/testing_builder/iron_builder/TestBuilderBoundary.java" />
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/EditLevelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/Application.java" />
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -1626,54 +1636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="72" column="15" lean-forward="false" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
-          <folding>
-            <element signature="e#2189#2190#0" expanded="false" />
-            <element signature="e#2302#2303#0" expanded="false" />
-            <element signature="e#2323#2324#0" expanded="false" />
-            <element signature="e#2459#2460#0" expanded="false" />
-            <element signature="e#2478#2479#0" expanded="false" />
-            <element signature="e#2610#2611#0" expanded="false" />
-            <element signature="e#2632#2633#0" expanded="false" />
-            <element signature="e#2793#2794#0" expanded="false" />
-            <element signature="e#2810#2811#0" expanded="false" />
-            <element signature="e#2935#2936#0" expanded="false" />
-            <element signature="e#2961#2962#0" expanded="false" />
-            <element signature="e#3153#3154#0" expanded="false" />
-            <element signature="e#3186#3187#0" expanded="false" />
-            <element signature="e#3976#3977#0" expanded="false" />
-            <element signature="e#4009#4010#0" expanded="false" />
-            <element signature="e#4220#4221#0" expanded="false" />
-            <element signature="e#4249#4250#0" expanded="false" />
-            <element signature="e#4462#4463#0" expanded="false" />
-            <element signature="e#4493#4494#0" expanded="false" />
-            <element signature="e#4661#4662#0" expanded="false" />
-            <element signature="e#4692#4693#0" expanded="false" />
-            <element signature="e#4861#4862#0" expanded="false" />
-            <element signature="e#4892#4893#0" expanded="false" />
-            <element signature="e#5051#5052#0" expanded="false" />
-            <element signature="e#5092#5093#0" expanded="false" />
-            <element signature="e#5218#5219#0" expanded="false" />
-            <element signature="e#5262#5263#0" expanded="false" />
-            <element signature="e#5380#5381#0" expanded="false" />
-            <element signature="e#5420#5421#0" expanded="false" />
-            <element signature="e#5639#5640#0" expanded="false" />
-            <element signature="e#5660#5661#0" expanded="false" />
-            <element signature="e#6654#6655#0" expanded="false" />
-            <element signature="e#6678#6679#0" expanded="false" />
-            <element signature="e#6880#6881#0" expanded="false" />
-            <element signature="e#6905#6906#0" expanded="false" />
-            <element signature="e#7081#7082#0" expanded="false" />
-            <element signature="e#7103#7104#0" expanded="false" />
-            <element signature="e#7596#7597#0" expanded="false" />
-            <element signature="e#7622#7623#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AcceptThemeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-130">
@@ -1682,38 +1644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding>
-            <element signature="e#2159#2160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Square.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/ChangeGameTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1752,18 +1686,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1456">
-          <caret line="100" column="21" lean-forward="false" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/LightningLevel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/SplashScreenToLevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseThemeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#904#905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseSaveLevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="e#627#628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/ThemeLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/ChangeGameTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1776,29 +1764,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java">
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="376">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#1883#1884#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/ThemeLevel.java">
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/EditLevelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        <state relative-caret-position="206">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2072">
+          <caret line="155" column="33" lean-forward="false" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="33" />
           <folding>
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <element signature="e#1835#1836#0" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
+            <element signature="e#2011#2012#0" expanded="true" />
+            <element signature="e#2036#2037#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="68" column="21" lean-forward="false" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8041#8042#0" expanded="true" />
+            <element signature="e#8076#8077#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -34,13 +34,14 @@ public class StarValueController implements ActionListener {
      */
     public void actionPerformed(ActionEvent actionEvent) {
         String txt = lvlView.getStarText(starnum).getText();
-        System.out.println(txt);
+        System.out.println("Starnum in controller:" + starnum);
         try {
             int contents = Integer.parseInt(txt);
+            System.out.println("Contents: " + contents);
             lvl.setStarAt(contents, starnum);
         }
         catch (Exception e){
-            lvlView.getStarText(starnum).setText(txt); // I changed this so it wouldn't set the value to 0 everytime you press enter.
+          //  lvlView.getStarText(starnum).setText(txt); // I changed this so it wouldn't set the value to 0 everytime you press enter.
         }
 
 
