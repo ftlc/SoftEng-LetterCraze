@@ -8,6 +8,12 @@ public class Move {
 	Tile[][] tiles;
 	int score;
 	
+	/**
+	 * Move Constructor - Create new move for undo purposes
+	 * @param l Level where move was made
+	 * @param t 2D array of all board tiles at time of move
+	 * @param s Score that move was worth
+	 */
 	public Move(Level l, Tile[][] t, int s){
 		this.level = l;		
 		this.score = s;
@@ -16,6 +22,10 @@ public class Move {
 		initTiles(t);
 	}
 	
+	/**
+	 * Deep Copy Tiles
+	 * @param tilesToCopy 2D Array of tiles to copy
+	 */
 	public void initTiles(Tile[][]tilesToCopy){
 		for(int x = 0; x < 6; x++){
 			for(int y = 0; y < 6; y++){
@@ -27,6 +37,10 @@ public class Move {
 		}
 	}
 	
+	/**
+	 * Undo a move - set board letters to those saved here
+	 * @return boolean representing whether or not move was successfully undone
+	 */
 	public boolean undo(){
 		boolean completed = true;
 		Board b = level.getBoard();

@@ -28,8 +28,8 @@ public class GameView extends JPanel {
 	 * Constructor for the GameView class. It needs to hold data
 	 * about the level it is displaying.
 	 * 
-	 * @param parent
-	 * @param theLevel
+	 * @param parent LevelView Parent of this GameView
+	 * @param theLevel Level Corresponding to this GameView
 	 */
 	public GameView(LevelView parent, Level theLevel) {
 		//Will have to pass GameView some data so it knows what to draw.

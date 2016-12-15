@@ -29,7 +29,7 @@ public class Dictionary {
 	/**
 	 * Special constructor for Dictionary to allow the user to specify
 	 * if the Dictionary is a theme dictionary.
-	 * @param theme
+	 * @param theme Boolean representing whether or not this is a theme level
 	 */
 	public Dictionary(boolean theme) {
 		this.theme = theme;
@@ -48,7 +48,7 @@ public class Dictionary {
 	
 	/**
 	 * Adds a given word to the dictionary
-	 * @param word
+	 * @param word Word to be added
 	 * @return true on success
 	 * @return false on failure
 	 */
@@ -59,7 +59,7 @@ public class Dictionary {
 	
 	/**
 	 * Determines if the given string is a valid word in the dictionary
-	 * @param s
+	 * @param s String to be checked 
 	 * @return true if s is in the dictionary
 	 * @return false if s is not in the dictionary
 	 */

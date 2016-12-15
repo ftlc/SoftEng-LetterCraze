@@ -24,6 +24,7 @@ public class windowCode {
 
 	/**
 	 * Launch the application.
+	 * @param args Standard args
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {

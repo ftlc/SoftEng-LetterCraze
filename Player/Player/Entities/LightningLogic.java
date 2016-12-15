@@ -13,14 +13,21 @@ public class LightningLogic extends Logic {
 	int timer;
 	Timer actualTimer;
 
+	/**
+	 * Lightning Logic Constructor - Initializes timer value
+	 * @param l Level corresponding to this logic
+	 */
 	public LightningLogic(Level l) {
 		super(l);
 		this.timer = -1;
 		// TODO Auto-generated constructor stub
 	}
 
-	// Initialize Entities for Lightning Level //
-	// by reading from file //
+	/**
+	 * Initialize Entities corresponding to File for Lightning Level
+	 * @param path Path to config file
+	 * @return boolean representing success
+	 */
 	@Override
 	public boolean readFile(String path) {
 
@@ -86,6 +93,10 @@ public class LightningLogic extends Logic {
 		return true;
 	}
 	
+	/**
+	 * Lightning specific version of play word - performs general operations and ensures timer has not run out
+	 * @return boolean representing whether or not word was valid to play
+	 */
 	@Override 
 	public boolean playWord(){
 		boolean returnVal = false;
@@ -96,11 +107,20 @@ public class LightningLogic extends Logic {
 		return returnVal;
 	}
 	
+	/**
+	 * Can Move Be Undone?
+	 * @return false - moves cannot be undone in Lightning level
+	 */
 	@Override
 	public boolean canUndo(){
 		return false;
 	}
 	
+	/**
+	 * Start timer for level 
+	 * @param levelView Level View corresponding to level
+	 * @return boolean representing whether or not timer was started
+	 */
 	@Override
 	public boolean startTimer(LevelView levelView){
 		TimerTask task = new TimerTask(){
@@ -120,6 +140,11 @@ public class LightningLogic extends Logic {
 	
 		return true;
 	}
+	
+	/**
+	 * Stop timer for level
+	 * @return boolean representing whether or not timer was started
+	 */
 	@Override
 	public boolean stopTimer(){
 		actualTimer.cancel();		

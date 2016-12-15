@@ -18,8 +18,8 @@ public class Tile{
 	 * Constructor for Tile. Pass it the tiles X and Y coordinate.
 	 * The tile will randomly generate a letter for itself.
 	 * 
-	 * @param x
-	 * @param y
+	 * @param x X Coordinate where tile will be located
+	 * @param y Y Coordinate where tile will be located
 	 */
 	public Tile(int x, int y){
 		this.xCoord = x;
@@ -34,9 +34,9 @@ public class Tile{
 	 * Constructor for Tile. Pass it the tiles X and Y coordinates,
 	 * and also pass the tile its' letter value.
 	 * 
-	 * @param x
-	 * @param y
-	 * @param letter
+	 * @param x X Coordinate where tile will be located
+	 * @param y Y Coordinate where tile will be located
+	 * @param letter Letter for the tile to be assigned
 	 */
 	public Tile(int x, int y, String letter){
 		this.xCoord = x;
@@ -48,7 +48,7 @@ public class Tile{
 	}
 	
 	/**
-	 *
+	 * Generate letter using weighted randomness
 	 * @return random letter with appropriate weighting
 	 */
 	public String generateLetter(){
@@ -157,7 +157,7 @@ public class Tile{
 	
 	/**
 	 * Sets the letter value of the Tile to the given string
-	 * @param s
+	 * @param s String representing letter to be set
 	 */
 	public void setLetter(String s) {
 		this.letter = s;
@@ -196,13 +196,13 @@ public class Tile{
 	
 	/**
 	 * Set the x-coordinate of the tile
-	 * @param x
+	 * @param x Integer of X Coordinate
 	 */
 	public void setXCoord(int x) { xCoord = x; }
 	
 	/**
 	 * Set the y-coordinate of the tile
-	 * @param y
+	 * @param y Integer of Y Coordinate
 	 */
 	public void setYCoord(int y) { yCoord = y; }
 }
