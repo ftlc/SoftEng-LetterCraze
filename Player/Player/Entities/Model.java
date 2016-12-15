@@ -13,7 +13,6 @@ public class Model {
 	
 	/**
 	 * Constructor for new model - initialize all paths and levels
-	 * @return Model for LetterCraze
 	 */
 	public Model(){
 		levels = new Level[TOTAL_NUM_LEVELS];
@@ -40,7 +39,6 @@ public class Model {
 	
 	/**
 	 * Read in all levels from config files
-	 * @return void
 	 */
 	public void initializeLevels(){
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){

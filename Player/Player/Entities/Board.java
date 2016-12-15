@@ -26,8 +26,8 @@ public class Board{
 	 * 
 	 * If it's not a theme board we will use the default dictionary.
 	 * 
-	 * @param l
-	 * @param theme
+	 * @param l 2D Character Array representing layout of places where tiles can be placed
+	 * @param theme Theme for current level
 	 */
 	public Board(char[][] l, boolean theme){
 		this.layout = l;
@@ -43,8 +43,8 @@ public class Board{
 	 * Returns position that a tile should move up to.
 	 * returns the original position if there is no where to move up to.
 	 * 
-	 * @param x
-	 * @param y
+	 * @param x X Coordinate
+	 * @param y Y Coordinate
 	 * @return Position that the tile should move up to
 	 */
 	public Position canMoveUp(int x, int y) {
@@ -109,9 +109,9 @@ public class Board{
 
 	/**
 	 * Determines if the board is valid.
-	 * @param xCoord
-	 * @param yCoord
-	 * @return
+	 * @param xCoord X Coordinate
+	 * @param yCoord Y Coordinate
+	 * @return boolean representing whether or not tile can be placed in location
 	 */
 	public boolean isValid(int xCoord, int yCoord){
 		return layout[xCoord][yCoord] == 'O';
@@ -134,7 +134,6 @@ public class Board{
 	 * @param x X location
 	 * @param y Y location
 	 * @param t Tile
-	 * @return void
 	 */
 	public void setTile(int x, int y, Tile t){
 		tiles[x][y] = t;

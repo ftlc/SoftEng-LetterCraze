@@ -32,7 +32,6 @@ public class Level {
 	 * 
 	 * @param path String representing path to file containing level configuration
 	 * @param num Level number
-	 * @return New level generated to specifications of config file
 	 */
 
 	public Level(String path, int num) {
@@ -116,8 +115,6 @@ public class Level {
 	
 	/**
 	 * Reconstruct level based on config file
-	 * 
-	 * @return void
 	 */
 	public void reconstruct(){
 		moves = new ArrayList<Move>();
@@ -128,7 +125,6 @@ public class Level {
 	 * Add selected word to selected words data structure
 	 * 
 	 * @param w Word to be added
-	 * @return void
 	 */
 	public void addWord(Word w){
 		this.selectedWords.add(w);
@@ -137,7 +133,6 @@ public class Level {
 	/**
 	 * Add a tile to the word currently being selected
 	 * @param t Tile to be added
-	 * @return void
 	 */
 	public void addCurrTile(Tile t){
 		this.currSelectedWord.add(t);
@@ -227,7 +222,6 @@ public class Level {
 	/**
 	 * Add Move to data structure tracking all moves made in a level
 	 * @param m Move to be added
-	 * @return void
 	 */
 	public void addMove(Move m){
 		moves.add(m);

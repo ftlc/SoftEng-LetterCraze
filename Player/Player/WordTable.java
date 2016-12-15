@@ -32,7 +32,7 @@ public class WordTable {
 	/**
 	 * Converts word to lowercase and checks whether exists within table.
 	 * 
-	 * @param s
+	 * @param s String to verify
 	 * @return     <code>true</code> if a word in the table; <code>false</code> otherwise.
 	 */
 	public static boolean isWord(String s) {
