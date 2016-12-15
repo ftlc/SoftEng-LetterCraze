@@ -46,8 +46,18 @@ public class Dictionary {
 	 */
 	public Character[][] getLetters() {
 		return letters;
+
 	}
 
+	public char[][] getLettersChar(){
+		char[][] ret = new char[6][6];
+		for(int i = 0; i < 6; i++) {
+			for(int j = 0; j < 6; j++) {
+				ret[i][j] = letters[i][j].charValue();
+			}
+		}
+		return ret;
+	}
 	/**
 	 * Adds a word to the theme/dictionary.
 	 * @param word to be added to the dictionary.
