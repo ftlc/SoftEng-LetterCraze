@@ -1,4 +1,4 @@
-package iron_builder;
+package Player;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ComponentEvent;
@@ -45,6 +45,7 @@ public class BoundariesTesting extends TestCase {
 		
 		LevelView level3 = menu.getLevelView(2);
 		assertTrue(level3.isVisible());
+		assertFalse(menu.isVisible());
 		this.levelView = level3;
 		this.level = level3.getLevel();
 		
@@ -60,6 +61,11 @@ public class BoundariesTesting extends TestCase {
 	}
 	
 	public void tearDown(){
+		
+		exitbutton.doClick();
+		assertFalse(levelView.isVisible());
+		assertTrue(menu.isVisible());
+		
 		m = null;
 		menu.dispose();
 	}
@@ -128,7 +134,27 @@ public class BoundariesTesting extends TestCase {
 		assertEquals("a", tiles[4][0].getLetter());
 		assertEquals("t", tiles[5][0].getLetter());
 		
+	}
+	
+	public void testResetBoard(){
+		selectCat();
 		
+		resetbutton.doClick();
+		
+		assertEquals(0, level.getScore());
+		assertEquals(0, level.getMoves().size());
+		assertFalse(tileViews[3][5].getText().isEmpty());
+		assertFalse(tileViews[4][5].getText().isEmpty());
+		assertFalse(tileViews[5][5].getText().isEmpty());
+		
+		assertEquals("c", tileViews[3][0].getText());
+		assertEquals("a", tileViews[4][0].getText());
+		assertEquals("t", tileViews[5][0].getText());
+		
+		Tile[][] temp_tiles = level.getBoard().getTiles();
+		assertEquals("c", temp_tiles[3][0].getLetter());
+		assertEquals("a", temp_tiles[4][0].getLetter());
+		assertEquals("t", temp_tiles[5][0].getLetter());
 	}
 	
 	public MouseEvent createMouseEvent(int eventType, JComponent c){

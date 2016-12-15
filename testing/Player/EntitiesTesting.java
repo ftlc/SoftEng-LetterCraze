@@ -1,4 +1,4 @@
-package iron_builder;
+package Player;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.awt.event.ContainerEvent;
