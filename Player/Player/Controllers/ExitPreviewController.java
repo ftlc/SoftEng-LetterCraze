@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by ftlc on 12/15/16.
+ * Controller that exits the preview level.
  */
 public class ExitPreviewController implements ActionListener {
 

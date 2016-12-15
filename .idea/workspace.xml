@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="MovePreviewLevelController">
+    <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player/Player/Controllers/ExitPreviewController.java" afterPath="$PROJECT_DIR$/Player/Player/Controllers/ExitPreviewController.java" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
@@ -113,23 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dictionary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="91" column="47" lean-forward="false" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
-              <folding>
-                <element signature="e#2260#2261#0" expanded="true" />
-                <element signature="e#2287#2288#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LevelView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="-1179">
               <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -138,15 +126,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Board.java">
+      <file leaf-file-name="Dictionary.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="31" column="75" lean-forward="false" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
-              <folding>
-                <element signature="e#987#988#0" expanded="true" />
-                <element signature="e#1011#1012#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="72" column="41" lean-forward="false" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,15 +146,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExitPreviewController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExitPreviewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player/Player/Controllers/ExitPreviewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="144">
+              <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CloseThemeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseThemeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#904#905#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,10 +245,10 @@
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/EditLevelController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java" />
-        <option value="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/Board.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
         <option value="$PROJECT_DIR$/Player/Player/Controllers/ExitPreviewController.java" />
+        <option value="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
       </list>
     </option>
   </component>
@@ -1225,7 +1222,7 @@
       <workItem from="1481740749020" duration="7763000" />
       <workItem from="1481751277215" duration="6912000" />
       <workItem from="1481758290402" duration="15206000" />
-      <workItem from="1481833337231" duration="5134000" />
+      <workItem from="1481833337231" duration="6500000" />
     </task>
     <task id="LOCAL-00001" summary="Splash Screen Button">
       <created>1480494394704</created>
@@ -1500,7 +1497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481840229345</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Thread">
+      <created>1481840742471</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1481840742471</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1536,7 +1540,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123746000" />
+    <option name="totallyTimeSpent" value="125112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
@@ -1589,7 +1593,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change Model Constructor" />
     <MESSAGE value="TestFiles?" />
     <MESSAGE value="Temp. Working on Subclasses" />
     <MESSAGE value="Clear non-editable fields" />
@@ -1614,7 +1617,8 @@
     <MESSAGE value="New methods documentation" />
     <MESSAGE value="ExitPreviewController" />
     <MESSAGE value="MovePreviewLevelController" />
-    <option name="LAST_COMMIT_MESSAGE" value="MovePreviewLevelController" />
+    <MESSAGE value="Thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thread" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1764,16 +1768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseThemeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#904#905#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseSaveLevelController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1909,17 +1903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="91" column="47" lean-forward="false" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
-          <folding>
-            <element signature="e#2260#2261#0" expanded="true" />
-            <element signature="e#2287#2288#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -1983,9 +1966,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseThemeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#904#905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player/Player/Controllers/ExitPreviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="-1179">
           <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1993,15 +1998,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Player/Player/Controllers/ExitPreviewController.java">
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="322">
+          <caret line="72" column="41" lean-forward="false" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

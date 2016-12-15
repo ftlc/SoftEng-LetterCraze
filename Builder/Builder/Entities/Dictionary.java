@@ -70,7 +70,7 @@ public class Dictionary {
 	public boolean addWord(String word) {
 		if(!words.contains(word))
 		{
-			words.add(word);
+			words.add(word.toLowerCase());
 		}
 		return true;
 	}
