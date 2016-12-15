@@ -67,8 +67,13 @@ public class EntitiesTesting extends TestCase{
 	public void testLevel(){
 		assertTrue(three != null);
 		assertEquals(three.getLevelNum(), 2);
-		
-		
+		Tile t1 = new Tile(1,0,"c");
+		Tile t2 = new Tile(1,0,"a");
+		Tile t3 = new Tile(1,0,"t");
+		three.addCurrTile(t1);
+		three.addCurrTile(t2);
+		three.addCurrTile(t3);
+		assertEquals(three.getCurrSelectedWord(), "cat");
 		
 	}
 }
