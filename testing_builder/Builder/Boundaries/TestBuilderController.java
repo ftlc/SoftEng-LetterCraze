@@ -2,6 +2,9 @@ package Builder.Boundaries;
 
 import junit.framework.TestCase;
 import Builder.Controllers.*;
+
+import java.io.File;
+
 import Builder.Boundaries.*;
 import Builder.Entities.*;
 
@@ -69,8 +72,19 @@ public class TestBuilderController extends TestCase {
 	
 	public void testEditLevelController(){
 		lv.getEditButton().getActionListeners()[0].actionPerformed(null);
-		
-		//lv.getFileFinder();
+		// Select file Puzzle-Test.txt
+		assertEquals("10", lv.getStarText(1).getText());
 	}
 	
+	public void testSaveLevelController(){
+		lv.getEditButton().getActionListeners()[0].actionPerformed(null);
+		// Select file Puzzle-Test.txt
+		
+		lv.getSaveButton().getActionListeners()[0].actionPerformed(null);
+		
+		lv.getSLView().setTheName("Testing-File.txt");
+		lv.getSLView().getOKButton().getActionListeners()[0].actionPerformed(null);
+		File file = new File("./Levels/Testing-File.txt");
+		assertTrue(file.exists());
+	}
 }

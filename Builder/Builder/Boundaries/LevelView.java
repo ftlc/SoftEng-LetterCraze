@@ -70,8 +70,20 @@ public class LevelView extends JFrame{
 		setLvl(m.getLevel());
 	}
 
+	/**
+	 * Getter method for the model of the level view.
+	 * @return the model
+	 */
 	public Model getModel(){
 		return this.model;
+	}
+	
+	/**
+	 * Getter method for the save level view.
+	 * @return the save level view.
+	 */
+	public SaveLevelView getSLView(){
+		return sv;
 	}
 	
 	/**

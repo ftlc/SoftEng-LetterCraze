@@ -15,10 +15,9 @@ import java.awt.*;
 public class SaveLevelView extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 	private JTextField name;
-	private JTextPane words;
-	private JTextPane letters;
 	private Model model;
 	private LevelView lv;
+	private JButton okButton;
 	
 	/**
 	 * Creates the dialog box object.
@@ -28,6 +27,14 @@ public class SaveLevelView extends JDialog {
 		this.lv = lv;
 		initializePopup();
 	}
+	
+	/**
+	 * Getter method of the okButton of the SaveLevelView.
+	 * @return the OKButton.
+	 */
+	public JButton getOKButton(){
+		return okButton;
+	}
 
 	/**
 	 * Getter method for the model so that the values can be saved to a txt.
@@ -35,14 +42,6 @@ public class SaveLevelView extends JDialog {
 	 */
 	public Model getModel() {
 		return model;
-	}
-
-	/**
-	 * Getter method to get 
-	 * @return
-	 */
-	public JTextPane getWords() {
-		return words;
 	}
 
 	public String getTheName() {
@@ -81,7 +80,7 @@ public class SaveLevelView extends JDialog {
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
-				JButton okButton = new JButton("OK");
+				okButton = new JButton("OK");
 				okButton.setActionCommand("OK");
 				okButton.addActionListener(new SaveLevelController(lv, model, this));
 				buttonPane.add(okButton);
