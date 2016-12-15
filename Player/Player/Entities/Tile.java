@@ -48,7 +48,7 @@ public class Tile{
 	}
 	
 	/**
-	 *
+	 * Generate letter using weighted randomness
 	 * @return random letter with appropriate weighting
 	 */
 	public String generateLetter(){

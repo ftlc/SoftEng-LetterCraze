@@ -11,7 +11,10 @@ public class Model {
 	Level levels[]; // Level Data //
 	ArrayList<String> paths;
 	
-	
+	/**
+	 * Constructor for new model - initialize all paths and levels
+	 * @return Model for LetterCraze
+	 */
 	public Model(){
 		levels = new Level[TOTAL_NUM_LEVELS];
 		this.paths = new ArrayList<String>();
@@ -35,15 +38,20 @@ public class Model {
 		initializeLevels();
 	}
 	
-	/* Read in all levels from disk (eventually) */
-	/* Exception (?) for missing level */
+	/**
+	 * Read in all levels from config files
+	 * @return void
+	 */
 	public void initializeLevels(){
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){
 			levels[i] = new Level(paths.get(i), i);
 		}
 	}
 
-	// Getters and Setters //
+	/**
+	 * Get All Levels
+	 * @return Array of Levels
+	 */
 	public Level[] getLevels(){ return levels; }
 	
 	

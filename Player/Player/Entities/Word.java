@@ -9,6 +9,10 @@ public class Word{
 	ArrayList<Tile> tiles;
 	int wordScore;
 	
+	/**
+	 * Word Constructor - Returns word representing string of tiles
+	 * @param t ArrayList of tiles to turn into a word
+	 */
 	public Word(ArrayList<Tile> t){
 		this.tiles = t;
 		this.letterScores = new HashMap<String, Integer>();
@@ -17,6 +21,9 @@ public class Word{
 		this.wordScore = calculateWordScore();
 	}
 	
+	/**
+	 * Initialize Letter Score HashMap (for puzzle score calculations)
+	 */
 	private void initScores(){
 		// 1 Point //
 		letterScores.put("e",1);
@@ -61,6 +68,10 @@ public class Word{
 		letterScores.put("qu",11);
 	}
 	
+	/**
+	 * Calculate score based off of letters in word
+	 * @return Integer representing score earned by selected word
+	 */
 	private int calculateWordScore(){
 		int total = 0;
 		for(Tile t: tiles){
@@ -70,6 +81,9 @@ public class Word{
 		return total;
 	}
 	
+	/**
+	 * For debugging purposes
+	 */
 	public String toString(){
 		String word = "";
 		for(Tile t: tiles){
@@ -80,6 +94,15 @@ public class Word{
 	}
 	
 	// Getters //
+	
+	/**
+	 * Returns Tiles that compose this Word
+	 * @return ArrayList of Tiles
+	 */
 	public ArrayList getWordTiles() { return tiles; }
+	/**
+	 * Get Word Score
+	 * @return Integer representing score that word is worth
+	 */
 	public int getWordScore() { return wordScore; }
 }
