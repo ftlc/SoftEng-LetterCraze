@@ -8,6 +8,11 @@ public class PuzzleLogic extends Logic {
 
 	int maxMoves;
 	int movesRem;
+	
+	/**
+	 * Puzzle Logic Constructor which initializes puzzle specific fields
+	 * @param l Level corresponding to this logic 
+	 */
 	public PuzzleLogic(Level l) {
 		super(l);
 		this.maxMoves = -1;
@@ -15,6 +20,10 @@ public class PuzzleLogic extends Logic {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * Puzzle specific version of play word - performs general operations and also adjusts remaining moves
+	 * @return boolean representing whether or not word was valid to play
+	 */
 	@Override
 	public boolean playWord(){
 		boolean returnVal = false;
@@ -28,11 +37,20 @@ public class PuzzleLogic extends Logic {
 		
 		return returnVal;
 	}
+	
+	/**
+	 * Score to be added every time a move is made 
+	 * @param theWord Word that has been played 
+	 * @return Integer representing score to be added
+	 */
 	@Override
 	public int scoreToAdd(Word theWord) {
 		return theWord.getWordScore();
 	}
-	
+	/**
+	 * Generate new letters for all tiles on board and reset max moves
+	 * @return boolean representing success
+	 */
 	@Override
 	public boolean resetBoard(){
 		boolean returnVal = super.resetBoard();
@@ -42,8 +60,12 @@ public class PuzzleLogic extends Logic {
 		return returnVal;
 	}
 
-	// Initialize Entities for Puzzle Level //
-	// by reading from file //
+
+	/**
+	 * Initialize Entities corresponding to File for Puzzle Level
+	 * @param path Path to config file
+	 * @return boolean representing success
+	 */
 	@Override
 	public boolean readFile(String path) {
 
@@ -106,6 +128,17 @@ public class PuzzleLogic extends Logic {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return true;
+	}
+	
+	/**
+	 * Can move be undone? Readjusts moves remaining when move has been undone
+	 * @return boolean representing whether or not moves can be undone in this level (True for puzzle)
+	 */
+	@Override
+	public boolean undoMove(){
+		movesRem++;
+		this.thirdBox = "Moves Remaining\n" + String.valueOf(movesRem);
 		return true;
 	}
 

@@ -16,7 +16,11 @@ public class Level {
 	public Level() {
 		initValues();
 	}
-	
+
+	public Level(Board brd) {
+		this.stars = new int[3];
+		this.board = brd;
+	}
 	/**
 	 * initializes the board and stars.
 	 */
@@ -40,13 +44,13 @@ public class Level {
 	 * @param star3 third star value.
 	 * @return true if values assigned.
 	 */
-	boolean assignStarValues(int star1, int star2, int star3)
+/*	boolean assignStarValues(int star1, int star2, int star3)
 	{
-		stars[1] = star1;
-		stars[2] = star2;
-		stars[3] = star3;
+		stars[0] = star1;
+		stars[1] = star2;
+		stars[2] = star3;
 		return true;
-	}
+	}*/
 
 	/**
 	 * Getter method of the board of the level.

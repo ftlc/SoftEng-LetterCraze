@@ -7,20 +7,14 @@ package Builder.Entities;
 public class LightningLevel extends Level {
 
     int time;
-    /**
-     * Constructor of the lightning level object.
-     * @param time the extra field of this type of level.
-     */
-    public LightningLevel(int time) {
-        super();
-        this.time = time;
-    }
+
 
     /**
-     * Constructo of the lightning level.
+     * Constructor of the lightning level.
+     * @param brd is the board that belonds to this level
      */
-    public LightningLevel() {
-        super();
+    public LightningLevel(Board brd) {
+        super(brd);
         this.time = -1;
     }
 
@@ -40,7 +34,13 @@ public class LightningLevel extends Level {
         this.time = time;
         return true;
     }
-
-
+    
+    /**
+     * Getter method for the time field.
+     * @return the time int.
+     */
+    public int getTime(){
+    	return time;
+    }
 
 }

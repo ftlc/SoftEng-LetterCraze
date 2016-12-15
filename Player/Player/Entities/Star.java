@@ -4,11 +4,23 @@ public class Star{
 	int oneStar;
 	int twoStar;
 	int threeStar;
+	
+	/**
+	 * Star Constructor - create object that stores star thresholds
+	 * @param one Threshold for one star
+	 * @param two Threshold for two stars
+	 * @param three Threshold for three stars
+	 */
 	public Star(int one, int two, int three){
 		this.oneStar = one;
 		this.twoStar = two;
 		this.threeStar = three;
 	}
+	/**
+	 * Calculate stars currently earned on level based off of thresholds
+	 * @param score Current score
+	 * @return number of stars currently earned
+	 */
 	public int calculateStars(int score){
 		if(score >= threeStar)
 			return 3;
@@ -21,8 +33,21 @@ public class Star{
 	}
 	
 	// Getters //
+	
+	/**
+	 * Get threshold for one star
+	 * @return Integer representing score necessary to achieve one star on level
+	 */
 	public int getOneStar() { return oneStar; }
+	/**
+	 * Get threshold for two stars
+	 * @return Integer representing score necessary to achieve two stars on level
+	 */
 	public int getTwoStar() { return twoStar; }
+	/**
+	 * Get threshold for three stars
+	 * @return Integer representing score necessary to achieve three stars on level
+	 */
 	public int getThreeStar() { return threeStar; }
 }
 

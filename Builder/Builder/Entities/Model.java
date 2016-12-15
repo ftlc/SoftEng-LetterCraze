@@ -22,7 +22,10 @@ public class Model {
 	 * Additional constructor that begins with the default puzzle type.
 	 */
 	public Model() {
+		level = new Level();
 		setLevelType("Puzzle");
+
+
 	}
 
 	/** 
@@ -47,18 +50,19 @@ public class Model {
 	 * @param type of level that is being created and assigned to the model.
 	 */
 	public void setLevelType(String type) {
+		Board brd = this.level.getBoard();
 		if(type.equals("Puzzle")) {
-			this.level = new PuzzleLevel();
+			this.level = new PuzzleLevel(brd);
 			lvltype = "Puzzle";
 		}
 
 		if(type.equals("Theme")) {
 			lvltype = "Theme";
-			this.level = new ThemeLevel();
+			this.level = new ThemeLevel(brd);
 		}
 		if(type.equals("Lightning")) {
 			lvltype = "Lightning";
-			this.level = new LightningLevel();
+			this.level = new LightningLevel(brd);
 		}
 	}
 
