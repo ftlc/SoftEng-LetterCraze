@@ -55,6 +55,7 @@ public class LevelView extends JFrame{
 	private BoardView panel;
 	private JButton btnExit;
 	private JButton btnEditLevel;
+	private JButton btnPreviewLevel;
 
 	/**
 	 * Constructor that initializes the level with all of its buttons and fields.
@@ -144,6 +145,8 @@ public class LevelView extends JFrame{
 		this.lvl = lvl;
 
 
+
+		btnPreviewLevel.addActionListener(new PreviewLevelController(this));
 
         Star1Text.addActionListener(new StarValueController(lvl, this, 1));
 
@@ -448,10 +451,9 @@ public class LevelView extends JFrame{
 		// ---------- EDIT LEVEL BUTTON ------------------------
 
 		// -----------------------------------------------------
-		JButton btnPreviewLevel = new JButton("Preview Level");
+		btnPreviewLevel = new JButton("Preview Level");
 		btnPreviewLevel.setBounds(283, 493, 171, 33);
 		btnPreviewLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
-		btnPreviewLevel.addActionListener(new PreviewLevelController(this));
 		btnPreviewLevel.setAlignmentY(0.975f);
 		contentPane.add(btnPreviewLevel);
 		// ---------- PREVIEW LEVEL BUTTON ---------------------
