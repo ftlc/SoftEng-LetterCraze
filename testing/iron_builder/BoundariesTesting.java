@@ -28,15 +28,30 @@ public class BoundariesTesting extends TestCase {
 	GameView gameView;
 	JLabel[][] tileViews;
 	TileController[][] tileControllers;
-	
+	UndoController undo;
+	LevelView levelViews;
+	MainMenuView mainView;
+	JButton undobutton;
+	JButton resetbutton;
+	Tile[][] tiles;
 	public void setUp(){
 		m = new Model();
 		menu = new MainMenuView(m);
-		
+		this.tiles = new Tile[1][1];
 		assertTrue((menu != null));
 		JPanel levelButton = menu.getLevelButton(2);
 		JButton button = (JButton)levelButton.getComponent(0);
 		button.doClick();
+		this.undobutton = (JButton)levelButton.getComponent(1);
+		
+		
+		this.resetbutton = (JButton)levelButton.getComponent(2);
+		
+		
+		
+		
+		
+		
 		
 		LevelView level3 = menu.getLevelView(2);
 		assertTrue(level3.isVisible());
@@ -46,6 +61,10 @@ public class BoundariesTesting extends TestCase {
 		gameView = levelView.getGameView();
 		tileViews = gameView.getTileViews();
 		tileControllers = gameView.getTileControllers();
+	
+		mainView = 	levelViews.getMainMenuView();
+	    levelViews = gameView.getLevelView();
+	  
 	}
 	
 	public void tearDown(){
@@ -68,6 +87,15 @@ public class BoundariesTesting extends TestCase {
 		assertEquals(level.getCurrSelectedWord().size(), 0);
 		
 		return;
+	}
+	public void testUndoClicked(){
+		MouseEvent ma = createMouseEvent(MouseEvent.MOUSE_CLICKED, undobutton );
+		level.setScore(0);
+		Move m = new Move(level,tiles, 1);
+		level.addMove(m);
+		
+		resetbutton.doClick();
+		assertEquals(level.getScore(),0);
 	}
 	
 	public MouseEvent createMouseEvent(int eventType, JComponent c){
