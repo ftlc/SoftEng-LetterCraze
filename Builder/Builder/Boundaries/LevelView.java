@@ -119,7 +119,7 @@ public class LevelView extends JFrame{
 	public Level getLvl() {
 		return lvl;
 	}
-	
+
 	/**
 	 * Getter method for the edit level button.
 	 * @return the edit level button.
@@ -451,6 +451,7 @@ public class LevelView extends JFrame{
 		JButton btnPreviewLevel = new JButton("Preview Level");
 		btnPreviewLevel.setBounds(283, 493, 171, 33);
 		btnPreviewLevel.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		btnPreviewLevel.addActionListener(new PreviewLevelController(this));
 		btnPreviewLevel.setAlignmentY(0.975f);
 		contentPane.add(btnPreviewLevel);
 		// ---------- PREVIEW LEVEL BUTTON ---------------------

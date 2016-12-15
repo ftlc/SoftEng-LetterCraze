@@ -116,7 +116,6 @@ public class EditLevelController implements ActionListener{
 				for(int j = 0; j<6; j++)
 				{
 					letters[row][j] = buffer.charAt(j);
-					System.out.println(letters[row][j]);
 				}
 
 				stringTemp = stringTemp + buffer + "\n";
