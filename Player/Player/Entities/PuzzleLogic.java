@@ -141,5 +141,19 @@ public class PuzzleLogic extends Logic {
 		this.thirdBox = "Moves Remaining\n" + String.valueOf(movesRem);
 		return true;
 	}
+	/**
+	 * Set Max Moves
+	 * @param x Integer to set Max Moves to
+	 */
+	public void setMaxMoves(int x){
+		this.maxMoves = x;
+	}
+	/**
+	 * Set Moves Remaining
+	 * @param x Integer to set Moves Remaining to
+	 */
+	public void setMovesRemaining(int x){
+		this.movesRem = x;
+	}
 
 }

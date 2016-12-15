@@ -49,5 +49,21 @@ public class Star{
 	 * @return Integer representing score necessary to achieve three stars on level
 	 */
 	public int getThreeStar() { return threeStar; }
+	
+	/**
+	 * Set threshold for One star
+	 * @param x Integer for first threshold
+	 */
+	public void setOneStar(int x) { oneStar = x; };
+	/**
+	 * Set threshold for Two stars
+	 * @param x Integer for second threshold
+	 */
+	public void setTwoStar(int x) { twoStar = x; };
+	/**
+	 * Set threshold for Three stars
+	 * @param x Integer for third threshold
+	 */
+	public void setThreeStar(int x) { threeStar = x; };
 }
 

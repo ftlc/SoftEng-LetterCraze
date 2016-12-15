@@ -34,7 +34,7 @@ public class EntitiesTesting extends TestCase{
 	Position p;
 	Dictionary d;
 	Star s;
-	GameView gameView;
+	GameView gameView; 
 	JLabel[][] tileViews;
 	TileController[][] tileControllers;
 	

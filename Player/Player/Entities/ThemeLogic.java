@@ -109,6 +109,13 @@ public class ThemeLogic extends Logic {
 	public boolean regenLetters(){
 		return false;
 	}
-	
+	/**
+	 * Set Theme to Name
+	 * @param name String to set Theme to
+	 */
+	public void setThemeName(String name){
+		this.theme = name;
+		this.thirdBox = "Theme\n" + name;
+	}
 
 }

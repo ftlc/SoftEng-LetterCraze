@@ -150,5 +150,12 @@ public class LightningLogic extends Logic {
 		actualTimer.cancel();		
 		return true;
 	}
+	/**
+	 * Set Timer to Value
+	 * @param t Integer to set timer to
+	 */
+	public void setTimer(int t){
+		this.timer = t;
+	}
 
 }

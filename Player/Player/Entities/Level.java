@@ -34,6 +34,19 @@ public class Level {
 	boolean selectingWord;
 	
 	/**
+	 * Default Constructor (for Builder Preview Level)
+	 */
+	public Level(){
+		this.score = 0;
+		this.star = new Star(0,0,0);
+		this.selectingWord = false;
+		this.currSelectedWord = new ArrayList<Tile>();
+		this.lastSelectedWord = new ArrayList<Tile>();
+		this.selectedWords = new ArrayList<Word>();
+		this.moves = new ArrayList<Move>();
+	}
+	
+	/**
 	 * Constructor for generating Level off of config file
 	 * 
 	 * @param path String representing path to file containing level configuration
@@ -251,7 +264,7 @@ public class Level {
 			logic.undoMove();
 		}
 		return completed;
-	}
+	}	
 	
 	/**
 	 * Set Selected Words ArrayList
@@ -329,5 +342,12 @@ public class Level {
 	 */
 	public void addScore(int score){
 		this.score += score;
+	}
+	/**
+	 * Set Level Logic (for Builder Preview Level)
+	 * @param l Logic
+	 */
+	public void setLogic(Logic l){
+		this.logic = l;
 	}
 }

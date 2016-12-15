@@ -16,6 +16,7 @@ import javax.swing.text.BadLocationException;
 import Player.Controllers.LevelToMainMenuController;
 import Player.Controllers.ResetBoardController;
 import Player.Controllers.UndoController;
+import Player.Controllers.ExitPreviewController;
 import Player.Entities.Level;
 import Player.Entities.Model;
 import Player.Entities.Word;
@@ -33,6 +34,17 @@ public class LevelView extends JFrame {
 	JButton btnResetBoard;
 	JButton btnUndo;
 	Model model;
+	
+	/**
+	 * LevelView Constructor For Builder Preview Level)
+	 */
+	public LevelView(Level theLevel){
+		this.theLevel = theLevel;
+		this.starArea = new JTextArea();
+		this.scoreArea = new JTextArea();
+		this.timerArea = new JTextArea();
+		initFramePreview();
+	}
 	
 	/**
 	 * LevelView constructor
@@ -62,6 +74,88 @@ public class LevelView extends JFrame {
 		btnExit = new JButton("EXIT"); // Index 0
 		btnExit.setFont(f);
 		btnExit.addActionListener(new LevelToMainMenuController(this, mainMenu));
+		btnExit.setBounds(470, 647, 298, 77);
+		add(btnExit);
+		
+		btnResetBoard = new JButton("Reset Board"); // Index 1
+		btnResetBoard.addActionListener(new ResetBoardController(theLevel, this));
+		btnResetBoard.setFont(f);
+		btnResetBoard.setBounds(470, 359, 298, 77);
+		add(btnResetBoard);
+		
+		btnUndo = new JButton("Undo Move"); // Index 2
+		btnUndo.addActionListener(new UndoController(this, theLevel));
+		btnUndo.setFont(f);
+		btnUndo.setBounds(470, 459, 298, 77);
+		add(btnUndo);
+		
+		txtrSelectedWords = new JTextArea();
+		txtrSelectedWords.setText("Selected Words\n");
+		txtrSelectedWords.setFont(f);
+		txtrSelectedWords.setOpaque(false);
+		txtrSelectedWords.setBackground(c);
+		txtrSelectedWords.setEditable(false);
+		txtrSelectedWords.setLineWrap(true);
+		txtrSelectedWords.setVisible(true);
+		
+		JScrollPane scroll = new JScrollPane(txtrSelectedWords);
+		scroll.setBackground(c);
+		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		scroll.setBounds(12, 464, 407, 263);
+		scroll.setVisible(true);
+		
+		add(scroll);
+		
+		scoreArea.setText("Score\n" + Integer.toString(theLevel.getScore()));
+		scoreArea.setFont(f);
+		scoreArea.setOpaque(false);
+		scoreArea.setBackground(c);
+		scoreArea.setBorder(b);
+		scoreArea.setEditable(false);
+		scoreArea.setBounds(470, 37, 298, 70);
+		add(scoreArea);
+		
+		starArea.setFont(f);
+		starArea.setOpaque(false);
+		starArea.setBackground(c);
+		starArea.setBorder(b);
+		starArea.setText("Stars\n" + Integer.toString(theLevel.getStar().calculateStars(theLevel.getScore())));
+		starArea.setEditable(false);
+		starArea.setBounds(470, 149, 298, 70);
+		add(starArea);
+		
+		timerArea.setFont(f);
+		timerArea.setOpaque(false);
+		timerArea.setBackground(c);
+		timerArea.setBorder(b);
+		timerArea.setText(theLevel.getThirdBox());
+		timerArea.setEditable(false);
+		timerArea.setBounds(470, 257, 298, 70);
+		add(timerArea);
+		
+		setTitle("LetterCraze");
+		setSize(800 , 800);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(null);
+		this.gameView = new GameView(this, theLevel);
+		gameView.setSize(400 , 400);
+		gameView.setOpaque(true);
+		gameView.setLocation(12 , 12);
+		add(gameView);
+	}
+	/**
+	 * InitFrame for Builder Preview Level
+	 */
+	public void initFramePreview(){
+		Color c = new Color(229,229,229,100);
+		Border b = BorderFactory.createLineBorder(Color.BLACK, 1);
+		Font f = new Font("TimesRoman", Font.PLAIN, 25);
+				
+		btnExit = new JButton("EXIT"); // Index 0
+		btnExit.setFont(f);
+		btnExit.addActionListener(new ExitPreviewController(this));
 		btnExit.setBounds(470, 647, 298, 77);
 		add(btnExit);
 		

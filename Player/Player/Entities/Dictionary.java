@@ -62,6 +62,14 @@ public class Dictionary {
 		return words.add(word);
 	}	
 	
+	/**
+	 * Set ArrayList of Words to given ArrayList
+	 * @param a ArrayList to set
+	 */
+	public void setWordList(ArrayList<String> a){
+		this.words = a;
+	}
+	
 	
 	/**
 	 * Determines if the given string is a valid word in the dictionary
