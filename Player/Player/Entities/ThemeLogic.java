@@ -7,14 +7,21 @@ import java.io.IOException;
 public class ThemeLogic extends Logic {
 	String theme;
 
+	/**
+	 * Constructor for Theme Logic - initializes theme 
+	 * @param l Level corresponding to this logic
+	 */
 	public ThemeLogic(Level l) {
 		super(l);
 		this.theme = "Not initialized";
 		// TODO Auto-generated constructor stub
 	}
 
-	// Initialize Entities for Theme Level //
-	// by reading from file //
+	/**
+	 * Initialize Entities corresponding to File for Theme Level
+	 * @param path Path to config file
+	 * @return boolean representing success
+	 */
 	@Override
 	public boolean readFile(String path) {
 
@@ -83,6 +90,10 @@ public class ThemeLogic extends Logic {
 		return true;
 	}
 
+	/**
+	 * Reconstruct level from file (because theme levels are need specific letters from file)
+	 * @return boolean representing success
+	 */
 	@Override
 	public boolean resetBoard(){
 		level.setScore(0);
@@ -90,6 +101,10 @@ public class ThemeLogic extends Logic {
 		
 		return true;
 	}
+	/**
+	 * Override regenLetters because letters cannot be regenerated in Theme Level
+	 * @return false - letters cannot be regenerated
+	 */
 	@Override
 	public boolean regenLetters(){
 		return false;
