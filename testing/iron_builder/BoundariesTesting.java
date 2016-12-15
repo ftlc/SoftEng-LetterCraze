@@ -80,7 +80,37 @@ public class BoundariesTesting extends TestCase {
 		
 		return;
 	}
-	public void testUndoClicked(){
+	
+	public void testWordSelection(){
+		MouseEvent me = createMouseEvent(MouseEvent.MOUSE_PRESSED, tileViews[3][0]);
+		tileControllers[3][0].mousePressed(me);
+		
+		assertTrue(level.getSelectingWord());
+		
+		me = createMouseEvent(MouseEvent.MOUSE_ENTERED, tileViews[4][0]);
+		tileControllers[4][0].mouseEntered(me);
+		
+		assertEquals(2, level.getCurrSelectedWord().size());
+		
+		me = createMouseEvent(MouseEvent.MOUSE_ENTERED, tileViews[5][0]);
+		tileControllers[5][0].mouseEntered(me);
+		
+		assertEquals(3, level.getCurrSelectedWord().size());
+		
+		me = createMouseEvent(MouseEvent.MOUSE_RELEASED, tileViews[5][0]);
+		tileControllers[5][0].mouseReleased(me);
+		
+		assertFalse(level.getSelectingWord());
+		assertEquals(0, level.getCurrSelectedWord().size());
+		
+		assertEquals(1, level.getScore());
+		assertEquals(1, level.getMoves().size());
+		assertTrue(tileViews[3][5].getText().isEmpty());
+		assertTrue(tileViews[4][5].getText().isEmpty());
+		assertTrue(tileViews[5][5].getText().isEmpty());
+	}
+	
+	public void UndoClicked(){
 		MouseEvent ma = createMouseEvent(MouseEvent.MOUSE_CLICKED, undobutton );
 		level.setScore(0);
 		Move m = new Move(level,tiles, 1);
@@ -91,7 +121,7 @@ public class BoundariesTesting extends TestCase {
 	}
 	
 	public MouseEvent createMouseEvent(int eventType, JComponent c){
-		MouseEvent me = new MouseEvent(c, eventType, System.currentTimeMillis(), 0, 0, 0, 0, false);
+		MouseEvent me = new MouseEvent(c, eventType, System.currentTimeMillis(), MouseEvent.BUTTON1_MASK, 0, 0, 0, false, MouseEvent.BUTTON1);
 		return me;
 	}
 
