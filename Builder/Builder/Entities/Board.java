@@ -46,4 +46,10 @@ public class Board {
 	{
 		return squares[i];
 	}
+
+
+	public boolean getToggleAt(int x, int y) {
+		int location = 6*x + y;
+		return getSquareAt(location).isToggle();
+	}
 }
