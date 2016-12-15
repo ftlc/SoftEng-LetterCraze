@@ -95,6 +95,7 @@ public class ChangeGameTypeController implements ActionListener{
 		//Set the board
 		lvl.setBoard(templvl.getBoard());
 		//Update the level in levelView
+		lv.disposeLvl();
 		lv.setLvl(lvl);
 	}
 

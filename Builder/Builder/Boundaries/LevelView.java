@@ -163,6 +163,11 @@ public class LevelView extends JFrame{
 		}
 	}
 
+	public void disposeLvl() {
+        btnPreviewLevel.removeActionListener(btnPreviewLevel.getActionListeners()[0]);
+
+	}
+
 
 	// ----------------------------------------
 	/**
