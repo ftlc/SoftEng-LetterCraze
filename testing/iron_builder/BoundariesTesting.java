@@ -110,7 +110,7 @@ public class BoundariesTesting extends TestCase {
 		assertTrue(tileViews[5][5].getText().isEmpty());
 	}
 	
-	public void testUndoClicked(){
+	public void testUndoClicked(){		
 		selectCat();
 		
 		undobutton.doClick();
