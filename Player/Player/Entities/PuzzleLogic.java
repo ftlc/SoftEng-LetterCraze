@@ -154,6 +154,7 @@ public class PuzzleLogic extends Logic {
 	 */
 	public void setMovesRemaining(int x){
 		this.movesRem = x;
+		this.thirdBox = "Moves Remaining\n" + String.valueOf(movesRem);
 	}
 
 }
