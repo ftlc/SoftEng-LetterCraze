@@ -33,6 +33,7 @@ public class BoundariesTesting extends TestCase {
 	MainMenuView mainView;
 	JButton undobutton;
 	JButton resetbutton;
+	JButton exitbutton;
 	Tile[][] tiles;
 	public void setUp(){
 		m = new Model();
@@ -41,17 +42,7 @@ public class BoundariesTesting extends TestCase {
 		assertTrue((menu != null));
 		JPanel levelButton = menu.getLevelButton(2);
 		JButton button = (JButton)levelButton.getComponent(0);
-		button.doClick();
-		this.undobutton = (JButton)levelButton.getComponent(1);
-		
-		
-		this.resetbutton = (JButton)levelButton.getComponent(2);
-		
-		
-		
-		
-		
-		
+		button.doClick();		
 		
 		LevelView level3 = menu.getLevelView(2);
 		assertTrue(level3.isVisible());
@@ -61,9 +52,10 @@ public class BoundariesTesting extends TestCase {
 		gameView = levelView.getGameView();
 		tileViews = gameView.getTileViews();
 		tileControllers = gameView.getTileControllers();
-	
-		mainView = 	levelViews.getMainMenuView();
-	    levelViews = gameView.getLevelView();
+	    
+	    this.undobutton = levelView.getBtnUndo();	
+		this.resetbutton = levelView.getBtnResetBoard();
+		this.exitbutton = levelView.getBtnExit();
 	  
 	}
 	
