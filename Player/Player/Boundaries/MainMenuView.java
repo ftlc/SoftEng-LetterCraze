@@ -25,7 +25,11 @@ public class MainMenuView extends JFrame {
 	int unlockedNum;
 	Model model;
 	
-	
+	/**
+	 * Constructor for the MainMenuView class
+	 * 
+	 * @param m Model to represent
+	 */
 	public MainMenuView(Model m) {
 		model = m;
 		levelButtons = new JPanel[TOTAL_NUM_LEVELS];
@@ -37,14 +41,18 @@ public class MainMenuView extends JFrame {
 		initFrame();
 	}
 	
-	// Create LevelViews for each Level //
+	/**
+	 *	Creates levelViews for each level. 
+	*/
 	private void initViews(){
 		for(int i = 0; i < TOTAL_NUM_LEVELS; i++){
 			levelViews[i] = new LevelView(levels[i], this, model);
 		}
 	}
 	
-	// Create Builder.Main Menu Frame with Level Buttons //
+	/**
+	 * Creates builder and initializes the frame
+	 */
 	private void initFrame() {
 		setSize(800, 800);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -148,6 +156,10 @@ public class MainMenuView extends JFrame {
 		setVisible(true);
 	}
 	
+	/**
+	 * reintializes a given level by resetting all of its content.
+	 * @param num which level to refresh
+	 */
 	public void reinitLevel(int num){
 		levelViews[num] = new LevelView(levels[num], this, model);
 		JButton theButton = (JButton)levelButtons[num].getComponent(0);
@@ -155,6 +167,11 @@ public class MainMenuView extends JFrame {
 		theButton.addActionListener(new MainMenuToLevelController(this, levelViews[num], levels[num]));
 	}
 	
+	/**
+	 * Changes the high school on a given level to the high school achieved while playing
+	 * that level.
+	 * @param levelNum which level to update the high score of
+	 */
 	public void updateHighScore(int levelNum){
 		JLabel scoreView = (JLabel)levelButtons[levelNum].getComponent(1);
 		Level theLevel = levels[levelNum];
@@ -162,6 +179,10 @@ public class MainMenuView extends JFrame {
 		
 	}
 	
+	/**
+	 * Makes the given level playable.
+	 * @param levelNum which level to make playable
+	 */
 	public void unlockLevel(int levelNum){
 		JButton theButton = (JButton)levelButtons[levelNum].getComponent(0);
 		theButton.setEnabled(true);
@@ -170,9 +191,24 @@ public class MainMenuView extends JFrame {
 		
 	}
 	
-	// Getters //
+	/**
+	 * Returns the levelView at index x
+	 * @param x
+	 * @return
+	 */
 	public LevelView getLevelView(int x) { return levelViews[x]; }
+	
+	/**
+	 * Returns all of the levels
+	 * @return
+	 */
 	public Level[] getLevels() { return levels; }
+	
+	/**
+	 * Returns the level button at index x
+	 * @param x
+	 * @return
+	 */
 	public JPanel getLevelButton(int x){ return levelButtons[x]; }
 	
 }
