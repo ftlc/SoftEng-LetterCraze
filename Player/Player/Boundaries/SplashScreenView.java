@@ -6,6 +6,11 @@ import javax.swing.JFrame;
 import Player.Entities.Model;
 
 public class SplashScreenView extends JFrame {
+	
+	/**
+	 * Constructor for the SplashScreenView class
+	 * @param m Model to pass to the MainMenuView spawned after the splash screen ends
+	 */
 	public SplashScreenView(Model m) {
 		SplashScreenImageView s = new SplashScreenImageView();
 		
