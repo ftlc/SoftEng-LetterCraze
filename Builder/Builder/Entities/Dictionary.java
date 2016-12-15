@@ -49,6 +49,10 @@ public class Dictionary {
 
 	}
 
+	/**
+	 * Getter for the characters of the theme that returns them as chars instead of Characters
+	 * @return the characters as chars
+	 */
 	public char[][] getLettersChar(){
 		char[][] ret = new char[6][6];
 		for(int i = 0; i < 6; i++) {
@@ -93,11 +97,13 @@ public class Dictionary {
 		return true;
 	}
 
-/*	public boolean placeLetters(String let)
-	{
-		return true;
-	}
-*/
+
+	/**
+	 * Get the individual letter as a Character
+	 * @param x value of the array
+	 * @param y value of the array
+	 * @return
+	 */
 	public Character getLetterAt(int x, int y)
 	{
 		return letters[x][y];

@@ -48,6 +48,12 @@ public class Board {
 	}
 
 
+	/**
+	 * Returns the boolean value of the square at the x, y, location
+	 * @param x the row of the board
+	 * @param y the column of the board
+	 * @return boolean at that location
+	 */
 	public boolean getToggleAt(int x, int y) {
 		int location = 6*x + y;
 		return getSquareAt(location).isToggle();
