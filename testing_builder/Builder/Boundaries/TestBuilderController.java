@@ -23,7 +23,11 @@ public class TestBuilderController extends TestCase {
 	protected void tearDown(){
 		lv.dispose();
 	}
-	
+
+
+    /**
+     * Tests the open theme controller.
+     */
 	public void testOpenThemeController(){
 		lv.setThemeComboBox();
 		lv.getComboBox().getActionListeners()[0].actionPerformed(null);
@@ -37,7 +41,11 @@ public class TestBuilderController extends TestCase {
 		tv.okButton.getActionListeners()[0].actionPerformed(null);
 		assertEquals("Theme", lv.getLvl().getLevelType());
 	}
-	
+
+    /**
+     * Tests the Assign stars controller. Reads each corresponding text field
+     * and writes it to the corresponding entity.
+     */
 	public void testAssignStarsController(){
 		lv.setPuzzleComboBox();
 		lv.getComboBox().getActionListeners()[0].actionPerformed(null);
@@ -56,7 +64,10 @@ public class TestBuilderController extends TestCase {
 		assertEquals(44, lv.getLvl().getStarAt(3));
 		
 	}
-	
+
+    /**
+     * Tests the assignNumWords controller for PuzzleLevel.
+     */
 	public void testAssignNumWordsController(){
 		lv.setPuzzleComboBox();
 		lv.setPuzzleFields();
@@ -64,7 +75,10 @@ public class TestBuilderController extends TestCase {
 		lv.getMaxWordstxt().getActionListeners()[0].actionPerformed(null);
 		assertEquals(20, ((PuzzleLevel)lv.getLvl()).getMaxWords());
 	}
-	
+
+    /**
+     * Tests the assignTime controller for LightningLevel.
+     */
 	public void testAssignTimeController(){
 		lv.setLightningComboBox();
 		lv.getComboBox().getActionListeners()[0].actionPerformed(null);
@@ -73,6 +87,10 @@ public class TestBuilderController extends TestCase {
 		assertEquals(60, ((LightningLevel)lv.getLvl()).getTime());
 	}
 
+	/**
+     * Tests the Edit Level controller; will pull up a JFileChooser with
+     * the correct file selected. Simply press "open".
+	 */
 	public void testEditLevelController(){
 
 		JFileChooser f1 = lv.getFileFinder();
@@ -92,7 +110,11 @@ public class TestBuilderController extends TestCase {
 
 
 	}
-	
+
+    /**
+     * Test for save level controller for Puzzle; simply press "Open" when JFileChooser
+     * comes up.
+     */
 	public void testSaveLevelControllerPuzzle(){
 
 
@@ -110,6 +132,10 @@ public class TestBuilderController extends TestCase {
 	}
 
 
+    /**
+     * Test for save level controller for Lightning; simply press "Open" when JFileChooser
+     * comes up.
+     */
 	public void testSaveLevelControllerLightning() {
 
 
@@ -131,6 +157,10 @@ public class TestBuilderController extends TestCase {
 
 
 
+    /**
+     * Test for save level controller for Theme; simply press "Open" when JFileChooser
+     * comes up.
+     */
 	public void testSaveLevelControllerTheme() {
 
 		JFileChooser f1 = lv.getFileFinder();

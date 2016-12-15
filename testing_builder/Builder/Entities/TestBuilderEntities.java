@@ -55,7 +55,7 @@ public class TestBuilderEntities extends TestCase {
 
 
 	/**
-	 * Test the PuzzleLevel subclass
+	 * Test the PuzzleLevel subclass.
 	 */
 	public void testPuzzleLevel() {
 		Board brd = new Board();
@@ -69,7 +69,7 @@ public class TestBuilderEntities extends TestCase {
 
 
 	/**
-	 * Test the LightningLevel subclass
+	 * Test the LightningLevel subclass.
 	 */
 	public void testLightningLevel() {
 		Board brd = new Board();
@@ -84,7 +84,7 @@ public class TestBuilderEntities extends TestCase {
 
 
 	/**
-	 * Test the ThemeLevel subclass
+	 * Test the ThemeLevel subclass.
 	 */
 	public void testThemeLevel() {
 		Board brd = new Board();

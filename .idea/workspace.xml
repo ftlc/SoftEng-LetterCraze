@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" afterPath="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" afterPath="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java" afterPath="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java" afterPath="$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,16 +60,29 @@
     <favorites_list name="SoftEng-LetterCraze" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.68963015">
+    <splitter split-orientation="horizontal" split-proportion="0.5980472">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TestBuilderController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java">
+          <file leaf-file-name="TestBuilderEntities.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="95">
-                  <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                <state relative-caret-position="990">
+                  <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TestBuilderController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1062">
+                  <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <marker date="1481767960975" expanded="true" signature="3154:3270" ph="/**...*/" />
                   </folding>
                 </state>
               </provider>
@@ -277,14 +286,14 @@
         <option value="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderEntities.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/PuzzleLevel.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/LightningLevel.java" />
-        <option value="$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/ThemeLevel.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/Model.java" />
-        <option value="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/StarValueController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/Level.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
+        <option value="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java" />
+        <option value="$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java" />
       </list>
     </option>
   </component>
@@ -373,6 +382,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Boundaries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SoftEng-LetterCraze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SoftEng-LetterCraze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iron_builder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1080,7 +1107,7 @@
       <workItem from="1481566643089" duration="4114000" />
       <workItem from="1481740749020" duration="7763000" />
       <workItem from="1481751277215" duration="6912000" />
-      <workItem from="1481758290402" duration="6193000" />
+      <workItem from="1481758290402" duration="7620000" />
     </task>
     <task id="LOCAL-00001" summary="Splash Screen Button">
       <created>1480494394704</created>
@@ -1299,7 +1326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481754827488</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Builder 93% Coverage">
+      <created>1481766554737</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1481766554737</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1335,11 +1369,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109599000" />
+    <option name="totallyTimeSpent" value="111026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1360,9 +1394,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21374045" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33151582" sideWeight="0.6232433" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24648649" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.073513515" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26216215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26216215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2355507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1388,7 +1422,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Src Bug Fix" />
     <MESSAGE value="Builder Entity Classes" />
     <MESSAGE value="ToggleSquareController" />
     <MESSAGE value="100th Commit" />
@@ -1413,7 +1446,8 @@
     <MESSAGE value="Save Level view removed extra methods" />
     <MESSAGE value="Edit Level Board Fix" />
     <MESSAGE value="Edit Level Theme Fix. Fully working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Level Theme Fix. Fully working" />
+    <MESSAGE value="Builder 93% Coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Builder 93% Coverage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1452,14 +1486,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Levels/SomeTextFile" />
     <entry file="file://$PROJECT_DIR$/Levels/Test.html" />
     <entry file="file://$PROJECT_DIR$/testing/iron_builder/EntitiesTesting.java">
@@ -1738,16 +1764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/ChangeGameTypeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1813,13 +1829,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java">
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/DeleteLevelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-126">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1831,6 +1845,27 @@
             <element signature="imports" expanded="true" />
             <element signature="e#8041#8042#0" expanded="true" />
             <element signature="e#8076#8077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1481767960975" expanded="true" signature="3154:3270" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing_builder/Builder/Entities/TestBuilderEntities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
