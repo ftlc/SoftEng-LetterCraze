@@ -47,19 +47,19 @@ public class LevelView extends JFrame {
 		Border b = BorderFactory.createLineBorder(Color.BLACK, 1);
 		Font f = new Font("TimesRoman", Font.PLAIN, 25);
 				
-		JButton btnExit = new JButton("EXIT");
+		JButton btnExit = new JButton("EXIT"); // Index 0
 		btnExit.setFont(f);
 		btnExit.addActionListener(new LevelToMainMenuController(this, mainMenu));
 		btnExit.setBounds(470, 647, 298, 77);
 		add(btnExit);
 		
-		JButton btnResetBoard = new JButton("Reset Board");
+		JButton btnResetBoard = new JButton("Reset Board"); // Index 1
 		btnResetBoard.addActionListener(new ResetBoardController(theLevel, this));
 		btnResetBoard.setFont(f);
 		btnResetBoard.setBounds(470, 359, 298, 77);
 		add(btnResetBoard);
 		
-		JButton btnUndo = new JButton("Undo Move");
+		JButton btnUndo = new JButton("Undo Move"); // Index 2
 		btnUndo.addActionListener(new UndoController(this, theLevel));
 		btnUndo.setFont(f);
 		btnUndo.setBounds(470, 459, 298, 77);
@@ -171,5 +171,9 @@ public class LevelView extends JFrame {
 	public Level getLevel() { return theLevel; }
 	public MainMenuView getMainMenuView() { return mainMenu; }
 	public GameView getGameView() { return this.gameView; }
+	public JTextArea getStarArea(){ return this.starArea; }
+	public JTextArea getScoreArea() { return this.scoreArea; }
+	public JTextArea getTimerArea() { return this.timerArea; }
+	public txtrSelectedWords() { return this.txtrSelectedWords; }
 	
 }
