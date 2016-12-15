@@ -34,6 +34,12 @@ public class LevelView extends JFrame {
 	JButton btnUndo;
 	Model model;
 	
+	/**
+	 * LevelView constructor
+	 * @param theLevel which level to display
+	 * @param mainMenu parent mainMenuView to return to on exit
+	 * @param m model that is being represented
+	 */
 	public LevelView(Level theLevel, MainMenuView mainMenu, Model m) {
 		this.theLevel = theLevel;
 		this.mainMenu = mainMenu;
@@ -44,6 +50,9 @@ public class LevelView extends JFrame {
 		initFrame();
 	}
 	
+	/**
+	 * Initialize the frame by adding all of the elements to it.
+	 */
 	private void initFrame() {
 		
 		Color c = new Color(229,229,229,100);
@@ -125,10 +134,16 @@ public class LevelView extends JFrame {
 		add(gameView);
 	}
 	
+	/**
+	 * Updates the text within the timer box
+	 */
 	public void updateThirdBox(){
 		timerArea.setText(theLevel.getThirdBox());
 	}
 	
+	/**
+	 * refreshes the levelview by clearing all of the fields
+	 */
 	public void refresh() {
 		scoreArea.setText(null);
 		starArea.setText(null);
@@ -139,10 +154,16 @@ public class LevelView extends JFrame {
 		gameView.refresh();
 	}
 	
+	/**
+	 * Clears the selected words view
+	 */
 	public void clearSelectedWords(){
 		txtrSelectedWords.setText("Selected Words\n");
 	}
 	
+	/**
+	 * Removes the most recently selected word from the list of selected words
+	 */
 	public void removeLastSelectedWord(){
 		String text = txtrSelectedWords.getText();
 		try {
@@ -155,31 +176,89 @@ public class LevelView extends JFrame {
 		}
 	}
 	
+	/**
+	 * Clears the level and destroys the JFrame
+	 */
 	public void clearLevel() {
 		this.dispose();
 		gameView.setVisible(false);
 		gameView.validate();
 	}
 	
+	/**
+	 * Adds a word to the selected words view
+	 * @param w
+	 */
 	public void updateSelectedWords(Word w){
 		txtrSelectedWords.append(w.toString());
 	}
 	
+	/**
+	 * Rebuilds the entire frame.
+	 */
 	public void reconstruct(){
 		this.removeAll();
 		initFrame();
 	}
 	
-	// Getters //
+	/**
+	 * gets the Level object
+	 * @return
+	 */
 	public Level getLevel() { return theLevel; }
+	
+	/**
+	 * Gets the parent MainMenuView object
+	 * @return
+	 */
 	public MainMenuView getMainMenuView() { return mainMenu; }
+	
+	/**
+	 * Gets the child GameView object
+	 * @return
+	 */
 	public GameView getGameView() { return this.gameView; }
+	
+	/**
+	 * Gets the JTextArea that holds the Star data
+	 * @return
+	 */
 	public JTextArea getStarArea(){ return this.starArea; }
+	
+	/**
+	 * Gets the JTextArea that holds the Score data
+	 * @return
+	 */
 	public JTextArea getScoreArea() { return this.scoreArea; }
+	
+	/**
+	 * Gets the JTextArea that holds the Timer data
+	 * @return
+	 */
 	public JTextArea getTimerArea() { return this.timerArea; }
+	
+	/**
+	 * Gets the JTextArea that holds the Selected Words data
+	 * @return
+	 */
 	public JTextArea txtrSelectedWords() { return this.txtrSelectedWords; }
+	
+	/**
+	 * Gets the JButton that is used to exit the level
+	 * @return
+	 */
 	public JButton getBtnExit(){ return this.btnExit; }
+	
+	/**
+	 * Gets the JButton that is used to reset the level
+	 * @return
+	 */
 	public JButton getBtnResetBoard(){ return this.btnResetBoard; }
+	
+	/**
+	 * Gets the Jbutton that is used to undo the last move
+	 * @return
+	 */
 	public JButton getBtnUndo(){ return this.btnUndo; }
 	
 }
