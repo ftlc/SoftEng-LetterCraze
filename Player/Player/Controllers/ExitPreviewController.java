@@ -18,5 +18,6 @@ public class ExitPreviewController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         lv.dispose();
+        lv.getLevel().getLogic().stopTimer();
     }
 }
