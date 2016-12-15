@@ -108,5 +108,12 @@ public class PuzzleLogic extends Logic {
 		}
 		return true;
 	}
+	
+	@Override
+	public boolean undoMove(){
+		movesRem++;
+		this.thirdBox = "Moves Remaining\n" + String.valueOf(movesRem);
+		return true;
+	}
 
 }

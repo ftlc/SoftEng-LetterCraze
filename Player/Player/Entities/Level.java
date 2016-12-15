@@ -138,6 +138,7 @@ public class Level {
 			moves.remove(move);
 
 			completed = move.undo();
+			logic.undoMove();
 		}
 		return completed;
 	}
