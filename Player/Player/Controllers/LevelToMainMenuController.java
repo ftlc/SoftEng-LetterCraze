@@ -5,6 +5,12 @@ import Player.Boundaries.LevelView;
 import Player.Boundaries.MainMenuView;
 import Player.Entities.Level;
 
+/**
+ * LevelToMainMenuController handles the transition required when a level is exited.
+ * @author bwbonanno
+ *
+ */
+
 public class LevelToMainMenuController implements ActionListener{
 	
 	LevelView from;

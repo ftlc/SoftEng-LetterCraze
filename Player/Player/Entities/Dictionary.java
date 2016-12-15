@@ -5,6 +5,12 @@ import java.util.ArrayList;
 
 import Player.WordTable;
 
+/**
+ * Dictionary holds the relevant dictionary for each level (theme-specific for theme levels, default otherwise).
+ * @author bwbonanno
+ *
+ */
+
 public class Dictionary {
 	
 	ArrayList<String> words;

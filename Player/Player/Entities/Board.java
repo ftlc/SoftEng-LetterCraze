@@ -1,6 +1,12 @@
 package Player.Entities;
 import Player.Entities.Tile;
 
+/**
+ * Board contains the 2D array of tiles that make up the GameView.
+ * @author bwbonanno
+ *
+ */
+
 public class Board{
 	final int TOTAL_NUM_TILES = 6;
 	//list of tiles

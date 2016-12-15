@@ -10,6 +10,12 @@ import Player.Entities.Board;
 import Player.Entities.Star;
 import Player.Entities.Word;
 
+/**
+ * The Level class coordinates all of the other entities that intertwine in order to make up a Player level.
+ * @author bwbonanno
+ *
+ */
+
 public class Level {
 	final int TOTAL_NUM_TILES = 6;
 	String path;

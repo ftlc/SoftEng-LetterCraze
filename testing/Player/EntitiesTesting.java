@@ -17,7 +17,11 @@ import Player.Controllers.*;
 import Player.Entities.*;
 import junit.framework.TestCase;
 
-
+/**
+ * Testing for the Player Entities.
+ * @author bwbonanno
+ *
+ */
 
 public class EntitiesTesting extends TestCase{
 	

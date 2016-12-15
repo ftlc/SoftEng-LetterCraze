@@ -16,6 +16,13 @@ import Player.Entities.Level;
 import Player.Entities.Position;
 import Player.Entities.Tile;
 
+
+/**
+ * The GameView holds the Board consisting of tiles where the main game events occur inside the Player.
+ * @author bwbonanno
+ *
+ */
+
 public class GameView extends JPanel {
 	
 	final int MAX_NUM_TILES = 6;
