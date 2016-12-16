@@ -68,7 +68,7 @@ public class MainMenuView extends JFrame {
 			// High Score Label //
 			int highScoreNum = theLevel.getHighScore();
 			JLabel highScore = new JLabel("Stars: " + Integer.toString(highScoreNum), SwingConstants.CENTER);
-			if (highScoreNum == 0 && i < unlockedNum)
+			if (highScoreNum == 0 && i < unlockedNum && i > 1)
 				this.unlockedNum = i;
 			
 			// Place Button and Label on JPanel //
