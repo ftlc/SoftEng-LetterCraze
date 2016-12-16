@@ -38,8 +38,7 @@ public class AcceptThemeController implements ActionListener {
         String letters = tv.getLetters().getText();
 
 
-
-
+        dictionary.clearDictionary();
         // for-loop that saves the words to the dictionary entity class.
         for (String line : words.split("\\n"))
         {

@@ -49,6 +49,11 @@ public class Dictionary {
 
 	}
 
+
+	public void clearDictionary() {
+		words = new ArrayList<String>();
+	}
+
 	/**
 	 * Getter for the characters of the theme that returns them as chars instead of Characters
 	 * @return the characters as chars
