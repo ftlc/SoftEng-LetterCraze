@@ -3,21 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level1.txt" afterPath="$PROJECT_DIR$/Levels/Level1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level10.txt" afterPath="$PROJECT_DIR$/Levels/Level10.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level11.txt" afterPath="$PROJECT_DIR$/Levels/Level11.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level12.txt" afterPath="$PROJECT_DIR$/Levels/Level12.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level13.txt" afterPath="$PROJECT_DIR$/Levels/Level13.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level14.txt" afterPath="$PROJECT_DIR$/Levels/Level14.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level15.txt" afterPath="$PROJECT_DIR$/Levels/Level15.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level2.txt" afterPath="$PROJECT_DIR$/Levels/Level2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level3.txt" afterPath="$PROJECT_DIR$/Levels/Level3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level4.txt" afterPath="$PROJECT_DIR$/Levels/Level4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level5.txt" afterPath="$PROJECT_DIR$/Levels/Level5.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level6.txt" afterPath="$PROJECT_DIR$/Levels/Level6.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level7.txt" afterPath="$PROJECT_DIR$/Levels/Level7.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level8.txt" afterPath="$PROJECT_DIR$/Levels/Level8.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level9.txt" afterPath="$PROJECT_DIR$/Levels/Level9.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,7 +58,7 @@
     <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$Main.coverage" NAME="Main Coverage Results" MODIFIED="1481741342139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Builder.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$All_in_iron_builder.coverage" NAME="All in iron_builder Coverage Results" MODIFIED="1481777250169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$All_in_iron_builder.coverage" NAME="All in iron_builder Coverage Results" MODIFIED="1481854383590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SoftEng-LetterCraze$TestBuilderBoundary.coverage" NAME="TestBuilderBoundary Coverage Results" MODIFIED="1481741237330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>iron_builder.*</FILTER>
     </SUITE>
@@ -110,21 +96,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PreviewLevelController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PreviewLevelController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1288">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AssignNumWordsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AssignNumWordsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AssignNumWordsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -263,12 +249,12 @@
         <option value="$PROJECT_DIR$/Player/Player/Controllers/ExitPreviewController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Boundaries/LevelView.java" />
-        <option value="$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java" />
         <option value="$PROJECT_DIR$/testing_builder/Builder/Boundaries/TestBuilderController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/AssignNumWordsController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/ChangeGameTypeController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/SaveLevelController.java" />
         <option value="$PROJECT_DIR$/Builder/Builder/Controllers/AcceptThemeController.java" />
+        <option value="$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java" />
       </list>
     </option>
   </component>
@@ -369,24 +355,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoftEng-LetterCraze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoftEng-LetterCraze" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Builder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -471,7 +439,117 @@
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Player/Player/Boundaries/MainMenuView.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunManager" selected="JUnit.All in iron_builder">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -490,32 +568,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="iron_builder" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestBuilderController.testAssignStarsController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Builder.Boundaries.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="iron_builder" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Builder.Boundaries" />
-      <option name="MAIN_CLASS_NAME" value="Builder.Boundaries.TestBuilderController" />
-      <option name="METHOD_NAME" value="testAssignStarsController" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="false" name="TestBuilderController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -588,6 +640,27 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="iron_builder" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in iron_builder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="iron_builder" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -973,18 +1046,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testAssignStarsController" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Builder in iron_builder" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Main (1)" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Builder in iron_builder" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main (1)" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in iron_builder" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main (1)" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Builder in iron_builder" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testAssignStarsController" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in iron_builder" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Builder in iron_builder" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1057,7 +1130,7 @@
       <workItem from="1481833337231" duration="6968000" />
       <workItem from="1481842861893" duration="4739000" />
       <workItem from="1481848217445" duration="854000" />
-      <workItem from="1481849144623" duration="3837000" />
+      <workItem from="1481849144623" duration="4422000" />
     </task>
     <task id="LOCAL-00001" summary="Splash Screen Button">
       <created>1480494394704</created>
@@ -1367,14 +1440,21 @@
       <option name="project" value="LOCAL" />
       <updated>1481849886936</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Levels Fixed">
+      <created>1481853880539</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1481853880539</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_iron_builder - 2016.12.14 at 23h 48m 17s.xml">
+    <history-entry file="All_in_iron_builder - 2016.12.15 at 09h 54m 27s.xml">
       <configuration name="All in iron_builder" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_iron_builder - 2016.12.15 at 09h 54m 27s.xml">
+    <history-entry file="All_in_iron_builder - 2016.12.15 at 21h 13m 48s.xml">
       <configuration name="All in iron_builder" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BoundariesTesting - 2016.12.14 at 22h 41m 40s.xml">
@@ -1403,7 +1483,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135010000" />
+    <option name="totallyTimeSpent" value="135595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
@@ -1418,13 +1498,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1836518" sideWeight="0.37675676" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3304253" sideWeight="0.6232433" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3304253" sideWeight="0.6232433" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.037077427" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39081082" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012432433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22864865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.515625" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1437,7 +1518,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23945946" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2355507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1456,7 +1536,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Theme and Dictionary" />
     <MESSAGE value="Time Controller and Some fixes to Change Level Controller" />
     <MESSAGE value="Commented the strange parts of ChangeGameType" />
     <MESSAGE value="Removed Spaces in Test Levels" />
@@ -1481,7 +1560,8 @@
     <MESSAGE value="Fix Null Pointer" />
     <MESSAGE value="Removed Extra Files" />
     <MESSAGE value="Theme Letters Alert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Theme Letters Alert" />
+    <MESSAGE value="Levels Fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Levels Fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1836,14 +1916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1288">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AcceptThemeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1854,8 +1926,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AssignNumWordsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding />
         </state>
       </provider>
