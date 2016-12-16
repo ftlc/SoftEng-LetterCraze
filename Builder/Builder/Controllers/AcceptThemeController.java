@@ -5,6 +5,7 @@ import Builder.Entities.Dictionary;
 import Builder.Entities.Model;
 import Builder.Entities.ThemeLevel;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -35,7 +36,10 @@ public class AcceptThemeController implements ActionListener {
         
         String words = tv.getWords().getText();
         String letters = tv.getLetters().getText();
-        
+
+
+
+
         // for-loop that saves the words to the dictionary entity class.
         for (String line : words.split("\\n"))
         {
@@ -49,10 +53,19 @@ public class AcceptThemeController implements ActionListener {
         // for loop that saves 6 lines of 6 characters each in a 2D array
         for(String line: letters.split("\\n"))
         {
-            for(int i = 0; i<line.length(); i++) {
-                let[j][i] = line.charAt(i);
+            if(line.length() == 6) {
+
+
+                for (int i = 0; i < line.length(); i++) {
+                    let[j][i] = line.charAt(i);
+                }
+                j++;
             }
-            j++;
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Wrong Number Of Letters Entered");
+                return;
+            }
         }
         
         dictionary.placeLetters(let); // saves the letters to dictionary entity class.
