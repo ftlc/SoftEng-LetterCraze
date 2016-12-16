@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Builder/Builder/Controllers/AcceptThemeController.java" afterPath="$PROJECT_DIR$/Builder/Builder/Controllers/AcceptThemeController.java" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1032,7 +1031,7 @@
       <workItem from="1481833337231" duration="6968000" />
       <workItem from="1481842861893" duration="4739000" />
       <workItem from="1481848217445" duration="854000" />
-      <workItem from="1481849144623" duration="729000" />
+      <workItem from="1481849144623" duration="1420000" />
     </task>
     <task id="LOCAL-00001" summary="Splash Screen Button">
       <created>1480494394704</created>
@@ -1335,7 +1334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481846438496</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Theme Letters Alert">
+      <created>1481849886936</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1481849886936</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1371,10 +1377,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131902000" />
+    <option name="totallyTimeSpent" value="132593000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
+    <frame x="10" y="35" width="1900" height="1018" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1424,7 +1430,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change Level Types on the fly" />
     <MESSAGE value="Theme and Dictionary" />
     <MESSAGE value="Time Controller and Some fixes to Change Level Controller" />
     <MESSAGE value="Commented the strange parts of ChangeGameType" />
@@ -1449,7 +1454,8 @@
     <MESSAGE value="Words Lowercase" />
     <MESSAGE value="Fix Null Pointer" />
     <MESSAGE value="Removed Extra Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed Extra Files" />
+    <MESSAGE value="Theme Letters Alert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Theme Letters Alert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
