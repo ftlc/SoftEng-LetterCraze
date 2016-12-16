@@ -2,276 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6a2c043-8b2d-4e5f-bdd5-5b9c67c28cef" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Boundaries/BoardView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Boundaries/LevelView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Boundaries/SaveLevelView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Boundaries/SplashScreenView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Boundaries/SquareView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Boundaries/ThemeView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Boundaries/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/AcceptThemeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/AssignNumWordsController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/AssignTimeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/ChangeGameTypeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/CloseSaveLevelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/CloseThemeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/DeleteLevelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/EditLevelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/ExitBuilderController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/PreviewLevelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/SaveLevelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/SaveLevelPopupController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/SplashScreenToLevelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/StarValueController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/ThemePopUpController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/ToggleSquareController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Controllers/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/Board.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/Dictionary.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/Level.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/LightningLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/Model.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/PuzzleLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/Square.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/ThemeLevel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Entities/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Builder/Builder/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level10.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level11.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level12.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level13.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level14.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level15.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Level9.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Lightning-Test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Puzzle-Test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Levels/Theme-Test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Boundaries/GameView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Boundaries/Images/LetterCraze.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Boundaries/LevelView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Boundaries/MainMenuView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Boundaries/SplashScreenImageView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Boundaries/SplashScreenView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Boundaries/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Controllers/ExitPreviewController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Controllers/LevelToMainMenuController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Controllers/MainMenuToLevelController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Controllers/ResetBoardController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Controllers/TileController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Controllers/UndoController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Controllers/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Board.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Dictionary.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Level.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/LightningLogic.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Logic.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Model.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Move.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Position.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/PuzzleLogic.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Star.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/ThemeLogic.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Tile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/Word.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Entities/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/StringFileIterator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/WordTable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/WordTable.sort" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/Player/Player/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Boundaries/BoardView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Boundaries/LevelView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Boundaries/SaveLevelView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Boundaries/SplashScreenView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Boundaries/SquareView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Boundaries/TestBuilderController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Boundaries/ThemeView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Boundaries/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/AcceptThemeController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/AssignNumWordsController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/AssignTimeController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/ChangeGameTypeController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/CloseSaveLevelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/CloseThemeController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/DeleteLevelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/EditLevelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/ExitBuilderController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/PreviewLevelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/SaveLevelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/SaveLevelPopupController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/SplashScreenToLevelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/StarValueController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/ThemePopUpController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/ToggleSquareController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Controllers/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/Board.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/Dictionary.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/Level.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/LightningLevel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/Model.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/PuzzleLevel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/Square.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/TestBuilderEntities.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/ThemeLevel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Entities/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Builder/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Boundaries/GameView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Boundaries/Images/LetterCraze.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Boundaries/LevelView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Boundaries/MainMenuView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Boundaries/SplashScreenImageView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Boundaries/SplashScreenView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Boundaries/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/BoundariesTesting.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Controllers/ExitPreviewController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Controllers/LevelToMainMenuController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Controllers/MainMenuToLevelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Controllers/ResetBoardController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Controllers/TileController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Controllers/UndoController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Controllers/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Board.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Dictionary.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Level.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/LightningLogic$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/LightningLogic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Logic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Model.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Move.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Position.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/PuzzleLogic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Star.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/ThemeLogic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Tile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/Word.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Entities/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/EntitiesTesting.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/LightningTesting.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/PuzzleTesting.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/StringFileIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/WordTable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/WordTable.sort" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/bin/Player/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/GameView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/LevelView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/MainMenuView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/SplashScreenImageView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/SplashScreenView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/class-use/GameView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/class-use/LevelView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/class-use/MainMenuView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/class-use/SplashScreenImageView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/class-use/SplashScreenView.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/class-use/windowCode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Boundaries/windowCode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/LevelToMainMenuController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/MainMenuToLevelController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/ResetBoardController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/TileController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/UndoController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/class-use/LevelToMainMenuController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/class-use/MainMenuToLevelController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/class-use/ResetBoardController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/class-use/TileController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/class-use/UndoController.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Controllers/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Board.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Dictionary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Level.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/LightningLogic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Logic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Model.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Move.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Position.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/PuzzleLogic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Star.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/ThemeLogic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Tile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/Word.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Board.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Dictionary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Level.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/LightningLogic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Logic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Model.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Move.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Position.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/PuzzleLogic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Star.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/ThemeLogic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Tile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/class-use/Word.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Entities/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/Main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/StringFileIterator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/WordTable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/class-use/Main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/class-use/StringFileIterator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/class-use/WordTable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/Player/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/allclasses-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/allclasses-noframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/constant-values.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/deprecated-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/help-doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-10.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-11.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-12.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-13.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-14.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-15.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-16.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-4.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-5.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-6.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-7.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-8.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index-files/index-9.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/overview-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/overview-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/overview-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/package-list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/serialized-form.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/doc/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/iron_builder.eml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/iron_builder.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/testing/Player/BoundariesTesting.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/testing/Player/EntitiesTesting.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/testing/Player/LightningTesting.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/testing/Player/PuzzleTesting.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/testing_builder/Builder/Boundaries/TestBuilderController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iron_lettercraze/testing_builder/Builder/Entities/TestBuilderEntities.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level1.txt" afterPath="$PROJECT_DIR$/Levels/Level1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level10.txt" afterPath="$PROJECT_DIR$/Levels/Level10.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level11.txt" afterPath="$PROJECT_DIR$/Levels/Level11.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level12.txt" afterPath="$PROJECT_DIR$/Levels/Level12.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level13.txt" afterPath="$PROJECT_DIR$/Levels/Level13.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level14.txt" afterPath="$PROJECT_DIR$/Levels/Level14.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level15.txt" afterPath="$PROJECT_DIR$/Levels/Level15.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level2.txt" afterPath="$PROJECT_DIR$/Levels/Level2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level3.txt" afterPath="$PROJECT_DIR$/Levels/Level3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level4.txt" afterPath="$PROJECT_DIR$/Levels/Level4.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level5.txt" afterPath="$PROJECT_DIR$/Levels/Level5.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level6.txt" afterPath="$PROJECT_DIR$/Levels/Level6.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level7.txt" afterPath="$PROJECT_DIR$/Levels/Level7.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level8.txt" afterPath="$PROJECT_DIR$/Levels/Level8.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Levels/Level9.txt" afterPath="$PROJECT_DIR$/Levels/Level9.txt" />
     </list>
     <ignored path="SoftEng-LetterCraze.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -340,42 +86,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChangeGameTypeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/ChangeGameTypeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CloseSaveLevelController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/CloseSaveLevelController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
               <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding>
-                <element signature="e#627#628#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#473#474#0" expanded="false" />
+                <element signature="e#501#502#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AcceptThemeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AcceptThemeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AcceptThemeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="66" column="23" lean-forward="false" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+            <state relative-caret-position="323">
+              <caret line="65" column="50" lean-forward="false" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AssignNumWordsController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PreviewLevelController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1288">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssignNumWordsController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AssignNumWordsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="521">
               <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
@@ -397,7 +145,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
               <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -419,7 +169,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
               <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#559#560#0" expanded="false" />
+                <element signature="e#578#579#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -429,7 +183,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1548">
               <caret line="94" column="16" lean-forward="false" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -439,7 +195,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3132">
               <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -545,7 +303,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -612,7 +369,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="testing" />
+              <option name="myItemId" value="Player" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -698,8 +455,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -714,27 +472,6 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="All in iron_builder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="iron_builder" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -831,6 +568,26 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Player.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="iron_builder" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1215,19 +972,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.All in iron_builder" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testAssignStarsController" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Builder in iron_builder" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testAssignStarsController" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Builder in iron_builder" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Builder in iron_builder" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testAssignStarsController" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in iron_builder" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Builder in iron_builder" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestBuilderController" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestBuilderController.testAssignStarsController" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1300,7 +1057,7 @@
       <workItem from="1481833337231" duration="6968000" />
       <workItem from="1481842861893" duration="4739000" />
       <workItem from="1481848217445" duration="854000" />
-      <workItem from="1481849144623" duration="1989000" />
+      <workItem from="1481849144623" duration="3837000" />
     </task>
     <task id="LOCAL-00001" summary="Splash Screen Button">
       <created>1480494394704</created>
@@ -1646,11 +1403,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133162000" />
+    <option name="totallyTimeSpent" value="135010000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="35" width="1900" height="1018" extended-state="1" />
-    <editor active="true" />
+    <frame x="10" y="35" width="1900" height="1018" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1661,13 +1418,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1836518" sideWeight="0.37675676" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3304253" sideWeight="0.6232433" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3304253" sideWeight="0.6232433" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.037077427" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4263393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012432433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.515625" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1758,12 +1515,6 @@
           <line>117</line>
           <properties />
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Builder/Builder/Entities/Dictionary.java</url>
@@ -1957,14 +1708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1818">
-          <caret line="110" column="30" lean-forward="true" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Player/Player/package.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2015,7 +1758,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2024,24 +1769,10 @@
         <state relative-caret-position="396">
           <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
-            <element signature="e#627#628#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#473#474#0" expanded="false" />
+            <element signature="e#501#502#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AcceptThemeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="66" column="23" lean-forward="false" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AssignNumWordsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2057,7 +1788,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2075,7 +1808,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#559#560#0" expanded="false" />
+            <element signature="e#578#579#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2083,7 +1820,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1548">
           <caret line="94" column="16" lean-forward="false" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2091,6 +1830,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3132">
           <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/PreviewLevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1288">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AcceptThemeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="65" column="50" lean-forward="false" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builder/Builder/Controllers/AssignNumWordsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
