@@ -176,7 +176,6 @@ public class SaveLevelController implements ActionListener{
 
 		content+="-\n0";
 
-		System.out.println(content);
 		return content;
 	}
 

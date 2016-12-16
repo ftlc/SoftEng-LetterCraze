@@ -33,7 +33,6 @@ public class AssignNumWordsController implements ActionListener{
     public void actionPerformed(ActionEvent actionEvent) {
         lvl = (PuzzleLevel) tempLevel;
         String txt = lvlView.getMaxWordstxt().getText();
-        System.out.println(txt);
         try {
             int contents = Integer.parseInt(txt);
             lvl.assignMaxWords(contents);

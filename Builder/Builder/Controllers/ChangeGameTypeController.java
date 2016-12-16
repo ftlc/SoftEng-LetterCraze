@@ -62,8 +62,6 @@ public class ChangeGameTypeController implements ActionListener{
 		}
 
 
-		System.out.println(model.getLvltype());
-		System.out.println(model.getLevel().getStarAt(1));
 	}
 
 
