@@ -85,7 +85,7 @@ public class PreviewLevelController implements ActionListener {
     		for(String s: dict)
     			theLevel.getDictionary().addWord(s);
     		
-    		tLogic.setThemeName(lv.getTheme().getName());
+    		tLogic.setThemeName(lv.getTheme().getTheName());
     		
     		
     		char[][] tLayout = tLevel.getDictionary().getLettersChar();
