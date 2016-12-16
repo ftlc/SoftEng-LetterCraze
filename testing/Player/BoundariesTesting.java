@@ -20,6 +20,12 @@ import Player.Controllers.*;
 import Player.Entities.*;
 import junit.framework.TestCase;
 
+/**
+ * Boundaries and Controllers Test Cases
+ * @author bwbonanno
+ *
+ */
+
 public class BoundariesTesting extends TestCase {
 	Model m;
 	MainMenuView menu;
@@ -36,6 +42,11 @@ public class BoundariesTesting extends TestCase {
 	JButton exitbutton;
 	JButton button;
 	Tile[][] tiles;
+	
+	/**
+	 * Open Theme Level 1 for Testing
+	 */
+	
 	public void setUp(){
 		m = new Model();
 		menu = new MainMenuView(m);
@@ -61,6 +72,9 @@ public class BoundariesTesting extends TestCase {
 	  
 	}
 	
+	/**
+	 * Dispose of window
+	 */
 	public void tearDown(){
 		
 		exitbutton.doClick();
@@ -71,6 +85,9 @@ public class BoundariesTesting extends TestCase {
 		menu.dispose();
 	}
 	
+	/**
+	 * Verify Selecting Tile behavior
+	 */
 	public void testClickLevel(){
 		
 		MouseEvent me = createMouseEvent(MouseEvent.MOUSE_PRESSED, tileViews[0][0]);
@@ -88,6 +105,9 @@ public class BoundariesTesting extends TestCase {
 		return;
 	}
 	
+	/**
+	 * Verify Word Selection Behavior on Theme Level
+	 */
 	public void testWordSelection(){
 		MouseEvent me = createMouseEvent(MouseEvent.MOUSE_PRESSED, tileViews[3][0]);
 		tileControllers[3][0].mousePressed(me);
@@ -117,6 +137,9 @@ public class BoundariesTesting extends TestCase {
 		assertTrue(tileViews[5][5].getText().isEmpty());
 	}
 	
+	/**
+	 * Verify Undo 
+	 */
 	public void testUndoClicked(){		
 		selectCat();
 		
@@ -137,6 +160,9 @@ public class BoundariesTesting extends TestCase {
 		
 	}
 	
+	/**
+	 * Verify Reset Board behavior
+	 */
 	public void testResetBoard(){
 		selectCat();
 		
@@ -158,6 +184,9 @@ public class BoundariesTesting extends TestCase {
 		assertEquals("t", temp_tiles[5][0].getLetter());
 	}
 	
+	/**
+	 * Ensure you can re enter level
+	 */
 	public void testExitLevel(){
 		exitbutton.doClick();
 		button.doClick();
@@ -165,11 +194,20 @@ public class BoundariesTesting extends TestCase {
 		assertFalse(menu.isVisible());
 	}	
 	
+	/**
+	 * Generate Left Click MouseEvent Helper Function
+	 * @param eventType Type of Event to be Generated
+	 * @param c Component to be clicked
+	 * @return me MouseEvent
+	 */
 	public MouseEvent createMouseEvent(int eventType, JComponent c){
 		MouseEvent me = new MouseEvent(c, eventType, System.currentTimeMillis(), MouseEvent.BUTTON1_MASK, 0, 0, 0, false, MouseEvent.BUTTON1);
 		return me;
 	}
 	
+	/**
+	 * Select Word "Cat" in Level Helper Function
+	 */
 	public void selectCat(){
 		MouseEvent me = createMouseEvent(MouseEvent.MOUSE_PRESSED, tileViews[3][0]);
 		tileControllers[3][0].mousePressed(me);

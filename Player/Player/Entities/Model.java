@@ -17,22 +17,21 @@ public class Model {
 	public Model(){
 		levels = new Level[TOTAL_NUM_LEVELS];
 		this.paths = new ArrayList<String>();
-		paths.add("./Levels/Puzzle-Test.txt");
-		paths.add("./Levels/Lightning-Test.txt");
-		paths.add("./Levels/Theme-Test.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Lightning-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");
-		paths.add("./Levels/Puzzle-Test-Uninitialized.txt");	
-		
+		paths.add("./Levels/Level1.txt");
+		paths.add("./Levels/Level2.txt");
+		paths.add("./Levels/Level3.txt");
+		paths.add("./Levels/Level4.txt");
+		paths.add("./Levels/Level5.txt");
+		paths.add("./Levels/Level6.txt");
+		paths.add("./Levels/Level7.txt");
+		paths.add("./Levels/Level8.txt");
+		paths.add("./Levels/Level9.txt");
+		paths.add("./Levels/Level10.txt");
+		paths.add("./Levels/Level11.txt");
+		paths.add("./Levels/Level12.txt");
+		paths.add("./Levels/Level13.txt");
+		paths.add("./Levels/Level14.txt");
+		paths.add("./Levels/Level15.txt");	
 		
 		initializeLevels();
 	}
