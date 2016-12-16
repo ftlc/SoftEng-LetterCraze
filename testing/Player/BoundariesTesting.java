@@ -34,13 +34,14 @@ public class BoundariesTesting extends TestCase {
 	JButton undobutton;
 	JButton resetbutton;
 	JButton exitbutton;
+	JButton button;
 	Tile[][] tiles;
 	public void setUp(){
 		m = new Model();
 		menu = new MainMenuView(m);
 		assertTrue((menu != null));
 		JPanel levelButton = menu.getLevelButton(2);
-		JButton button = (JButton)levelButton.getComponent(0);
+		button = (JButton)levelButton.getComponent(0);
 		button.doClick();		
 		
 		LevelView level3 = menu.getLevelView(2);
@@ -156,6 +157,13 @@ public class BoundariesTesting extends TestCase {
 		assertEquals("a", temp_tiles[4][0].getLetter());
 		assertEquals("t", temp_tiles[5][0].getLetter());
 	}
+	
+	public void testExitLevel(){
+		exitbutton.doClick();
+		button.doClick();
+		
+		assertFalse(menu.isVisible());
+	}	
 	
 	public MouseEvent createMouseEvent(int eventType, JComponent c){
 		MouseEvent me = new MouseEvent(c, eventType, System.currentTimeMillis(), MouseEvent.BUTTON1_MASK, 0, 0, 0, false, MouseEvent.BUTTON1);
