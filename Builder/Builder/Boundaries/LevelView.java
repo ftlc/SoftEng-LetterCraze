@@ -130,6 +130,14 @@ public class LevelView extends JFrame{
 	}
 
 	/**
+	 * Getter method for the preview level button.
+	 * @return the preview level button
+	 */
+	public JButton getPreviewButton() {
+		return btnPreviewLevel;
+	}
+
+	/**
 	 * getter method to get the dialog box with its contents when building a theme level.
 	 * @return the current dialog box with contents for the theme.
 	 */
