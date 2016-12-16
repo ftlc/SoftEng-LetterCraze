@@ -167,6 +167,7 @@ public class EditLevelController implements ActionListener{
 
 		for (int i = 0; i < 36; i++){
 
+			loadBV.resetSquareView(i);
 			if (i % 6 == 0){
 				buffer = input.nextLine();
 			}
@@ -174,6 +175,9 @@ public class EditLevelController implements ActionListener{
 			temp = buffer.charAt(i%6);
 
 			Square tmpSquare = brd.getSquareAt(i);
+
+
+
 			if (temp == 'O'){
 				loadBV.setSquareView(i);
 				tmpSquare.setToggle(true);

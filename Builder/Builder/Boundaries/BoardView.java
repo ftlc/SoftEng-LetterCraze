@@ -42,6 +42,16 @@ public class BoardView extends JPanel {
 	}
 
 	/**
+	 * if the squareView is pressed down resets it becomes unset
+	 * @param position 0-36 the square to reset
+	 */
+	public void resetSquareView(int position) {
+		if(squares[position].isSelected()) {
+			setSquareView(position);
+		}
+	}
+
+	/**
 	 * Initializes the board with a black background and the location/layout
 	 * of all the buttons which start out as untoggled.
 	 */
