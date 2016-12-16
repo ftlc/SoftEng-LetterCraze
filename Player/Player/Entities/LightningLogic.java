@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javax.swing.JOptionPane;
+
 import Player.Boundaries.LevelView;
 
 public class LightningLogic extends Logic {
@@ -130,6 +132,12 @@ public class LightningLogic extends Logic {
 					timer--;
 					thirdBox = "Timer\n" + String.valueOf(timer);
 					levelView.updateThirdBox();
+				}
+				else{
+					JOptionPane timesUp = new JOptionPane();
+					timesUp.showMessageDialog(levelView, "Time is up!");
+					levelView.getBtnExit().doClick();					
+					
 				}
 				
 			}
