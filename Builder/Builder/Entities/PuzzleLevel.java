@@ -1,5 +1,9 @@
 package Builder.Entities;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * The subclass puzzle level of the super class level.
  * Created by ftlc on 12/2/16.
@@ -15,7 +19,7 @@ public class PuzzleLevel extends Level{
      */
     public PuzzleLevel(Board brd) {
         super(brd);
-        this.maxWords = -1;
+        this.maxWords = 0;
     }
 
     /**
@@ -44,5 +48,27 @@ public class PuzzleLevel extends Level{
         return true;
     }
 
+    @Override
+    public void writeLevel(String FileName) {
+        System.out.println("PuzzleLevel");
+
+
+
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(FileName))) {
+            String content = "P\n-\n";
+            content = addStars(content);
+            String maxMoves = String.valueOf(getMaxWords());
+            content = content + maxMoves + "\n-\n";
+            content = addBoard(content);
+            content = content + "0";
+            System.out.println(content);
+
+            bw.write(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }

@@ -64,7 +64,7 @@ public class LevelView extends JFrame{
 	public LevelView(Model m) //, ThemeView themeCreationDialog)
 	{
 		this.model = m;
-		this.themeCreationDialog = new ThemeView(m);
+		this.themeCreationDialog = new ThemeView(m, this);
 		this.sv = new SaveLevelView(model, this);
 
 		initializeLevel();

@@ -28,5 +28,14 @@ public class SquareView extends JToggleButton {
     }
 
 
+    public Character getLetter() {
+        return getText().charAt(0);
+    }
+
+    public void setLetter(Character c) {
+        setText(c.toString());
+
+    }
+
 }
 

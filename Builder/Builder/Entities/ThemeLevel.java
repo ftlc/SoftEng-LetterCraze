@@ -1,5 +1,8 @@
 package Builder.Entities;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -59,5 +62,42 @@ public class ThemeLevel extends Level{
      */
     public void setDictionary(Dictionary dictionary) {
         this.dictionary = dictionary;
+    }
+
+
+    @Override
+    public void writeLevel(String FileName) {
+        System.out.println("ThemeLevel");
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(FileName))) {
+
+            String content = "T\n-\n";
+            content = addStars(content);
+            String name = this.getThemeName();
+            content += name + "\n-\n";
+            Dictionary dictionary = this.getDictionary();
+            ArrayList<String> words = dictionary.getWords();
+
+            for (String w : words) {
+                content += w + "\n";
+            }
+            content += "-\n";
+
+            for (int x = 0; x < 6; x++) {
+                for (int y = 0; y < 6; y++) {
+                    content += dictionary.getLetterAt(x, y);
+                }
+                content += "\n";
+            }
+
+            content += "-\n0";
+
+            System.out.println(content);
+            bw.write(content);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

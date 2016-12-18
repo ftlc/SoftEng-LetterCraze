@@ -110,12 +110,21 @@ public class EditLevelController implements ActionListener{
 		BoardView loadBV = lv.getBoardView();
 		for (int i = 0; i < 36; i++){
 
+            loadBV.resetSquareView(i);
 			if (i % 6 == 0){
 				int row = i/6;
 				buffer = input.nextLine();
 				for(int j = 0; j<6; j++)
 				{
+					SquareView current = loadBV.getSquareViewAt(row, j);
 					letters[row][j] = buffer.charAt(j);
+					if(buffer.charAt(j) != '\"' && buffer.charAt(j) != '%') {
+						current.setLetter(buffer.charAt(j));
+					}
+					else
+                    {
+                        current.setLetter(' ');
+                    }
 				}
 
 				stringTemp = stringTemp + buffer + "\n";

@@ -14,6 +14,8 @@ import javax.swing.border.EmptyBorder;
 import Builder.Controllers.AcceptThemeController;
 import Builder.Controllers.CloseThemeController;
 import Builder.Entities.Model;
+import Player.Boundaries.*;
+
 import java.awt.Font;
 
 /**
@@ -29,15 +31,25 @@ public class ThemeView extends JDialog{
 	private JTextPane letters;
 	JButton okButton;
     Model model;
+    LevelView lv;
     
 	/**
 	 * Creates the Dialog box.
 	 * @param m, model holding the information about the entities.
 	 */
-	public ThemeView(Model m) {
+	public ThemeView(Model m, LevelView lv) {
         this.model = m;
+        this.lv = lv;
         initializePopup();
     }
+
+	/**
+	 * Getter method that returns the levelview
+	 * @return levelview
+	 */
+	public LevelView getLevelView() {
+		return lv;
+	}
 
 	/**
 	 * Getter method that returns the model.

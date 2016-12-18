@@ -1,5 +1,9 @@
 package Builder.Entities;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * Subclass of the level class, different because it
  * has the time attribute.
@@ -15,7 +19,7 @@ public class LightningLevel extends Level {
      */
     public LightningLevel(Board brd) {
         super(brd);
-        this.time = -1;
+        this.time = 0;
     }
 
     /**
@@ -43,4 +47,24 @@ public class LightningLevel extends Level {
     	return time;
     }
 
+    @Override
+    public void writeLevel(String FileName) {
+        System.out.println("LightningLevel");
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(FileName))) {
+            String content = "L\n-\n";
+            content = addStars(content);
+            String time = String.valueOf(getTime());
+            content = content + time + "\n-\n";
+            content = addBoard(content);
+            content = content + "0";
+            System.out.println(content);
+
+            bw.write(content);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

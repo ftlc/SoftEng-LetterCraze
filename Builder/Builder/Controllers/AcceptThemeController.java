@@ -1,8 +1,10 @@
 package Builder.Controllers;
 
+import Builder.Boundaries.SquareView;
 import Builder.Boundaries.ThemeView;
 import Builder.Entities.Dictionary;
 import Builder.Entities.Model;
+import Builder.Entities.Square;
 import Builder.Entities.ThemeLevel;
 
 import javax.swing.*;
@@ -56,7 +58,20 @@ public class AcceptThemeController implements ActionListener {
 
 
                 for (int i = 0; i < line.length(); i++) {
-                    let[j][i] = line.charAt(i);
+                    char currentChar = line.charAt(i);
+                    let[j][i] = currentChar;
+                    SquareView current = tv.getLevelView().getBoardView().getSquareViewAt(j, i);
+                    if(currentChar == '\"')
+                    {
+                        current.setSelected(false);
+                    }
+                    else {
+                        current.setSelected(true);
+                        if(currentChar != '%') {
+                            current.setLetter(currentChar);
+                        }
+                    }
+
                 }
                 j++;
             }

@@ -103,5 +103,8 @@ public class BoardView extends JPanel {
 		return b;
 	}
 
+	public SquareView getSquareViewAt(int x, int y) {
+		return squares[6*x + y];
+	}
 
 }
